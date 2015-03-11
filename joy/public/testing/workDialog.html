@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko" ng-app="workDialogApp">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+	<base href="/">
+	<title>Work Edit</title>
+	<link rel="stylesheet" href="/testing/bootstrap.css"/>
+	<link rel="stylesheet" href="/testing/workdialog.css"/>
+</head>
+
+<body ng-controller='workDialogController'>
+<form>
+	<fieldset>
+		<legend>Work Register #{{item.bunho}}</legend>
+		<div class="rows">
+			<label for="nalja">Date</label> /
+			<label for="sigack">Time</label>
+			<input ng-blur="changeYoil(item.nalja)" ng-model="item.nalja" type='date' value="{{item.nalja}}" id="nalja"/>
+			<input ng-model="item.sigack" type='time' value="{{item.sigack}}" id="sigack"/>
+			<label for="yoil">Yoil</label>
+			<span ng-model="item.yoil" id="yoil">{{item.yoil}}</span>
+		</div>
+		<div class="rows">
+			<label for="mark">Mark</label>
+			<select ng-model="item.mark" id="mark">
+				<optgroup label="Mark">
+					<option value="a">urgent</option>
+					<option value="e">held</option>
+					<option value="i">scheduled</option>
+					<option value="o">finished</option>
+					<option value="u">information</option>
+				</optgroup>
+			</select>
+			<label for="cash">Cash</label>
+			<input id="cash" class="underline" />
+			<label for="card">Card</label>
+			<input id="card" class="underline" />
+		</div>
+		<div class="rows">
+			<label for="ref">Ref</label>
+			<input ng-model="item.ref" type='text' value="{{item.caption}}" id="ref" class="underline" />
+			<label for="caption">Caption</label>
+			<input ng-model="item.caption" type='text' value="{{item.caption}}" id="caption" class="underline" />
+		</div>
+		<div class="rows">
+			<label for="work">Work</label>
+		</div>
+		<div class="rows">
+			<textarea ng-model="item.work"  cols="80" rows="10" id="work"/>{{item.work}}</textarea>
+		</div>
+		<div class="rows">
+			<button ng-click="ok()" type="button">OK</button>
+			<button ng-click="exit()" type="button">EXIT</button>
+		</div>
+	</fieldset>
+</form>
+
+
+	<script src="/testing/angular.js"></script>
+	<script src="/testing/workdialog.js"></script>
+
+	<script src="/testing/joyUtils.js"></script>
+
+	<script src="/testing/testing.js"></script>
+
+
+
+</body>
+</html>
+
+
+

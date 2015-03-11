@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+	<title>Bootstrap3</title>
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap3.css">
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+<div class="container">
+
+<h1>Bootstrap3 Reference</h1>
+
+<div class="panel-group" id="accordion">
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#active" data-toggle="collapse" data-parent="#accordion">active</a>
+		</h4>
+	</div>
+	<div id="active" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>added to a button will make it look pressed</p>
+			<dl>
+				<dt>active</dt>
+					<dd><span class="btn active">1</span></dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#alert" data-toggle="collapse" data-parent="#accordion">alert</a>
+		</h4>
+	</div>
+	<div id="alert" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>use base class alert then alert-* for contextual reference</p>
+			<dl>
+				<dt>alert-danger</dt>
+					<dd class="alert alert-danger">red alert</dd>
+				<dt>alert-dismissable</dt>
+					<dd>use a button with close class to make alerts dismissable</dd>
+				<dt>alert-info</dt>
+					<dd class="alert alert-info">blue alert</dd>
+				<dt>alert-link</dt>
+					<dd>use to style a link inside an alert</dd>
+				<dt>alert-success</dt>
+					<dd class="alert alert-success">green alert</dd>
+				<dt>alert-warning</dt>
+					<dd class="alert alert-warning">goldenrod alert</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#badge" data-toggle="collapse" data-parent="#accordion">badge</a>
+		</h4>
+	</div>
+	<div id="badge" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>highlights new or unread items, can be used in link, navs etc... <span class="badge">7</span></p>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#breadcrumb" data-toggle="collapse" data-parent="#accordion">breadcrumb</a>
+		</h4>
+	</div>
+	<div id="breadcrumb" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>indicates the current pages position in the navigational hierarchy</p>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#btn" data-toggle="collapse" data-parent="#accordion">btn</a>
+		</h4>
+	</div>
+	<div id="btn" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>add to a button, anchor or input elements for quick styling</p>
+			<dl>
+				<dt>btn-group</dt>
+					<dd>nest buttons within a button group  to create a series of buttons. nest a button group within a button group for dropdowns 
+						 <span class="btn btn-group">
+							 <span class="btn btn-default">1</span>
+							 <span class="btn btn-default">2</span>
+							 <span class="btn btn-default">3</span>
+						 </span>
+						 <ul>
+							<dt>btn-group-xs</dt>
+								<dd>creates a xs size button group
+									<span class="btn btn-group btn-group-xs">
+										<span class="btn btn-default">1</span>
+										<span class="btn btn-default">2</span>
+										<span class="btn btn-default">3</span>
+									</span>
+								</dd>
+							<dt>btn-group-sm</dt>
+								<dd>creates a sm size button group
+									<span class="btn btn-group btn-group-sm">
+										<span class="btn btn-default">1</span>
+										<span class="btn btn-default">2</span>
+										<span class="btn btn-default">3</span>
+									</span>
+								</dd>	
+							<dt>btn-group-lg</dt>
+								<dd>creates a lg size button group
+									<span class="btn btn-group btn-group-lg">
+										<span class="btn btn-default">1</span>
+										<span class="btn btn-default">2</span>
+										<span class="btn btn-default">3</span>
+									</span>
+								</dd>
+							<dt>btn-group-vertical</dt>
+								<dd>stacks buttons vertically
+									<span class="btn btn-group-vertical">
+										<span class="btn btn-default">1</span>
+										<span class="btn btn-default">2</span>
+										<span class="btn btn-default">3</span>
+									</span>
+								</dd>
+							<dt>btn-group-justified</dt>
+								<dd>stretch button size to fill width of parent element
+									<span class="btn btn-group-justified">
+										<span class="btn btn-default">1</span>
+										<span class="btn btn-default">2</span>
+										<span class="btn btn-default">3</span>
+									</span>
+								</dd>
+						</ul>
+					 </dd>
+				<dt>btn-danger</dt>
+					<dd>red colored button <span class="btn btn-danger">danger</span></dd>
+				<dt>btn-default</dt>
+					<dd>default styled button <span class="btn btn-default">default</span></dd>
+				<dt>btn-info</dt>
+					<dd>lightblue colored button <span class="btn btn-info">info</span></dd>
+				<dt>btn-link</dt>
+					<dd>makes a button look like a link <span class="btn btn-link">link</span></dd>
+				<dt>btn-primary</dt>
+					<dd>blue colored button <span class="btn btn-primary">primary</span></dd>
+				<dt>btn-successs</dt>
+					<dd>green colored button <span class="btn btn-success">success</span></dd>
+				<dt>btn-toolbar</dt>
+					<dd>use to nest button groups to create a complex toolbar</dd>
+				<dt>btn-warning</dt>
+					<dd>goldenrod colored button <span class="btn btn-warning">warning</span></dd>
+				<dt>btn-xs</dt>
+					<dd>creates a xs size button <span class="btn btn-default btn-xs">xs</span></dd>
+				<dt>btn-sm</dt>
+					<dd>creates a sm size button <span class="btn btn-default btn-sm">sm</span></dd>
+				<dt>btn-lg</dt>
+					<dd>creates a lg size button <span class="btn btn-default btn-lg">lg</span></dd>
+				<dt>btn-block</dt>
+					<dd>creates a button which spans the full width of its parent element <span class="btn btn-default btn-block">block</span></dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#caret" data-toggle="collapse" data-parent="#accordion">caret</a>
+		</h4>
+	</div>
+	<div id="caret" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>use to indicate direction of dropdown/dropup menu <span class="caret"></span></p>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#center-block" data-toggle="collapse" data-parent="#accordion">center-block</a>
+		</h4>
+	</div>
+	<div id="center-block" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>sets disply to block and center via margin</p>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#checkbox" data-toggle="collapse" data-parent="#accordion">checkbox</a>
+		</h4>
+	</div>
+	<div id="checkbox" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>checkboxes for selecting one or more options from a list-use to wrap input elements</p>
+			<dl>
+				<dt>checkbox-inline</dt>
+					<dd>displays a series of checkboxes on one line</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#clearfix" data-toggle="collapse" data-parent="#accordion">clearfix</a>
+		</h4>
+	</div>
+	<div id="clearfix" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>clears the float on any element</p>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#close" data-toggle="collapse" data-parent="#accordion">close</a>
+		</h4>
+	</div>
+	<div id="close" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>generic close icon for dismissing content like modals and alerts<button type="button" class="close">x</button></p>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#col" data-toggle="collapse" data-parent="#accordion">col</a>
+		</h4>
+	</div>
+	<div id="col" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>use to indicate a column within responsive mobile first grid<br>max number of 12</p>
+			<dl>
+				<dt>col-xs-*</dt>
+					<dd>indicates column size on xs devices</dd>
+				<dt>col-sm-*</dt>
+					<dd>indicates column size on sm devices</dd>
+				<dt>col-md-*</dt>
+					<dd>indicates column size on md devices</dd>
+				<dt>col-lg-*</dt>
+					<dd>indicates column size on lg devices</dd>
+				<dt>col-xs-offset-*</dt>
+					<dd>offset column to the right * columns on xs devices</dd>
+				<dt>col-sm-offset-*</dt>
+					<dd>offset column to the right * columns on sm devices</dd>
+				<dt>col-md-offset-*</dt>
+					<dd>offset column to the right * columns on md devices</dd>
+				<dt>col-lg-offset-*</dt>
+					<dd>offset column to the right * columns on lg devices</dd>
+				<dt>col-md-push-*</dt>
+					<dd>use to change the order of default grid</dd>
+				<dt>col-md-pull-*</dt>
+					<dd>use to change the order of default grid</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#collapse" data-toggle="collapse" data-parent="#accordion">collapse</a>
+		</h4>
+	</div>
+	<div id="collapse" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>use to collapse a panel</p>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#container" data-toggle="collapse" data-parent="#accordion">container</a>
+		</h4>
+	</div>
+	<div id="container" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>use to define a fluid grid</p>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#control-label" data-toggle="collapse" data-parent="#accordion">control-label</a>
+		</h4>
+	</div>
+	<div id="control-label" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>use to style input labels within form-control</p>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#content" data-toggle="collapse" data-parent="#accordion">content</a>
+		</h4>
+	</div>
+	<div id="content" class="panel-collapse collapse">
+		<div class="panel-body">
+			<ul>
+			      	<li>content-main</li>
+			 	<li>content-secondary</li>
+		      	</ul>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#contextual-classes" data-toggle="collapse" data-parent="#accordion">contextual classes</a>
+		</h4>
+	</div>
+	<div id="contextual-classes" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>use to color table rows or individual cells</p>
+			<dl>
+				<dt>active</dt>
+					<dd>blue color</dd>
+				<dt>danger</dt>
+					<dd>red color</dd>
+				<dt>success</dt>
+					<dd>green color</dd>
+				<dt>warning</dt>
+					<dd>goldenrod color</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#disabled" data-toggle="collapse" data-parent="#accordion">disabled</a>
+		</h4>
+	</div>
+	<div id="disabled" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>use within a button, link, pagination or a dropdown menu item to display as disabled <span class="btn btn-default disabled">disabled</span></p>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#divider" data-toggle="collapse" data-parent="#accordion">divider</a>
+		</h4>
+	</div>
+	<div id="divider" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>use within a dropdown to create a divider line</p>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#dropdown" data-toggle="collapse" data-parent="#accordion">dropdown</a>
+		</h4>
+	</div>
+	<div id="dropdown" class="panel-collapse collapse">
+		<div class="panel-body">
+      			<p>use as a base class for a dropdown menu</p>
+			<dl>
+				<dt>dropdown-toggle</dt>
+					<dd>used by js to toggle the open class of the parent list item</dd>
+				<dt>dropdown-menu</dt>
+					<dd>use to quickly style a list into a dropdown</dd>
+				<dt>dropdown-header</dt>
+					<dd>use to add a header to a dropdown menu</dd>
+				<dt>dropup</dt>
+					<dd>quickly reverse direction of dropdown menu</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#footer" data-toggle="collapse" data-parent="#accordion">footer</a>
+		</h4>
+	</div>
+	<div id="footer" class="panel-collapse collapse">
+		<div class="panel-body">
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#form" data-toggle="collapse" data-parent="#accordion">form</a>
+		</h4>
+	</div>
+	<div id="form" class="panel-collapse collapse">
+		<div class="panel-body">
+			 <p>use as a base class for forms</p>
+			<dl>
+				<dt>form-group</dt>
+					<dd>use to wrap labels and controls for optimum spacing</dd>
+				<dt>form-control</dt>
+					<dd>provide basic feedback states to users or visitors</dd>
+						<ul>
+							<dt>form-control-static</dt>
+								<dd>use to place plain text next to a form labe in a horizontal form</dd>
+						</ul>
+				<dt>form-inline</dt>
+					<dd>used to left-align and block display form elements</dd>
+				<dt>form-horizontal</dt>
+					<dd>use to horizontally align form labels and inputs</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#glyphicon" data-toggle="collapse" data-parent="#accordion">glyphicon</a>
+		</h4>
+	</div>
+	<div id="glyphicon" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>use as a base class to add glyphicons</p>
+			<dl>
+				<dt>glyphicon-*(-*)</dt>
+					<dd>use after glyphicon base class to add exact glyphicon</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#header" data-toggle="collapse" data-parent="#accordion">header</a>
+		</h4>
+	</div>
+	<div id="header" class="panel-collapse collapse">
+		<div class="panel-body">
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#help-block" data-toggle="collapse" data-parent="#accordion">help-block</a>
+		</h4>
+	</div>
+	<div id="help-block" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>use this to create a block of help text that breaks onto a new line and may extend beyond one line</p>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#helper-classes" data-toggle="collapse" data-parent="#accordion">helper classes</a>
+		</h4>
+	</div>
+	<div id="helper-classes" class="panel-collapse collapse">
+		<div class="panel-body">
+			<dl>
+				<dt>caret</dt>
+					<dd>use to indicate direction of dropdown/dropup menu <span class="caret"></span></dd>
+				<dt>center-block</dt>
+					<dd>sets disply to block and center via margin</dd>
+				<dt>clearfix</dt>
+					<dd>clears the float on any element</dd>
+				<dt>close </dt>
+					<dd>generic close icon for dismissing contenet like modals and alerts <span class="close">x</span></dd>
+				<dt>hidden</dt>
+					<dd>force an element to be hidden</dd>
+				<dt>quickfloats</dt>
+					<dd>floats element in direction indicated</dd>
+					<ul>
+						<dt>pull-left</dt>
+							<dd>floats element left</dd>
+						<dt>pull-right</dt>
+							<dd>floats element right</dd>
+					</ul>
+				<dt>show</dt>
+					<dd>forces an element to be shown</dd>
+				<dt>sr-only</dt>
+					<dd>hide an element to all devices EXCEPT screen readers</dd>
+				<dt>text-hide</dt>
+					<dd>use to help replace an element's text content with a background image</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#hidden" data-toggle="collapse" data-parent="#accordion">hidden</a>
+		</h4>
+	</div>
+	<div id="hidden" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>use these utility classes for showing and hiding content by device via media query-use on inline and table elements not supported</p>
+			<dl>
+				<dt>hidden-xs</dt>
+					<dd>use to make element hidden on xs devices-phones(<768px)</dd>
+				<dt>hidden-sm</dt>
+					<dd>use to make element hidden on sm devices-tablets(>=768px)</dd>
+				<dt>hidden-md</dt>
+					<dd>use to make element hidden on md devices-desktops(>=992px)</dd>
+				<dt>hidden-lg</dt>
+					<dd>use to make element hidden on lg devices-desktops(>=1200px)</dd>
+				<dt>hidden-print</dt>
+					<dd>use to make element hidden in print</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#hide" data-toggle="collapse" data-parent="#accordion">hide</a>
+		</h4>
+	</div>
+	<div id="hide" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>still available in Bootstrap3 but it does not always affect screen readers and is deprecated as of v3.0.1. Use hidden or sr-only instead.</p>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#icon-bar" data-toggle="collapse" data-parent="#accordion">icon-bar</a>
+		</h4>
+	</div>
+	<div id="icon-bar" class="panel-collapse collapse">
+		<div class="panel-body">
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#img" data-toggle="collapse" data-parent="#accordion">img-*</a>
+		</h4>
+	</div>
+	<div id="img" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>Add classes to an img element to easily style images</p>
+			<dl>
+				<dt>img-circle</dt>
+					<dd>creates a circular styled image</dd>
+				<dt>img-responsive</dt>
+					<dd>creates an image which scales nicely to the parent element<br>automatically set width:100% height:auto</dd>
+				<dt>img-rounded</dt>
+					<dd>creates an image with rounded corners</dd>
+				<dt>img-thumbnail</dt>
+					<dd>creates a thumbnail image with a border</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#initialism" data-toggle="collapse" data-parent="#accordion">initialism</a>
+		</h4>
+	</div>
+	<div id="initialism" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>add to an abbreviation for a slightly smaller font-size</p>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#input" data-toggle="collapse" data-parent="#accordion">input group</a>
+		</h4>
+	</div>
+	<div id="input" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>use to add text or buttons before, after or on both sides of any text based input</p>
+			<dl>
+				<dt>input-group-addon</dt>
+					<dd>use to prepend or append elements to text based input</dd>
+				<dt>input-group-btn</dt>
+					<dd>use to prepend or append buttons to text based input</dd>
+				<dt>input-group-sm</dt>
+					<dd>easily add relative sizing to input-group</dd>
+				<dt>input-group-lg</dt>
+					<dd>easily add relative sizing to input-group</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#invisible" data-toggle="collapse" data-parent="#accordion">invisible</a>
+		</h4>
+	</div>
+	<div id="invisible" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>used to toggle only the visibility of an element, meaning its display is not modified and the element can still affect the flow of the document</p>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#jumbotron" data-toggle="collapse" data-parent="#accordion">jumbotron</a>
+		</h4>
+	</div>
+	<div id="jumbotron" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>extends to full width of viewport to showcase key content</p>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#label" data-toggle="collapse" data-parent="#accordion">label</a>
+		</h4>
+	</div>
+	<div id="label" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>use this base class to easily add 'button-look' without functionality</p>
+			<dl>
+				<dt>label-danger</dt>
+					<dd>red label <span class="label label-danger"> danger </span></dd>
+				<dt>label-default</dt>
+					<dd>gray label <span class="label label-default"> default </span></dd>
+				<dt>label-info</dt>
+					<dd>lightblue label <span class="label label-info"> info </span></dd>
+				<dt>label-primary</dt>
+					<dd>blue label <span class="label label-primary"> primary </span></dd>
+				<dt>label-success</dt>
+					<dd>green label <span class="label label-success"> success </span></dd>
+				<dt>label-warning</dt>
+					<dd>goldenrod label <span class="label label-warning"> warning </span></dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#lead" data-toggle="collapse" data-parent="#accordion">lead</a>
+		</h4>
+	</div>
+	<div id="lead" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>use to make a paragraph stand out</p>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#list-group" data-toggle="collapse" data-parent="#accordion">list-group</a>
+		</h4>
+	</div>
+	<div id="list-group" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>use this base class to style any list</p>
+			<dl>
+				<dt>list-group-item</dt>
+					<dd>denotes item within a list</dd>
+				<ul>
+					<dt>list-group-item-heading</dt>
+						<dd>denotes a heading within an item</dd>
+					<dt>list-group-item-text</dt>
+						<dd>denotes text within an item</dd>
+				</ul>
+				<dt>dl-horizontal</dt>
+					<dd>displays the description on the same line as the list item</dd>
+				<dt>list-inline</dt>
+					<dd>displays list items on a single line</dd>
+				<dt>list-unstyled</dt>
+					<dd>removes default list-style properties and left margin</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#media" data-toggle="collapse" data-parent="#accordion">media</a>
+		</h4>
+	</div>
+	<div id="media" class="panel-collapse collapse">
+		<div class="panel-body">
+			<ul>
+				<li>media-object</li>
+				<li>media-body</li>
+				<li>media-heading</li>
+				<li>media-list</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#nav" data-toggle="collapse" data-parent="#accordion">nav</a>
+		</h4>
+	</div>
+	<div id="nav" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>use as a base class for navs</p>
+			<dl>
+			      	<dt>nav-pills</dt>
+					<dd>use this class to create a pill shaped nav</dd>
+				<dt>nav-tabs</dt>
+					<dd>use this class to create a tab shaped nav</dd>
+				<ul>
+					<dt>nav-justified</dt>
+						<dd>create nav pills/tabs of equal width which fill the parent element</dd>
+					<dt>nav-stacked</dt>
+						<dd>vertically stack nav pills/tabs</dd>
+				</ul>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#navbar" data-toggle="collapse" data-parent="#accordion">navbar</a>
+		</h4>
+	</div>
+	<div id="navbar" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>use this base class to create a navbar</p>
+			<dl>
+				<dt>navbar-brand</dt>
+					<dd>style a brand or title for a navbar</dd>
+				<dt>navbar-btn</dt>
+					<dd>vertically centers a button in navbar</dd>
+				<dt>navbar-collapse</dt>
+					<dd></dd>
+				<dt>navbar-default</dt>
+					<dd>default style navbar</dd>
+				<dt>navbar-fixed-bottom</dt>
+					<dd>fix navbar at bottom of screen</dd>
+				<dt>navbar-fixed-top</dt>
+					<dd>fix navbar to top of screen</dd>
+				<dt>navbar-form</dt>
+					<dd>place form contenet within navbar-form for proper vertical alignment</dd>
+				<dt>navbar-header</dt>
+					<dd></dd>
+				<dt>navbar-inverse</dt>
+					<dd>inverts color of navbar with light text and dark background</dd>
+				<dt>navbar-left</dt>
+					<dd>align nav links, forms, buttons, or text; navbar equivalent to pull-left</dd>
+				<dt>navbar-link</dt>
+					<dd>use for standard links that are not within the regular navbar navigation component</dd>
+				<dt>navbar-nav</dt>
+					<dd></dd>
+				<dt>navbar-right</dt>
+					<dd>align nav links, forms, buttons, or text; navbar equivalent to pull-right</dd>
+				<dt>navbar-static-top</dt>
+					<dd>create a full-width navbar that scrolls away with the page</dd>
+				<dt>navbar-text</dt>
+					<dd>wrap strings of text within a navbar for proper leading and color</dd>
+				<dt>navbar-toggle</dt>
+					<dd></dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#page-header" data-toggle="collapse" data-parent="#accordion">page-header</a>
+		</h4>
+	</div>
+	<div id="page-header" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>use on an h1 for appropriately spaced out and segmented sections of content on a page</p>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#pager" data-toggle="collapse" data-parent="#accordion">pager</a>
+		</h4>
+	</div>
+	<div id="pager" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>adds simple pill shape previous/next links for simple pagination<br> default alignment is centered</p>
+			<dl>
+				<dt>next</dt>
+					<dd>use to right align link</dd>
+				<dt>previous</dt>
+					<dd>use to left align link</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#pagination" data-toggle="collapse" data-parent="#accordion">pagination</a>
+		</h4>
+	</div>
+	<div id="pagination" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>use to create a block style multi-page pagination unit</p>
+			<dl>
+				<dt>pagination-sm</dt>
+					<dd>easily size pagination block sm</dd>
+				<dt>pagination-lg</dt>
+					<dd>easily size pagination block lg</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#panel" data-toggle="collapse" data-parent="#accordion">panel</a>
+		</h4>
+	</div>
+	<div id="panel" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>applies basic border and padding to contain some content</p>
+			<dl>
+				<dt>panel-body</dt>
+					<dd>defines the body of a panel</dd>
+				<dt>panel-danger</dt>
+					<dd>use to add red border and heading background to a panel</dd>
+				<dt>panel-default</dt>
+					<dd>default styled panel</dd>
+				<dt>panel-footer</dt>
+					<dd>define the footer of the panel</dd>
+				<dt>panel-heading</dt>
+					<dd>define the heading within the panel</dd>
+				<dt>panel-info</dt>
+					<dd>use to add lightblue border and heading background to a panel</dd>
+				<dt>panel-primary</dt>
+					<dd>use to add blue border and heading background to a panel</dd>
+				<dt>panel-success</dt>
+					<dd>use to add green border and heading background to a panel</dd>
+				<dt>panel-title</dt>
+					<dd>add to panel heading for instant title style</dd>
+				<dt>panel-warning</dt>
+					<dd>use to add goldenrod border and heading background to a panel</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#progress" data-toggle="collapse" data-parent="#accordion">progress</a>
+		</h4>
+	</div>
+	<div id="progress" class="panel-collapse collapse">
+		<div class="panel-body">
+			 <p>use this base class for progress bars</p>
+			<dl>
+				<dt>progress-bar</dt>
+					<dd>easily provide feedback on an action with this blue progress bar</dd>
+				<ul>
+					<dt>progress-bar-danger</dt>
+						<dd>change default progress bar color to red</dd>
+					<dt>progress-bar-info</dt>
+						<dd>change default progress bar color to lightblue</dd>
+					<dt>progress-bar-striped</dt>
+						<dd>add this to base class progress for a striped progress bar</dd>
+					<dt>progress-bar-success</dt>
+						<dd>change default progress bar color to green</dd>
+					<dt>progress-bar-warning</dt>
+						<dd>change default progress bar color to goldenrod</dd>
+				</ul>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#pull" data-toggle="collapse" data-parent="#accordion">pull</a>
+		</h4>
+	</div>
+	<div id="pull" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>quick floats</p>
+			<dl>
+				<dt>pull-left</dt>
+					<dd>floats element left</dd>
+				<dt>pull-right</dt>
+					<dd>floats element right</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#pre-scrollable" data-toggle="collapse" data-parent="#accordion">pre-scrollable</a>
+		</h4>
+	</div>
+	<div id="pre-scrollable" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>use to wrap blocks of code to provide a maximum height of 350 px and a y-axis scrollbar</p>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#radio" data-toggle="collapse" data-parent="#accordion">radio</a>
+		</h4>
+	</div>
+	<div id="radio" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>easily add radio button styling <label><input type="radio">1</label></p>
+			<dl>
+				<dt>radio-inline</dt>
+					<dd>displays a series radio buttons on one line</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#row" data-toggle="collapse" data-parent="#accordion">row</a>
+		</h4>
+	</div>
+	<div id="row" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>use to create a row within the grid</p>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#show" data-toggle="collapse" data-parent="#accordion">show</a>
+		</h4>
+	</div>
+	<div id="show" class="panel-collapse collapse">
+		<div class="panel-body">
+			 <p>forces an element to be shown</p>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#small" data-toggle="collapse" data-parent="#accordion">small</a>
+		</h4>
+	</div>
+	<div id="small" class="panel-collapse collapse">
+		<div class="panel-body">
+			 <p>use to wrap text for a small display</p>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#sr-only" data-toggle="collapse" data-parent="#accordion">sr-only</a>
+		</h4>
+	</div>
+	<div id="sr-only" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>use to hide an element to all devices except screen readers</p>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#success" data-toggle="collapse" data-parent="#accordion">success</a>
+		</h4>
+	</div>
+	<div id="success" class="panel-collapse collapse">
+		<div class="panel-body">
+			 <p>indicates a successful or positive action</p>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#table" data-toggle="collapse" data-parent="#accordion">table</a>
+		</h4>
+	</div>
+	<div id="table" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>add this base class to any table for basic styling -light padding and horizontal only dividers<br>contextual classes are available for table rows</p>
+			<dl>
+				<dt>table-bordered</dt>
+					<dd>use to add borders on all sides of table and cells</dd>
+				<dt>table-condensed</dt>
+					<dd>use to make tables more compact by cutting padding in half</dd>
+				<dt>table-hover</dt>
+					<dd>enables a hover state on table rows</dd>
+				<dt>table-responsive</dt>
+					<dd>wrap a table in this to make tables scroll horizontally for devices under 768px</dd>
+				<dt>table-striped</dt>
+					<dd>use to create a table body with zebra stiped rows</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#text" data-toggle="collapse" data-parent="#accordion">text</a>
+		</h4>
+	</div>
+	<div id="text" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>use these to add quick styling to text</p>
+			<dl>
+				<dt> text-center</dt>
+					<dd class="text-center">center align text</dd>
+				<dt>text-danger</dt>
+					<dd class="text-danger">red colored text</dd>
+				<dt>text-hide</dt>
+					<dd>forces text to be hidden</dd>
+				<dt>text-info</dt>
+					<dd class="text-info">lightblue colored text</dd>
+				<dt>text-left</dt>
+					<dd class="text-left">left align text</dd>
+				<dt>text-muted</dt>
+					<dd class="text-muted">gray colored text</dd>
+				<dt>text-primary</dt>
+					<dd class="text-primary">blue colored text</dd>
+				<dt>text-right</dt>
+					<dd class="text-right">right align text</dd>
+				<dt>text-success</dt>
+					<dd class="text-success">green colored text</dd>
+				<dt>text-warning</dt>
+					<dd class="text-warning">goldenrod colored text</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#thumbnail" data-toggle="collapse" data-parent="#accordion">thumbnail</a>
+		</h4>
+	</div>
+	<div id="thumbnail" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>use to quickly display grids of images, videos, text, and more with simple borders and rounded corners</p>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#visible" data-toggle="collapse" data-parent="#accordion">visible</a>
+		</h4>
+	</div>
+	<div id="visible" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>use these utility classes for showing and hiding content by device via media query-use on inline and table elements not supported</p>
+			<dl>
+				<dt>visible-xs</dt>
+					<dd>use to make element visible on xs devices-phones(<768px)</dd>
+				<dt>visible-sm</dt>
+					<dd>use to make element visible on sm devices-tablets(>=768px)</dd>
+				<dt>visible-md</dt>
+					<dd>use to make element visible on md devices-desktops(>=992px)</dd>
+				<dt>visible-lg</dt>
+					<dd>use to make element visible on lg devices-desktops(>=1200px)</dd>
+				<dt>visible-print</dt>
+					<dd>use to make element visible in print</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#warning" data-toggle="collapse" data-parent="#accordion">warning</a>
+		</h4>
+	</div>
+	<div id="warning" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>indicates a warning that might need attention</p>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#well" data-toggle="collapse" data-parent="#accordion">well</a>
+		</h4>
+	</div>
+	<div id="well" class="panel-collapse collapse">
+		<div class="panel-body">
+			<p>use this base class to give an element an inset effect</p>
+			<dl>
+				<dt>well-sm</dt>
+					<dd>creates a smaller well by decreasing padding</dd>
+				<dt>well-lg</dt>
+					<dd>creates a larger well by increasing padding</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4 class="panel-title">
+			<a href="#wrapper" data-toggle="collapse" data-parent="#accordion">wrapper</a>
+		</h4>
+	</div>
+	<div id="wrapper" class="panel-collapse collapse">
+		<div class="panel-body">
+		</div>
+	</div>
+</div>
+
+
+
+
+
+</div> <!-- panel-group #accordion -->
+
+<footer>
+<br>
+<p>&copy; 2013, all rights reserved. site built and maintained by <a href="http://travislorton.com">Travis Lorton</a></p>
+</footer>
+
+</div> <!-- container -->
+	
+
+
+ <!-- Bootstrap -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

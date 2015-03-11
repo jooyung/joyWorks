@@ -1,0 +1,26 @@
+body { magin: 0; padding: 0; width: 100%; }
+form { width: 80%; margin: 0 auto; padding: 0; border: 0px solid red; }
+legend { margin: 10px 0 10px 55px; color: #389293; border: none; }
+div { margin: 0 0 10px 10px; }
+
+label { color: #839293;  }
+input { border: none; }
+input:focus { background-color: #ffe; border: 1px solid #333; }
+
+.underline { border-bottom: 1px solid #839283;}
+#nalja, #sigack, #yoil, #mark, #cash, #card, #ref, #caption { text-align: center; }
+#nalja, #sigack { height: 2em; margin-left: 10px; }
+#yoil { margin-left: 20px; }
+#mark { width: 100px; }
+
+label[for="cash"] { margin-left: 30px; }
+#cash, #card { width: 20%; }
+
+#ref { width: 16%; }
+
+label[for="caption"] { margin-left: 20px; }
+#caption { width: 60%; }
+
+textarea { margin-top: -10px; width: 100%; }
+
+button { margin-left: 130px; }
