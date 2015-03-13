@@ -1,5 +1,8 @@
 'use strict';
 
+/**
+ * WORKS APPS
+ */
 
 // Declare app level module which depends on filters, and services
 angular.module('myApp', [
@@ -9,3 +12,8 @@ angular.module('myApp', [
   , 'myApp.directives'
   , 'myApp.controllers'
 ]);
+
+angular.module('myApp')
+.config(function ($httpProvider) {
+	$httpProvider.interceptors.push('authInterceptor');
+});

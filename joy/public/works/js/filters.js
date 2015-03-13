@@ -1,6 +1,8 @@
 'use strict';
 
-/* Filters */
+/**
+ * WORKS FILTERS
+ */
 
 angular.module('myApp.filters', []).
   filter('interpolate', ['version', function(version) {

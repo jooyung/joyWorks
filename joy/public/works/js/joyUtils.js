@@ -141,11 +141,30 @@ function addCommas(nStr)
 |--------------------------------------
 | NALJA: If a nalja is given at the second parameter, then set the date to it
 */
+
+/**
+ * 20150313
+ * AngularJS 1.3 has changed to treat Date for date input element in HTML5
+ * only Date object can be shown properly in date input element
+ * @param  {[Date]} dateObject [instanceof Date]
+ * @return {[String]}            [yyyy-mm-dd]
+ */
+function convertDateObjectToDateString(dateObject) {
+	var dAr = [];
+
+	dAr.push( dateObject.getFullYear() );
+	dAr.push( Right( '0' + (dateObject.getMonth()+1), 2) );
+	dAr.push( Right( '0' + dateObject.getDate(), 2) );
+
+	return dAr.join("-");
+}
+
 function makeDateTime(gooboon, nalja)
 {
 	var dt = new Date();
 	if (nalja)
 	{
+		if (nalja instanceof Date) nalja = convertDateObjectToDateString(nalja);
 		var nAr = breakDateString(nalja);
 		dt.setFullYear(nAr[0], nAr[1] - 1, nAr[2]);
 	}
@@ -193,6 +212,7 @@ function breakDateString(nalja)
 
 function calcYoil(nalja)
 {
+	if (nalja instanceof Date) nalja = convertDateObjectToDateString(nalja);
 	var nar = breakDateString(nalja);
 	var d = new Date(nar[0], nar[1]-1, nar[2]); //*Conver to JavaScript date
 
@@ -220,91 +240,96 @@ function convertDate(date) {
 	return dAr.join("-");
 }
 
-/*
-Firstly, get the numbers by the calculation of plus and minus of periods
-Then Adjust the months if they are over number 12, and accordingly its years
-The date is always 1st and the last day of the month
+function convertISOFormatToDate(date) {
+	return new Date(Date.parse(date));
+}
+
+/**
+ * Gigan
+ * -----------------
+ * Deal with javascript date object: receive and return javascript object
+ * If necessary for MySQL, convert it to iso by using other simple function
+ *
+	// Firstly, get the numbers by the calculation of plus and minus of periods
+	// Then Adjust the months if they are over number 12, and accordingly its years
+	// The date is always 1st and the last day of the month
+
+
+	// http://www.w3schools.com/jsref/jsref_setmonth.asp
+	// JavaScript setMonth() Method
+
+	// Parameter	Description
+	// month	Required. An integer representing the month
+	// Expected values are 0-11, but other values are allowed:
+
+	// -1 will result in the last month of the previous year
+	// 12 will result in the first month of the next year
+	// 13 will result in the second month of the next year
+	// ----------------------------------------------------
+	// day	Optional. An integer representing the day of month
+	// Expected values are 1-31, but other values are allowed:
+
+	// 0 will result in the last day of the previous month
+	// -1 will result in the day before the last day of the previous month
+
+	// If the month has 31 days:
+	// 32 will result in the first day of the next month
+
+	// If the month has 30 days:
+	// 32 will result in the second day of the next month
  */
-/*
-http://www.w3schools.com/jsref/jsref_setmonth.asp
-JavaScript setMonth() Method
 
-Parameter	Description
-month	Required. An integer representing the month
-Expected values are 0-11, but other values are allowed:
-
--1 will result in the last month of the previous year
-12 will result in the first month of the next year
-13 will result in the second month of the next year
-----------------------------------------------------
-day	Optional. An integer representing the day of month
-Expected values are 1-31, but other values are allowed:
-
-0 will result in the last day of the previous month
--1 will result in the day before the last day of the previous month
-
-If the month has 31 days:
-32 will result in the first day of the next month
-
-If the month has 30 days:
-32 will result in the second day of the next month
- */
 function getPeriod(nalja, gigan) {
-	var nar = breakDateString(nalja);
-	var year = fromYear = toYear = parseInt(nar[0]);
-	var month = fromMonth = toMonth = parseInt(nar[1]) - 1; // Conver to JavaScript Month
-	var date = parseInt(nar[2]);
-	var fromDate = 1;
-	var toDate = 0; // *0 returns the last day of the last month. goes algon with toMonth
-	var yoil;
-	var ndFrom, ndTo; // new Date
+
+	var year = nalja.getFullYear();
+	var month = nalja.getMonth();
+	var date = nalja.getDate();
+	var yoil = nalja.getDay();
+
+	var FD = dateToDefaultTimes( new Date(nalja), 0 );
+	var TD = dateToDefaultTimes( new Date(nalja), 1 );
+
+	if (gigan != '1D') FD.setDate(1);
 
 	switch (gigan) {
-		case "1D":
-			fromDate = toDate = date;
-			break;
-		case "1W":
-			yoil = calcYoil(nalja);
-			fromDate = date - yoil;
-			toDate = fromDate + 6;
-			break;
-		case "1M":
-			toMonth += 1;
-			break;
-		case "3M":
-			fromMonth -= 1;
-			toMonth += 2; // *this goes along with doDate=0
-			break;
-		case "6M":
-			fromMonth -= 2;
-			toMonth += 4; // *
-			break;
-		case "1Q":
-			fromMonth = month >= 9 ? 9 : month >= 6 ? 6 : month >= 3 ? 3 : 0
-			toMonth = fromMonth + 3
-			break;
-		case "1H":
-			fromMonth = month >= 6 ? 6 : 0
-			toMonth = fromMonth + 6
-			break;
-		case "1Y":
-			fromMonth = 0;
-			toMonth = 12;
-			break;
-		case "3Y":
-			fromYear -= 1;
-			toYear += 1;
-			fromMonth = 0;
-			toMonth = 12;
-			break;
-		default:
-			break;
+		case "1D": break;
+		case "1W": FD.setDate(date - yoil); TD.setDate(date - yoil + 6); break;
+		case "1M": TD.setMonth(TD.getMonth()+1); break;
+		case "3M": FD.setMonth(month-1); TD.setMonth(month+2); break;
+		case "6M": FD.setMonth(month-2); TD.setMonth(month+4); break;
+		case "1Q": month = month >= 9 ? 9 : month >= 6 ? 6 : month >= 3 ? 3 : 0;FD.setMonth(month); TD.setMonth(month+3); break;
+		case "1H": month = month >= 6 ? 6 : 0; FD.setMonth(month); TD.setMonth(month+6); break;
+		case "1Y": FD.setMonth(0); TD.setMonth(12); break;
+		case "3Y": FD.setYear(year-1); FD.setMonth(0); TD.setYear(year+1); TD.setMonth(12); break;
+		default: TD.setMonth(TD.getMonth()+1); break;
 	}
 
-	ndFrom = getDateString(fromYear, fromMonth, fromDate);
-	ndTo = getDateString(toYear, toMonth, toDate);
+	if (gigan != '1D' && gigan != '1W') TD.setDate(0);
 
-	return [ndFrom, ndTo];
+	return [FD, TD];
+}
+
+function dateToDefaultTimes(date, mark) {
+
+	var nD = new Date(date);
+	if (mark == 0) {
+		nD.setHours('00');
+		nD.setMinutes('00');
+		nD.setSeconds('00');
+	} else if (mark == 1) {
+		nD.setHours('23');
+		nD.setMinutes('59');
+		nD.setSeconds('59');
+	}
+
+	return nD;
+}
+
+function dateArrayToISOArray(dAr) {
+
+	var nAr = [];
+	for (var i=0; i<dAr.length; i++) nAr.push(dAr[i].toISOString());
+	return nAr;
 }
 
 function getDateString(year, month, date) {

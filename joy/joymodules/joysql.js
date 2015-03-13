@@ -35,92 +35,6 @@ conn.connect(function(err) {
 | INSERT INTO works SET nalja=:nalja, sigack=:sigack, yoil=:yoil, ref=:ref
 | , caption=:caption, work=:work, mark=:mark", req.body
 */
-// conn.config.queryFormat = function (query, values) {
-//   if (!values) return query;
-//   return query.replace(/\:(\w+)/g, function (txt, key) {
-//     if (values.hasOwnProperty(key)) {
-//       return this.escape(values[key]);
-//     }
-//     return txt;
-//   }.bind(this));
-// };
-
-/*
-|-------------------------------------
-| MySql Escape String
-|-------------------------------------
-|http://stackoverflow.com/questions/7744912/making-a-javascript-string-sql-friendly
-| Maybe not necessary to use because node-mysql provides escape() service by using ? option
-*/
-// function mysql_real_escape_string (str) {
-//     return str.replace(/[\0\x08\x09\x1a\n\r"'\\\%]/g, function (char) {
-//         switch (char) {
-//             case "\0": return "\\0";
-//             case "\x08": return "\\b";
-//             case "\x09": return "\\t";
-//             case "\x1a": return "\\z";
-//             case "\n": return "\\n";
-//             case "\r": return "\\r";
-//             case "\"":
-//             case "'":
-//             case "\\":
-//             case "%": return "\\"+char; // prepends a backslash to backslash, percent,
-//                                   // and double/single quotes
-//         }
-//     });
-// }
-
-// var _escapeString = function (val) {
-//   val = val.replace(/[\0\n\r\b\t\\'"\x1a]/g, function (s) {
-//     switch (s) {
-//       case "\0":
-//         return "\\0";
-//       case "\n":
-//         return "\\n";
-//       case "\r":
-//         return "\\r";
-//       case "\b":
-//         return "\\b";
-//       case "\t":
-//         return "\\t";
-//       case "\x1a":
-//         return "\\Z";
-//       case "'":
-//         return "''";
-//       case '"':
-//         return '""';
-//       default:
-//         return "\\" + s;
-//     }
-//   });
-
-//   return val;
-// };
-
-/*
-|-----------------------------------
-| make a query string from an object
-|-----------------------------------
-| "usdts:=usdts, jpyts:=jpyts, eurts:=eurts, gbpts:=gbpts, cnytb:=cnytb, nalja:=nalja, sigack:=sigack"
-*/
-// function queryObj2objStr (qObj, sJoiner) {
-// 	var sAr = [];
-// 	var joiner = sJoiner || ", ";
-// 	for (var fld in qObj)  {
-// 		if (fld !== "$$hashKey") sAr.push(fld + "=:" + fld );
-// 	}
-// 	return sAr.join(joiner);
-// }
-
-// function queryObj2str (qObj, sJoiner) {
-// 	var sAr = [];
-// 	var joiner = sJoiner || ", ";
-// 	for (var fld in qObj)  {
-// 		if (fld !== "$$hashKey" && fld) sAr.push(fld + "='" + mysql_real_escape_string(qObj[fld]) + "'");;
-// 	}
-// 	var str = sAr.join(joiner); //console.log(str);
-// 	return str;
-// }
 
 /*
 |-----------------------------------
@@ -170,7 +84,7 @@ exports.onequery = function(dbobj, res) {
  * @return {[type]}
  */
 function simpleQuery(dbobj, res) {
-	var sql = mysql.format(dbobj.sql, dbobj.inserts);console.log(sql);
+	var sql = mysql.format(dbobj.sql, dbobj.inserts); // console.log(sql);
 	conn.query(sql, function(err, result) {
 		console.log(joyutil.getNaljaSigack() + " " + dbobj.category);
 		if (err) console.log("joySQL Error: " + err);
@@ -271,11 +185,10 @@ function allQuery(dbobj, res) {
 	}
 
 	qstr = tmparray.join(" ");
-	// console.log(qstr);
-
-	conn.query(qstr, function(err, result) {
+	var query = conn.query(qstr, function(err, result) {
 		if (err) console.log("joySQL Error: " + err);
 		else {
+			// console.log(query.sql);
 			if (!res) return; // for non-web queries
 			else res.end(JSON.stringify(result));
 			console.log(joyutil.getNaljaSigack() + " " + category);
@@ -288,51 +201,33 @@ function newQuery(dbobj, res) {
 	var tmparray = [];
 	qstr = "INSERT INTO " + dbobj.table + " SET ?";
 	if (dbobj.rmfield) delete dbobj.qobj[dbobj.rmfield];
-
-	var qry = conn.query(qstr, dbobj.qobj, function(err, result) {
+	var query = conn.query(qstr, dbobj.qobj, function(err, result) {
 		if (err) console.log(dbobj.category + " joySQL Error: " + err);
 		else {
+			// console.log(query.sql);
 			if (!res) return; // for non-web queries
 			if (dbobj.category=="works new") workDoubleTime(result.insertId, dbobj.qobj.ref, res);
 			else res.end(JSON.stringify(result.insertId));
 			console.log(joyutil.getNaljaSigack() + " " + dbobj.category);
 		}
 	});
-
-	 // console.log(qry);
 }
 
 function oldQuery(dbobj, res) {
 	var qstr;
 	var tmparray = [];
 
-	// tmparray.push("UPDATE");
-	// tmparray.push(dbobj.table);
 	tmparray.push("UPDATE " + dbobj.table + " SET ?");
 	if (dbobj.rmfield) delete dbobj.qobj[dbobj.rmfield];
-	// if (dbobj.qobj.hasOwnProperty('$$hashKey')) delete dbobj.qobj['$$hashKey'];
-	// tmparray.push(queryObj2str(dbobj.qobj));
 
-	// CONDITIONALS
-	// if (dbobj.gigan) {
-	// 	tmparray.push("WHERE (nalja >= '" + dbobj.gigan[0] + "' AND nalja <= '" + dbobj.gigan[1] + "')")
-	// }
-
-	// if (dbobj.searchobj) {
-	// 	if (dbobj.gigan) tmparray.push("AND");
-	// 	else tmparray.push("WHERE");
-	// 	tmparray.push(searchobj2str(dbobj.searchobj));
-	// }
-
-	// tmparray.push("WHERE")
 	tmparray.push("WHERE " + dbobj.updateinfo.field + "='" + dbobj.updateinfo.value + "'");
 
 	qstr = tmparray.join(" ");
-	// console.log(qstr);
 
-	var qry = conn.query(qstr, dbobj.qobj, function(err, result) {
+	var query = conn.query(qstr, dbobj.qobj, function(err, result) {
 		if (err) console.log(dbobj.category + " joySQL Error: " + err);
 		else {
+			// console.log(query.sql);
 			console.log(joyutil.getNaljaSigack() + " " + dbobj.category);
 			if (dbobj.dbop === "fx") {
 				// console.log(dbobj.qobj);
@@ -376,7 +271,7 @@ function eksQuery(dbobj, res) {
 			if (!res) return; // for non-web queries
 		}
 	});
-	console.log(query.sql);
+	// console.log(query.sql);
 
 	// Lastly, eks
 	var db = {};

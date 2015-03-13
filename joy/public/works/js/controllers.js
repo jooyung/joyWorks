@@ -1,22 +1,30 @@
 'use strict';
 
-/* Controllers */
+/**
+ * WORKS CONTROLLERS
+ */
+
+/**
+ * LOGIN PLEASE
+ */
+if (!window.sessionStorage.token) location.pathname = '/';
 
 angular.module('myApp.controllers', [])
 .
-controller('MyController', ['$scope', '$window', '$http', '$sce', '$interval', 'joyUtils', 'ARBAGO',
-function($scope, $window, $http, $sce, $interval, joyUtils, ARBAGO) {
+controller('MyController', ['$scope', '$window', '$http', '$location', '$sce', '$interval', 'joyUtils', 'ARBAGO',
+function($scope, $window, $http, $location, $sce, $interval, joyUtils, ARBAGO) {
+
 	$scope.author = ARBAGO.president;
 	$scope.data = [];
-	$scope.categoryOptions = [ 'bunho', 'caption', 'cash', 'card', 'mark', 'nalja', 'ref', 'sigack', 'yoil' ];
-	$scope.fromDate = joyUtils.sayLastMonth();
+	$scope.categoryOptions = [ 'bunho', 'caption', 'cash', 'card', 'mark', 'nalja', 'ref', 'rel', 'sigack', 'yoil' ];
+	$scope.defaultDates = setDefaultDates;
+	setDefaultDates();
 	$scope.inorder = 'mark';
-	$scope.selectedorder = 'mark';
+	// $scope.selectedorder = 'mark';
 	$scope.searchSeed = '';
 	$scope.showWork = false;
 	$scope.showAll = true;
 	$scope.pending = true;
-	$scope.toDate = joyUtils.sayToday();
 
 	$scope.gigansArray = [{label: 'D', value: '1D'}, {label: 'W', value: '1W'}, {label: 'M', value: '1M'}, {label: 'S', value: '3M'}, {label: '6', value: '6M'}, {label: 'Q', value: '1Q'}, {label: 'H', value: '1H'}, {label: 'Y', value: '1Y'}, {label: '3', value: '3Y'}];
 
@@ -60,9 +68,13 @@ function($scope, $window, $http, $sce, $interval, joyUtils, ARBAGO) {
 	/**
 	 * Calendar Dates
 	 */
-	$scope.defaultDates = function() {
-		$scope.toDate = joyUtils.sayToday();
-		$scope.fromDate = joyUtils.sayLastMonth();
+
+	function setDefaultDates() {
+		$scope.fromDate = dateToDefaultTimes( new Date(), 0 ); // 00:00:00
+		$scope.toDate = dateToDefaultTimes( new Date(), 1 ); // 23:59:59
+
+		$scope.fromDate.setDate($scope.fromDate.getDate()+1); // 2015-1-2 ~ 2015-2-1
+		$scope.fromDate.setMonth($scope.fromDate.getMonth()-1);
 	};
 
 	/**
@@ -85,6 +97,7 @@ function($scope, $window, $http, $sce, $interval, joyUtils, ARBAGO) {
 	$scope.getWorksByCalendar = function() {
 		// console.log("getWorksByCalendar");
 		var db = {category: "works 캘린더", table: "works", dbop: "all", rmfield: '', qobj: '', searchobj: ''};
+		// db.gigan = dateArrayToISOArray( [$scope.fromDate, $scope.toDate] );console.log(db.gigan);
 		db.gigan = [$scope.fromDate, $scope.toDate];
 		$scope.getWorks({db: db});
 	};
@@ -92,6 +105,7 @@ function($scope, $window, $http, $sce, $interval, joyUtils, ARBAGO) {
 	$scope.getWorksByGigan = function(gigan, btn) {
 		$scope.selected = btn;
 		var db = {category: "works 기간", table: "works", dbop: "all", rmfield: '', qobj: '', searchobj: ''};
+		// db.gigan = dateArrayToISOArray( getPeriod($scope.toDate, gigan) );console.log(db.gigan);
 		db.gigan = getPeriod($scope.toDate, gigan);
 		$scope.getWorks({db: db});
 	};
@@ -105,50 +119,49 @@ function($scope, $window, $http, $sce, $interval, joyUtils, ARBAGO) {
 	| http://stackoverflow.com/questions/15519713/highlighting-a-filtered-result-in-angularjs
 	 */
 	$scope.highlight = function(text, search) {
-        if (!search) {
-            return $sce.trustAsHtml(text);
-        }
-      return $sce.trustAsHtml(unescape(escape(text).replace(new RegExp(escape(search), 'gi'), '<span class="highlightedText">$&</span>')));
-    };
+		if (!search) {
+			return $sce.trustAsHtml(text);
+		}
+		return $sce.trustAsHtml(unescape(escape(text).replace(new RegExp(escape(search), 'gi'), '<span class="highlightedText">$&</span>')));
+	};
 
-    $scope.searchData = function() {
-    	if (!$scope.searchSeed) return;
+	$scope.searchData = function() {
+		if (!$scope.searchSeed) return;
 		var db = {category: "works 찾기", table: "works", dbop: "all", rmfield: '', qobj: '', gigan: ''};
 		db.searchobj = {searchseed: $scope.searchSeed, searchfields: ['caption', 'work']};
 
 		$scope.getWorks({db: db});
-    };
+	};
 
-    $scope.searchDataByCalendar = function() {
-    	if (!$scope.searchSeed) return;
+	$scope.searchDataByCalendar = function() {
+		if (!$scope.searchSeed) return;
 		var db = {category: "works 기간내찾기", table: "works", dbop: "all", rmfield: '', qobj: '', gigan: ''};
 		db.searchobj = {searchseed: $scope.searchSeed, searchfields: ['caption', 'work']};
 		db.gigan = [$scope.fromDate, $scope.toDate];
 		$scope.getWorks({db: db});
-    };
-
-	$scope.toggleColorWork = function() {
-		alert('Color Work');
 	};
 
-/*
-|-----------------------------
-| NEW WINDOW: WORK EDIT DIALOG
-|-----------------------------
-| $window: dependency injection (communcation with dialog)
-*/
+	$scope.toggleColorWork = function() {
+	alert('Color Work');
+	};
+
+	/*
+	|-----------------------------
+	| NEW WINDOW: WORK EDIT DIALOG
+	|-----------------------------
+	| $window: dependency injection (communcation with dialog)
+	*/
 
 	$scope.getDialogSpecs = function() {
 		return {url: "workDialog.html", name: "WorkWindow", features: "left=300,top=200,height=400,width=604"};
 	};
 
-//window.open(URL,name,specs,replace)
-//	features = "height=305,width=110,alwaysLowered=0,alwaysRaised=0, channelmode=0,dependent=0,directories=0,fullscreen=0, hotkeys=1,location=0,menubar=0,resizable=0,scrollbars=0, status=0,titlebar=0,toolbar=0,z-lock=0";
 	$scope.workDialogNew = function(bunho, ref) {
 		var specs = $scope.getDialogSpecs();
 		var dialogWork;
-		var datetime = makeDateTime('times');
-		$window.worktmp = {nalja: datetime[0], yoil: datetime[1], sigack: datetime[2], ref: ref};
+		// var datetime = makeDateTime('times');
+		// $window.worktmp = {nalja: datetime[0], yoil: datetime[1], sigack: datetime[2], ref: ref};
+		$window.worktmp = {ref: ref};
 		$scope.pending = true;
 		dialogWork = $window.open(specs.url, specs.name, specs.features);
 

@@ -1,5 +1,9 @@
 'use strict';
 
+/**
+ * WORKS WORKDIALOG
+ */
+
 // Declare app level module which depends on filters, and services
 angular.module('workDialogApp', [
   // 'ngRoute'
@@ -25,16 +29,26 @@ function($scope, $http, $window) {
 
 		$http.post('/db', angular.toJson({db: db}))
 		.success(function(data) {
-			$scope.item = data[0];
-			$scope.item.nalja = $window.opener.convertDate($scope.item.nalja);
+			$scope.item = data[0]; // 2015-03-12T15:00:00.000Z
+			$scope.item.nalja = new Date(Date.parse($scope.item.nalja));
+
+			//-- 20150313 AngularJS 1.3
+			//-- Combine date and time from MySQL into JavaScript Date Object
+			var tmp = $scope.item.sigack.split(':');
+			$scope.item.nalja.setHours(tmp[0]);
+			$scope.item.nalja.setMinutes(tmp[1]);
+			$scope.item.nalja.setSeconds(tmp[2]);
+
+			//-- Detach time from date
+			$scope.item.sigack = new Date($scope.item.nalja); // Fri Mar 13 2015 20:43:44 GMT+0900 (Korea Standard Time)
 			dbop = "old";
 		})
 		.error(function(err) {alert(err.msg);});
 	} else {
 		dbop = "new";
-		var nalja = $window.opener.worktmp.nalja;
-		var yoil = $window.opener.worktmp.yoil;
-		var sigack = $window.opener.worktmp.sigack;
+		var nalja = new Date();
+		var yoil = nalja.getDay();
+		var sigack = new Date(nalja); //-- Detach time from date
 		var ref = $window.opener.worktmp.ref;
 		if (!ref) ref = ''; // When the data are sent, angular.toJson removes 'undefined' field
 
@@ -42,14 +56,18 @@ function($scope, $http, $window) {
 	}
 
 	$scope.ok = function() {
-		//$window.opener.item = $scope.item;//not necessary because it is sync auto
-		// if (!item.caption) revertItem($scope.item, $scope.cloneItem);
 		if (!$scope.item.caption) {
-		console.log($scope.item);
+			console.log($scope.item);
 			alert("The CAPTION is empty!");
 			return;
 		}
-		db = { category: "works " + dbop, table: "works", dbop: dbop, rmfield: 'bunho', qobj: $scope.item, gigan: '', searchobj: '' };
+
+		db = { category: "works " + dbop, table: "works", dbop: dbop, rmfield: 'bunho', qobj: makeQryObj(), gigan: '', searchobj: '' };
+
+		//-- to MySQL: put into a normal string, then MySQL will save it into ISO type
+		db.qobj.nalja = $scope.item.nalja.getFullYear() + "-" + ($scope.item.nalja.getMonth()+1) + "-" + $scope.item.nalja.getDate();
+		db.qobj.sigack = $scope.item.sigack.getHours() + ":" + $scope.item.sigack.getMinutes() + ":" + $scope.item.sigack.getSeconds();
+
 		if (dbop === "old") db.updateinfo = { field: 'bunho', value: $scope.item.bunho };
 		$http.post('/db', angular.toJson({db: db}))
 		.success(function(data) {
@@ -81,7 +99,14 @@ function($scope, $http, $window) {
 		$scope.item.yoil = calcYoil(nalja);
 	}
 
-	// console.log("Items: " , $window.opener.item);
+
+	function makeQryObj () {
+		var tmpObj = {};
+		for (var key in $scope.item) tmpObj[key] = $scope.item[key];
+		return tmpObj;
+	}
+
+
 }]);
 
 

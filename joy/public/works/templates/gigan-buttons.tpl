@@ -6,7 +6,7 @@
 			>{{b.label}}</button>
 	<button ng-click="workDialogNew()" class="btn btn-primary">새</button>
 	<select id="inorder" ng-model="inorder">
-		<option ng-repeat="item in categoryOptions" value="{{item}}" ng-selected="selectedorder">{{item}}</option>
+		<option ng-repeat="item in categoryOptions track by item" value="{{item}}">{{item}}</option>
 	</select>
 	<button ng-click="showAll = !showAll" class="btn btn-primary">SW</button>
 	<button ng-click="toggleColorWork()" class="btn btn-primary">CW</button>
