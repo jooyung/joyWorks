@@ -1,0 +1,1 @@
+<iframe src="http://community.fxkeb.com/fxportal/jsp/RS/DEPLOY_EXRATE/22056_0.html" width="175" height="250" border="0" frameborder="no" scrolling="no" marginwidth="0"></iframe>

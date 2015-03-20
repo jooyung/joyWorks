@@ -15,7 +15,8 @@ var
 	, pO = { 0: [/\s+-\s+/g, "-"], 1: [/^(\d+)\s+/, "$1-"], 2: [/_+/g, " "], 3: [/^(\d+)\.\s*/, "$1-"] }
 	, fChanged = 0
 	, dirCount = 0
-	, startDir = "c:\\Users\\joy\\Music\\Elvis"
+	// , startDir = path.join("c:\\Users\\joy\\Music\\Elvis\\Adios Lincoln-2014"
+	, startDir = path.join("C:", "Users", "joy", "Music", "Elvis", "Adios Lincoln-2014")
 ;
 
 var keys = Object.keys(pO);
@@ -33,6 +34,7 @@ function applyReGex(filename) {
 
 /**
 * Go into each directory and do the work
+* ---
  */
 function changeNames (dir, sp) {
 
@@ -77,6 +79,11 @@ function changeNames (dir, sp) {
 }
 
 //-- Change the directory
+/**
+ * Change the directory
+ * ---
+ * Not necessary, but I just feel to do it
+ */
 try {
 	process.chdir(startDir);
 } catch (err) {

@@ -1,8 +1,10 @@
-var mysql = require('mysql');
-var joyutil = require('./joyutils');
-var server = require('../JOYServer');
-var fxrates = {usdts: 0, eurts: 0, gbpts: 0, jpyts: 0, cnytb: 0};
-var fxrates_old = JSON.stringify(fxrates);
+var
+	mysql = require('mysql')
+	, joyutil = require('./joyutils')
+	, io = require('./joysocket')
+	, fxrates = {usdts: 0, eurts: 0, gbpts: 0, jpyts: 0, cnytb: 0}
+	, fxrates_old = JSON.stringify(fxrates)
+;
 exports.fxrates = fxrates;
 /*
 |-------------------------------
@@ -51,11 +53,11 @@ function searchobj2str (sObj) {
 	return "(" + sAr.join(" OR ") + ")";
 }
 
-/*
-|-----------------------------------
-| E X P O R T S
-|-----------------------------------
-*/
+/**
+ * E X P O R T S
+ */
+
+
 exports.conn = conn;
 
 exports.onequery = function(dbobj, res) {
@@ -79,26 +81,25 @@ exports.onequery = function(dbobj, res) {
 
 /**
  * used by works dialog
- * @param  {[type]}
- * @param  {[type]}
- * @return {[type]}
+ * ---
+ * inserts: not for db, but for '?'s in sql
  */
+
 function simpleQuery(dbobj, res) {
 	var sql = mysql.format(dbobj.sql, dbobj.inserts); // console.log(sql);
 	conn.query(sql, function(err, result) {
 		console.log(joyutil.getNaljaSigack() + " " + dbobj.category);
-		if (err) console.log("joySQL Error: " + err);
-		else res.end(JSON.stringify(result));
+		if (err) console.log("joySQL Error: simple: " + err);
+		else if (dbobj.category == "fx onetime") io.informFxRates(result[0]);
+		else if (res) res.end(JSON.stringify(result[0]));
+		else return result;
 	});
 }
 
 /**
  * Fetch updated data right after "old" update
- * @param  {[type]}
- * @param  {[type]}
- * @return {[type]}
- * @description bunho is removed in "old" query
  */
+
 function getUpdatedByBunho(dbobj, res) {
 	var db = {};
 	db.sql = "SELECT * FROM ?? WHERE ?? = ?";
@@ -109,11 +110,10 @@ function getUpdatedByBunho(dbobj, res) {
 
 /**
  * Special and individual function only for works
- * @param  {[type]}
- * @param  {[type]}
- * @return {[type]}
- * @description Ater a new work is saved, then update the ref and retrieve it
+ * ---
+ * Ater a new work is saved, then update the ref and retrieve it
  */
+
 function workDoubleTime(bunho, ref, res) {
 	var sql, inserts;
 
@@ -125,7 +125,7 @@ function workDoubleTime(bunho, ref, res) {
 		// Update the ref
 		conn.query(sql, function(err, result) {
 			console.log(joyutil.getNaljaSigack() + " Works New Double Update");
-			if (err) console.log("joySQL Error: " + err);
+			if (err) console.log("joySQL Error: work double: " + err);
 			// else ;
 		});
 	}
@@ -137,29 +137,15 @@ function workDoubleTime(bunho, ref, res) {
 	// Retrieve
 	conn.query(sql, function(err, result) {
 		console.log(joyutil.getNaljaSigack() + " Works New Double Retrieval");
-		if (err) console.log("joySQL Error: " + err);
+		if (err) console.log("joySQL Error: work double2: " + err);
 		else res.end(JSON.stringify(result));
 	})
 }
 
-/*
-|----------------------------------
-|   S O C K E T . I O
-|----------------------------------
-*/
-// var io = require('socket.io').listen(server);
-// io.on('connection', function (socket) {
-// 	socket.emit('news', { hello: 'world' });
-// 	socket.on('my other event', function (data) {
-// 		console.log(data);
-// 	});
-// });
+/**
+ * All
+ */
 
-/*
-|-----------------------------------
-| F U N C T I O N S
-|-----------------------------------
-*/
 function allQuery(dbobj, res) {
 	var category = dbobj.category
 		, rmfield = dbobj.rmfield
@@ -186,7 +172,7 @@ function allQuery(dbobj, res) {
 
 	qstr = tmparray.join(" ");
 	var query = conn.query(qstr, function(err, result) {
-		if (err) console.log("joySQL Error: " + err);
+		if (err) console.log("joySQL Error: all: " + err);
 		else {
 			// console.log(query.sql);
 			if (!res) return; // for non-web queries
@@ -196,13 +182,17 @@ function allQuery(dbobj, res) {
 	});
 }
 
+/**
+ * New
+ */
+
 function newQuery(dbobj, res) {
 	var qstr;
 	var tmparray = [];
 	qstr = "INSERT INTO " + dbobj.table + " SET ?";
 	if (dbobj.rmfield) delete dbobj.qobj[dbobj.rmfield];
 	var query = conn.query(qstr, dbobj.qobj, function(err, result) {
-		if (err) console.log(dbobj.category + " joySQL Error: " + err);
+		if (err) console.log(dbobj.category + " joySQL Error: new: " + err);
 		else {
 			// console.log(query.sql);
 			if (!res) return; // for non-web queries
@@ -212,6 +202,10 @@ function newQuery(dbobj, res) {
 		}
 	});
 }
+
+/**
+ * Old
+ */
 
 function oldQuery(dbobj, res) {
 	var qstr;
@@ -225,7 +219,7 @@ function oldQuery(dbobj, res) {
 	qstr = tmparray.join(" ");
 
 	var query = conn.query(qstr, dbobj.qobj, function(err, result) {
-		if (err) console.log(dbobj.category + " joySQL Error: " + err);
+		if (err) console.log(dbobj.category + " joySQL Error: old: " + err);
 		else {
 			// console.log(query.sql);
 			console.log(joyutil.getNaljaSigack() + " " + dbobj.category);
@@ -237,10 +231,10 @@ function oldQuery(dbobj, res) {
 				fxrates = dbobj.qobj;
 				if (!compareFxRates()) {
 					console.log("Fx Changed")
-					exports.fxrates = fxrates;
+					// exports.fxrates = fxrates;
 					fxrates_old = JSON.stringify(fxrates);
 					// console.log(dbobj.qobj);
-					server.informFxRates();
+					io.informFxRates(fxrates);
 				}
 			}
 			if (!res) return; // for non-web queries
@@ -252,9 +246,17 @@ function oldQuery(dbobj, res) {
 	// console.log(qry);
 }
 
+/**
+ * compare FxRates
+ */
+
 function compareFxRates() {
 	return fxrates.usdts != 0 ? JSON.stringify(fxrates) == fxrates_old : true;
 }
+
+/**
+ * Eks
+ */
 
 function eksQuery(dbobj, res) {
 	var qstr;
@@ -266,7 +268,7 @@ function eksQuery(dbobj, res) {
 
 	// First, backup the old one
 	var query = conn.query(qstr, dbobj.qobj, function(err, result) {
-		if (err) console.log(dbobj.category + " eksQuery joySQL Error: " + err);
+		if (err) console.log(dbobj.category + " eksQuery joySQL Error: eks: " + err);
 		else {
 			if (!res) return; // for non-web queries
 		}
