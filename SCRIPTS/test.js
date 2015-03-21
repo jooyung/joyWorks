@@ -9,8 +9,4 @@ var
 	, startDir = "c:/Users/joy/Music/Elvis/Adios Lincoln-2014"
 ;
 
-var pO = { 0: [/^\s*[cC]hapter\s+/, ""], 1: [/^PART\s+/, ""] }
-
-for (var k in pO) {
-	cc(pO[k])
-}
+console.log("Hello %", ":", "주영")

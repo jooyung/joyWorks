@@ -1,8 +1,7 @@
-/*
-|-----------------------------------------
-| PARSING
-|-----------------------------------------
-|
+/**
+ * PARSING
+
+
 	// <p>2015-02-25&nbsp;17:54</p>
 	var datepat = /(\d{4}-\d{2}-\d{2}).+?(\d{2}:\d{2})/;
 
@@ -14,8 +13,8 @@
 		fxobj.buy.push(match[1]);
 		fxobj.sell.push(match[2]);
 	}
-|
-*/
+|*/
+
 var
 	request = require('request')
 	, joysql = require('./joysql')
@@ -61,11 +60,19 @@ function FxProcessing(fxstr) {
 	db.qobj = fxrates;
 	db.updateinfo = {field: 'bunho', value: 1};
 
-
-	// console.log(fxrates);
-	//UPDATE fxrates SET usdts:=usdts, jpyts:=jpyts, eurts:=eurts, gbpts:=gbpts, cnytb:=cnytb, nalja:=nalja, sigack:=sigack
 	joysql.onequery(db);
 }
+
+/**
+ * EXPORTS
+ */
+
+/**
+ * FxRetrieval
+ * --
+ * Other scripts call this
+ * socket (time interval)
+ */
 
 exports.FxRetrieval = function () {
 	var myhost = "community.fxkeb.com";
@@ -80,7 +87,7 @@ exports.FxRetrieval = function () {
 				FxProcessing(data.replace(/\n/g, ''));
 			}
 		});
-	} else console.log("Not Fx Time Yet");
+	} // else console.log("Not Fx Time Yet");
 }
 
 exports.fxrates = fxrates;

@@ -25,6 +25,8 @@ function informFxRates (fxrates) {
 
 /**
  * query fx
+ * --
+ * upon client's connection, query once to supply fx rates from db to clients
  */
 
 function onetimeFxQuery() {
@@ -33,11 +35,13 @@ function onetimeFxQuery() {
 	db.inserts = ["fxrates"];
 	db.category = "fx onetime";
 	db.dbop = "simple";
-	var fxrates = joysql.onequery(db);
+	joysql.onequery(db);
 }
 
 /**
  * socket server
+ * --
+ * When a client gets connected, query db for fxrates to supply
  */
 
 function listen (server){
@@ -47,7 +51,7 @@ function listen (server){
 	io.on('connection', function (socket) {
 		users.push(socket);
 		socket.emit('client', { client: socket.id });
-		onetimeFxQuery();
+		onetimeFxQuery(); //-- runs once per client
 	});
 }
 

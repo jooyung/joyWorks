@@ -10,7 +10,7 @@ var i, bmk, bmkname;
 var changeColor = true;
 
 //-- Patterns
-var pO = { 0: [/^\s*[cC]hapter\s+/, ""], 1: [/^PART\s+/, ""] }
+var pO = { 0: [/^\s*[cC]hapter\s*/, ""], 1: [/^Part|PART\s*/, ""] }
 
 /**
  * printing easily
@@ -58,7 +58,7 @@ function changeNames(bObj, sp) {
 		//-- has children? Go Deep
 		if (bmk.children) changeNames(bmk, sp + " + ");
 
-		cc(sp + bmk.name);
+		// cc(sp + bmk.name);
 
 		//-- Process: apply regex to change the name
 		if ( newName = applyReGex(bmk.name) ) {

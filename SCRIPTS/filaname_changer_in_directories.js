@@ -16,7 +16,7 @@ var
 	, fChanged = 0
 	, dirCount = 0
 	// , startDir = path.join("c:\\Users\\joy\\Music\\Elvis\\Adios Lincoln-2014"
-	, startDir = path.join("C:", "Users", "joy", "Music", "Elvis", "Adios Lincoln-2014")
+	, startDir = path.join("C:", "Users", "joy", "Music", "Elvis", "Elvis Presley - The Complete 50's Masters")
 ;
 
 var keys = Object.keys(pO);
