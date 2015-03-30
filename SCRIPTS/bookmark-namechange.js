@@ -10,7 +10,7 @@ var i, bmk, bmkname;
 var changeColor = true;
 
 //-- Patterns
-var pO = { 0: [/^\s*[cC]hapter\s*/, ""], 1: [/^Part|PART\s*/, ""] }
+var pO = { 0: [/^\s*[cC]hapter\s*/, ""], 1: [/^Part|PART\s*/, ""], 2: [/^Appendix\s*/, ""] }
 
 /**
  * printing easily

@@ -12,10 +12,13 @@ var source =
 
 
 
+
 	,["$차례", 8]
 	,[":차례", 8]
 
-	
+
+
+
 ];
 
 
@@ -23,8 +26,17 @@ var source =
 this.bookmarkRoot.remove();
 console.println("\r");
 
+/**
+ * Do it: Convert Data, Start, Console Clear
+ */
+
 var data = converting();
 start(bookmarkRoot);
+console.clear();
+
+/**
+ * Functions
+ */
 
 function converting() {
 	var data = [];
