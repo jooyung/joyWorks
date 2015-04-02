@@ -1,31 +1,54 @@
-var len = bookmarkRoot.children.length;
-var i, bmk, bmkname;
+/**
+ * Color Bookmarks
+ * ----------------------
+ * Modified: 2015-03-30 (turn it to functions, and clean the code)
+ */
 
-// Make second-deep children black
-var godeep = 1;
-var j, godeepLen, godeepBmk;
+//-- Make second-deep children black
+var bmk, godeep = true, godeepBmk;
 
-console.println("\r-----------S T A R T-----------------\r");
+//-- dir means the first chilren of the bookmarkRoot
+var skipDir = ['AAA', 'AA', 'Words', 'Contents'];
 
-for (i=0; i<len; i++) {
-    bmk = bookmarkRoot.children[i];
-    bmkname = bmk.name;
-    console.println(bmkname);
-    //if (bmkname == 'C-20150201-094046-0001') continue;
-    if (bmkname != 'AAA' && bmkname != 'AA' && bmkname != 'Words' && bmkname != 'Contents') {
-		bmk.style = 0;
-		bmk.color = ["RGB", 0, 0, 1];
+/**
+ * color bookmarks
+ */
 
-		// 2nd Level
-		if (godeep && bmk.children && bmk.children.length > 0) {
-			godeepLen = bmk.children.length;
-			for (j=0; j<godeepLen; j++) {
-				godeepBmk = bmk.children[j];
-				console.println("-----> " + godeepBmk.name);
-				godeepBmk.style = 2;
-				godeepBmk.color = ["RGB", 0, 0, 0];
+function colorBookmarks(bmkObj) {
+	for (var i in bmkObj.children) {
+	    bmk = bmkObj.children[i];
+	    // console.println(bmk.name);
+	    if (!isSkipDir(bmk.name)) {
+			bmk.style = 0;
+			bmk.color = ["RGB", 0, 0, 1];
+
+			//-- 2nd Level
+			if (godeep && bmk.children && bmk.children.length > 0) {
+				for (var j in bmk.children) {
+					godeepBmk = bmk.children[j];
+					// console.println("-----> " + godeepBmk.name);
+					godeepBmk.style = 2;
+					godeepBmk.color = ["RGB", 0, 0, 0];
+				}
 			}
 		}
 	}
 }
-console.println("-------------E N D-------------------\r");
+
+/**
+ * Skip Directories
+ */
+
+function isSkipDir(dir) {
+	for (var i in skipDir)
+		if (dir === skipDir[i]) return true;
+
+	return false;
+}
+
+/**
+ * Start
+ */
+
+colorBookmarks(bookmarkRoot);
+console.clear();

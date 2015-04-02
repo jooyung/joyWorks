@@ -150,7 +150,9 @@ A _**namespace**_ is a grouping of semantically related types contained in an as
 `As luck would have it`, the Windows.* namespaces offer functionality that mirrows many APIs of the .NET base class libraries.
 
 [W] as well
-+ In addition; also: mentioned other matters as well.
+
+
+- In addition; also: mentioned other matters as well.
 - With equal effect: I might as well go.
 
 `As well`, many of the Windows.* namespaces offer similar (though not identical) funcionality as is found in the .NET base class libraries.
@@ -161,9 +163,10 @@ So the short answer is that the Microsoft .NET platform is alive and well under 
 ___
 # 2. Building C# Applications
 [W] proper  (prŏp′ər) [명사 뒤] 엄밀한 의미의
-- 5. Being within the strictly limited sense, as of a term designating something: *the town proper, excluding the suburbs*
-- 5. (immediately postpositive) (of an object, quality, etc) referred to or named specifically so as to exclude anything not directly connected with it: *his claim is connected with the deed proper.*
-- 4. belonging or pertaining exclusively to a person, thing, or group.
+
+- Being within the strictly limited sense, as of a term designating something: *the town proper, excluding the suburbs*
+- (immediately postpositive) (of an object, quality, etc) referred to or named specifically so as to exclude anything not directly connected with it: *his claim is connected with the deed proper.*
+- belonging or pertaining exclusively to a person, thing, or group.
 - *The celebrations proper always begin on the last stroke of midnight.* 엄밀한 의미의 축하 행사는 자정을 알리는 마지막 타종 소리와 함께 시작된다.
 
 The point of this chapter is to provide a tour of various .NET development options, including, of course, Visual Studio `proper`.
@@ -193,11 +196,13 @@ Many of these tools are driven from the command prompt, so if you wish to use th
 ### Some Unique Features of Visual C# Express
 ## Building .NET Applications Using Visual Studio
 [W] staggering (stăg′ər-ĭng)
+
 - Causing great astonishment, amazement, or dismay; overwhelming: `a staggering achievement; a staggering defeat.`
 
 There are a `staggering` number of members within the Visual Studio family.
 ### Some Unique Features of Visual Studio
 [W] at that
+
 - In addition; besides: `lived in one room, and a small room at that.`
 - Regardless of what has been said or implied: `a long shot, but she just might win at that.`
 
@@ -221,7 +226,7 @@ To be completely honest, Visual Studio provides so many features that it would t
 
 If you wish to perform a local installation of the help system `after the fact`, navigate to the All Programs->Microsoft Visual Studio 11->Microsoft Help Viewer tool using your Windows Start button.
 
-[W] `At the risk of` sounding like a broken record, I really can’t emphasize enough how important it is that you learn to use the .NET Framework 4.5 SDK documentation. 
+[W] `At the risk of` sounding like a broken record, I really can’t emphasize enough how important it is that you learn to use the .NET Framework 4.5 SDK documentation.
 ## Summary
 ___
 # 3. Core C# Programming Constructs, Part I
@@ -267,6 +272,7 @@ The .NET platform supports a style of string formatting slightly akin to the pri
 ### String Concatenation
 ### Escape Characters
 [W] rusty (rŭs′tē)
+
 - out of practice; impaired in skill or knowledge by inaction or neglect
 
 In case you are a bit `rusty` on the meanings behind these escape characters, Table 3-6 lists the more common optins.
@@ -274,15 +280,17 @@ In case you are a bit `rusty` on the meanings behind these escape characters, Ta
 ### Strings and Equality
 ### Strings Are Immutable
 [W] flat-out (flăt′out′)
+
 -  Thoroughgoing; out-and-out: *a flat-out promotional campaign*; *a flat-out deception.*
 
 1 using full speed or all of one's resources: *a flat-out effort.*
-2 downright: *a flat-out forgery.* 
+2 downright: *a flat-out forgery.*
 
 At first glance, this might seem like a `flat-out` lie, given that we are always reassigning strings to new values and because System.String type defines a number of methods that appear to modify the character data in one way or another (such as uppercasing and lowercasing).
 
 ### The System.Text.StringBuilder Type
 [W] abandon (ə-băn′dən) 방종, 자유분방
+
 - Great enthusiasm or lack of restraint: *skied with abandon.*
 - *He signed cheques with careless abandon.*
 
@@ -296,11 +304,13 @@ Given that the string type can be inefficient when used `with reckless abandon',
 ### Setting Project-Wide Overflow Checking
 ### The unchecked Keyword
 [W] discrete (dĭ-skrēt′)
+
 - separate, individual, distinct, detached, disconnected, unattached, discontinuous *the process seen as a sequence of discrete phases*
 
 When you want to selectively handle `discrete` statements, make use of the checked keyword.
 ## Understanding Implicitly Typed Local Variables
 [W] yours truly, an informal term for I, myself, or me
+
 - I, myself, or me: *"Let me talk about a typical day in the life of yours truly" (Robert A. Spivey).*
 
 While many (including `yours truly`) would argue that it is always good practice to explicitly specify the data type of each variable, the C# language does provide for implicitly typing of local variables using the *var* keyword.
@@ -332,6 +342,7 @@ Unlike C and C++, the if/else statement in C# operates on on Boolean expression,
 ### Conditional Operators
 ### The switch Statement
 [W] whet (wĕt, hwĕt)
+
 - stimulate, increase, excite, stir, enhance, provoke, arouse, awaken, animate, rouse, quicken, incite, kindle, pique `a delicious aroma which whetted our appetites`
 
 To `whet your appetite`, consider the following final helper function, which performs a switch test on the System.DayOfWeek enum.
@@ -356,6 +367,7 @@ ___
 ### Arrays As Arguments or Return Values
 ### The System.Array Base Class
 [W] rundown (rŭn′doun′)
+
 - A point-by-point summary.
 - recapitulation, run-through, sum, summary, summation, summing-up, wrap-up.
 - Informal: recap.
@@ -363,6 +375,7 @@ ___
 Table 4-2 gives a `rundown` of some of the more interesting members (be sure to check the .NET Framework 4.5 SDK documentation for full details).
 ## Understanding the enum Type
 [W] grunt (grŭnt)
+
 - Slang One who performs routine or mundane tasks.
 - an unskilled or low-ranking soldier or other worker; *"infantrymen in Vietnam were called grunts"; "he went from grunt to chairman in six years"*
 - unskilled person - a person who lacks technical training
@@ -374,6 +387,7 @@ For example, if you are creating a payroll system, you might want to refer to th
 [W] By default, the first element is set to the value zero (0), followed by an n+1 `progression`.
 ### Controlling the Underlying Storage for an enum
 [W] conserve (kən-sûrv′)
+
 - To use carefully or sparingly, avoiding waste: *kept the thermostat lower to conserve energy.*
 - To economize: *tried to conserve on fuel during the long winter.*
 - use cautiously and frugally; *"I try to economize my spare time"; "conserve your energy for the ascent to the summit"*
@@ -408,6 +422,7 @@ To define a nullable variable type, the question mark symbol(**?**) is suffixed 
 ___
 # 5. Understanding Encapsulation
 [W] commonplace (kŏm′ən-plās′)
+
 - commonplace - completely ordinary and unremarkable; *"air travel has now become commonplace"; "commonplace everyday activities"*
 - ordinary - not exceptional in any way especially in quality or ability or size or degree; *"ordinary everyday objects"; "ordinary decency"; "an ordinary day"; "an ordinary wine"*
 
@@ -418,6 +433,7 @@ In the Chapters 3 and 4, you investigated a number of core syntactical construct
 Recall the term **"object"** is used to describe an instance of a given class type created using the **new** keyword.
 
 [W] fit the bill
+
 - fit the bill - be what is needed or be good enough for what is required; *"Does this restaurant fit the bill for the celebration?"*
 - ===fill the bill - conform to, fit, meet - satisfy a condition or restriction; *"Does this paper meet the requirements for the degree?"*
 
@@ -427,6 +443,7 @@ However to keep this example as simple as possible, pubic data `fits the bill`.
 [W] However, it is `not uncommon` for a class to have dozens of fields to `contend with`.
 ### The Role of the Default Constructor
 [W] freebee (frē′bē)
+
 - freebee - something that is free (usually provided as part of a promotional scheme); *"the road map was a freebie"*
 - =freebie
 - <->gift - something acquired without compensation
@@ -440,81 +457,235 @@ Every C# class is provided with a `freebee` default constructor that you may red
 ### Observing Constructor Flow
 ### Revisiting Optional Arguments
 ## Understanding the static Keyword
+[W] deem (dēm)
+
+- deem - keep in mind or convey as a conviction or view; *"take for granted"; "view as important"; "hold these truths to be self-evident"; "I hold him personally responsible"*
+- =take for, view as, hold
+- <->hold - assert or affirm; *"Rousseau's philosophy holds that people are inherently good"*
+- <->consider, regard, view, reckon, see - deem to be; *"She views this quite differently from me"; "I consider her to be shallow"; "I don't see the situation quite as negatively as you do"*
+
+Simply put, static members are items that are `deemed` (by the class designer) to be so commonplace that there is no need to create an instance of the class before invoking the member.
 ### Defining Static Field Data
 ### Defining Static Methods
+[W] When designing any C# class, one of your design challenges is to determine which pieces of data
+should be defined as static members, and which should not. While there are no `hard and fast rules`,
+remember that a static data field is shared by all objects of that type. Therefore, if you are defining a
+point of data that all objects should share between them, static is `the way to go`.
 ### Defining Static Constructors
 ### Defining Static Classes
+Recall that a class (or structure) that only exposes static functionality is often termed a **utility class**. When designing a utility class, it is good practice to apply the static keyword to the class definition.
 ## Defining the Pillars of OOP
+[W] contend with
+
+- See also: confront, oppose
+- contend with someone (for something) and contend (with someone) for something
+
+    - to fight someone for something; to compete with someone to win something. *I don't want to have to contend with Sally for the award. I don't want to have to contend for the job with Ed.*
+
+All object-oriented languages (C#, Java, C++, Visual Basic, etc) must `contend with` **three core principals**, often called **the pillars of object-oriented programming (OOP)**.
 ### The Role of Encapsulation
 ### The Role of Inheritance
+The **"is-a" relationship** is termed **inheritance**.
+
+There is another from of code reuse in the world of OOP: the *containment/delegation model* also known as the **"has-a" relationship** or **aggregation**. This form of reuse is not used to establish parent/child relationships. Rther, the "has-a" relationship allows one class to define a member variable of another class and expose its functionality (if required) to the object user indrectly.
 ### The Role of Polymorphism
+This trait captures a language's ability to treat related objects in a similar manner.
+
+A class's ploymorphicinterface is constructed using any number of virtual or abstract members.
+
+In a nutshell, a **virtual member** is a member in a base class that defines a default implementation that may be changed (or more formally speaking, _**overriden**_) by a derived clas. In contract, an **abstract method** is a member in a base class that does not provide a default implementation, but does provide a signature.
 ## C# Access Modifiers
 ### The Default Access Modifiers
+Be default, *type members* are implicitly private while *types* are implicitly internal.
 ### Access Modifiers and Nested Types
+[W] `By way of` example, here is a private enumeration (named CarColor) nested within a public class (named SportsCar):
 ## The First Pillar: C#’s Encapsulation Services
+[W] Because of this, public fields typically `have no place` in a production-level class definition.
 ### Encapsulation Using Traditional Accessors and Mutators
 ### Encapsulation Using .NET Properties
+First of all, understand that properties are just a simplification for "real" accessor and mutator methods.
+
+[W] Therefore, as a class designer, you are still able to perform any internal logic necessary before making the value assignment (e.g., uppercase the value, `scrub the value for illegal characters`, check the bounds of a numerical value, and so on).
+
+Properties (as opposed to accessors and mutators) also make your types easier to manipulate, in that properties are able to respond to the intrinsic operators of C#.
 ### Using Properties Within a Class Definition
+[W] `While this is well and good`, also consider what a class constructor typically does internally.
+
+[W] If you were also making checks on the other data points, you would `have a good deal of` duplicate code.
+
+[W] To streamline your code, and isolate all of your error checking to a central location, `you will do well if` you always use properties within your class whenever you need to get or set the values.
 ### Read-Only and Write-Only Properties
 ### Revisiting the static Keyword: Defining Static Properties
 ## Understanding Automatic Properties
 ### Interacting with Automatic Properties
+[W] As the name implies, this feature will `offload` the work of defining a private backing field and the related C# property member to the compiler using a new bit of syntax.
 ### Regarding Automatic Properties and Default Values
 ## Understanding Object Initialization Syntax
 ### Calling Custom Constructors with Initialization Syntax
+```
+Point goldPoint = new Point(PointColor.Gold) { X = 90, Y = 20 };
+```
 ### Initializing Inner Types
+[W] While you might feel object initialization syntax can `take a bit of getting used to`, once you get comfortable with the code, you'll be quite pleased at how quickly you can establish the state of a new object `with minimal fuss and bother`.
+
+[W] To wrap up this chapter, allow me to close `with three byte-sized` topics that will round out your understanding of building well-encapsulated classes: constant data, read-only fields, and partial class definitions.
 ## Working with Constant Field Data
+This is due to the fact that **constant fields of a class are** _**implicitly static**_.
 ### Understanding Read-Only Fields
 ### Static Read-Only Fields
 ## Understanding Partial Types
+[W]  When you are creating your classes, `it is often the case that` much of the code can be basically ignored after it is `accounted for`. For example, field data, properties, and constructors tend to `remain as-is` during production, while methods tend to be modified quite often.
 ## Summary
+[W] `With this behind you`, you are now able to turn to the next chapter where you will learn to build a family of related classes using inheritance and polymorphism.
 ___
-# 6. Understanding Inheritance and 6. Polymorphism
+# 6. Understanding Inheritance and Polymorphism
 ## The Basic Mechanics of Inheritance
 ### Specifying the Parent Class of an Existing Class
+[W] Currently, this new class has not defined any numbers `whatsoever`.
+
+Although constructors are typically defined as public, **a derived class never inherits the constructors of a parent class**. Constructors are only used to construct the class that they are defined within.
 ### Regarding Multiple Base Classes
 ### The sealed Keyword
 ## Revising Visual Studio Class Diagrams
 ## The Second Pillar of OOP: The Details of Inheritance
 ### Controlling Base Class Creation with the base Keyword
+[W] Let's `retrofit` the custom constructor of the Manager type to do `this very thing` using the base keyword.
+
+[W] Retrofitting refers to the addition of new technology or features to older systems.
+
+- *power plant retrofit*, improving power plant efficiency / increasing output / reducing emissions
+- *home energy retrofit*, the improving of existing buildings with energy efficiency equipment
+- *seismic retrofit*, the process of strengthening older buildings in order to make them earthquake resistant
+
 ### Keeping Family Secrets: The protected Keyword
 ### Adding a Sealed Class
+[W] cap off
+
+- cap off - finish or complete, as with some decisive action; *"he capped off the meeting with a radical proposal"*
+- <->finish off, finish up, get through, polish off, wrap up, clear up, mop up - finish a task completely; *"I finally got through this homework assignment"*
+
+However, when builing class hierarchies, you might find that a certain in the inheritance chain should be **"capped off"**, as it makes no sense to further extend the lineage.
 ## Programming for Containment/Delegation
 ### Understanding Nested Type Definitions
+[W] Chapter 5 briefly mentioned the concept of nested types, which is `a spin on` the "has-a" relationship you have just examined.
+
+[W] Although the syntax is fairly clear, understanding why you would want to do this might not be `readily apparent`.
+
+recall that *non-nested classes* cannot be declared using the *private* keyword.
+
+[W] If the details aren't crystal clear right now, `don't sweat it`.
 ## The Third Pillar of OOP: C#’s Polymorphic Support
+[W] bump (bŭmp)
+
+- To raise; boost: *bump up the price of gasoline.*
+- - A rise or increase, as in prices or enrollment.
+
+Perhaps managers should gain additional stock options in conjunction with a monetary `bump` in salary.
 ### The virtual and override Keywords
 ### Overriding Virtual Members Using the Visual Studio IDE
 ### Sealing Virtual Members
 ### Understanding Abstract Classes
+[W] nebulous (nĕb′yə-ləs)
+
+- nebulous - lacking definition or definite content; *"nebulous reasons"; "unfixed as were her general notions of what men ought to be"- Jane Austen*
+- =unfixed
+- <->indefinite - vague or not clearly defined or stated; *"must you be so indefinite?"*; *"amorphous blots of color having vague and indefinite edges"*; *"he would not answer so indefinite a proposal"*
+
+Given that many base classes tend to be rather `nebulous` entities, a far better design for this example is to prevent the ability to dirctly create a new Employee object in code.
 ### Understanding the Polymorphic Interface
+[W] This is much more interesting than `first meets the eye`,  as this trait of OOP allows you to build easily extendable and flexible software applications.
+
+[W] Given this, you are now `obligated` to override the Draw() method in the Circle class.
+
+[W] This Main() method illustrates polymorphism `at its finest`.
+
+[W] Due to the polymorphic interface, the code within your foreach loop would not have to change `in the slightest`, as the compiler enforces that only Shape-compatible types are placed within the myShapes array.
 ### Understanding Member Shadowing
+[W] In the real world, `the possibility of this occurring is the greatest` when you are subclassing from a class you (or your team) did not create yourselves (for example, if you purchase a third-party .NET software package).
 ## Understanding Base Class/Derived Class Casting Rules
 ### The C# as Keyword
+[W] Be very aware that explicit casting is evaluated at runtime, not compile time.
 ### The C# is Keyword
 ## The Master Parent Class: System.Object
+[W] for good measure
+- In addition to the required amount.
+
+Therefore, p1 and p2 are both pointing to the same object in memory, as is the variable o (of type object, which was thrown in `for good measure`).
 ### Overriding System.Object.ToString()
 ### Overriding System.Object.Equals()
+[W] If a class has a `prim-and-proper` implementation of ToString()  that accounts for all field data up the chain of inheritance, you can simply perform a comparison of the object’s string data:
 ### Overriding System.Object.GetHashCode()
+[W] There are many algorithms that can be used to create a hash code, `some fancy, others not so fancy`.
 ### Testing Your Modified Person Class
 ### The Static Members of System.Object
 ## Summary
 ___
-# 7. Understanding Structured Exception 7. Handling
+# 7. Understanding Structured Exception Handling
 ## Ode to Errors, Bugs, and Exceptions
+[W] bogus (bō′gəs)
+
+- bogus - fraudulent; having a misleading appearance
+- =bastard, fake, phoney, phony
+- <->counterfeit, imitative - not genuine; imitating something superior; *"counterfeit emotion"*; *"counterfeit money"*; *"counterfeit works of art"*; *"a counterfeit prince"*
+
+Other times, a problem is caused by `bogus` user input that has not been accounted for in the application’s code base (e.g., a phone number input field assigned to the value “Chucky”).
+
+.NET structured exception handling is a technique for dealing with runtime exceptions.
+
+However, `before we get too far ahead of ourselves`, let's formalize the role of structured exception handling and check out how it differs from traditional error-handling technieues.
+
+In your production-level products, you should, of course, `make liberal use of` the techniques presented in this chapter.
 ## The Role of .NET Exception Handling
+[w] mishmash (mĭsh′măsh′, -mäsh′)
+- mishmash - a motley assortment of things
+- =farrago, gallimaufry, hodgepodge, hotchpotch, melange, mingle-mangle, oddments, odds and ends, omnium-gatherum, ragbag
+- <->assortment, miscellanea, miscellany, mixed bag, motley, potpourri, salmagundi, smorgasbord, variety, mixture - a collection containing a variety of sorts of things; *"a great assortment of cars was on display"*; *"he had a variety of disorders"*; *"a veritable smorgasbord of religions"*
+
+Prior to .NET, error handling under the Windows operating system was a confused `mishmash` of techniques.
+
+[W] ad hoc (ăd hŏk′, hōk′)
+
+1. ad hoc - often improvised or impromptu; *"an ad hoc committee meeting"*
+    - <->unplanned - without apparent forethought or prompting or planning; *"an unplanned economy"*; *"accepts an unplanned order"*; *"an unplanned pregnancy"*; *"unplanned remarks"*
+2.  ad hoc - for or concerned with one specific purpose; *"a coordinated policy instead of ad hoc decisions"*
+    - <->specific - (sometimes followed by `to') applying to or characterized by or distinguishing something particular or special or unique; *"rules with specific application"*; *"demands specific to the job"*; *"a specific and detailed account of the accident"*
+
+- ad hoc - for one specific case; *"they were appointed ad hoc"*
+
+In addition to a developer’s `ad hoc` techniques, the Windows API defines hundreds of error codes that come by way of #defines, HRESULTs, and far too many variations on the simple Boolean (bool, BOOL, VARIANT_BOOL, and so on).
+
+[T] SEH: Structured Exception Handling
 ### The Building Blocks of .NET Exception Handling
 ### The System.Exception Base Class
 ## The Simplest Possible Example
+[W] In addition to leveraging the Radio class via containment/delegation, the Car class (shown next) is defined `in such a way` that if the user accelerates a Car object beyond a predefined maximum speed (specified using a constant member variable named MaxSpeed), its engine explodes, rendering the car unusable (captured by a private bool member variable named carIsDead).
 ### Throwing a General Exception
+[W] Here, you are making the assumption that if the program attempts to increase the speed of a Car object that has expired, a System.Exception object should be thrown to indicate the Accelerate()  method cannot continue (which may or may not be a valid assumption; this will be a `judgment call` on your part based on the application you are creating).
+
+[W] Deciding exactly what `justifies` throwing an exception is a design issue you must always `contend with`.
 ### Catching Exceptions
+[W] What you do with this data is `largely` up to you.
 ## Configuring the State of an Exception
+[W] spruce - make neat, smart, or trim; *"Spruce up your house for Spring"*; *"titivate the child"*
+
+- =slick up, smarten up, spiff up, spruce up, titivate, tittivate
+- <->beautify, fancify, prettify, embellish - make more beautiful
+
+To `Spruce up` our current example, let's examine further details of these members on a case-by-case basis.
 ### The TargetSite Property
 ### The StackTrace Property
 ### The HelpLink Property
 ### The Data Property
+using System.Collections;
 ## System-Level Exceptions (System.SystemException)
 ## Application-Level Exceptions (System.ApplicationException)
 ### Building Custom Exceptions, Take One
+[W] doom (do͞om)
+
+- doomed - marked for certain death; *"the black spot told the old sailor he was doomed"*
+- <->dead - no longer having or seeming to have or expecting to have life; *"the nerve is dead"*; *"a dead pallor"*; *"he was marked as a dead man by the assassin"*
+
+For example, assume you want to build a custom exception (named CarIsDeadException) to represent the error of speeding up a `doomed` automobile.
 ### Building Custom Exceptions, Take Two
 ### Building Custom Exceptions, Take Three
 ## Processing Multiple Exceptions
