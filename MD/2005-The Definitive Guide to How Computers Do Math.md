@@ -106,10 +106,20 @@ This explains why we have special words like **dozen**, meaning "twelve", and **
 ## Place-Value Number Systems
 Consider the concept of Roman numerals, in which I=1, V=5, X=10, L=50, C=100, D=500, M=1,000, and so forth.
 ## Using Powers or Exponents
+
+- exponential form
+- base
+- exponent
+
 ### Counting in Decimal
 ### The Binary Number System
+Sometime in the late l940s, the American chemist turned topologist turned statistician **John Wilder Tukey** realized that computers and the binary number system were destined to become increasingly important. In addition to coining the word **"software,"** Tukey decided that saying "binary digit" was `a bit of mouthful`, so he started to look for an alternative. He considered a variety of options, including *binit* and *bigit*, but eventually settled on **bit**, which is elegant in its simplicity and is used to this day.
+
+Groupings of four bits are relatively common, so they are given the special name of **nybble** (or sometimes **nibble**). Similarly, groupings of eight bits are also common, so they are given the special name of **byte**. Thus, *"two nybbles make a byte,"* which goes to show that computer engineers do have a sense of humor (albeit not a tremendously sophisticated one).
 ## Counting in binary
+[W] Thus, on the next count we reset the first column to 0, increment the second column to 1, and `proceed on our merry way` (Figure 1-5).
 ## Learning your binary “times tables”
+[W] `Cast your mind back` through the mists of time to those `far-off days` in elementary (junior) school.
 ## Using Wires to Represent Numbers
 ## The Hexadecimal Number System
 ### Counting in hexadecimal

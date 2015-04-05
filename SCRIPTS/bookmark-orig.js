@@ -1,5 +1,7 @@
 /*
 ([^\d])$
+173
+233
  */
 
 var pageIncrease = 4;
@@ -12,10 +14,8 @@ var source =
 
 
 
-
 	,["$차례", 8]
 	,[":차례", 8]
-
 
 
 
@@ -23,7 +23,7 @@ var source =
 
 
 
-this.bookmarkRoot.remove();
+bookmarkRoot.remove();
 console.println("\r");
 
 /**
@@ -31,6 +31,8 @@ console.println("\r");
  */
 
 var data = converting();
+
+console.clear();
 start(bookmarkRoot);
 console.clear();
 
@@ -68,6 +70,28 @@ function converting() {
 }
 
 
+function makeBookmark(BOOKMARK, pos, bmkArray) {
+	var len = bmkArray.length;
+	var myName, myPagenumber, myStyle, myColor;
+	myName = bmkArray[0];
+	myPagenumber = 0;
+	myStyle = 0;
+	myColor = "black";
+	if (len > 1) myPagenumber = bmkArray[1] + pageIncrease;
+	if (len > 2) myStyle = bmkArray[2];
+	if (len > 3) myColor = bmkArray[3];
+
+	if (myColor == "blue") myColor = ["RGB", 0, 0.0, 1];
+	else if (myColor == "green") myColor = ["RGB", 0, 0.3, 0.7];
+	else if (myColor == "red") myColor = ["RGB", 1, 0.0, 0.0];
+	// console.println("name: " + myName + ", page: " + myPagenumber + ", style: " + myStyle + ", color: " + myColor);
+
+	BOOKMARK.createChild(myName, "pageNum="+myPagenumber, pos);
+	var childBookmark = BOOKMARK.children[pos];
+	childBookmark.style = myStyle;
+	childBookmark.color = myColor;
+}
+
 function start(BOOKMARK) {
 	var i;
 	for (i in data) {
@@ -104,29 +128,6 @@ function handleChildren(BOOKMARK, myArray) {
 			handleObject(BOOKMARK, i, myData);
 		}
 	}
-}
-
-function makeBookmark(BOOKMARK, pos, bmkArray) {
-	var len = bmkArray.length;
-	var myName, myPagenumber, myStyle, myColor;
-	myName = bmkArray[0];
-	myPagenumber = 0;
-	myStyle = 0;
-	myColor = "black";
-	if (len > 1) myPagenumber = bmkArray[1] + pageIncrease;
-	if (len > 2) myStyle = bmkArray[2];
-	if (len > 3) myColor = bmkArray[3];
-
-	if (myColor == "blue") myColor = ["RGB", 0, 0.0, 1];
-	else if (myColor == "green") myColor = ["RGB", 0, 0.3, 0.7];
-	else if (myColor == "red") myColor = ["RGB", 1, 0.0, 0.0];
-
-	BOOKMARK.createChild(myName, "pageNum="+myPagenumber, pos);
-	var childBookmark = BOOKMARK.children[pos];
-	childBookmark.style = myStyle;
-	childBookmark.color = myColor;
-
-	//console.println("name: " + myName + ", page: " + myPagenumber + ", style: " + myStyle + ", color: " + myColor);
 }
 
 function checkType(myData) {

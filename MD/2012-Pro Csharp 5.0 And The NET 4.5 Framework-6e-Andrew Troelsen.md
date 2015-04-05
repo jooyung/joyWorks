@@ -689,6 +689,9 @@ For example, assume you want to build a custom exception (named CarIsDeadExcepti
 ### Building Custom Exceptions, Take Two
 ### Building Custom Exceptions, Take Three
 ## Processing Multiple Exceptions
+[W] The rule of thumb to keep in mind is to make sure your catch blocks are structured `such that` the very first catch is the most specific exception (i.e., the most derived type in an exception-type inheritance chain), leaving the final catch for the most general (i.e., the base class of a given exception inheritance chain, in this case System. Exception).
+
+[W] `Where at all possible`, always favor catching specific exception classes, rather than a general System.Exception.
 ### General catch Statements
 ### Rethrowing Exceptions
 ### Inner Exceptions
@@ -700,9 +703,21 @@ For example, assume you want to build a custom exception (named CarIsDeadExcepti
 ___
 # 8. Working with Interfaces
 ## Understanding Interface Types
+An _**interface**_ is nothing more than a named set of _**abstract members**_.
+
+[W] `Said another way`, an interface expresses a behavior that a given class or structure may choose to support.
 ### Interface Types vs. Abstract Base Classes
+Interfaces, on the other hand, contain *only* abstract member definitions.
+
+However, with this update, every derived class (Circle, Hexagon, and ThreeDCircle) must now provide a concrete implementation of this function, even if it makes no sense to do so.
 ## Defining Custom Interfaces
+Unlike a class, interfaces never specify a base class (not even System.Object; however, as you will see later in this chapter, an interface can specify base interfaces.)
+
+[W] Interfaces do not `bring much to the table` until they are implemented by a class or structure.
 ## Implementing an Interface
+[W] Understand that implementing an interface is an `all-or-nothing proposition`.
+
+[W] However, if you are implementing an interface that defines ten members (such as the IDbConnection interface shown earlier), the type is now responsible for `fleshing out` the details of all ten abstract members.
 ## Invoking Interface Members at the Object Level
 ### Obtaining Interface References: The as Keyword
 ### Obtaining Interface References: The is Keyword
@@ -710,6 +725,9 @@ ___
 ## Interfaces As Return Values
 ## Arrays of Interface Types
 ## Implementing Interfaces Using Visual Studio
+[W] As you would hope, Visual Studio supports various tools that make the task of implementing interfaces `less burdensome`.
+
+[W] For example, you might be halfway through writing a class when it `dawns on` you that you can generalize the behavior into an interface (and thereby open up the possibility of alternative implementations).
 ## Explicit Interface Implementation
 ## Designing Interface Hierarchies
 ### Multiple Inheritance with Interface Types
@@ -718,6 +736,7 @@ ___
 ### Building a Named Iterator
 ## The ICloneable Interface
 ### A More Elaborate Cloning Example
+[W] System.Guid: a globally unique identifier [GUID] is a statistically unique 128-bit number
 ## The IComparable Interface
 ### Specifying Multiple Sort Orders with IComparer
 ### Custom Properties and Custom Sort Types
@@ -725,18 +744,41 @@ ___
 ___
 # 9. Collections and Generics
 ## The Motivation for Collection Classes
+[W] telltale (tĕl′tāl′)
+
+- telltale - disclosing unintentionally; *"a telling smile"*; *"a telltale panel of lights"*; *"a telltale patch of oil on the water marked where the boat went down"*
+- =revealing, telling
+- <->informatory, informative - providing or conveying information
+
+As you will see, the `telltale` sign of any generic item is the "type parameter" marked with angled brackets (for example, LIST<T>).
 ### The System.Collections Namespace
+[W] Any .NET application built with .NET 2.0 or higher should ignore the classes in System.Collections `in favor of` the corresponding classes in System.Collections.Generic.
 ### A Survey of System.Collections.Specialized Namespace
 ## The Problems of Nongeneric Collections
 ### The Issue of Performance
+To do so, C# provides a simple mechanism, termed **boxing**, to store the data in a value type within a reference variable.
+
+**Boxing** can be formally defined as the process of explicitly assigning a value type to a System.Object variable. When you *box* a value, the CLR allocates a new object on the heap and copies the value type's value (25, in this case) into that instance. What is returned to you is a reference to the newly allocated heap-based object.
+
+Syntactically speaking, an *unboxing* operation looks like a normal casting operation.
+
+[W] At first glance, boxing/unboxing might seem like a rather `uneventful` language feature that is more academic than practical.
+
+However, it turns out that the boxing/unboxing process is quite helpful because it allows you to assume everything can be treated as a System.Object, while the CLR takes care of the memory-related details on your behalf.
+
+Now it is reboxed, as WriteLine() requires object types!
+
+Boxing and unboxing are convenient from a programmer's viewpoint, but this simplified approach to stack/heap memory transfer comes with the baggage of *performance issues* (in both speed of execution and code size) and a *lack of type safety*.
 ### The Issue of Type Safety
 ### A First Look at Generic Collections
 ## The Role of Generic Type Parameters
+Only classes, structures, interfaces, and delegates can be written generically; *enum types cannot*.
 ### Specifying Type Parameters for Generic Classes/Structures
 ### Specifying Type Parameters for Generic Members
 ### Specifying Type Parameters for Generic Interfaces
 ## The System.Collections.Generic Namespace
 ### Understanding Collection Initialization Syntax
+You can apply collection initialization syntax only to classes that support and *Add()* method, which is formalized by the ICollection<T>/ICollection interfaces.
 ### Working with the List<T> Class
 ### Working with the Stack<T> Class
 ### Working with the Queue<T> Class
@@ -754,16 +796,36 @@ ___
 ___
 # 10. Delegates, Events, and Lambda Expressions
 ## Understanding the .NET Delegate Type
+In essence, a **delegate** is a type-safe object that points to another method (or possibly a list of methods) in the application, which can be invoked at a later time.
+
+.NET delegates can point to either static or instance methods.
 ### Defining a Delegate Type in C#
+To summarize, a C# delegate type definition results in a sealed class with three compiler-generated methods whose parameter and return types are based on the delegate's declaration.
 ### The System.MulticastDelegate and System.Delegate Base Classes
 ## The Simplest Possible Delegate Example
+C# does not require you to explicitly call **Invoke()** within your code base. Because *BinaryOp* can point to methods that take two arguments, the following code statement is also permissible:
+```
+Console.WriteLine("10 + 10 is {0}", b.Invoke(10,10));
+```
+
+Recall that .NET delegates are **type safe**. Therefore, if you attempt to pass a delegate a method that does not match the pattern, you receive a compile-time error.
 ### Investigating a Delegate Object
 ## Sending Object State Notifications Using Delegates
+[W] dead-on (dĕd′ôn′, -ŏn′)
+
+- dead-on - accurate and to the point; *"a dead-on feel for characterization"*; *"She avoids big scenes...preferring to rely on small gestures and dead-on dialogue"*- Peter S.Prescott
+- <->colloquialism - a colloquial expression; characteristic of spoken or written communication that seeks to imitate informal speech
+- <->accurate - conforming exactly or almost exactly to fact or to a standard or performing with total accuracy; *"an accurate reproduction"*; *"the accounting was accurate"*; *"accurate measurements"*; *"an accurate scale"*
+
+Again, notice that the OnCarEngineEvent() method is a `dead-on` match to the related delegate in that it takes a string as input and returns void.
 ### Enabling Multicasting
+In fact, you could call Delegate.Combine() directly; however, the += operator offers a simpler alternative.
 ### Removing Targets from a Delegate’s Invocation List
 ### Method Group Conversion Syntax
+As a simplification, C# provides a shortcut termed method group conversion. This feature allows you to supply a direct method name, rather than a delegate object, when calling methods that take delegates as arguments.
 ## Understanding Generic Delegates
 ### The Generic Action<> and Func<> Delegates
+[W] As you can see, using the Action<> delegate `saves you the bother of` defining a custom delegate.
 ## Understanding C# Events
 ### The C# event Keyword
 ### Events Under the Hood
