@@ -8,7 +8,7 @@
 var bmk, godeep = true, godeepBmk;
 
 //-- dir means the first chilren of the bookmarkRoot
-var skipDir = ['AAA', 'AA', 'Words', 'Contents'];
+var skipDir = ['AAA', 'AA', 'Words', 'Contents', 'Table of Contents', 'Contents at a Glance'];
 
 /**
  * color bookmarks

@@ -125,6 +125,7 @@ With either normalization or denormalization, **the goal is to control redundanc
     ```
 
 Error
+
 - Access Error on the file: Services->Log On Tab->Check Local System Account
 - File Size: 4MB -> 5MB
 

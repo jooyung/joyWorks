@@ -5,7 +5,8 @@
 ##About the Technical Reviewer
 ##Acknowledgments
 ##Introduction
-# 1. C# and the .NET Framework
+___
+#1. C# and the .NET Framework
 ##Before .NET
 ###Windows Programming in the Late 1990s
 ###Goals for the Next-Generation Platform Services
@@ -29,7 +30,8 @@
 ####The Common Language Specification
 ##Review of the Acronyms
 ##The Evolution of C#
-# 2. Overview of C# Programming
+___
+#2. Overview of C# Programming
 ##A Simple C# Program
 ###More About SimpleProgram
 ##Identifiers
@@ -51,7 +53,8 @@
 ###More About Comments
 ###Documentation Comments
 ###Summary of Comment Types
-# 3. Types, Storage, and Variables
+___
+#3. Types, Storage, and Variables
 ##A C# Program Is a Set of Type Declarations
 ##A Type Is a Template
 ##Instantiating a Type
@@ -75,7 +78,8 @@
 ###Using the Value of a Variable
 ##Static Typing and the dynamic Keyword
 ##Nullable Types
-# 4. Classes: The Basics
+___
+#4. Classes: The Basics
 ##Overview of Classes
 ###A Class Is an Active Data Structure
 ##Programs and Classes: A Quick Example
@@ -100,7 +104,8 @@ Unlike C and C++, in C# there are _**no global functions**_ declared outside of 
 ##Accessing Members from Inside the Class
 ##Accessing Members from Outside the Class
 ##Putting It All Together
-# 5. Methods
+___
+#5. Methods
 ##The Structure of a Method
 ##Code Execution in the Method Body
 ##Local Variables
@@ -134,7 +139,8 @@ Methods contain most of the code that _**comprise**_ a program.
 ##Optional Parameters
 ##Stack Frames
 ##Recursion
-# 6. More About Classes
+___
+#6. More About Classes
 ##Class Members
 ##Order of Member Modifiers
 ##Instance Class Members
@@ -181,7 +187,8 @@ Methods contain most of the code that _**comprise**_ a program.
 [W] By default, `both a member's accessors` have the same access level as the member itself. That is, if a property has an access level of public, then `both its accessors` have that same access level. The same is true of indexers.
 ##Partial Classes and Partial Types
 ##Partial Methods
-# 7. Classes and Inheritance
+___
+#7. Classes and Inheritance
 ##Class Inheritance
 ##Accessing the Inherited Members
 ##All Classes Are Derived from Class object
@@ -216,7 +223,8 @@ Methods contain most of the code that _**comprise**_ a program.
 ##Extension Methods
 ##Naming Conventions
 [W] Writing programs requires `coming up with` lots of names; names for classes, variables, methods, properties, and lots of things I haven't covered yet.
-# 8. Expressions and Operators
+___
+#8. Expressions and Operators
 ##Expressions
 ##Literals
 ###Integer Literals
@@ -246,8 +254,21 @@ Methods contain most of the code that _**comprise**_ a program.
 ###Example of Operator Overloading
 ##The typeof Operator
 ##Other Operators
-# 9. Statements
+___
+#9. Statements
 ##What Are Statements?
+A *statement* is a source code instruction describing a type or telling the program to perform an action.
+
+- Declaration statements
+- Embedded statements: Statements that perform actions or manage flow of control
+- Labeled statements
+
+Embedded statements
+
+- Simple statement
+- block
+- empty statement: You can use an empty statement at any position where the syntax of the language requires an embedded statement but your program logic does not require any action.
+
 A block counts syntactically as a single embedded statement. Anywhere that an embedded statement is required syntactically, you can use a block.
 ##Expression Statements
 ##Flow-of-Control Statements
@@ -277,7 +298,8 @@ Unlike C and C++, in C# test expressions must return a value of type _bool_. Num
 ###Multiple Resources and Nesting
 ###Another Form of the using Statement
 ##Other Statements
-# 10. Structs
+___
+#10. Structs
 ##What Are Structs?
 ##Structs Are Value Types
 ##Assigning to a Struct
@@ -290,7 +312,8 @@ Unlike C and C++, in C# test expressions must return a value of type _bool_. Num
 ##Boxing and Unboxing
 ##Structs As Return Values and Parameters
 ##Additional Information About Structs
-# 11. Enumerations
+___
+#11. Enumerations
 ##Enumerations
 ###Setting the Underlying Type and Explicit Values
 ###Implicit Member Numbering
@@ -298,7 +321,8 @@ Unlike C and C++, in C# test expressions must return a value of type _bool_. Num
 ###The Flags Attribute
 ###Example Using Bit Flags
 ##More About Enums
-# 12. Arrays
+___
+#12. Arrays
 ##Arrays
 ###Definitions
 ###Important Details
@@ -332,7 +356,8 @@ Unlike C/C++, in C# the **brackets follow the base type**, not the variable name
 ##Useful Inherited Array Members
 ###The Clone Method
 ##Comparing Array Types
-# 13. Delegates
+___
+#13. Delegates
 ##What Is a Delegate?
 You can think of a **delegate** as an object that holds one or methods. Normally, of course, you wouldn't think of "executing" an object, but a delegate is different from a typical object. **You can execute a delegate**, and when you do so, it executes the method or methods that it "holds."
 
@@ -365,7 +390,8 @@ If you're coming from a C++ background, the fastest way for you to understand **
 ##Lambda Expressions
 [W] **pare down** - decrease gradually or bit by bit
 - Rather than requiring you to include this redundant information, C# 3.0 introduced lambda expressions, which `pare down` the syntax of anonymous methods. In fact, if lambda expressions had been introduced first, there never would have been anonymous methods.
-# 14. Events
+___
+#14. Events
 ##Publishers and Subscribers
 The methods supplied by the subscribers are called **callback methods**, because the publisher calls the subscribers back by executing their methods. They are also called **event handlers**, because they are the code that is called to handle the event.
 
@@ -383,7 +409,8 @@ A common error is to think of an event as a type - `which` it's not. Like a meth
 ###Passing Data by Extending EventArgs
 ###Removing Event Handlers
 ##Event Accessors
-# 15. Interfaces
+___
+#15. Interfaces
 ##What Is an Interface?
 [W] But `even if we could get around that hurdle` and somehow pass in an object of type CB, we would still have a problem, because CB's structure is different from that of CA.
 ###Example Using the IComparable Interface
@@ -398,9 +425,40 @@ A common error is to think of an event as a type - `which` it's not. Like a meth
 ##An Inherited Member As an Implementation
 ##Explicit Interface Member Implementations
 ###Accessing Explicit Interface Member Implementations
+[W] ramification (răm′ə-fĭ-kā′shən) 파문, 여파, 영향(어떤 행동・결정에 따라 생기는, 예상 밖의 복잡한 여러 결과・영향들 중 하나)
+
+- *ramification* - a development that complicates a situation; "the court's decision had many unforeseen ramifications"
+- =*complication*
+- -*development* - a recent event that has some relevance for the present situation; "recent developments in Iraq"; "what a revolting development!"
+
+This restriction has an important `ramification` for inheritance.
 ##Interfaces Can Inherit Interfaces
+[W] The interfaces in the list can `themselves` have inherited interfaces.
 ##Example of Different Classes Implementing an Interface
-# 16. Conversions
+
+"new Cat()" has the following meaning
+
+    The instantiation of Cat creates Cat(),
+        which hierarchically instantiates Animal and LiveBirth as Animal() and LiveBirth() respectively.
+
+    The "()" means a reference to a point in the heap memory.
+
+the syntax of "animalArray[0] = new Cat();" has the following meaning.
+ 
+    get the 1st reference to Cat(),
+        and then further get the 2nd reference to Animal(),
+        and finally saves the 2nd reference to Animal() into animalArray[0]
+
+animalArray[0] gets the final reference to Animal() through Dog(),
+    and saves the final reference to Animal() in the array.
+
+The syntax of "Animal a = animalArray[0];" has the following meaning.
+ 
+    annimalArray[0] has a reference to Animal() in Cat()
+        which has a reference to ILiveBirth()
+        that has a reference to BabyCalled()    
+___
+#16. Conversions
 ##What Are Conversions?
 ##Implicit Conversions
 ##Explicit Conversions and Casting
@@ -419,10 +477,21 @@ A common error is to think of an event as a type - `which` it's not. Like a meth
 ####float or double to decimal
 ####decimal to float or double
 ##Reference Conversions
+As you well know by now, reference objects comprise two parts in memory: **the reference** and **the data**.
+
+- Part of the information held by the reference is the *type of the data it is pointing at*.
+- A reference conversion takes a source reference (srcRef) and returns a reference (targetRef) pointing at the same place in the heap but "labels" the reference as a different type.
 ###Implicit Reference Conversions
 ###Explicit Reference Conversions
 ###Valid Explicit Reference Conversions
+
+- Cast is unnecessary; A is the base class of B.
+- Allowed because myVAr1 is null.
+- This cast is fine because the data is of type B.
 ##Boxing Conversions
+All C# types, including the *value types*, are derived from type *object*. *<u>Value types</u>*, however, are efficient, lightweight types that do not, by default, include their object component in the *heap*.
+
+When the object component is needed, however, you can use **boxing**, which is an implicit conversion that takes a value type value, creates from it a full reference type object in the heap, and returns a reference to the object.
 ###Boxing Creates a Copy
 ###The Boxing Conversions
 ##Unboxing Conversions
@@ -434,7 +503,8 @@ A common error is to think of an event as a type - `which` it's not. Like a meth
 ###Example of a Multistep User-Defined Conversion
 ##The is Operator
 ##The as Operator
-# 17. Generics
+___
+#17. Generics
 ##What Are Generics?
 ###A Stack Example
 ##Generics in C#
@@ -464,7 +534,8 @@ A common error is to think of an event as a type - `which` it's not. Like a meth
 ##Contravariance
 ###Covariance and Contravariance in Interfaces
 ###More About Variance
-# 18. Enumerators and Iterators
+___
+#18. Enumerators and Iterators
 ##Enumerators and Enumerable Types
 ###Using the foreach Statement
 ##The IEnumerator Interface
@@ -479,7 +550,8 @@ A common error is to think of an event as a type - `which` it's not. Like a meth
 ##Producing Multiple Enumerables
 ##Iterators As Properties
 ##Behind the Scenes with Iterators
-# 19. Introduction to LINQ
+___
+#19. Introduction to LINQ
 ##What Is LINQ?
 ##LINQ Providers
 ###Anonymous Types
@@ -519,7 +591,8 @@ A common error is to think of an event as a type - `which` it's not. Like a meth
 ####XDeclaration
 ####XProcessingInstruction
 ###Using LINQ Queries with LINQ to XML
-# 20. Introduction to Asynchronous Programming
+___
+#20. Introduction to Asynchronous Programming
 ##What Is Asynchrony?
 ###A Starting Example
 ##The Structure of the async/await Feature
@@ -547,7 +620,8 @@ A common error is to think of an event as a type - `which` it's not. Like a meth
 ####The Callback Method
 ####Calling EndInvoke Inside the Callback Method
 ##Timers
-# 21. Namespaces and Assemblies
+___
+#21. Namespaces and Assemblies
 ##Referencing Other Assemblies
 ###The mscorlib Library
 ##Namespaces
@@ -568,7 +642,8 @@ A common error is to think of an event as a type - `which` it's not. Like a meth
 ###Side-by-Side Execution in the GAC
 ##Configuration Files
 ##Delayed Signing
-# 22. Exceptions
+___
+#22. Exceptions
 ##What Are Exceptions?
 ##The try Statement
 ###Handling the Exception
@@ -583,7 +658,8 @@ A common error is to think of an event as a type - `which` it's not. Like a meth
 ###Example of Searching Down the Call Stack
 ##Throwing Exceptions
 ##Throwing Without an Exception Object
-# 23. Preprocessor Directives
+___
+#23. Preprocessor Directives
 ##What Are Preprocessor Directives?
 ##General Rules
 ##The #define and #undef Directives
@@ -593,7 +669,8 @@ A common error is to think of an event as a type - `which` it's not. Like a meth
 ##Line Number Directives
 ##Region Directives
 ##The #pragma warning Directive
-# 24. Reflection and Attributes
+___
+#24. Reflection and Attributes
 ##Metadata and Reflection
 ##The Type Class
 ##Getting a Type Object
@@ -622,7 +699,8 @@ A common error is to think of an event as a type - `which` it's not. Like a meth
 ##Accessing an Attribute
 ###Using the IsDefined Method
 ###Using the GetCustomAttributes Method
-# 25. Other Topics
+___
+#25. Other Topics
 ##Overview
 ##Strings
 ##The StringBuilder Class

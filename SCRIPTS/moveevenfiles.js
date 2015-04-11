@@ -3,7 +3,7 @@ var
 	, startDir = 'd:\\Scanned\\Scanned Files'
 	, toDir = 'd:\\Scanned\\Evens\\'
 	, files
-	, patt = /\d{3,}/
+	, patt = /(\d{3,})\.jpg|png$/;
 ;
 
 /*
@@ -60,5 +60,7 @@ if (files) {
   isEvenFilename
  */
 function isEvenFilename(file) {
-	return Number(patt.exec(file)) % 2;
+	var match =patt.exec(file);
+	// cc(match[1]);
+	return match[1] % 2;
 }
