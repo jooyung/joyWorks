@@ -18,11 +18,18 @@
 - f + a character
 - % for matching parens
 - H, M, L (to screen top, middle, and bottom)
-- / for seaching a string
+- / for searching a string
 - ]]
 - zt, zz, zb (put the current line on top, middle, and bottom)
 - */# (search the current word forward/backword)
 
+- t + , (go to a letter before ,)
+- d + t + } (delete to before })
+
 ### multiline indent
 
 - <i} (place the cursor inside a block first)
+
+## Editing
+
+- <kbd>S</kbd>: Delete to the end of the line, and set to edit mode

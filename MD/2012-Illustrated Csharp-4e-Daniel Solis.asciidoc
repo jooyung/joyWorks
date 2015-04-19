@@ -1,0 +1,2277 @@
+[[asciidoc_user_guide]]
+= 아스키돜
+윤주영 <abc@abc.com>
+1.3.5, 2015-4-18
+:toc:
+:icons: font
+:sectanchors:
+
+[partintro]
+여기에서는 문서 창조 시스템인 아스키돜을
+사용하는 방법을 연구합니다
+
+[preface]
+== 들어가기에 앞서
+
+문서창조시스템중에서 GitHub와 련동하여 쓰는 MarkDown이 있다. 그것과 달리
+아스키돜은 좀더 자세히 문서를 편집할 수 있다
+
+[preface]
+== Foreword
+
+어떻게 하면 문서를 좀 더 쉽고 빠르게 만들게 될까
+XML을 리용하는 DocBook은 너무 복잡하다
+
+[preface]
+[role="afterword"]
+== 결론
+
+마크다운과 아스키돜을 사용하는 것을 알아보았다
+결론은 각각이 나름의 사용처가 있다
+마크다운은 쉽고 깔끔하다
+아스키돜은 정교하게 페이지를 정의하고 만들어내는데 쓴다
+
+[dedication]
+== 바침
+
+아스키돜을 기안한 모든 사람들에게 또 이 책을 통해 문서작성을 배우는
+사람들에게 이 책을 바친다
+
+["dedication", role="praise"]
+== 아스키돜 사용가이드 찬사
+
+[quote, 윤주영]
+____
+"너무 멋진 책입니다"
+____
+
+[quote, 박근혜]
+____
+이 책을 만드신 분께 행운이 있으시길...
+____
+
+[[Cover]]
+== Cover
+
+[[Contents_at_a_Glance]]
+=== Contents at a Glance
+
+[[Contents]]
+=== Contents
+
+[[About_the_Author]]
+=== About the Author
+
+[[About_the_Technical_Reviewer]]
+=== About the Technical Reviewer
+
+[[Acknowledgments]]
+=== Acknowledgments
+
+[[Introduction]]
+=== Introduction
+
+[[C_and_the__NET_Framework]]
+== C# and the .NET Framework
+
+[[Before__NET]]
+=== Before .NET
+
+[[Windows_Programming_in_the_Late_s]]
+==== Windows Programming in the Late 1990s
+
+[[Goals_for_the_Next_Generation_Platform_Services]]
+==== Goals for the Next-Generation Platform Services
+
+[[Enter_Microsoft__NET]]
+=== Enter Microsoft .NET
+
+[[Components_of_the__NET_Framework]]
+==== Components of the .NET Framework
+
+[[An_Improved_Programming_Environment]]
+==== An Improved Programming Environment
+
+[[Object_Oriented_Development_Environment]]
+===== Object-Oriented Development Environment
+
+[[Automatic_Garbage_Collection]]
+===== Automatic Garbage Collection
+
+[[Interoperability]]
+===== Interoperability
+
+[[No_COM_Required]]
+===== No COM Required
+
+[[Simplified_Deployment]]
+===== Simplified Deployment
+
+[[Type_Safety]]
+===== Type Safety
+
+[[The_Base_Class_Library]]
+===== The Base Class Library
+
+[[Compiling_to_the_Common_Intermediate_Language]]
+=== Compiling to the Common Intermediate Language
+
+[[Compiling_to_Native_Code_and_Execution]]
+=== Compiling to Native Code and Execution
+
+[[Overview_of_Compilation_and_Execution]]
+==== Overview of Compilation and Execution
+
+[[The_Common_Language_Runtime]]
+=== The Common Language Runtime
+
+[[The_Common_Language_Infrastructure]]
+=== The Common Language Infrastructure
+
+[[Important_Parts_of_the_CLI]]
+==== Important Parts of the CLI
+
+[[The_Common_Type_System]]
+===== The Common Type System
+
+[[The_Common_Language_Specification]]
+===== The Common Language Specification
+
+[[Review_of_the_Acronyms]]
+=== Review of the Acronyms
+
+[[The_Evolution_of_C]]
+=== The Evolution of C\#
+
+[[Overview_of_C_Programming]]
+== Overview of C# Programming
+
+[[A_Simple_C_Program]]
+=== A Simple C# Program
+
+[[More_About_SimpleProgram]]
+==== More About SimpleProgram
+
+[[Identifiers]]
+=== Identifiers
+
+[[Keywords]]
+=== Keywords
+
+[[Main_The_Starting_Point_of_a_Program]]
+=== Main: The Starting Point of a Program
+
+[[Whitespace]]
+=== Whitespace
+
+[[Statements]]
+=== Statements
+
+[[Blocks]]
+==== Blocks
+
+[[Text_Output_from_a_Program]]
+=== Text Output from a Program
+
+[[Write]]
+==== Write
+
+[[WriteLine]]
+==== WriteLine
+
+[[The_Format_String]]
+==== The Format String
+
+- parameters are separated by commas
+- format string: the first parameter
+- substitution markers
+- substitution values
+
+
+[[Multiple_Markers_and_Values]]
+==== Multiple Markers and Values
+
+- any number of markers
+- any number of values
+- in any order
+- any number of times
+
+- not produce a compile error but a runtime error (called an exception)
+
+
+[[Formatting_Numeric_Strings]]
+==== Formatting Numeric Strings
+
+format specifier: { index, alignment :format }
+
+
+[[The_Alignment_Specifier]]
+===== The Alignment Specifier
+
+- minimum width: minimum number of character to use for the field
+- the sign: represents either right or left alignment
+
+[W] The format items are between two vertical bars, `just so that` in the output you can see the limits of the string on each side.
+
+padded with spaces, or the alignment specifier is ignored
+
+
+[[The_Format_Field]]
+===== The Format Field
+
+.the colon character
+- with no intervening spaces
+
+.format specifier
+- a single alphabetic character
+- nine built-in character formats
+- the case is *significant* for some specifiers but not for others
+
+.precision specifier
+- one or two digits
+
+
+[[Standard_Numeric_Format_Specifiers]]
+===== Standard Numeric Format Specifiers
+
+nine standard numeric format specifiers
+
+Name            | Character       | Meaning
+---             | ---             | ---
+Currency        | C, c            | the number of decimal places
+Decimal         | D, d            | padded with 0s on the left
+Fixed-point     | F, f            | the number of decimal places
+General         | G, g            | default
+Hexadecimal     | X, x            | padded with 0s on the left. case sensitive
+Number          | N, n            | comma or period separators. the number of decimal places
+Percent         | P, p            | multipled by 100. the number of decimal places
+Round-trip      | R, r            | Parse method. Precision specifier is ignored.
+Scientific      | E, e            | mantissa, exponent. The exponent is preceded by the letter E. case sensitive
+
+
+[[Comments_Annotating_the_Code]]
+=== Comments: Annotating the Code
+
+[[More_About_Comments]]
+==== More About Comments
+
+[[Documentation_Comments]]
+==== Documentation Comments
+
+- XML text
+- three contiguous slashes
+
+
+[[Summary_of_Comment_Types]]
+==== Summary of Comment Types
+
+- Single-line: //
+- Delimited: /* */
+- Documentation: ///
+
+
+[[Types, Storage, and Variables]]
+== Types, Storage, and Variables
+
+[[A_C_Program_Is_a_Set_of_Type_Declarations]]
+=== A C# Program Is a Set of Type Declarations
+
+[[A_Type_Is_a_Template]]
+=== A Type Is a Template
+
+[[Instantiating_a_Type]]
+=== Instantiating a Type
+
+[[Data_Members_and_Function_Members]]
+=== Data Members and Function Members
+
+[[Types_of_Members]]
+==== Types of Members
+
+[[Predefined_Types]]
+=== Predefined Types
+
+[[More_About_the_Predefined_Types]]
+==== More About the Predefined Types
+
+[[User_Defined_Types]]
+=== User-Defined Types
+
+[[The_Stack_and_the_Heap]]
+=== The Stack and the Heap
+
+[[The_Stack]]
+==== The Stack
+
+[[Facts_About_Stacks]]
+===== Facts About Stacks
+
+[[The_Heap]]
+==== The Heap
+
+[[Value_Types_and_Reference_Types]]
+=== Value Types and Reference Types
+
+[[Storing_Members_of_a_Reference_Type_Object]]
+==== Storing Members of a Reference Type Object
+
+[[Categorizing_the_C_Types]]
+==== Categorizing the C# Types
+
+[[Variables]]
+=== Variables
+
+[[Variable_Declarations]]
+==== Variable Declarations
+
+[[Variable_Initializers]]
+===== Variable Initializers
+
+[[Automatic_Initialization]]
+===== Automatic Initialization
+
+[[Multiple_Variable_Declarations]]
+==== Multiple-Variable Declarations
+
+[[Using_the_Value_of_a_Variable]]
+==== Using the Value of a Variable
+
+[[Static_Typing_and_the_dynamic_Keyword]]
+=== Static Typing and the dynamic Keyword
+
+[[Nullable_Types]]
+=== Nullable Types
+
+[[Classes_The_Basics]]
+== Classes: The Basics
+
+[[Overview_of_Classes]]
+=== Overview of Classes
+
+[[A_Class_Is_an_Active_Data_Structure]]
+==== A Class Is an Active Data Structure
+
+[[Programs_and_Classes_A_Quick_Example]]
+=== Programs and Classes: A Quick Example
+
+[[Declaring_a_Class]]
+=== Declaring a Class
+Class members can be declared in any order inside the class body. This means it's perfectly fine for the declaration of a member to refer to another member that is not yet defined until further down in the class declaration.
+
+[[Class_Members]]
+=== Class Members
+
+[[Fields]]
+==== Fields
+Unlike C and C++, in C# there are **_no global variables_** declared outside of a type.
+
+[[Explicit_and_Implicit_Field_Initialization]]
+===== Explicit and Implicit Field Initialization
+The default value for each type is _**0**_, and false for _**bool**_. The default for reference types is _**null**_.
+
+[[Declarations_with_Multiple_Fields]]
+===== Declarations with Multiple Fields
+
+[[Methods]]
+==== Methods
+Unlike C and C++, in C# there are _**no global functions**_ declared outside of type declaration. Also unlike C and C++, in C# there is no **"default"** return type for a method. All methods must include a return type of list it as void.
+
+[[Creating_Variables_and_Instances_of_a_Class]]
+=== Creating Variables and Instances of a Class
+
+[[Allocating_Memory_for_the_Data]]
+=== Allocating Memory for the Data
+
+[[Combining_the_Steps]]
+==== Combining the Steps
+
+[[Instance_Members]]
+=== Instance Members
+
+[[Access_Modifiers]]
+=== Access Modifiers
+
+[[Private_and_Public_Access]]
+==== Private and Public Access
+
+[[Depicting_Public_and_Private_Access]]
+===== Depicting Public and Private Access
+
+[[Example_of_Member_Access]]
+===== Example of Member Access
+
+[[Accessing_Members_from_Inside_the_Class]]
+=== Accessing Members from Inside the Class
+
+[[Accessing_Members_from_Outside_the_Class]]
+=== Accessing Members from Outside the Class
+
+[[Putting_It_All_Together]]
+=== Putting It All Together
+
+[[Methods]]
+== Methods
+
+[[The_Structure_of_a_Method]]
+=== The Structure of a Method
+
+[[Code_Execution_in_the_Method_Body]]
+=== Code Execution in the Method Body
+
+[[Local_Variables]]
+=== Local Variables
+
+[[Type_Inference_and_the_var_Keyword]]
+==== Type Inference and the var Keyword
+
+[[Local_Variables_Inside_Nested_Blocks]]
+==== Local Variables Inside Nested Blocks
+[W] Blocks can be nested `to any level`.
+
+In C# you cannot declare another local variable with the same name within the scope of the first name, regardless of the level of nesting.
+
+[[Local_Constants]]
+=== Local Constants
+The mandatory initializer. The initializer value must be determinable at compile time and is usually one of the predefined simple types or an expression made up of them. It can also be _**null reference**_, but it cannot be a reference to an object, because references to objects are determined at run time.
+
+[[Flow_of_Control]]
+=== Flow of Control
+Methods contain most of the code that _**comprise**_ a program.
+
+[[Method_Invocations]]
+=== Method Invocations
+
+[[Return_Values]]
+=== Return Values
+
+[[The_Return_Statement_and_Void_Methods]]
+=== The Return Statement and Void Methods
+
+[[Parameters]]
+=== Parameters
+
+[[Formal_Parameters]]
+==== Formal Parameters
+
+[[Actual_Parameters]]
+==== Actual Parameters
+
+[[An_Example_of_Methods_with_Positional_Parameters]]
+===== An Example of Methods with Positional Parameters
+
+[[Value_Parameters]]
+=== Value Parameters
+
+[[Reference_Parameters]]
+=== Reference Parameters
+
+[[Reference_Types_As_Value_and_Reference_Parameters]]
+=== Reference Types As Value and Reference Parameters
+
+[[Output_Parameters]]
+=== Output Parameters
+
+[W] Inside the method, `every possible path through the code` must assign a value to every output parameter before the method can exit.
+
+
+[[Parameter_Arrays]]
+=== Parameter Arrays
+
+Parameter arrays are different `in that` they allow *zero or more actual parameter* of a particular type for a particular formal parameter.
+
+- only one parameter array
+- the last parameter in the list
+- of the same type
+
+- *params* modifier before the data type
+- empty square brackets
+
+
+[[Method_Invocation]]
+==== Method Invocation
+
+- A comma-separated list: ListInts(10,20,30);
+- A one-dimensional array: int[] intArray = {10,20,30}; ListInts(intArray);
+
+Do not use the **params** modifier in the *invocation*.
+
+The usage of the modifier in parameter arrays doesn't fit the pattern of the other parameter types.
+
+
+[[Expanded_Form]]
+===== Expanded Form
+
+It takes the list of actual parameters and uses them to *create and initialize an array* in the heap.
+
+the values of the actual parameters are **copied** to the array.
+
+
+[[Arrays_As_Actual_Parameters]]
+==== Arrays As Actual Parameters
+
+[[Summary_of_Parameter_Types]]
+=== Summary of Parameter Types
+
+[[Method_Overloading]]
+=== Method Overloading
+
+[[Named_Parameters]]
+=== Named Parameters
+
+[[Optional_Parameters]]
+=== Optional Parameters
+
+[[Stack_Frames]]
+=== Stack Frames
+
+[[Recursion]]
+=== Recursion
+
+[[More_About_Classes]]
+== More About Classes
+
+[[Class_Members]]
+=== Class Members
+
+[[Order_of_Member_Modifiers]]
+=== Order of Member Modifiers
+
+[[Instance_Class_Members]]
+=== Instance Class Members
+
+[[Static_Fields]]
+=== Static Fields
+
+[[Accessing_Static_Members_from_Outside_the_Class]]
+=== Accessing Static Members from Outside the Class
+
+[[Example_of_a_Static_Field]]
+==== Example of a Static Field
+
+[[Lifetimes_of_Static_Members]]
+==== Lifetimes of Static Members
+
+[[Static_Function_Members]]
+=== Static Function Members
+
+[[Other_Static_Class_Member_Types]]
+=== Other Static Class Member Types
+
+[[Member_Constants]]
+=== Member Constants
+
+[[Constants_Are_Like_Statics]]
+=== Constants Are Like Statics
+
+[[Properties]]
+=== Properties
+
+[[Property_Declarations_and_Accessors]]
+==== Property Declarations and Accessors
+
+[[A_Property_Example]]
+==== A Property Example
+
+[[Using_a_Property]]
+==== Using a Property
+
+[[Properties_and_Associated_Fields]]
+==== Properties and Associated Fields
+
+[[Performing_Other_Calculations]]
+==== Performing Other Calculations
+
+[[Read_Only_and_Write-Only Properties]]
+==== Read-Only and Write-Only Properties
+
+[[Properties_vs__Public_Fields]]
+==== Properties vs. Public Fields
+
+[[An_Example_of_a_Computed, Read-Only Property]]
+==== An Example of a Computed, Read-Only Property
+
+[W] hypotenuse  (hī-pŏt′n-o͞os′, -yo͞os′)  also hy·poth·e·nuse (-pŏth′ə-no͞os′, -nyo͞os′)
+
+.The side of a right triangle opposite the right angle.
+
+[1565–75; < Latin hypotēnūsa < Greek hypoteínousa (grámmē) **subtending (line)**, feminine present participle of hypoteínein to **subtend** =hypo- hypo- + teínein to stretch (see thin)]
+
+.hypotenuse - the side of a right triangle opposite the right angle
+- <>right triangle, right-angled triangle - a triangle with one right angle
+- <>flank - a subfigure consisting of a side of something
+
+
+[[Automatically_Implemented_Properties]]
+==== Automatically Implemented Properties
+
+[[Static_Properties]]
+==== Static Properties
+
+[[Instance_Constructors]]
+=== Instance Constructors
+
+[[Constructors_with_Parameters]]
+==== Constructors with Parameters
+
+[[Default_Constructors]]
+==== Default Constructors
+
+[[Static_Constructors]]
+=== Static Constructors
+
+[[Example_of_a_Static_Constructor]]
+==== Example of a Static Constructor
+
+[[Object_Initializers]]
+=== Object Initializers
+
+[[Destructors]]
+=== Destructors
+
+[[The_readonly_Modifier]]
+=== The readonly Modifier
+
+[[The_this_Keyword]]
+=== The this Keyword
+
+[[Indexers]]
+=== Indexers
+
+[[What_Is_an_Indexer_]]
+==== What Is an Indexer?
+
+[[Indexers_and_Properties]]
+==== Indexers and Properties
+
+[[Declaring_an_Indexer]]
+==== Declaring an Indexer
+
+[[The_Indexer_set_Accessor]]
+==== The Indexer set Accessor
+
+[[The_Indexer_get_Accessor]]
+==== The Indexer get Accessor
+
+[[More_About_Indexers]]
+==== More About Indexers
+
+[[Declaring_the_Indexer_for_the_Employee_Example]]
+==== Declaring the Indexer for the Employee Example
+
+[[Another_Indexer_Example]]
+==== Another Indexer Example
+
+[[Indexer_Overloading]]
+==== Indexer Overloading
+
+[[Access_Modifiers_on_Accessors]]
+=== Access Modifiers on Accessors
+[W] By default, `both a member's accessors` have the same access level as the member itself. That is, if a property has an access level of public, then `both its accessors` have that same access level. The same is true of indexers.
+
+[[Partial_Classes_and_Partial_Types]]
+=== Partial Classes and Partial Types
+
+[[Partial_Methods]]
+=== Partial Methods
+
+[[Classes_and_Inheritance]]
+== Classes and Inheritance
+
+[[Class_Inheritance]]
+=== Class Inheritance
+
+[[Accessing_the_Inherited_Members]]
+=== Accessing the Inherited Members
+
+[[All_Classes_Are_Derived_from_Class_object]]
+=== All Classes Are Derived from Class object
+
+[[Masking_Members_of_a_Base_Class]]
+=== Masking Members of a Base Class
+
+[[Base_Access]]
+=== Base Access
+[W] Generally there are mmore elegant designs-`but the feature is there` if there's a situation where nothing else will do.
+
+[[Using_References_to_a_Base_Class]]
+=== Using References to a Base Class
+
+[[Virtual_and_Override_Methods]]
+==== Virtual and Override Methods
+
+[[Overriding_a_Method_Marked_override]]
+==== Overriding a Method Marked override
+[W] Overriding methods can occur `between any levels of inheritance`.
+
+[[Case__Declaring_Print_with_override]]
+===== Case 1: Declaring Print with override
+
+[[Case__Declaring_Print_with_new]]
+===== Case 2: Declaring Print with new
+
+[[Overriding_Other_Member_Types]]
+==== Overriding Other Member Types
+
+[[Constructor_Execution]]
+=== Constructor Execution
+
+[[Constructor_Initializers]]
+==== Constructor Initializers
+
+[[Class_Access_Modifiers]]
+==== Class Access Modifiers
+
+[[Inheritance_Between_Assemblies]]
+=== Inheritance Between Assemblies
+
+[[Member_Access_Modifiers]]
+=== Member Access Modifiers
+
+[[Regions_Accessing_a_Member]]
+==== Regions Accessing a Member
+
+[[Public_Member_Accessibility]]
+==== Public Member Accessibility
+
+[[Private_Member_Accessibility]]
+==== Private Member Accessibility
+
+[[Protected_Member_Accessibility]]
+==== Protected Member Accessibility
+
+[[Internal_Member_Accessibility]]
+==== Internal Member Accessibility
+
+[[Protected_Internal_Member_Accessibility]]
+==== Protected Internal Member Accessibility
+
+[[Summary_of_Member_Access_Modifiers]]
+==== Summary of Member Access Modifiers
+
+[[Abstract_Members]]
+=== Abstract Members
+
+[[Abstract_Classes]]
+=== Abstract Classes
+
+[[Example_of_an_Abstract_Class_and_an_Abstract_Method]]
+==== Example of an Abstract Class and an Abstract Method
+
+[[Another_Example_of_an_Abstract_Class]]
+==== Another Example of an Abstract Class
+
+[[Sealed_Classes]]
+=== Sealed Classes
+
+[[Static_Classes]]
+=== Static Classes
+
+A static class is a class `where` all the members are static. Static classes are used to group data and functions that are not affected by instance data.
+
+- a static constructor
+- implicitly sealed
+
+
+[[Extension_Methods]]
+=== Extension Methods
+
+[[Naming_Conventions]]
+=== Naming Conventions
+[W] Writing programs requires `coming up with` lots of names; names for classes, variables, methods, properties, and lots of things I haven't covered yet.
+
+[[Expressions_and_Operators]]
+== Expressions and Operators
+
+[[Expressions]]
+=== Expressions
+
+[[Literals]]
+=== Literals
+
+[[Integer_Literals]]
+==== Integer Literals
+
+[[Real_Literals]]
+==== Real Literals
+
+[[Character_Literals]]
+==== Character Literals
+
+[[String_Literals]]
+==== String Literals
+
+[[Order_of_Evaluation]]
+=== Order of Evaluation
+[W] `You know from your grade school days` that in the preceding example, the multiplication must be performed before the addition because multiplication has a higher precedence than addition. `But unlike grade-school days`, where you had four operators and two levels of precedence, `things are a bit more complex with` C#, which has more than 45 operators and 14 levels of precedence.
+
+[[Precedence]]
+==== Precedence
+
+[[Associativity]]
+==== Associativity
+
+[[Simple_Arithmetic_Operators]]
+=== Simple Arithmetic Operators
+
+[[The_Remainder_Operator]]
+=== The Remainder Operator
+
+[[Relational_and_Equality_Comparison_Operators]]
+=== Relational and Equality Comparison Operators
+
+[[Comparison_and_Equality_Operations]]
+==== Comparison and Equality Operations
+
+[[Increment_and_Decrement_Operators]]
+=== Increment and Decrement Operators
+
+[[Conditional_Logical_Operators]]
+=== Conditional Logical Operators
+
+[[Logical_Operators]]
+=== Logical Operators
+
+[[Shift_Operators]]
+=== Shift Operators
+
+[[Assignment_Operators]]
+=== Assignment Operators
+
+[[Compound_Assignment]]
+==== Compound Assignment
+
+[[The_Conditional_Operator]]
+=== The Conditional Operator
+
+[[Unary_Arithmetic_Operators]]
+=== Unary Arithmetic Operators
+
+[[User_Defined_Type_Conversions]]
+=== User-Defined Type Conversions
+
+[[Explicit_Conversion_and_the_Cast_Operator]]
+==== Explicit Conversion and the Cast Operator
+
+[[Operator_Overloading]]
+=== Operator Overloading
+
+[[Restrictions_on_Operator_Overloading]]
+==== Restrictions on Operator Overloading
+
+[[Example_of_Operator_Overloading]]
+==== Example of Operator Overloading
+
+[[The_typeof_Operator]]
+=== The typeof Operator
+
+[[Other_Operators]]
+=== Other Operators
+
+[[Statements]]
+== Statements
+
+[[What_Are_Statements_]]
+=== What Are Statements?
+A *statement* is a source code instruction describing a type or telling the program to perform an action.
+
+- Declaration statements
+- Embedded statements: Statements that perform actions or manage flow of control
+- Labeled statements
+
+Embedded statements
+
+- Simple statement
+- block
+- empty statement: You can use an empty statement at any position where the syntax of the language requires an embedded statement but your program logic does not require any action.
+
+A block counts syntactically as a single embedded statement. Anywhere that an embedded statement is required syntactically, you can use a block.
+
+[[Expression_Statements]]
+=== Expression Statements
+
+[[Flow_of_Control_Statements]]
+=== Flow-of-Control Statements
+Unlike C and C++, in C# test expressions must return a value of type _bool_. Numbers do not have a Boolean interpretation in C#.
+
+[[The_if_Statement]]
+=== The if Statement
+
+[[The_if___else_Statement]]
+=== The if...else Statement
+
+[[The_while_Loop]]
+=== The while Loop
+
+[[The_do_Loop]]
+=== The do Loop
+
+[[The_for_Loop]]
+=== The for Loop
+
+[[The_Scope_of_Variables_in_a_for_Statement]]
+==== The Scope of Variables in a for Statement
+
+[[Multiple_Expressions_in_the_Initializer_and_Iteration_Expression]]
+==== Multiple Expressions in the Initializer and Iteration Expression
+
+[[The_switch_Statement]]
+=== The switch Statement
+
+[[A_Switch_Example]]
+==== A Switch Example
+
+[[More_on_the_switch_Statement]]
+==== More on the switch Statement
+
+[[Switch_Labels]]
+==== Switch Labels
+
+[[Jump_Statements]]
+=== Jump Statements
+
+[[The_break_Statement]]
+=== The break Statement
+
+[[The_continue_Statement]]
+=== The continue Statement
+
+[[Labeled_Statements]]
+=== Labeled Statements
+
+[[Labels]]
+==== Labels
+
+[[The_Scope_of_Labeled_Statements]]
+==== The Scope of Labeled Statements
+
+[[The_goto_Statement]]
+=== The goto Statement
+
+[[The_goto_Statement_Inside_a_switch_Statement]]
+==== The goto Statement Inside a switch Statement
+
+[[The_using_Statement]]
+=== The using Statement
+
+[[Packaging_the_Use_of_a_Resource]]
+==== Packaging the Use of a Resource
+
+[[Example_of_the_using_Statement]]
+==== Example of the using Statement
+
+[[Multiple_Resources_and_Nesting]]
+==== Multiple Resources and Nesting
+
+[[Another_Form_of_the_using_Statement]]
+==== Another Form of the using Statement
+
+[[Other_Statements]]
+=== Other Statements
+
+[[Structs]]
+== Structs
+
+[[What_Are_Structs_]]
+=== What Are Structs?
+
+[[Structs_Are_Value_Types]]
+=== Structs Are Value Types
+
+[[Assigning_to_a_Struct]]
+=== Assigning to a Struct
+
+[[Constructors_and_Destructors]]
+=== Constructors and Destructors
+
+[[Instance_Constructors]]
+==== Instance Constructors
+
+[[Static_Constructors]]
+==== Static Constructors
+
+[[Summary_of_Constructors_and_Destructors]]
+==== Summary of Constructors and Destructors
+
+[[Field_Initializers_Are_Not_Allowed]]
+=== Field Initializers Are Not Allowed
+
+[[Structs_Are_Sealed]]
+=== Structs Are Sealed
+
+[[Boxing_and_Unboxing]]
+=== Boxing and Unboxing
+
+[[Structs_As_Return_Values_and_Parameters]]
+=== Structs As Return Values and Parameters
+
+[[Additional_Information_About_Structs]]
+=== Additional Information About Structs
+
+[[Enumerations]]
+== Enumerations
+
+[[Enumerations]]
+=== Enumerations
+
+[[Setting_the_Underlying_Type_and_Explicit_Values]]
+==== Setting the Underlying Type and Explicit Values
+
+[[Implicit_Member_Numbering]]
+==== Implicit Member Numbering
+
+[[Bit_Flags]]
+=== Bit Flags
+
+[[The_Flags_Attribute]]
+==== The Flags Attribute
+
+[[Example_Using_Bit_Flags]]
+==== Example Using Bit Flags
+
+[[More_About_Enums]]
+=== More About Enums
+
+[[Arrays]]
+== Arrays
+
+[[Arrays]]
+=== Arrays
+
+[[Definitions]]
+==== Definitions
+
+[[Important_Details]]
+==== Important Details
+
+[[Types_of_Arrays]]
+=== Types of Arrays
+
+[[An_Array_As_an_Object]]
+=== An Array As an Object
+
+[[One_Dimensional_and_Rectangular_Arrays]]
+=== One-Dimensional and Rectangular Arrays
+
+[[Declaring_a_One_Dimensional_or_Rectangular_Array]]
+==== Declaring a One-Dimensional or Rectangular Array
+Unlike C/C++, in C# the **brackets follow the base type**, not the variable name.
+
+[[Instantiating_a_One_Dimensional_or_Rectangular_Array]]
+=== Instantiating a One-Dimensional or Rectangular Array
+
+[[Accessing_Array_Elements]]
+=== Accessing Array Elements
+
+[[Initializing_an_Array]]
+=== Initializing an Array
+
+[[Explicit_Initialization_of_One_Dimensional_Arrays]]
+==== Explicit Initialization of One-Dimensional Arrays
+
+[[Explicit_Initialization_of_Rectangular_Arrays]]
+==== Explicit Initialization of Rectangular Arrays
+
+[[Syntax_Points_for_Initializing_Rectangular_Arrays]]
+==== Syntax Points for Initializing Rectangular Arrays
+
+[[Shortcut_Syntax]]
+==== Shortcut Syntax
+
+[[Implicitly_Typed_Arrays]]
+==== Implicitly Typed Arrays
+
+[[Putting_It_All_Together]]
+==== Putting It All Together
+
+[[Jagged_Arrays]]
+=== Jagged Arrays
+
+[[Declaring_a_Jagged_Array]]
+==== Declaring a Jagged Array
+
+[[Shortcut_Instantiation]]
+==== Shortcut Instantiation
+
+[[Instantiating_a_Jagged_Array]]
+==== Instantiating a Jagged Array
+
+[[Subarrays_in_Jagged_Arrays]]
+==== Subarrays in Jagged Arrays
+
+[[Comparing_Rectangular_and_Jagged_Arrays]]
+=== Comparing Rectangular and Jagged Arrays
+**One-dimensional arrays** have specific instructions in the CIL that allow them to be **optimized** for performance. Rectangular arrays do not have these instructions and are not optimized to the same level.
+
+[[The_foreach_Statement]]
+=== The foreach Statement
+
+[[The_Iteration_Variable_Is_Read_Only]]
+==== The Iteration Variable Is Read-Only
+
+[[The_foreach_Statement_with_Multidimensional_Arrays]]
+==== The foreach Statement with Multidimensional Arrays
+
+[[Example_with_a_Rectangular_Array]]
+===== Example with a Rectangular Array
+
+[[Example_with_a_Jagged_Array]]
+===== Example with a Jagged Array
+
+[[Array_Covariance]]
+=== Array Covariance
+
+[[Useful_Inherited_Array_Members]]
+=== Useful Inherited Array Members
+
+[[The_Clone_Method]]
+==== The Clone Method
+
+[[Comparing_Array_Types]]
+=== Comparing Array Types
+
+[[Delegates]]
+== Delegates
+
+[[What_Is_a_Delegate_]]
+=== What Is a Delegate?
+You can think of a **delegate** as an object that holds one or more methods. Normally, of course, you wouldn't think of "executing" an object, but a delegate is different from a typical object. **You can execute a delegate**, and when you do so, it executes the method or methods that it "holds."
+
+[W] on steroids (stĕr′oid′, stîr′-)
+
+- In a very large, enhanced, or exaggerated form: *"a weapon one observer had called an M16 on steroids" (Stephen Coonts).*
+- When something is on steroids, it is more powerful than it could naturally become, because of some trigger. *That gym-trainer is on anabolic steroids.* *The CLK-GTR is a mercedes-Benz on steroids.*
+
+If you're coming from a C++ background, the fastest way for you to understand **delegates** is to think of them as type-safe, object-oriented C++ function pointers `on steroids`.
+
+[[An_Overview_of_Delegates]]
+=== An Overview of Delegates
+You can think of a delegate as an object that contains an ordered list of methods *with the same signature and return type*, as illustrated in Figure 13-2.
+
+[[Declaring_the_Delegate_Type]]
+=== Declaring the Delegate Type
+[W] The declaration of a delegate type `looks much like` the declaration of a method, `in that` it has both a return type and a signature.
+
+The return type and signature specify the form of the methods that the delegate will accept.
+
+[[Creating_the_Delegate_Object]]
+=== Creating the Delegate Object
+
+- object-creation expression
+- shortcut syntax
+
+
+[[Assigning_Delegates]]
+=== Assigning Delegates
+
+The old delegate object will be disposed of by the garbage collector (GC) when it gets around to it.
+
+[[Combining_Delegates]]
+=== Combining Delegates
+
+Delegates are immutable
+
+
+[[Adding_Methods_to_Delegates]]
+=== Adding Methods to Delegates
+
+C# provides syntax for making it appear that you can add a method to a delegate, using the += operator
+
+What is actually happening, of course, is that *when the += operator is used, a new delegate is created*, with an invocation list that is the combination of the delegate on the left and the method listed on the right.
+
+You can add a method to a delegate more than once. Each time you add it, it creates a new element in the invocation list.
+
+
+[[Removing_Methods_from_a_Delegate]]
+=== Removing Methods from a Delegate
+
+If the invocation list is empty, the delegate is null.
+
+
+[[Invoking_a_Delegate]]
+=== Invoking a Delegate
+
+unless one of the parameters is an *output parameter*, which I'll cover shortly.
+
+
+[[Delegate_Example]]
+=== Delegate Example
+
+The value returned by the last method in the invocation list is the value returned from the delegate invocation.
+
+
+[[Invoking_Delegates_with_Return_Values]]
+=== Invoking Delegates with Return Values
+
+[[Invoking_Delegates_with_Reference_Parameters]]
+=== Invoking Delegates with Reference Parameters
+
+[[Anonymous_Methods]]
+=== Anonymous Methods
+
+[[Using_Anonymous_Methods]]
+==== Using Anonymous Methods
+
+[[Syntax_of_Anonymous_Methods]]
+==== Syntax of Anonymous Methods
+
+[[Return_Type]]
+===== Return Type
+[W] The implementation code of the anonymous method must therefore return an int `on all pathways` through the code.
+
+[[Parameters]]
+===== Parameters
+
+.but only if both of the following are true:
+- The delegate's parameter list does not contain any **out** parameters.
+- The anonymous method does not use any parameters.
+
+
+[[The_params_Parameters]]
+===== The params Parameters
+
+then the *params keyword* is omitted
+
+
+[[Scope_of_Variables_and_Parameters]]
+==== Scope of Variables and Parameters
+
+[[Outer_Variables]]
+===== Outer Variables
+
+captured: An outer variable used in the implementation code of an anonymous method is said to be *captured* by the method.
+
+
+[[Extension_of_a_Captured_Variable’s Lifetime]]
+===== Extension of a Captured Variable’s Lifetime
+
+[[Lambda_Expressions]]
+=== Lambda Expressions
+[W] **pare down** - decrease gradually or bit by bit
+
+- Rather than requiring you to include this redundant information, C# 3.0 introduced lambda expressions, which `pare down` the syntax of anonymous methods. In fact, if lambda expressions had been introduced first, there never would have been anonymous methods.
+
+- The delegate keyword is redundant
+- Place the *lambda operator*, **=>**, between the parameter list and the body of the anonymous method
+- The lambda operator is read as **"goes to"**.
+
+[W] `There's more, however, that` the compiler can infer, allowing you to simplify the lambda expression further, as shown in the following code.
+
+- explicitly typed
+- implicitly typed
+
+If there's only a single implicitly typed parameter, you can `leave off` the parentheses surrounding it, as shown in the assignment to le3.
+
+If the statement block contains *a single return statement*, you can replace the statement block with just the expression that follows the return keyword, as shown in the assignment to le4.
+
+```
+MyDel del = delegate(int x) { return x + 1; }; //- Anonymous method
+MyDel le4 = x => x + 1; //- Lambda expression
+```
+
+- implicitly typed
+- neither *ref* nor *out* parameters: if there are, they're explicitly typed
+- parentheses: a single parameter implicitly typed
+- empty parentheses: if there are no parameters
+
+[[Events]]
+== Events
+
+[[Publishers_and_Subscribers]]
+=== Publishers and Subscribers
+The methods supplied by the subscribers are called **callback methods**, because the publisher calls the subscribers back by executing their methods. They are also called **event handlers**, because they are the code that is called to handle the event.
+
+[W] Event handler: A method that is registered `with the publisher`, `by the subscriber`, and is executed when the publisher raises the event.
+
+[[Overview_of_Source_Code_Components]]
+=== Overview of Source Code Components
+
+[[Declaring_an_Event]]
+=== Declaring an Event
+
+[[An_Event_Is_a_Member]]
+==== An Event Is a Member
+[W] ramification (răm′ə-fĭ-kā′shən)
+
+- A development or consequence growing out of and sometimes complicating a problem, plan, or statement: the ramifications of a court decision.
+
+A common error is to think of an event as a type - `which` it's not. Like a method, or a property, an event is a member of a class or a struct, and there are several important `ramifications` to this.
+
+[[Subscribing_to_an_Event]]
+=== Subscribing to an Event
+
+[[Raising_an_Event]]
+=== Raising an Event
+
+[[Standard_Event_Usage]]
+=== Standard Event Usage
+
+[[Passing_Data_by_Extending_EventArgs]]
+==== Passing Data by Extending EventArgs
+
+[[Removing_Event_Handlers]]
+==== Removing Event Handlers
+
+[[Event_Accessors]]
+=== Event Accessors
+
+[[Interfaces]]
+== Interfaces
+
+[[What_Is_an_Interface_]]
+=== What Is an Interface?
+[W] But `even if we could get around that hurdle` and somehow pass in an object of type CB, we would still have a problem, because CB's structure is different from that of CA.
+
+[[Example_Using_the_IComparable_Interface]]
+==== Example Using the IComparable Interface
+
+[[Declaring_an_Interface]]
+=== Declaring an Interface
+
+[[Implementing_an_Interface]]
+=== Implementing an Interface
+
+[[Example_with_a_Simple_Interface]]
+==== Example with a Simple Interface
+
+[[An_Interface_Is_a_Reference_Type]]
+=== An Interface Is a Reference Type
+
+[[Using_the_as_Operator_with_Interfaces]]
+=== Using the as Operator with Interfaces
+
+[[Implementing_Multiple_Interfaces]]
+=== Implementing Multiple Interfaces
+
+[[Implementing_Interfaces_with_Duplicate_Members]]
+=== Implementing Interfaces with Duplicate Members
+
+[[References_to_Multiple_Interfaces]]
+=== References to Multiple Interfaces
+
+[[An_Inherited_Member_As_an_Implementation]]
+=== An Inherited Member As an Implementation
+
+[[Explicit_Interface_Member_Implementations]]
+=== Explicit Interface Member Implementations
+
+[[Accessing_Explicit_Interface_Member_Implementations]]
+==== Accessing Explicit Interface Member Implementations
+[W] ramification (răm′ə-fĭ-kā′shən) 파문, 여파, 영향(어떤 행동・결정에 따라 생기는, 예상 밖의 복잡한 여러 결과・영향들 중 하나)
+
+- *ramification* - a development that complicates a situation; "the court's decision had many unforeseen ramifications"
+- =*complication*
+- -*development* - a recent event that has some relevance for the present situation; "recent developments in Iraq"; "what a revolting development!"
+
+This restriction has an important `ramification` for inheritance.
+
+[[Interfaces_Can_Inherit_Interfaces]]
+=== Interfaces Can Inherit Interfaces
+[W] The interfaces in the list can `themselves` have inherited interfaces.
+
+[[Example_of_Different_Classes_Implementing_an_Interface]]
+=== Example of Different Classes Implementing an Interface
+
+"new Cat()" has the following meaning
+
+    The instantiation of Cat creates Cat(),
+        which hierarchically instantiates Animal and LiveBirth as Animal() and LiveBirth() respectively.
+
+    The "()" means a reference to a point in the heap memory.
+
+the syntax of "animalArray[0] = new Cat();" has the following meaning.
+
+    get the 1st reference to Cat(),
+        and then further get the 2nd reference to Animal(),
+        and finally saves the 2nd reference to Animal() into animalArray[0]
+
+animalArray[0] gets the final reference to Animal() through Dog(),
+    and saves the final reference to Animal() in the array.
+
+The syntax of "Animal a = animalArray[0];" has the following meaning.
+
+    annimalArray[0] has a reference to Animal() in Cat()
+        which has a reference to ILiveBirth()
+        that has a reference to BabyCalled()
+
+[[Conversions]]
+== Conversions
+
+[[What_Are_Conversions_]]
+=== What Are Conversions?
+
+[[Implicit_Conversions]]
+=== Implicit Conversions
+
+[[Explicit_Conversions_and_Casting]]
+=== Explicit Conversions and Casting
+
+[[Casting]]
+==== Casting
+
+[[Types_of_Conversions]]
+=== Types of Conversions
+
+[[Numeric_Conversions]]
+=== Numeric Conversions
+
+[[Implicit_Numeric_Conversions]]
+==== Implicit Numeric Conversions
+
+[[Overflow_Checking_Context]]
+==== Overflow Checking Context
+
+[[The_checked_and_unchecked_Operators]]
+===== The checked and unchecked Operators
+
+[[The_checked_and_unchecked_Statements]]
+===== The checked and unchecked Statements
+
+[[Explicit_Numeric_Conversions]]
+==== Explicit Numeric Conversions
+
+[[Integer_Type_to_Integer_Type]]
+===== Integer Type to Integer Type
+
+[[float_or_double_to_Integer_Type]]
+===== float or double to Integer Type
+
+[[decimal_to_Integer_Type]]
+===== decimal to Integer Type
+
+[[double_to_float]]
+===== double to float
+
+[[float_or_double_to_decimal]]
+===== float or double to decimal
+
+[[decimal_to_float_or_double]]
+===== decimal to float or double
+
+[[Reference_Conversions]]
+=== Reference Conversions
+As you well know by now, reference objects comprise two parts in memory: **the reference** and **the data**.
+
+- Part of the information held by the reference is the *type of the data it is pointing at*.
+- A reference conversion takes a source reference (srcRef) and returns a reference (targetRef) pointing at the same place in the heap but "labels" the reference as a different type.
+
+[[Implicit_Reference_Conversions]]
+==== Implicit Reference Conversions
+
+[[Explicit_Reference_Conversions]]
+==== Explicit Reference Conversions
+
+[[Valid_Explicit_Reference_Conversions]]
+==== Valid Explicit Reference Conversions
+
+- Cast is unnecessary; A is the base class of B.
+- Allowed because myVAr1 is null.
+- This cast is fine because the data is of type B.
+
+[[Boxing_Conversions]]
+=== Boxing Conversions
+All C# types, including the *value types*, are derived from type *object*. *+++<u>Value types</u>+++*, however, are efficient, lightweight types that do not, by default, include their object component in the *heap*.
+
+When the object component is needed, however, you can use **boxing**, which is an implicit conversion that takes a value type value, creates from it a full reference type object in the heap, and returns a reference to the object.
+
+[[Boxing_Creates_a_Copy]]
+==== Boxing Creates a Copy
+
+[[The_Boxing_Conversions]]
+==== The Boxing Conversions
+
+[[Unboxing_Conversions]]
+=== Unboxing Conversions
+
+[[The_Unboxing_Conversions]]
+==== The Unboxing Conversions
+
+[[User_Defined_Conversions]]
+=== User-Defined Conversions
+
+[[Constraints_on_User_Defined_Conversions]]
+==== Constraints on User-Defined Conversions
+
+[[Example_of_a_User_Defined_Conversion]]
+==== Example of a User-Defined Conversion
+
+[[Evaluating_User_Defined_Conversions]]
+==== Evaluating User-Defined Conversions
+
+[[Example_of_a_Multistep_User_Defined_Conversion]]
+==== Example of a Multistep User-Defined Conversion
+
+[[The_is_Operator]]
+=== The is Operator
+
+[[The_as_Operator]]
+=== The as Operator
+
+[[Generics]]
+== Generics
+
+[[What_Are_Generics_]]
+=== What Are Generics?
+
+[W] `There are times`, however, when a class would be more useful if you could "distill" or "refactor" out its actions and apply them not just to the data types for which they are coded, but for other types as well. Generics allow you to do `just that`.
+
+[W] This is particularly designed `for cases in which` there are multiple sections of code performing the same instructions, but on different data types.
+
+[[A_Stack_Example]]
+=== A Stack Example
+
+[[Generics_in_C]]
+=== Generics in C\#
+[W] `By this point in the text`, you should be very familiar with the concept that a **type** is not an object but a **template** for an object. `In the same way`, +++<u>a **generic type** is not a type but a **template for a type**</u>+++.
+
+C# provides five kinds of generics: *classes, structs, interfaces, delegates, and methods*. Notice that the first four are types, and methods are members.
+
+User-Defined Types: *[A]rray, [C]lass, [D]elegate, [E]num, [I]nterface, [S]truct*
+
+Generic Types: *[C]lass, [D]elegate, [I]nterface, [S]truct*
+
+[[Continuing_with_the_Stack_Example]]
+==== Continuing with the Stack Example
+
+[[Generic_Classes]]
+=== Generic Classes
+Regular classes: declaring the class and creating instances of the class
+
+Generic classes: construct actual class types, and then create references and instances
+
+[[Declaring_a_Generic_Class]]
+=== Declaring a Generic Class
+type parameters
+
+[W] demarcate (dĭ-mär′kāt′, dē′mär-kāt′)
+
+.demarcate - set, mark, or draw the boundaries of something
+- =delimitate, delimit
+- <>circumscribe, confine, limit - restrict or confine, "I limit you to two visits to the pub a day"
+
+There is no special keyword that `flags` a generic class declaration. Instead, the presence of the *type parameter list*, `demarcated` with *angle brackets*, distinguishes a generic class declaration from a regular class declaration.
+
+[[Creating_a_Constructed_Type]]
+=== Creating a Constructed Type
+
+[[Creating_Variables_and_Instances]]
+=== Creating Variables and Instances
+
+[[The_Stack_Example_Using_Generics]]
+==== The Stack Example Using Generics
+
+[[Comparing_the_Generic_and_Nongeneric_Stack]]
+==== Comparing the Generic and Nongeneric Stack
+
+[[Constraints_on_Type_Parameters]]
+=== Constraints on Type Parameters
+
+[[Where_Clauses]]
+==== Where Clauses
+
+[[Constraint_Types_and_Order]]
+==== Constraint Types and Order
+
+[[Generic_Methods]]
+=== Generic Methods
+
+[[Declaring_a_Generic_Method]]
+==== Declaring a Generic Method
+
+[[Invoking_a_Generic_Method]]
+==== Invoking a Generic Method
+
+[[Inferring_Types]]
+===== Inferring Types
+```
+int myInt = 5;
+MyMethod<int> (myInt);
+MyMethod(myInt);
+```
+
+[[Example_of_a_Generic_Method]]
+==== Example of a Generic Method
+
+[[Extension_Methods_with_Generic_Classes]]
+=== Extension Methods with Generic Classes
+
+[[Generic_Structs]]
+=== Generic Structs
+
+[[Generic_Delegates]]
+=== Generic Delegates
+
+[[Another_Generic_Delegate_Example]]
+==== Another Generic Delegate Example
+
+[[Generic_Interfaces]]
+=== Generic Interfaces
+
+[[An_Example_Using_Generic_Interfaces]]
+==== An Example Using Generic Interfaces
+
+[[Generic_Interface_Implementations_Must_Be_Unique]]
+==== Generic Interface Implementations Must Be Unique
+
+[[Covariance]]
+=== Covariance
+There are three types of *variance* - **covariance**, **contravariance**, and **invariance**.
+
+**assignment compatibility**: every variable has a type assigned to it, and you can assign an object of a more derived type to a variable of one of its base types.
+
+**Assignment compatibility** means that you can assign a reference of a more derived type to a variable of a less derived type.
+
+This constant *relation* between the use of a derived type only as an output value and the validity of the constructed delegate is called **covariance**.
+
+[[Contravariance]]
+=== Contravariance
+This relation, allowing a more derived object where a less derived object is exprected, is called **contravariance**.
+
+[[Covariance_and_Contravariance_in_Interfaces]]
+==== Covariance and Contravariance in Interfaces
+
+[[More_About_Variance]]
+==== More About Variance
+
+[[Enumerators_and_Iterators]]
+== Enumerators and Iterators
+
+[[Enumerators_and_Enumerable_Types]]
+=== Enumerators and Enumerable Types
+
+[[Using_the_foreach_Statement]]
+==== Using the foreach Statement
+
+[[The_IEnumerator_Interface]]
+=== The IEnumerator Interface
+
+[[The_IEnumerable_Interface]]
+==== The IEnumerable Interface
+
+[[Example_Using_IEnumerable_and_IEnumerator]]
+==== Example Using IEnumerable and IEnumerator
+
+[[The_Generic_Enumeration_Interfaces]]
+=== The Generic Enumeration Interfaces
+
+[[Iterators]]
+=== Iterators
+
+[[Iterator_Blocks]]
+==== Iterator Blocks
+
+[[Using_an_Iterator_to_Create_an_Enumerator]]
+==== Using an Iterator to Create an Enumerator
+
+[[Using_an_Iterator_to_Create_an_Enumerable]]
+==== Using an Iterator to Create an Enumerable
+
+[[Common_Iterator_Patterns]]
+=== Common Iterator Patterns
+
+[[Producing_Multiple_Enumerables]]
+=== Producing Multiple Enumerables
+
+[[Iterators_As_Properties]]
+=== Iterators As Properties
+
+[[Behind_the_Scenes_with_Iterators]]
+=== Behind the Scenes with Iterators
+
+[[Introduction_to_LINQ]]
+== Introduction to LINQ
+
+[[What_Is_LINQ_]]
+=== What Is LINQ?
+
+[[LINQ_Providers]]
+=== LINQ Providers
+
+[[Anonymous_Types]]
+==== Anonymous Types
+
+[[Method_Syntax_and_Query_Syntax]]
+=== Method Syntax and Query Syntax
+
+[[Query_Variables]]
+=== Query Variables
+
+[[The_Structure_of_Query_Expressions]]
+=== The Structure of Query Expressions
+
+[[The_from_Clause]]
+==== The from Clause
+
+[[The_join_Clause]]
+==== The join Clause
+
+[[What_Is_a_Join_]]
+==== What Is a Join?
+
+[[The_from_let_where_Section_in_the_Query_Body]]
+==== The from let where Section in the Query Body
+
+[[The_from_Clause]]
+===== The from Clause
+
+[[The_let_Clause]]
+===== The let Clause
+
+[[The_where_Clause]]
+===== The where Clause
+
+[[The_orderby_Clause]]
+==== The orderby Clause
+
+[[The_select_group_Clause]]
+==== The select group Clause
+
+[[Anonymous_Types_in_Queries]]
+==== Anonymous Types in Queries
+
+[[The_group_Clause]]
+==== The group Clause
+
+[[Query_Continuation_The_into_Clause]]
+==== Query Continuation: The into Clause
+
+[[The_Standard_Query_Operators]]
+=== The Standard Query Operators
+[W] peruse (pə-ro͞oz′)
+
+.To look at carefully or critically:
+
+- =check (out), con, examine, go over, inspect, scrutinize, study, survey, traverse, view.
+- =Informal: case.
+- Idiom: give a going-over.
+
+You should `peruse` the list and become familiar with these powerful tools that can save you lots of time and effort. Then when you need to use them, you can look up the full documentation online.
+
+
+[[Signatures_of_the_Standard_Query_Operators]]
+==== Signatures of the Standard Query Operators
+[W] The standard query operators are methods declared in class *System.Linq.Enumerable*. These methods, however, `aren't just any methods` - they're extension methods that extend generic class IEnumerable<T>.
+
+[[Query_Expressions_and_the_Standard_Query_Operators]]
+==== Query Expressions and the Standard Query Operators
+
+[[Delegates_As_Parameters]]
+==== Delegates As Parameters
+
+[[The_LINQ_Predefined_Delegate_Types]]
+==== The LINQ Predefined Delegate Types
+
+[[Example_Using_a_Delegate_Parameter]]
+==== Example Using a Delegate Parameter
+
+[[Example_Using_a_Lambda_Expression_Parameter]]
+==== Example Using a Lambda Expression Parameter
+
+[[LINQ_to_XML]]
+=== LINQ to XML
+
+[[Markup_Languages]]
+==== Markup Languages
+
+[[XML_Basics]]
+==== XML Basics
+
+[[The_XML_Classes]]
+==== The XML Classes
+
+[[Creating, Saving, Loading, and Displaying an XML Document]]
+===== Creating, Saving, Loading, and Displaying an XML Document
+
+[[Creating_an_XML_Tree]]
+===== Creating an XML Tree
+
+[[Using_Values_from_the_XML_Tree]]
+===== Using Values from the XML Tree
+
+[[Adding_Nodes_and_Manipulating_XML]]
+===== Adding Nodes and Manipulating XML
+
+[[Working_with_XML_Attributes]]
+==== Working with XML Attributes
+
+[[Other_Types_of_Nodes]]
+==== Other Types of Nodes
+
+[[XComment]]
+===== XComment
+
+[[XDeclaration]]
+===== XDeclaration
+
+[[XProcessingInstruction]]
+===== XProcessingInstruction
+
+[[Using_LINQ_Queries_with_LINQ_to_XML]]
+==== Using LINQ Queries with LINQ to XML
+
+[[Introduction_to_Asynchronous_Programming]]
+== Introduction to Asynchronous Programming
+
+[W] asynchronism (ā-sĭng′krə-nĭz′əm), asynchrony (-krə-nē)
+
+.Lack of temporal concurrence; absence of synchronism.
+
+.asynchronism - the relation that exists when things occur at unrelated times; "the stimulus produced a desynchronizing of the brain waves"
+- =asynchrony, desynchronisation, desynchronization, desynchronizing
+- <>temporal relation - a relation involving time
+- !=synchroneity, synchronicity, synchronisation, synchronism, synchronization, synchronizing, synchrony - the relation that exists when things occur at the same time; "the drug produces an increased synchrony of the brain waves"
+
+
+
+[[What_Is_Asynchrony_]]
+=== What Is Asynchrony?
+
+When you start a program, the system creates a new **process** in memory. A **process** is the set of resources that comprise a running program. These include the virtual address space, file handlers, and a host of other things required for the program to run.
+
+Inside the process, the system creates a *kernel object*, called a **thred**, which represents the actual excuting program. (*Thread* is short for **"thread of execution"**.) Once the process is set up, the system starts the thread executing at the first statement in method **Main**.
+
+Other times, however, no new thread id created, but instead, *the execution of the code is reordered* to make better use of the single thread's capacity.
+
+- C# 5.0
+- async/await feature
+- BackgroundWorker class
+- .NET Task Parallel Library
+
+
+[[A_Starting_Example]]
+==== A Starting Example
+
+using System.Threading.Tasks;
+
+
+[[The_Structure_of_the_async_await_Feature]]
+=== The Structure of the async/await Feature
+
+- synchronous
+- asynchronous
+
+.aync/await feature: three components
+- the calling method
+- the async method
+- the await expression
+
+
+[[What_Is_An_async_Method_]]
+=== What Is An async Method?
+
+- method header: async
+- await expressions
+- three return types: void, Task, Task<T>
+- No out, no ref parameters
+- lambda expressions, anonymous methods
+
+.async
+- before the return type
+- signal that the method contains await expressions
+- contextual keyword (async can be an identifier)
+
+[W] We can `generalize` this observation `to the following`, which we will `look at in more detail` shortly.
+
+.return types
+- Task<T>: read the *Task's Result* property
+- Task: check on the *async* method's state
+- void: fire and forget
+
+- Task<T> must return a value of type *T*
+
+
+[[The_Flow_of_Control_in_an_Async_Method]]
+==== The Flow of Control in an Async Method
+
+In the meantime, the code in the calling method continues on its course, having received the *Task* object back from the *async* method. When it needs the actual result value, it references the *Result* property of the *Task* object. If, by that point, the *async* method has set that property, the calling method retrieves the value and continues on. +++<u>**Otherwise, it halts and waits for the property to be set before continuing on.**</u>+++
+
+.two confusing things
+- return type: *await* returns the return type of the *async* method
+- return: *async* method just exits without returning to anything
+
+
+[[The_await_Expression]]
+==== The await Expression
+
+[[Cancelling_an_async_Operation]]
+==== Cancelling an async Operation
+
+[[Exception_Handling_and_the_await_Expression]]
+==== Exception Handling and the await Expression
+
+[[Waiting_Synchronously_for_Tasks_in_the_Calling_Method]]
+==== Waiting Synchronously for Tasks in the Calling Method
+
+[[Waiting_Asynchronously_for_Tasks_in_the_async_Method]]
+==== Waiting Asynchronously for Tasks in the async Method
+
+[[The_Task_Delay_Method]]
+==== The Task.Delay Method
+
+[[Async_Operations_in_GUI_Programs]]
+=== Async Operations in GUI Programs
+
+[[Task_Yield]]
+==== Task.Yield
+
+[[Using_an_async_Lambda_Expression]]
+=== Using an async Lambda Expression
+
+[W] backlog (băk′lŏg′, -lôg′)
+
+.backlog - an accumulation of jobs not done or materials not processed that are yet to be dealt with (especially unfilled customer orders for products or services)
+- <>aggregation, collection, accumulation, assemblage - several things grouped together or considered as a whole
+
+If the handler code for a particular message takes a long time, a message `backlog` builds up in the message queue, and the program becomes unresponsive because none of the messages can be handled until the long-running handler is finished.
+
+[W] lurch (lûrch)
+
+.lurch - move abruptly; "The ship suddenly lurched to the left"
+
+- =pitch, shift
+- <>move - move so as to change position, perform a nontranslational motion; "He moved his hand slightly to the right"
+
+When the programmer clicked the button, nothing appeared to happen at all, and when he tried to move the window around on the screen several seconds after clicking the button, the window was frozen on the screen and wouldn't move - until after the 4 seconds were done, when the window all of a sudden `lurched` to the new position.
+
+[W] When you run the program, you'll find that its behavior matches the preceding description, `which is that` the button isn't disabled and the status label doesn't change, and if you try to move the window, it won't move until the 4 seconds have passed.
+
+
+[[A_Full_GUI_Example]]
+=== A Full GUI Example
+
+[[The_BackgroundWorker_Class]]
+=== The BackgroundWorker Class
+
+[[Example_of_the_BackgroundWorker_Class_in_a_WPF_Program]]
+==== Example of the BackgroundWorker Class in a WPF Program
+
+[[Parallel_Loops]]
+=== Parallel Loops
+
+[W] So, unfortunately, I've had to `settle for` `whetting your appetite` by introducing just two of its very simple constructs that you can learn and use quickly and easily.
+
+
+[[Other_Asynchronous_Programming_Patterns]]
+=== Other Asynchronous Programming Patterns
+
+[W] There might still be occasions, however, `where` you'll need to use the older patters for producing asynchronous code.
+
+[W] After learning these older patterns, `you'll have a greater appreciation for` how much simpler life is with the *async/await* feature.
+
+
+[[BeginInvoke_and_EndInvoke]]
+=== BeginInvoke and EndInvoke
+
+[[The_Wait_Until_Done_Pattern]]
+==== The Wait-Until-Done Pattern
+
+[[The_AsyncResult_Class]]
+==== The AsyncResult Class
+
+[[The_Polling_Pattern]]
+==== The Polling Pattern
+
+[[The_Callback_Pattern]]
+==== The Callback Pattern
+
+[[The_Callback_Method]]
+===== The Callback Method
+
+[[Calling_EndInvoke_Inside_the_Callback_Method]]
+===== Calling EndInvoke Inside the Callback Method
+
+[[Timers]]
+=== Timers
+
+[[Namespaces_and_Assemblies]]
+== Namespaces and Assemblies
+
+[[Referencing_Other_Assemblies]]
+=== Referencing Other Assemblies
+
+[[The_mscorlib_Library]]
+==== The mscorlib Library
+
+[[Namespaces]]
+=== Namespaces
+
+[[Namespace_Names]]
+==== Namespace Names
+
+[[More_About_Namespaces]]
+==== More About Namespaces
+
+[[Namespaces_Spread_Across_Files]]
+==== Namespaces Spread Across Files
+
+[[Nesting_Namespaces]]
+==== Nesting Namespaces
+
+[[The_using_Directives]]
+=== The using Directives
+
+[[The_using_Namespace_Directive]]
+==== The using Namespace Directive
+
+[[The_using_Alias_Directive]]
+==== The using Alias Directive
+
+[[The_Structure_of_an_Assembly]]
+=== The Structure of an Assembly
+
+[[The_Identity_of_an_Assembly]]
+=== The Identity of an Assembly
+
+[[Strongly_Named_Assemblies]]
+=== Strongly Named Assemblies
+
+[[Creating_a_Strongly_Named_Assembly]]
+==== Creating a Strongly Named Assembly
+
+[[Private_Deployment_of_an_Assembly]]
+=== Private Deployment of an Assembly
+
+[[Shared_Assemblies_and_the_GAC]]
+=== Shared Assemblies and the GAC
+
+[[Installing_Assemblies_into_the_GAC]]
+==== Installing Assemblies into the GAC
+
+[[Side_by_Side_Execution_in_the_GAC]]
+==== Side-by-Side Execution in the GAC
+
+[[Configuration_Files]]
+=== Configuration Files
+
+[[Delayed_Signing]]
+=== Delayed Signing
+
+[[Exceptions]]
+== Exceptions
+
+[[What_Are_Exceptions_]]
+=== What Are Exceptions?
+
+[[The_try_Statement]]
+=== The try Statement
+
+[[Handling_the_Exception]]
+==== Handling the Exception
+
+[[The_Exception_Classes]]
+=== The Exception Classes
+
+[[The_catch_Clause]]
+=== The catch Clause
+
+[[Examples_Using_Specific_catch_Clauses]]
+=== Examples Using Specific catch Clauses
+
+[[The_catch_Clauses_Section]]
+=== The catch Clauses Section
+
+[[The_finally_Block]]
+=== The finally Block
+
+[[Finding_a_Handler_for_an_Exception]]
+=== Finding a Handler for an Exception
+
+[[Searching_Further]]
+=== Searching Further
+
+[[General_Algorithm]]
+==== General Algorithm
+
+[[Example_of_Searching_Down_the_Call_Stack]]
+==== Example of Searching Down the Call Stack
+
+[[Throwing_Exceptions]]
+=== Throwing Exceptions
+
+[[Throwing_Without_an_Exception_Object]]
+=== Throwing Without an Exception Object
+
+[[Preprocessor_Directives]]
+== Preprocessor Directives
+
+[[What_Are_Preprocessor_Directives_]]
+=== What Are Preprocessor Directives?
+
+[[General_Rules]]
+=== General Rules
+
+[[The_define_and_undef_Directives]]
+=== The #define and #undef Directives
+
+[[Conditional_Compilation]]
+=== Conditional Compilation
+
+[[The_Conditional_Compilation_Constructs]]
+=== The Conditional Compilation Constructs
+
+[[Diagnostic_Directives]]
+=== Diagnostic Directives
+
+[[Line_Number_Directives]]
+=== Line Number Directives
+
+[[Region_Directives]]
+=== Region Directives
+
+[[The_pragma_warning_Directive]]
+=== The #pragma warning Directive
+
+[[Reflection_and_Attributes]]
+== Reflection and Attributes
+
+[[Metadata_and_Reflection]]
+=== Metadata and Reflection
+
+[[The_Type_Class]]
+=== The Type Class
+
+[[Getting_a_Type_Object]]
+=== Getting a Type Object
+
+[[What_Is_an_Attribute_]]
+=== What Is an Attribute?
+
+[[Applying_an_Attribute]]
+=== Applying an Attribute
+
+[[Predefined, Reserved Attributes]]
+=== Predefined, Reserved Attributes
+
+[[The_Obsolete_Attribute]]
+==== The Obsolete Attribute
+
+[[The_Conditional_Attribute]]
+==== The Conditional Attribute
+
+[[Example_of_the_Conditional_Attribute]]
+===== Example of the Conditional Attribute
+
+[[The_Caller_Information_Attributes]]
+==== The Caller Information Attributes
+
+[[The_DebuggerStepThrough_Attribute]]
+==== The DebuggerStepThrough Attribute
+
+[[Other_Predefined_Attributes]]
+==== Other Predefined Attributes
+
+[[More_About_Applying_Attributes]]
+=== More About Applying Attributes
+
+[[Multiple_Attributes]]
+==== Multiple Attributes
+
+[[Other_Types_of_Targets]]
+==== Other Types of Targets
+
+[[Global_Attributes]]
+==== Global Attributes
+
+[[Custom_Attributes]]
+=== Custom Attributes
+
+[[Declaring_a_Custom_Attribute]]
+==== Declaring a Custom Attribute
+
+[[Using_Attribute_Constructors]]
+==== Using Attribute Constructors
+
+[[Specifying_the_Constructor]]
+==== Specifying the Constructor
+
+[[Using_the_Constructor]]
+==== Using the Constructor
+
+[[Positional_and_Named_Parameters_in_Constructors]]
+==== Positional and Named Parameters in Constructors
+
+[[Restricting_the_Usage_of_an_Attribute]]
+==== Restricting the Usage of an Attribute
+
+[[The_Constructor_for_AttributeUsage]]
+===== The Constructor for AttributeUsage
+
+[[Suggested_Practices_for_Custom_Attributes]]
+==== Suggested Practices for Custom Attributes
+
+[[Accessing_an_Attribute]]
+=== Accessing an Attribute
+
+[[Using_the_IsDefined_Method]]
+==== Using the IsDefined Method
+
+[[Using_the_GetCustomAttributes_Method]]
+==== Using the GetCustomAttributes Method
+
+[[Other_Topics]]
+== Other Topics
+
+[[Overview]]
+=== Overview
+
+[[Strings]]
+=== Strings
+
+[[The_StringBuilder_Class]]
+=== The StringBuilder Class
+
+[[Parsing_Strings_to_Data_Values]]
+=== Parsing Strings to Data Values
+
+[[More_About_the_Nullable_Types]]
+=== More About the Nullable Types
+
+[[Assigning_to_a_Nullable_Type]]
+==== Assigning to a Nullable Type
+
+[[The_Null_Coalescing_Operator]]
+==== The Null Coalescing Operator
+
+[[Using_Nullable_User_Defined_Types]]
+==== Using Nullable User-Defined Types
+
+[[Nullable_T_]]
+===== Nullable<T>
+
+[[Method_Main]]
+=== Method Main
+
+[[Accessibility_of_Main]]
+==== Accessibility of Main
+
+[[Documentation_Comments]]
+=== Documentation Comments
+
+[[Inserting_Documentation_Comments]]
+==== Inserting Documentation Comments
+
+[[Using_Other_XML_Tags]]
+==== Using Other XML Tags
+
+[[Nested_Types]]
+=== Nested Types
+
+[[Example_of_a_Nested_Class]]
+==== Example of a Nested Class
+
+[[Visibility_and_Nested_Types]]
+==== Visibility and Nested Types
+
+[[Destructors_and_the_Dispose_Pattern]]
+=== Destructors and the Dispose Pattern
+
+[[The_Standard_Dispose_Pattern]]
+==== The Standard Dispose Pattern
+
+[[Comparing_Constructors_and_Destructors]]
+==== Comparing Constructors and Destructors
+
+[[Interoperating_with_COM]]
+=== Interoperating with COM
+
+[[Index]]
+== Index

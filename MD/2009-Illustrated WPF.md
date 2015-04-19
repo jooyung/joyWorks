@@ -1,3 +1,5 @@
+__TOC__
+
 # Content at a Glance
 # 1. Introduction to Windows Presentation Foundation
 ## What Is Windows Presentation Foundation?
@@ -125,14 +127,18 @@ Since the ampersand marks the start of a character entity, the ampersand charact
 ## Layout in WPF
 ## Chapter Conventions
 ## The Layout Process
-[W] As I mentioned, in previous frameworks, you set the size of an element and placed it on the panel, `and that was it`. It didn't move, and it didn't change size. Although that simplicity was nice, it also meant that the elements couldn't `adapt` as windows and panels changed size.
+[W] As I mentioned, in previous frameworks, you set the size of an element and placed it on the panel, `and that was it`. It didn't move, and it didn't change size. Although that simplicity was nice, it also meant that the elements couldn't `adapt` as windows and panels changed sizes.
 ## Setting the Requested Size of Elements
+[W] Width and Height: Even though the philosophy of WPF is to not set actual sizes for things, `there are times when` you need to `do just that`. You can assign values to these properties to set an actual width or height.
 ## Alignment
 ## Content Alignment
+[W] But you can also place the content `on one end or the other`, using the HorizontalContentAlignment or VerticalContentAlignment property.
 ## Visibility
+[W] `Visibly`, anyway, it appears not to exist.
 ## Padding and Margins
 ## Panels
 ## The StackPanel
+[W] The stack can grow `without bounds`, even it grows beyond the visible edge of the StackPanel.
 ## The WrapPanel
 ## The DockPanel
 ## The Grid
@@ -149,6 +155,21 @@ Since the ampersand marks the start of a character entity, the ampersand charact
 ## Summary
 # 6. Content and Controls
 ## Liberating Content
+[W] They `factored out` the hard-coded restrictions so that you can include whatever kind of content might make sense in your application.
+
+[W] unprecedented (ŭn-prĕs′ĭ-dĕn′tĭd)
+
+1. =unparalleled, unheard-of, exceptional, new, original, novel, unusual, abnormal, singular, ground-breaking, unrivalled, freakish, unexampled *Such a move is unprecedented.*
+2. =extraordinary, amazing, remarkable, outstanding, fantastic, marvellous, exceptional, phenomenal, uncommon *The scheme has been hailed as an unprecedented success.*
+
+>Not the same as what was previously known or done:
+
+- =different, fresh, innovative, inventive, new, newfangled, novel, original, unfamiliar.
+
+The controls derived from these classes give you `unprecedented` freedom of design.
+
+[T] control
+>Also, as a point of terminology, in WPF the term **control** has a more restricted meaning than in previous frameworks. In WPF, <u>_**a control is a user interafce element**_</u> with which the user can interact. Previously, any UI element on the screen was called a control.
 ## Source Code Conventions
 ## The Image Element
 ### Displaying an Image Using Code
@@ -165,6 +186,14 @@ Since the ampersand marks the start of a character entity, the ampersand charact
 ## The HeaderedContentControls
 ### The GroupBox Element
 ### The Expander Control
+[W] chevron (shĕv′rən)
+
+1. A badge or insignia consisting of stripes meeting at an angle, worn on the sleeve of a military or police uniform to indicate rank, merit, or length of service.
+1. Heraldry A device shaped like an inverted V.
+1. A V-shaped pattern, especially a kind of fret used in architecture.
+
+Next to the Header, it also contains a circular button with a `chevron` pointing either up or down to indicate whether the content box should be dropped down (opened) or pulled up (closed).
+
 ## ItemsControl Elements
 ### The ListBox Control
 ### Checking the Selection
@@ -175,7 +204,9 @@ Since the ampersand marks the start of a character entity, the ampersand charact
 ## Summary
 # 7. Dependency Properties
 ## Properties and a New Paradigm
+[W] Although this is the general paradigm, the get and set accessors aren't constrained to setting and returning the backing field; `there doesn't even have to` be a backing field.
 ## Looking at an Example
+[W] `The short explanation` is that because the property is set at the GroupBox level, everything inside the GroupBox with a FontWeight property inherits the Bold value, except the element that explicitly sets its own value locally.
 ## Determining the Value of a Property
 ## The Infrastructure of a Dependency Property
 ## Creating a Custom Dependency Property
@@ -187,9 +218,48 @@ Since the ampersand marks the start of a character entity, the ampersand charact
 # 8. Data Binding
 ## What Is Data Binding?
 ## The Binding Object
+[W] [such that](http://english.stackexchange.com/questions/16883/difference-between-so-that-and-such-that)
+
+```
+The sentences, while very similar, do have a subtle difference of meaning.
+"Such that" is a description of HOW something is to be done:
+
+The image will be sheared such that the x-axis goes through (1,1).
+-> The image will be sheared in such a way that the x-axis goes through (1,1).
+"So that" is a description of WHY something is to be done:
+
+The image will be sheared so that the x-axis goes through (1,1)
+-> The image will be sheared in order for the x-axis to go through (1,1).
+(Or, more obviously: Because the x-axis needs to pass through (1,1), the image will be sheared appropriately.)
+```
+
+```
+Right. It seems that with "such that", the outcome could just be a coincidence rather than intentional.
+The cup was tipped such that liquid might spill. The cup was tipped so that one could drink from it.
+```
+
+```
+This distinction criterion is very simple and always works:
+'such that' expresses consequence,
+'so that' purpose.
+```
+
+Creating a binding XAML is so easy that it `obscures` the details of what's actually happening.
+
+The Label is bound to the TextBox `such that` whenever you change the content of the TextBox, the content of the Label is updated to match.
+
 ## Binding Direction
 ## Triggers
 ## Data Converters
+[W] `Sometimes, however, the result isn't exactly what we would hope for.`
+
+[W] sparse (spärs)
+>sparse - not dense; "a thin beard"; "trees were sparse"
+
+- =thin
+- <>distributed - spread out or scattered about or divided up
+
+In the first window, the value 2 in the TextBox looks a bit `sparse`, but when you drag the slider a bit to the right, the 14 decimal places seems a bit much.
 ## Multiple Bindings on an Element
 ## More Fun with Multiple Bindings
 ## Deleting Bindings

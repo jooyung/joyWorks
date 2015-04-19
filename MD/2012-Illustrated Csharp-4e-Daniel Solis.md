@@ -29,7 +29,7 @@ ___
 ####The Common Type System
 ####The Common Language Specification
 ##Review of the Acronyms
-##The Evolution of C#
+##The Evolution of C# 
 ___
 #2. Overview of C# Programming
 ##A Simple C# Program
@@ -44,15 +44,76 @@ ___
 ###Write
 ###WriteLine
 ###The Format String
+
+- parameters are separated by commas
+- format string: the first parameter
+- substitution markers
+- substitution values
+
 ###Multiple Markers and Values
+
+- any number of markers
+- any number of values
+- in any order
+- any number of times
+
+- not produce a compile error but a runtime error (called an exception)
+
 ###Formatting Numeric Strings
+
+format specifier: { index, alignment :format }
+
 ####The Alignment Specifier
+
+- minimum width: minimum number of character to use for the field
+- the sign: represents either right or left alignment
+
+[W] The format items are between two vertical bars, `just so that` in the output you can see the limits of the string on each side.
+
+padded with spaces, or the alignment specifier is ignored
+
 ####The Format Field
+
+the colon character
+- with no intervening spaces
+
+format specifier
+- a single alphabetic character
+- nine built-in character formats
+- the case is *significant* for some specifiers but not for others
+
+precision specifier
+- one or two digits
+
 ####Standard Numeric Format Specifiers
+
+nine standard numeric format specifiers
+
+Name            | Character       | Meaning
+---             | ---             | ---
+Currency        | C, c            | the number of decimal places        
+Decimal         | D, d            | padded with 0s on the left
+Fixed-point     | F, f            | the number of decimal places
+General         | G, g            | default
+Hexadecimal     | X, x            | padded with 0s on the left. case sensitive
+Number          | N, n            | comma or period separators. the number of decimal places
+Percent         | P, p            | multipled by 100. the number of decimal places
+Round-trip      | R, r            | Parse method. Precision specifier is ignored.
+Scientific      | E, e            | mantissa, exponent. The exponent is preceded by the letter E. case sensitive
+
 ##Comments: Annotating the Code
 ###More About Comments
 ###Documentation Comments
+
+- XML text
+- three contiguous slashes
+
 ###Summary of Comment Types
+
+- Single-line: //
+- Delimited: /* */
+- Documentation: ///
+
 ___
 #3. Types, Storage, and Variables
 ##A C# Program Is a Set of Type Declarations
@@ -129,9 +190,35 @@ Methods contain most of the code that _**comprise**_ a program.
 ##Reference Parameters
 ##Reference Types As Value and Reference Parameters
 ##Output Parameters
+
+[W] Inside the method, `every possible path through the code` must assign a value to every output parameter before the method can exit.
+
 ##Parameter Arrays
+
+Parameter arrays are different `in that` they allow *zero or more actual parameter* of a particular type for a particular formal parameter.
+
+- only one parameter array
+- the last parameter in the list
+- of the same type
+
+- *params* modifier before the data type
+- empty square brackets
+
 ###Method Invocation
+
+- A comma-separated list: ListInts(10,20,30);
+- A one-dimensional array: int[] intArray = {10,20,30}; ListInts(intArray);
+
+Do not use the **params** modifier in the *invocation*.
+
+The usage of the modifier in parameter arrays doesn't fit the pattern of the other parameter types.
+
 ####Expanded Form
+
+It takes the list of actual parameters and uses them to *create and initialize an array* in the heap.
+
+the values of the actual parameters are **copied** to the array.
+
 ###Arrays As Actual Parameters
 ##Summary of Parameter Types
 ##Method Overloading
@@ -161,7 +248,16 @@ ___
 ###Read-Only and Write-Only Properties
 ###Properties vs. Public Fields
 ###An Example of a Computed, Read-Only Property
+
 [W] hypotenuse  (hī-pŏt′n-o͞os′, -yo͞os′)  also hy·poth·e·nuse (-pŏth′ə-no͞os′, -nyo͞os′)
+>The side of a right triangle opposite the right angle.
+
+[1565–75; < Latin hypotēnūsa < Greek hypoteínousa (grámmē) **subtending (line)**, feminine present participle of hypoteínein to **subtend** =hypo- hypo- + teínein to stretch (see thin)]
+
+>hypotenuse - the side of a right triangle opposite the right angle
+- <>right triangle, right-angled triangle - a triangle with one right angle
+- <>flank - a subfigure consisting of a side of something
+
 ###Automatically Implemented Properties
 ###Static Properties
 ##Instance Constructors
@@ -220,6 +316,12 @@ ___
 ###Another Example of an Abstract Class
 ##Sealed Classes
 ##Static Classes
+
+A static class is a class `where` all the members are static. Static classes are used to group data and functions that are not affected by instance data.
+
+- a static constructor
+- implicitly sealed
+
 ##Extension Methods
 ##Naming Conventions
 [W] Writing programs requires `coming up with` lots of names; names for classes, variables, methods, properties, and lots of things I haven't covered yet.
@@ -359,7 +461,7 @@ Unlike C/C++, in C# the **brackets follow the base type**, not the variable name
 ___
 #13. Delegates
 ##What Is a Delegate?
-You can think of a **delegate** as an object that holds one or methods. Normally, of course, you wouldn't think of "executing" an object, but a delegate is different from a typical object. **You can execute a delegate**, and when you do so, it executes the method or methods that it "holds."
+You can think of a **delegate** as an object that holds one or more methods. Normally, of course, you wouldn't think of "executing" an object, but a delegate is different from a typical object. **You can execute a delegate**, and when you do so, it executes the method or methods that it "holds."
 
 [W] on steroids (stĕr′oid′, stîr′-)
 - In a very large, enhanced, or exaggerated form: *"a weapon one observer had called an M16 on steroids" (Stephen Coonts).*
@@ -367,14 +469,43 @@ You can think of a **delegate** as an object that holds one or methods. Normally
 
 If you're coming from a C++ background, the fastest way for you to understand **delegates** is to think of them as type-safe, object-oriented C++ function pointers `on steroids`.
 ##An Overview of Delegates
+You can think of a delegate as an object that contains an ordered list of methods *with the same signature and return type*, as illustrated in Figure 13-2.
 ##Declaring the Delegate Type
+[W] The declaration of a delegate type `looks much like` the declaration of a method, `in that` it has both a return type and a signature.
+
+The return type and signature specify the form of the methods that the delegate will accept.
 ##Creating the Delegate Object
+
+- object-creation expression
+- shortcut syntax
+
 ##Assigning Delegates
+
+The old delegate object will be disposed of by the garbage collector (GC) when it gets around to it.
 ##Combining Delegates
+
+Delegates are immutable
+
 ##Adding Methods to Delegates
+
+C# provides syntax for making it appear that you can add a method to a delegate, using the += operator
+
+What is actually happening, of course, is that *when the += operator is used, a new delegate is created*, with an invocation list that is the combination of the delegate on the left and the method listed on the right.
+
+You can add a method to a delegate more than once. Each time you add it, it creates a new element in the invocation list.
+
 ##Removing Methods from a Delegate
+
+If the invocation list is empty, the delegate is null.
+
 ##Invoking a Delegate
+
+unless one of the parameters is an *output parameter*, which I'll cover shortly.
+
 ##Delegate Example
+
+The value returned by the last method in the invocation list is the value returned from the delegate invocation.
+
 ##Invoking Delegates with Return Values
 ##Invoking Delegates with Reference Parameters
 ##Anonymous Methods
@@ -383,13 +514,47 @@ If you're coming from a C++ background, the fastest way for you to understand **
 ####Return Type
 [W] The implementation code of the anonymous method must therefore return an int `on all pathways` through the code.
 ####Parameters
+
+but only if both of the following are true:
+- The delegate's parameter list does not contain any **out** parameters.
+- The anonymous method does not use any parameters.
+
 ####The params Parameters
+
+then the *params keyword* is omitted
+
 ###Scope of Variables and Parameters
 ####Outer Variables
+
+captured: An outer variable used in the implementation code of an anonymous method is said to be *captured* by the method.
+
 ####Extension of a Captured Variable’s Lifetime
 ##Lambda Expressions
 [W] **pare down** - decrease gradually or bit by bit
 - Rather than requiring you to include this redundant information, C# 3.0 introduced lambda expressions, which `pare down` the syntax of anonymous methods. In fact, if lambda expressions had been introduced first, there never would have been anonymous methods.
+
+- The delegate keyword is redundant
+- Place the *lambda operator*, **=>**, between the parameter list and the body of the anonymous method
+- The lambda operator is read as **"goes to"**.
+
+[W] `There's more, however, that` the compiler can infer, allowing you to simplify the lambda expression further, as shown in the following code.
+
+- explicitly typed
+- implicitly typed
+
+If there's only a single implicitly typed parameter, you can `leave off` the parentheses surrounding it, as shown in the assignment to le3.
+
+If the statement block contains *a single return statement*, you can replace the statement block with just the expression that follows the return keyword, as shown in the assignment to le4.
+
+```
+MyDel del = delegate(int x) { return x + 1; }; //- Anonymous method
+MyDel le4 = x => x + 1; //- Lambda expression
+```
+
+- implicitly typed
+- neither *ref* nor *out* parameters: if there are, they're explicitly typed
+- parentheses: a single parameter implicitly typed
+- empty parentheses: if there are no parameters
 ___
 #14. Events
 ##Publishers and Subscribers
@@ -506,11 +671,33 @@ When the object component is needed, however, you can use **boxing**, which is a
 ___
 #17. Generics
 ##What Are Generics?
-###A Stack Example
-##Generics in C#
+
+[W] `There are times`, however, when a class would be more useful if you could "distill" or "refactor" out its actions and apply them not just to the data types for which they are coded, but for other types as well. Generics allow you to do `just that`.
+
+[W] This is particularly designed `for cases in which` there are multiple sections of code performing the same instructions, but on different data types.
+##A Stack Example
+##Generics in C# 
+[W] `By this point in the text`, you should be very familiar with the concept that a **type** is not an object but a **template** for an object. `In the same way`, <u>a **generic type** is not a type but a **template for a type**</u>.
+
+C# provides five kinds of generics: *classes, structs, interfaces, delegates, and methods*. Notice that the first four are types, and methods are members.
+
+User-Defined Types: *[A]rray, [C]lass, [D]elegate, [E]num, [I]nterface, [S]truct*
+
+Generic Types: *[C]lass, [D]elegate, [I]nterface, [S]truct*
 ###Continuing with the Stack Example
 ##Generic Classes
+Regular classes: declaring the class and creating instances of the class
+
+Generic classes: construct actual class types, and then create references and instances
 ##Declaring a Generic Class
+type parameters
+
+[W] demarcate (dĭ-mär′kāt′, dē′mär-kāt′)
+>demarcate - set, mark, or draw the boundaries of something
+- =delimitate, delimit
+- <>circumscribe, confine, limit - restrict or confine, "I limit you to two visits to the pub a day"
+
+There is no special keyword that `flags` a generic class declaration. Instead, the presence of the *type parameter list*, `demarcated` with *angle brackets*, distinguishes a generic class declaration from a regular class declaration.
 ##Creating a Constructed Type
 ##Creating Variables and Instances
 ###The Stack Example Using Generics
@@ -522,6 +709,11 @@ ___
 ###Declaring a Generic Method
 ###Invoking a Generic Method
 ####Inferring Types
+```
+int myInt = 5;
+MyMethod<int> (myInt);
+MyMethod(myInt);
+```
 ###Example of a Generic Method
 ##Extension Methods with Generic Classes
 ##Generic Structs
@@ -531,7 +723,15 @@ ___
 ###An Example Using Generic Interfaces
 ###Generic Interface Implementations Must Be Unique
 ##Covariance
+There are three types of *variance* - **covariance**, **contravariance**, and **invariance**.
+
+**assignment compatibility**: every variable has a type assigned to it, and you can assign an object of a more derived type to a variable of one of its base types.
+
+**Assignment compatibility** means that you can assign a reference of a more derived type to a variable of a less derived type.
+
+This constant *relation* between the use of a derived type only as an output value and the validity of the constructed delegate is called **covariance**.
 ##Contravariance
+This relation, allowing a more derived object where a less derived object is exprected, is called **contravariance**.
 ###Covariance and Contravariance in Interfaces
 ###More About Variance
 ___
@@ -571,7 +771,17 @@ ___
 ###The group Clause
 ###Query Continuation: The into Clause
 ##The Standard Query Operators
+[W] peruse (pə-ro͞oz′)
+>To look at carefully or critically:
+
+- =check (out), con, examine, go over, inspect, scrutinize, study, survey, traverse, view.
+- =Informal: case.
+- Idiom: give a going-over.
+
+You should `peruse` the list and become familiar with these powerful tools that can save you lots of time and effort. Then when you need to use them, you can look up the full documentation online.
+
 ###Signatures of the Standard Query Operators
+[W] The standard query operators are methods declared in class *System.Linq.Enumerable*. These methods, however, `aren't just any methods` - they're extension methods that extend generic class IEnumerable<T>.
 ###Query Expressions and the Standard Query Operators
 ###Delegates As Parameters
 ###The LINQ Predefined Delegate Types
@@ -593,11 +803,73 @@ ___
 ###Using LINQ Queries with LINQ to XML
 ___
 #20. Introduction to Asynchronous Programming
+
+[W] asynchronism (ā-sĭng′krə-nĭz′əm), asynchrony (-krə-nē)
+>Lack of temporal concurrence; absence of synchronism.
+
+>asynchronism - the relation that exists when things occur at unrelated times; "the stimulus produced a desynchronizing of the brain waves"
+- =asynchrony, desynchronisation, desynchronization, desynchronizing
+- <>temporal relation - a relation involving time
+- !=synchroneity, synchronicity, synchronisation, synchronism, synchronization, synchronizing, synchrony - the relation that exists when things occur at the same time; "the drug produces an increased synchrony of the brain waves"
+
+
 ##What Is Asynchrony?
+
+When you start a program, the system creates a new **process** in memory. A **process** is the set of resources that comprise a running program. These include the virtual address space, file handlers, and a host of other things required for the program to run.
+
+Inside the process, the system creates a *kernel object*, called a **thred**, which represents the actual excuting program. (*Thread* is short for **"thread of execution"**.) Once the process is set up, the system starts the thread executing at the first statement in method **Main**.
+
+Other times, however, no new thread id created, but instead, *the execution of the code is reordered* to make better use of the single thread's capacity.
+
+- C# 5.0
+- async/await feature
+- BackgroundWorker class
+- .NET Task Parallel Library
+
 ###A Starting Example
+
+using System.Threading.Tasks;
+
 ##The Structure of the async/await Feature
+
+- synchronous
+- asynchronous
+
+aync/await feature: three components
+- the calling method
+- the async method
+- the await expression
+
 ##What Is An async Method?
+
+- method header: async
+- await expressions
+- three return types: void, Task, Task\<T>
+- No out, no ref parameters
+- lambda expressions, anonymous methods
+
+async
+- before the return type
+- signal that the method contains await expressions
+- contextual keyword (async can be an identifier)
+
+[W] We can `generalize` this observation `to the following`, which we will `look at in more detail` shortly.
+
+return types
+- Task\<T>: read the *Task's Result* property
+- Task: check on the *async* method's state
+- void: fire and forget
+
+- Task\<T> must return a value of type *T*
+
 ###The Flow of Control in an Async Method
+
+In the meantime, the code in the calling method continues on its course, having received the *Task* object back from the *async* method. When it needs the actual result value, it references the *Result* property of the *Task* object. If, by that point, the *async* method has set that property, the calling method retrieves the value and continues on. <u>**Otherwise, it halts and waits for the property to be set before continuing on.**</u>
+
+two confusing things
+- return type: *await* returns the return type of the *async* method
+- return: *async* method just exits without returning to anything
+
 ###The await Expression
 ###Cancelling an async Operation
 ###Exception Handling and the await Expression
@@ -607,11 +879,36 @@ ___
 ##Async Operations in GUI Programs
 ###Task.Yield
 ##Using an async Lambda Expression
+
+[W] backlog (băk′lŏg′, -lôg′)
+>backlog - an accumulation of jobs not done or materials not processed that are yet to be dealt with (especially unfilled customer orders for products or services)
+- <>aggregation, collection, accumulation, assemblage - several things grouped together or considered as a whole
+
+If the handler code for a particular message takes a long time, a message `backlog` builds up in the message queue, and the program becomes unresponsive because none of the messages can be handled until the long-running handler is finished.
+
+[W] lurch (lûrch)
+>lurch - move abruptly; "The ship suddenly lurched to the left"
+
+- =pitch, shift
+- <>move - move so as to change position, perform a nontranslational motion; "He moved his hand slightly to the right"
+
+When the programmer clicked the button, nothing appeared to happen at all, and when he tried to move the window around on the screen several seconds after clicking the button, the window was frozen on the screen and wouldn't move - until after the 4 seconds were done, when the window all of a sudden `lurched` to the new position.
+
+[W] When you run the program, you'll find that its behavior matches the preceding description, `which is that` the button isn't disabled and the status label doesn't change, and if you try to move the window, it won't move until the 4 seconds have passed.
+
 ##A Full GUI Example
 ##The BackgroundWorker Class
 ###Example of the BackgroundWorker Class in a WPF Program
 ##Parallel Loops
+
+[W] So, unfortunately, I've had to `settle for` `whetting your appetite` by introducing just two of its very simple constructs that you can learn and use quickly and easily.
+
 ##Other Asynchronous Programming Patterns
+
+[W] There might still be occasions, however, `where` you'll need to use the older patters for producing asynchronous code.
+
+[W] After learning these older patterns, `you'll have a greater appreciation for` how much simpler life is with the *async/await* feature.
+
 ##BeginInvoke and EndInvoke
 ###The Wait-Until-Done Pattern
 ###The AsyncResult Class
