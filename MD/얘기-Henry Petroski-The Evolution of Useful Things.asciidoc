@@ -1,0 +1,113 @@
+[[_0_]]
+= The Evolution of Useful Things
+Joy <arbago@gmail.com>
+v1.0, 2015-06-3
+:icons: font
+:sectanchors:
+:imagesdir: images
+:homepage: http://arbago.com
+:toc: macro
+
+toc::[]
+
+[preface]
+== 책
+
+The Evolution of Useful Things, Henry Petroski, 1992
+
+[preface]
+== Preface
+
+vicissitude (vĭ-sĭs′ĭ-to͞od′, -tyo͞od′):: A change or variation: _an economy vulnerable to the vicissitudes of the oil market_
+
+refutation (rĕf′yo͝o-tā′shən) also re·fut·al (rĭ-fyo͞ot′l)::
+refutation - the speech act of answering an attack on your assertions; "his refutation of the charges was short and persuasive"; "in defense he said the other man started it"
+* =defence, defense
+* answer - the speech act of replying to a question
+* confutation - the speech act of refuting conclusively
+* rebuttal - the speech act of refuting by offering a contrary contention or argument
+
+dictum (dĭk′təm) 격언, 금언:: A dictum is a saying that describes an aspect of life in an interesting or wise way.
+
+ineffable (ĭn-ĕf′ə-bəl) 형언할 수 없는::
+ineffable - defying expression or description; "indefinable yearnings"; "indescribable beauty"; "ineffable ecstasy"; "inexpressible anguish"; "unspeakable happiness"; "unutterable contempt"; "a thing of untellable splendor"
+* =indescribable, unspeakable, untellable, unutterable, indefinable
+* inexpressible, unexpressible - defying expression
+
+[[_1_0_0_]]
+== 1. How the Fork Got Its Tines
+
+tine (tīn) (사슴뿔같은 것의)가지::
+tine - prong on a fork or pitchfork or antler
+* fork - cutlery used for serving and eating food
+* pitchfork - a long-handled hand tool with sharp widely spaced prongs for lifting and pitching hay
+* prong - a pointed projection
+
+Eureka (yo͝o-rē′kə) 유레카, 알겠어, 바로 이거야::
+Used to express triumph upon finding or discovering something.
+* [Greek heurēka, I have found (it) (supposedly exclaimed by Archimedes upon discovering how to measure the volume of an irregular solid and thereby determine the purity of a gold object), first person sing. perfect tense of heuriskein, to find.]
+
+Why is Western tableware so alien to Eastern cultures, and why do chopsticks make our hands all thumbs?
+
+posit (pŏz′ĭt) (주장・논의의 근거로 삼기 위해 무엇을) 사실로 상정하다[받아들이다]::
+posit - put before; "I submit to you that the accused is guilty"
+* =put forward, state, submit
+* propose, suggest, advise - make a proposal, declare a plan for something; "the senator proposed to abolish the sales tax"
+
+bear out ~이 옳음[사실임]을 증명하다:: to substantiate; confirm
+* 지탱하다, 지지[지원]하다; 증거가 되다.
+** The other witnesses will bear me out. (나머지) 다른 증인들이 내 말이 사실임을 증언해 줄 것이다.
+
+obsidian (ŏb-sĭd′ē-ən) 흑요석[암] 黑曜石::
+obsidian - acid or granitic glass formed by the rapid cooling of lava without crystallization; usually dark, but transparent in thin pieces
+* volcanic glass - a kind of natural glass produced when molten lava cools very rapidly
+
+efficacious (ĕf′ĭ-kā′shəs) 효력이 있는::
+efficacious - producing or capable of producing an intended result or having a striking effect; "an air-cooled motor was more effective than a witch's broomstick for rapid long-distance transportation"-LewisMumford; "effective teaching methods"; "effective steps toward peace"; "made an effective entrance"; "his complaint proved to be effectual in bringing action"; "an efficacious law"
+* =effective, effectual
+* efficacious - marked by qualities giving the power to produce an intended effect; "written propaganda is less efficacious than the habits and prejudices...of the readers"-Aldous Huxley; "the medicine is efficacious in stopping a cough"
+* efficient - being effective without wasting time or effort or expense; "an efficient production manager"; "efficient engines save gas"
+* potent, stiff, strong - having a strong physiological or chemical effect; "a potent toxin"; "potent liquor"; "a potent cup of tea", "a stiff drink"
+* powerful - having great power or force or potency or effect; "the most powerful government in western Europe"; "his powerful arms"; "a powerful bomb"; "the horse's powerful kick"; "powerful drugs"; "a powerful argument"
+* useful, utile - being of use or service; "the girl felt motherly and useful"; "a useful job"; "a useful member of society"
+
+
+[[_2_0_0_]]
+== 2. Form Follows Failure
+
+[[_3_0_0_]]
+== 3. Inventors as Critics
+
+[[_4_0_0_]]
+== 4. From Pins to Paper Clips
+
+[[_5_0_0_]]
+== 5. Little Things Can Mean a Lot
+
+[[_6_0_0_]]
+== 6. Stick Before Zip
+
+[[_7_0_0_]]
+== 7. Tools Make Tools
+
+[[_8_0_0_]]
+== 8. Patterns of Proliferation
+
+[[_9_0_0_]]
+== 9. Domestic Fashion and Industrial Design
+
+[[_10_0_0_]]
+== 10. The Power of Precedent
+
+[[_11_0_0_]]
+== 11. Closure Before Opening
+
+[[_12_0_0_]]
+== 12. Big Bucks from Small Change
+
+[[_13_0_0_]]
+== 13. When Good Is Better Than Best
+
+[[_14_0_0_]]
+== 14. Always Room for Improvement
+

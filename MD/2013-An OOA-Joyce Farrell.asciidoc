@@ -1,0 +1,954 @@
+[[_0_]]
+= 제목
+Joy <arbago@gmail.com>
+:icons: font
+:sectanchors:
+:toc: macro
+
+toc::[]
+
+[preface]
+== 머릿말
+
+[[_1_0_0_]]
+== 1. An Overview of Computers and Programming
+
+[[_1_1_1_]]
+=== Understanding Computer Systems
+
+[[_1_2_2_]]
+=== Understanding Simple Program Logic
+
+[[_1_3_3_]]
+=== Understanding the Program Development Cycle
+
+[[_1_3_4_]]
+==== Understanding the Problem
+
+[[_1_3_5_]]
+==== Planning the Logic
+
+[[_1_3_6_]]
+==== Coding the Program
+
+[[_1_3_7_]]
+==== Using Software to Translate the Program into Machine Language
+
+[[_1_3_8_]]
+==== Testing the Program
+
+[[_1_3_9_]]
+==== Putting the Program into Production
+
+[[_1_3_10_]]
+==== Maintaining the Program
+
+[[_1_4_11_]]
+=== Using Pseudocode Statements and Flowchart Symbols
+
+[[_1_4_12_]]
+==== Writing Pseudocode
+
+[[_1_4_13_]]
+==== Drawing Flowcharts
+
+[[_1_4_14_]]
+==== Repeating Instructions
+
+[[_1_5_15_]]
+=== Using a Sentinel Value to End a Program
+
+[[_1_6_16_]]
+=== Understanding Programming and User Environments
+
+[[_1_6_17_]]
+==== Understanding Programming Environments
+
+[[_1_6_18_]]
+==== Understanding User Environments
+
+[[_1_7_19_]]
+=== Understanding the Evolution of Programming Models
+
+[[_1_8_20_]]
+=== Chapter Summary
+
+[[_1_9_21_]]
+=== Key Terms
+
+[[_1_10_22_]]
+=== Review Questions
+
+[[_1_11_23_]]
+=== Exercises
+
+[[_2_0_24_]]
+== 2. Elements of High-Quality Programs
+
+[[_2_1_25_]]
+=== Declaring and Using Variables and Constants
+
+[[_2_1_26_]]
+==== Understanding Unnamed, Literal Constants and their Data Types
+
+[[_2_1_27_]]
+==== Working with Variables
+
+[[_2_1_28_]]
+==== Naming Variables
+
+[[_2_1_29_]]
+==== Assigning Values to Variables
+
+[[_2_1_30_]]
+==== Understanding the Data Types of Variables
+
+[[_2_1_31_]]
+==== Declaring Named Constants
+
+[[_2_2_32_]]
+=== Performing Arithmetic Operations
+
+[[_2_3_33_]]
+=== Understanding the Advantages of Modularization
+
+[[_2_3_34_]]
+==== Modularization Provides Abstraction
+
+[[_2_3_35_]]
+==== Modularization Allows Multiple Programmers to Work on a Problem
+
+[[_2_3_36_]]
+==== Modularization Allows You to Reuse Work
+
+[[_2_4_37_]]
+=== Modularizing a Program
+
+[[_2_4_38_]]
+==== Declaring Variables and Constants within Modules
+
+[[_2_4_39_]]
+==== Understanding the Most Common Configuration for Mainline Logic
+
+[[_2_5_40_]]
+=== Creating Hierarchy Charts
+
+[[_2_6_41_]]
+=== Features of Good Program Design
+
+[[_2_6_42_]]
+==== Using Program Comments
+
+[[_2_6_43_]]
+==== Choosing Identifiers
+
+[[_2_6_44_]]
+==== Designing Clear Statements
+
+[[_2_6_45_]]
+===== Avoiding Confusing Line Breaks
+
+[[_2_6_46_]]
+===== Using Temporary Variables to Clarify Long Statements
+
+[[_2_6_47_]]
+==== Writing Clear Prompts and Echoing Input
+
+[[_2_6_48_]]
+==== Maintaining Good Programming Habits
+
+[[_2_7_49_]]
+=== Chapter Summary
+
+[[_2_8_50_]]
+=== Key Terms
+
+[[_2_9_51_]]
+=== Review Questions
+
+[[_2_10_52_]]
+=== Exercises
+
+[[_3_0_53_]]
+== 3. Understanding Structure
+
+[[_3_1_54_]]
+=== The Disadvantages of Unstructured Spaghetti Code
+
+[[_3_2_55_]]
+=== Understanding the Three Basic Structures
+
+[[_3_3_56_]]
+=== Using a Priming Input to Structure a Program
+
+[[_3_4_57_]]
+=== Understanding the Reasons for Structure
+
+[[_3_5_58_]]
+=== Recognizing Structure
+
+[[_3_6_59_]]
+=== Structuring and Modularizing Unstructured Logic
+
+[[_3_7_60_]]
+=== Chapter Summary
+
+[[_3_8_61_]]
+=== Key Terms
+
+[[_3_9_62_]]
+=== Review Questions
+
+[[_3_10_63_]]
+=== Exercises
+
+[[_4_0_64_]]
+== 4. Making Decisions
+
+[[_4_1_65_]]
+=== Boolean Expressions and the Selection Structure
+
+[[_4_2_66_]]
+=== Using Relational Comparison Operators
+
+[[_4_2_67_]]
+==== Avoiding a Common Error with Relational Operators
+
+[[_4_3_68_]]
+=== Understanding AND Logic
+
+[[_4_3_69_]]
+==== Nesting AND Decisions for Efficiency
+
+[[_4_3_70_]]
+==== Using the AND Operator
+
+[[_4_3_71_]]
+==== Avoiding Common Errors in an AND Selection
+
+[[_4_4_72_]]
+=== Understanding OR Logic
+
+[[_4_5_73_]]
+=== Writing OR Decisions for Efficiency
+
+[[_4_6_74_]]
+=== Using the OR Operator
+
+[[_4_7_75_]]
+=== Avoiding Common Errors in an OR Selection
+
+[[_4_8_76_]]
+=== Making Selections within Ranges
+
+[[_4_8_77_]]
+==== Avoiding Common Errors When Using Range Checks
+
+[[_4_9_78_]]
+=== Understanding Precedence When Combining AND and OR Operators
+
+[[_4_10_79_]]
+=== Chapter Summary
+
+[[_4_11_80_]]
+=== Key Terms
+
+[[_4_12_81_]]
+=== Review Questions
+
+[[_4_13_82_]]
+=== Exercises
+
+[[_5_0_83_]]
+== 5. Looping
+
+[[_5_1_84_]]
+=== Understanding the Advantages of Looping
+
+[[_5_2_85_]]
+=== Using a Loop Control Variable
+
+[[_5_2_86_]]
+==== Using a Definite Loop with a Counter
+
+[[_5_2_87_]]
+==== Using an Indefinite Loop with a Sentinel Value
+
+[[_5_2_88_]]
+==== Understanding the Loop in a Program’s Mainline Logic
+
+[[_5_3_89_]]
+=== Nested Loops
+
+[[_5_4_90_]]
+=== Avoiding Common Loop Mistakes
+
+[[_5_4_91_]]
+==== Mistake: Neglecting to Initialize the Loop Control Variable
+
+[[_5_4_92_]]
+==== Mistake: Neglecting to Alter the Loop Control Variable
+
+[[_5_4_93_]]
+==== Mistake: Using the Wrong Comparison with the Loop Control Variable
+
+[[_5_4_94_]]
+==== Mistake: Including Statements Inside the Loop that BelongOutside the Loop
+
+[[_5_5_95_]]
+=== Using a for Loop
+
+[[_5_6_96_]]
+=== Common Loop Applications
+
+[[_5_6_97_]]
+==== Using a Loop to Accumulate Totals
+
+[[_5_6_98_]]
+==== Using a Loop to Validate Data
+
+[[_5_6_99_]]
+==== Limiting a Reprompting Loop
+
+[[_5_6_100_]]
+==== Validating a Data Type
+
+[[_5_6_101_]]
+==== Validating Reasonableness and Consistency of Data
+
+[[_5_7_102_]]
+=== Chapter Summary
+
+[[_5_8_103_]]
+=== Key Terms
+
+[[_5_9_104_]]
+=== Review Questions
+
+[[_5_10_105_]]
+=== Exercises
+
+[[_6_0_106_]]
+== 6. Arrays
+
+[[_6_1_107_]]
+=== Storing Data in Arrays
+
+[[_6_1_108_]]
+==== How Arrays Occupy Computer Memory
+
+[[_6_2_109_]]
+=== How an Array Can Replace Nested Decisions
+
+[[_6_3_110_]]
+=== Using Constants with Arrays
+
+[[_6_3_111_]]
+==== Using a Constant as the Size of an Array
+
+[[_6_3_112_]]
+==== Using Constants as Array Element Values
+
+[[_6_3_113_]]
+==== Using a Constant as an Array Subscript
+
+[[_6_4_114_]]
+=== Searching an Array for an Exact Match
+
+[[_6_5_115_]]
+=== Using Parallel Arrays
+
+[[_6_5_116_]]
+==== Improving Search Efficiency
+
+[[_6_6_117_]]
+=== Searching an Array for a Range Match
+
+[[_6_7_118_]]
+=== Remaining within Array Bounds
+
+[[_6_8_119_]]
+=== Using a for Loop to Process Arrays
+
+[[_6_9_120_]]
+=== Chapter Summary
+
+[[_6_10_121_]]
+=== Key Terms
+
+[[_6_11_122_]]
+=== Review Questions
+
+[[_6_12_123_]]
+=== Exercises
+
+[[_7_0_124_]]
+== 7. File Handling and Applications
+
+[[_7_1_125_]]
+=== Understanding Computer Files
+
+When discussing computer storage, _temporary_ and _permanent_ refer to *volatility*, not length of time.
+
+Because you can erase data `from` files, some programmers prefer the term _persistent storage_ to permanent storage.
+
+[W] persist (pər-sĭst′)::
+persist - continue to exist; "These stories die hard"; "The legend of Elvis endures"
+* =die hard, prevail, endure, run
+* <>continue - exist over a prolonged period of time; "The bad weather continued for two more weeks"
+* <>carry over - transfer or persist from one stage or sphere of activity to another
+* <>run - occur persistently; "Musical talent runs in the family"
+* <>reverberate - have a long or continuing effect; "The discussions with my teacher reverberated throughout my adult life"
+
+A *byte* is a small unit of storage; for example, in a simple text file, a byte holds only *one character*.
+
+[[_7_1_126_]]
+==== Organizing Files
+
+[[_7_2_127_]]
+=== Understanding the Data Hierarchy
+
+.data hierarchy
+* characters: made of smaller elements called bits
+* fields
+* records: groups of fields that go tother for some logical reason
+* files: tables
+* database
+
+[[_7_3_128_]]
+=== Performing File Operations
+
+[[_7_3_129_]]
+==== Declaring a File
+
+Most languages support several types of files, but one way of categorizing files is by whether they can be used for _input_ or for _output_. Just as variables and constants have data types such as num and string, each file has a data type that is defined in the language you are using. For example, a file's type might be InputFile. Just like variables and constants, *files are declared by giving each a type and an identifier*. As examples, you might declare two files as follows:
+
+----
+InputFile employeeData
+OutputFile updatedData
+----
+
+[[_7_3_130_]]
+==== Opening a File
+
+Opening a file locates it on a storage device and associates a variable name within your program with the file.
+
+[[_7_3_131_]]
+==== Reading Data from a File
+
+When you read data from a file, you must read all the fields that are stored even though you might not want to use all of them.
+
+Even though you are not concered with the address or pay rate fields, you must read them into your program for each employee befor you get to the name for the next employee.
+
+[[_7_3_132_]]
+==== Writing Data to a File
+
+[[_7_3_133_]]
+==== Closing a File
+
+[[_7_3_134_]]
+==== A Program that Performs File Operations
+
+[[_7_4_135_]]
+=== Understanding Sequential Files and Control Break Logic
+
+[[_7_4_136_]]
+==== Understanding Control Break Logic
+
+[[_7_5_137_]]
+=== Merging Sequential Files
+
+[[_7_6_138_]]
+=== Master and Transaction File Processing
+
+[[_7_7_139_]]
+=== Random Access Files
+
+[[_7_8_140_]]
+=== Chapter Summary
+
+[[_7_9_141_]]
+=== Key Terms
+
+[[_7_10_142_]]
+=== Review Questions
+
+[[_7_11_143_]]
+=== Exercises
+
+[[_8_0_144_]]
+== 8. Advanced Data Handling Concepts
+
+[[_8_1_145_]]
+=== Understanding the Need for Sorting Data
+
+[[_8_2_146_]]
+=== Using the Bubble Sort Algorithm
+
+[[_8_2_147_]]
+==== Understanding Swapping Values
+
+[[_8_2_148_]]
+==== Understanding the Bubble Sort
+
+[[_8_2_149_]]
+==== Sorting a List of Variable Size
+
+[[_8_2_150_]]
+==== Refining the Bubble Sort to Reduce Unnecessary Comparisons
+
+[[_8_2_151_]]
+==== Refining the Bubble Sort to Eliminate Unnecessary Passes
+
+[[_8_3_152_]]
+=== Sorting Multifield Records
+
+[[_8_3_153_]]
+==== Sorting Data Stored in Parallel Arrays
+
+[[_8_3_154_]]
+==== Sorting Records as a Whole
+
+[[_8_4_155_]]
+=== Using the Insertion Sort Algorithm
+
+[[_8_5_156_]]
+=== Using Multidimensional Arrays
+
+[[_8_6_157_]]
+=== Using Indexed Files and Linked Lists
+
+[[_8_6_158_]]
+==== Using Indexed Files
+
+[[_8_6_159_]]
+==== Using Linked Lists
+
+[[_8_7_160_]]
+=== Chapter Summary
+
+[[_8_8_161_]]
+=== Key Terms
+
+[[_8_9_162_]]
+=== Review Questions
+
+[[_8_10_163_]]
+=== Exercises
+
+[[_9_0_164_]]
+== 9. Advanced Modularization Techniques
+
+[[_9_1_165_]]
+=== Using Methods with No Parameters
+
+[[_9_2_166_]]
+=== Creating Methods that Require Parameters
+
+[[_9_2_167_]]
+==== Creating Methods that Require Multiple Parameters
+
+[[_9_3_168_]]
+=== Creating Methods that Return a Value
+
+[[_9_3_169_]]
+==== Using an IPO Chart
+
+[[_9_4_170_]]
+=== Passing an Array to a Method
+
+[[_9_5_171_]]
+=== Overloading Methods
+
+[[_9_5_172_]]
+==== Avoiding Ambiguous Methods
+
+[[_9_6_173_]]
+=== Using Predefined Methods
+
+[[_9_7_174_]]
+=== Method Design Issues: Implementation Hiding, Cohesion, and Coupling
+
+[[_9_7_175_]]
+==== Understanding Implementation Hiding
+
+[[_9_7_176_]]
+==== Increasing Cohesion
+
+[[_9_7_177_]]
+==== Reducing Coupling
+
+[[_9_8_178_]]
+=== Understanding Recursion
+
+[[_9_9_179_]]
+=== Chapter Summary
+
+[[_9_10_180_]]
+=== Key Terms
+
+[[_9_11_181_]]
+=== Review Questions
+
+[[_9_12_182_]]
+=== Exercises
+
+[[_10_0_183_]]
+== 10. Object-Oriented Programming
+
+[[_10_1_184_]]
+=== Principles of Object-Oriented Programming
+
+[[_10_1_185_]]
+==== Classes and Objects
+
+[[_10_1_186_]]
+==== Polymorphism
+
+[[_10_1_187_]]
+==== Inheritance
+
+[[_10_1_188_]]
+==== Encapsulation
+
+[[_10_2_189_]]
+=== Defining Classes and Creating Class Diagrams
+
+[[_10_2_190_]]
+==== Creating Class Diagrams
+
+[[_10_2_191_]]
+==== The Set Methods
+
+[[_10_2_192_]]
+==== The Get Methods
+
+[[_10_2_193_]]
+==== The work Methods
+
+[[_10_3_194_]]
+=== Understanding Public and Private Access
+
+[[_10_4_195_]]
+=== Organizing Classes
+
+[[_10_5_196_]]
+=== Understanding Instance Methods
+
+[[_10_6_197_]]
+=== Understanding Static Methods
+
+[[_10_7_198_]]
+=== Using Objects
+
+[[_10_8_199_]]
+=== Chapter Summary
+
+[[_10_9_200_]]
+=== Key Terms
+
+[[_10_10_201_]]
+=== Review Questions
+
+[[_10_11_202_]]
+=== Exercises
+
+[[_11_0_203_]]
+== 11. More Object-Oriented Programming Concepts
+
+[[_11_1_204_]]
+=== Understanding Constructors
+
+[[_11_1_205_]]
+==== Default Constructors
+
+[[_11_1_206_]]
+==== Nondefault Constructors
+
+[[_11_1_207_]]
+==== Overloading Methods and Constructors
+
+[[_11_2_208_]]
+=== Understanding Destructors
+
+[[_11_3_209_]]
+=== Understanding Composition
+
+[[_11_4_210_]]
+=== Understanding Inheritance
+
+[[_11_4_211_]]
+==== Understanding Inheritance Terminology
+
+[[_11_4_212_]]
+==== Accessing Private Fields and Methods of a Parent Class
+
+[[_11_4_213_]]
+==== Using Inheritance to Achieve Good Software Design
+
+[[_11_5_214_]]
+=== An Example of Using Predefined Classes: Creating GUI Objects
+
+[[_11_6_215_]]
+=== Understanding Exception Handling
+
+[[_11_6_216_]]
+==== Drawbacks to Traditional Error-Handling Techniques
+
+[[_11_6_217_]]
+==== The Object-Oriented Exception-Handling Model
+
+[[_11_6_218_]]
+==== Using Built-in Exceptions and Creating Your Own Exceptions
+
+[[_11_7_219_]]
+=== Reviewing the Advantages of Object-Oriented Programming
+
+[[_11_8_220_]]
+=== Chapter Summary
+
+[[_11_9_221_]]
+=== Key Terms
+
+[[_11_10_222_]]
+=== Review Questions
+
+[[_11_11_223_]]
+=== Exercises
+
+[[_12_0_224_]]
+== 12. Event-Driven GUI Programming, Multithreading, and Animation
+
+[[_12_1_225_]]
+=== Understanding Event-Driven Programming
+
+[[_12_2_226_]]
+=== User-Initiated Actions and GUI Components
+
+[[_12_3_227_]]
+=== Designing Graphical User Interfaces
+
+[[_12_3_228_]]
+==== The Interface Should Be Natural and Predictable
+
+[[_12_3_229_]]
+==== The Interface Should Be Attractive, Easy to Read,and Nondistracting
+
+[[_12_3_230_]]
+==== To Some Extent, It’s Helpful If the User Can CustomizeYour Applications
+
+[[_12_3_231_]]
+==== The Program Should Be Forgiving
+
+[[_12_3_232_]]
+==== The GUI Is Only a Means to an End
+
+[[_12_4_233_]]
+=== Developing an Event-Driven Application
+
+[[_12_4_234_]]
+==== Creating Storyboards
+
+[[_12_4_235_]]
+==== Defining the Storyboard Objects in an Object Dictionary
+
+[[_12_4_236_]]
+==== Defining Connections Between the User Screens
+
+[[_12_4_237_]]
+==== Planning the Logic
+
+[[_12_5_238_]]
+=== Understanding Threads and Multithreading
+
+[[_12_6_239_]]
+=== Creating Animation
+
+[[_12_7_240_]]
+=== Chapter Summary
+
+[[_12_8_241_]]
+=== Key Terms
+
+[[_12_9_242_]]
+=== Review Questions
+
+[[_12_10_243_]]
+=== Exercises
+
+[[_13_0_244_]]
+== 13. SystemModeling with the UML
+
+[[_13_1_245_]]
+=== Understanding System Modeling
+
+[[_13_2_246_]]
+=== What is the UML?
+
+[[_13_3_247_]]
+=== Using UML Use Case Diagrams
+
+[[_13_4_248_]]
+=== Using UML Class and Object Diagrams
+
+[[_13_5_249_]]
+=== Using Other UML Diagrams
+
+[[_13_5_250_]]
+==== Sequence Diagrams
+
+[[_13_5_251_]]
+==== Communication Diagrams
+
+[[_13_5_252_]]
+==== State Machine Diagrams
+
+[[_13_5_253_]]
+==== Activity Diagrams
+
+[[_13_5_254_]]
+==== Component and Deployment Diagrams
+
+[[_13_5_255_]]
+==== Profile Diagrams
+
+[[_13_5_256_]]
+==== Diagramming Exception Handling
+
+[[_13_6_257_]]
+=== Deciding When to Use the UML and Which UML Diagrams to Use
+
+[[_13_7_258_]]
+=== Chapter Summary
+
+[[_13_8_259_]]
+=== Key Terms
+
+[[_13_9_260_]]
+=== Review Questions
+
+[[_13_10_261_]]
+=== Exercises
+
+[[_14_0_262_]]
+== 14. Using Relational Databases
+
+[[_14_1_263_]]
+=== Understanding Relational Database Fundamentals
+
+[[_14_2_264_]]
+=== Creating Databases and Table Descriptions
+
+[[_14_3_265_]]
+=== Identifying Primary Keys
+
+[[_14_4_266_]]
+=== Understanding Database Structure Notation
+
+[[_14_5_267_]]
+=== Working with Records within Tables
+
+[[_14_6_268_]]
+=== Creating Queries
+
+[[_14_7_269_]]
+=== Understanding Relationships between Tables
+
+[[_14_7_270_]]
+==== Understanding One-To-Many Relationships
+
+[[_14_7_271_]]
+==== Understanding Many-To-Many Relationships
+
+[[_14_7_272_]]
+==== Understanding One-To-One Relationships
+
+[[_14_8_273_]]
+=== Recognizing Poor Table Design
+
+[[_14_9_274_]]
+=== Understanding Anomalies, Normal Forms, and Normalization
+
+[[_14_9_275_]]
+==== First Normal Form
+
+[[_14_9_276_]]
+==== Second Normal Form
+
+[[_14_9_277_]]
+==== Third Normal Form
+
+[[_14_10_278_]]
+=== Database Performance and Security Issues
+
+[[_14_10_279_]]
+==== Providing Data Integrity
+
+[[_14_10_280_]]
+==== Recovering Lost Data
+
+[[_14_10_281_]]
+==== Avoiding Concurrent Update Problems
+
+[[_14_10_282_]]
+==== Providing Authentication and Permissions
+
+[[_14_10_283_]]
+==== Providing Encryption
+
+[[_14_11_284_]]
+=== Chapter Summary
+
+[[_14_12_285_]]
+=== Key Terms
+
+[[_14_13_286_]]
+=== Review Questions
+
+[[_14_14_287_]]
+=== Exercises
+
+[[_15_0_288_]]
+== Appendices
+
+[[_15_1_289_]]
+=== A. Understanding Numbering Systems and Computer Codes
+
+[[_15_1_290_]]
+==== The Hexadecimal System
+
+[[_15_1_291_]]
+==== Measuring Storage
+
+[[_15_1_292_]]
+==== Key Terms
+
+[[_15_2_293_]]
+=== B. Flowchart Symbols
+
+[[_15_3_294_]]
+=== C. Structures
+
+[[_15_4_295_]]
+=== D. Solving Difficult Structuring Problems
+
+[[_15_5_296_]]
+=== E. Creating Print Charts
+
+[[_15_6_297_]]
+=== F. Two Variations on the Basic Structures-Case and do-while
+
+[[_15_6_298_]]
+==== The case Structure
+
+[[_15_6_299_]]
+==== The do-while Loop
+
+[[_15_6_300_]]
+==== Recognizing the Characteristics Shared by All StructuredLoops
+
+[[_15_6_301_]]
+==== Recognizing Unstructured Loops
+
+[[_15_6_302_]]
+==== Key Terms

@@ -1,0 +1,398 @@
+[[_0_]]
+= 제목
+Joy <arbago@gmail.com>
+:icons: font
+:sectanchors:
+:toc: macro
+
+toc::[]
+
+[preface]
+== 머릿말
+
+[[_0_0_0_]]
+== 머리말
+
+[B] stands for Birds
+
+[[_0_1_1_]]
+=== 키위가 된다는 것은 어떤 느낌일까?
+
+[[_0_2_2_]]
+=== 인간의 관점, 새의 관점
+
+[[_0_3_3_]]
+=== 새는 세상을 어떻게 지각하는가
+
+[[_1_0_4_]]
+== 제1장 시각
+
+[B] wedge-tailed eagle::
+쐐기꼬리독수리 +
+(Animals) a large brown Australian eagle, Aquila audax, having a wedge-shaped tail and a wingspan of 3 m. Also called: eaglehawk
+
+[B] bumble-bee::
+뒤영벌 +
+a kind of large bee with a hairy body
+
+[[_1_1_5_]]
+=== 매가 시력이 좋은 리유
+
+매부리::
+사냥에 쓰는 매를 맡이 기르고 부리는 사람
+
+[B] shrike (shrīk)::
+때까치 +
+Any of various carnivorous songbirds of the family Laniidae, having a screeching call and a strong hooked bill and often impaling its prey on sharp-pointed thorns or barbs of wire fencing. +
+shrike - any of numerous Old World birds having a strong hooked bill that feed on smaller animals
+* <>oscine, oscine bird - passerine bird having specialized vocal apparatus
+* <>family Laniidae, Laniidae - shrikes
+* <>butcherbird - shrikes that impale their prey on thorns
+* <>Lanius lucovicianus, loggerhead shrike - a common shrike of southeastern United States having black bands around the eyes
+* <>Lanius ludovicianus migrans, migrant shrike - a shrike of central North America; winters in Texas and the southern Mississippi valley
+* <>bush shrike - an African shrike
+
+[W] impale (ĭm-pāl′) also em·pale (ĕm-)::
+impale - pierce with a sharp stake or point; "impale a shrimp on a skewer"
+* =empale, spike, transfix
+* <>pierce, thrust - penetrate or cut through with a sharp instrument
+* <>pin - pierce with a pin; "pin down the butterfly"
+* <>spear - pierce with a spear; "spear fish"
+
+hawk (hôk)::
+수리매 +
+hawk - diurnal bird of prey typically having short rounded wings and a long tailhawk - diurnal bird of prey typically having short rounded wings and a long tail
+* <>bird of prey, raptor, raptorial bird - any of numerous carnivorous birds that hunt and kill other animals
+* <>Accipitridae, family Accipitridae - hawks; Old World vultures; kites; harriers; eagles
+* <>eyas - an unfledged or nestling hawk
+* <>tercel, tercelet, tiercel - male hawk especially male peregrine or gyrfalcon
+* <>Accipiter gentilis, goshawk - large hawk of Eurasia and North America used in falconry
+* <>Accipiter nisus, sparrow hawk - small hawk of Eurasia and northern Africa
+* <>Accipiter cooperii, blue darter, Cooper's hawk - bluish-grey North American hawk having a darting flight
+* <>chicken hawk, hen hawk - nontechnical term for any hawks said to prey on poultry
+* <>buteonine - any hawk of the genus Buteo
+* <>Buteo jamaicensis, redtail, red-tailed hawk - dark brown American hawk species having a reddish-brown tail
+* <>Buteo lagopus, roughleg, rough-legged hawk - large hawk of the northern hemisphere that feeds chiefly on small rodents and is beneficial to farmers
+* <>Buteo lineatus, red-shouldered hawk - North American hawk with reddish brown shoulders
+* <>Buteo buteo, buzzard - the common European short-winged hawk
+* <>honey buzzard, Pernis apivorus - Old World hawk that feeds on bee larvae and small rodents and reptiles
+* <>kite - any of several small graceful hawks of the family Accipitridae having long pointed wings and feeding on insects and small animals
+* <>harrier - hawks that hunt over meadows and marshes and prey on small terrestrial animals
+* <>harrier eagle, short-toed eagle - any of numerous large Old World hawks intermediate in some respects between typical hawks and typical eagles
+* <>falcon - diurnal birds of prey having long pointed powerful wings adapted for swift flight
+* <>fish eagle, fish hawk, osprey, Pandion haliaetus, sea eagle - large harmless hawk found worldwide that feeds on fish and builds a bulky nest often occupied for years
+
+great grey shrike::
+큰재개구마리 +
+Lanius excubitor - a common European butcherbird
+* =European shrike
+* <>butcherbird - shrikes that impale their prey on thorns
+
+butcherbird (bo͝och′ər-bûrd′)::
+푸주한새 +
+butcherbird - large carnivorous Australian bird with the shrike-like habit of impaling prey on thorns
+* <>Australian magpie - black-and-white oscine birds that resemble magpies
+* <>Cracticus, genus Cracticus - type genus of the Cracticidae: Australian butcherbirds
+
+buzzard (bŭz′ərd)::
+말똥가리 +
+buzzard - the common European short-winged hawk
+* =Buteo buteo
+* <>hawk - diurnal bird of prey typically having short rounded wings and a long tail
+* <>Buteo, genus Buteo - broad-winged soaring hawks
+
+종다리::
+종달새, lark
+
+시력이 뛰어난 사람을 일컬어 `매의 눈', `독수리의 눈'이라고 하는 것에서 보듯 우리는 오래전부터 매를 비롯한 맹금류의 비상한 시력을 알고 있었다
+
+fovea (fō′vē-ə)::
+눈오목, 와(窩) +
+fovea - area consisting of a small depression in the retina containing cones and where vision is most acute
+* =fovea centralis
+* <>region, area - a part of an animal that has a special function or is supplied by a given artery or nerve; "in the abdominal region"
+* <>retina - the innermost light-sensitive membrane covering the back wall of the eyeball; it is continuous with the optic nerve
+
+매가 시력이 좋은 한 가지 리유는 안구 뒤쪽에 있는 시각 민감점인 눈오목 ~fovea~이 사람과 달리 두 개기 때문이다. 눈오목은 안구 뒤쪽의 망막에 움푹 파인 작은 구멍으로, 이곳에는 혈관이 없으며 - 혈관이 있으면 상이 흐려진다 - 광수용기(빛을 탐지하는 세포)가 밀집해 있다. 이런 리유로 눈오목은 망막에서 상이 가장 선명하게 맺히는 부위다. 매의 시력에 뛰어난 데는 두 개의 눈오목이 한몫한다
+
+ornithology (ôr′nə-thŏl′ə-jē)::
+조류학 +
+ornithology - the branch of zoology that studies birds
+* <>Aves, class Aves - (ornithology) the class of birds
+* <>zoological science, zoology - the branch of biology that studies animals
+
+케이시 앨버트 우드 (1856~1942)::
+조류의 안저 (The Fundus Oculi of Birds)
+
+fundus (fŭn′dəs)::
+(위·안구·자궁 등의) 기저부, 밑(base) +
+fundus - (anatomy) the base of a hollow organ or that part of the organ farthest from its opening; "the uterine fundus"; "the fundus of the stomach"
+* <>anatomical structure, bodily structure, body structure, complex body part, structure - a particular complex anatomical part of a living thing; "he has good bone structure"
+* <>anatomy, general anatomy - the branch of morphology that deals with the structure of animals
+
+oculus (ŏk′yə-ləs)  pl. oc·u·li (-lī′)::
+눈 +
+oculus - the organ of sightoculus - the organ of sight
+* =eye, optic
+* <>sense organ, sensory receptor, receptor - an organ having nerve endings (in the skin or viscera or eye or ear or nose or mouth) that respond to stimulation
+* <>visual system - the sensory system for vision
+* <>naked eye - the eye unaided by any optical instrument that alters the power of vision or alters the apparent size or distance of objects; "it is not safe to look directly at the sun with the naked eye"
+* <>peeper - an informal term referring to the eye
+* <>oculus dexter, OD - the right eye
+* <>oculus sinister, OS - the left eye
+* <>ocellus, simple eye, stemma - an eye having a single lens
+* <>compound eye - in insects and some crustaceans: composed of many light-sensitive elements each forming a portion of an image
+* <>choroid, choroid coat - a highly vascular membrane in the eye between the retina and the sclera; a dark pigmentation minimizes the scattering of light inside the eye
+* <>ciliary body - the part of the tunic of the eye between the choroid coat and the iris; "the ciliary body produces aqueous humor"
+* <>eyelid, lid, palpebra - either of two folds of skin that can be moved to cover or open the eye; "his lids would stay open no longer"
+* <>canthus - either of the corners of the eye where the upper and lower eyelids meet
+* <>epicanthic fold, epicanthus - a vertical fold of skin over the nasal canthus; normal for Mongolian peoples; sometimes occurs in Down's syndrome
+* <>nictitating membrane, third eyelid - a protective fold of skin in the eyes of reptiles and birds and some mammals
+* <>conjunctiva - a transparent lubricating mucous membrane that covers the eyeball and the under surface of the eyelid
+* <>eyeball, orb - the ball-shaped capsule containing the vertebrate eye
+* <>eye muscle, ocular muscle - one of the small muscles of the eye that serve to rotate the eyeball
+* <>cornea - the transparent dome-shaped anterior portion of the outer covering of the eye; it covers the iris and pupil and is continuous with the sclera
+* <>uvea - the part of the eye that contains the iris and ciliary body and choroid
+* <>uveoscleral pathway - a tubule that drains excess aqueous humor
+* <>iris - muscular diaphragm that controls the size of the pupil which in turn controls the amount of light that enters the eye; it forms the colored portion of the eye
+* <>crystalline lens, lens of the eye, lens - biconvex transparent body situated behind the iris in the eye; its role (along with the cornea) is to focuses light on the retina
+* <>arteria centralis retinae, central artery of the retina - a branch of the ophthalmic artery; enters the eyeball with the optic nerve
+* <>arteria ciliaris, ciliary artery - one of several arteries supplying the choroid coat of the eye
+* <>arteria lacrimalis, lacrimal artery - an artery that originates from the ophthalmic artery and supplies the lacrimal gland and rectal eye muscles and the upper eyelid and the forehead
+* <>lacrimal vein, vena lacrimalis - drains the lacrimal gland; empties into the superior ophthalmic vein
+* <>lacrimal apparatus - the structures that secrete and drain tears from the eye
+* <>retina - the innermost light-sensitive membrane covering the back wall of the eyeball; it is continuous with the optic nerve
+* <>sclera, sclerotic coat - the whitish fibrous membrane (albuginea) that with the cornea forms the outer covering and protection of the eyeball
+* <>musculus sphincter pupillae, pupillary sphincter - a ring of smooth muscle surrounding the iris
+* <>face, human face - the front of the human head from the forehead to the chin and ear to ear; "he washed his face"; "I wish I had seen the look on his face when he got the news"
+* <>colloquialism - a colloquial expression; characteristic of spoken or written communication that seeks to imitate informal speech
+* <>aperture - a natural opening in something
+
+loggerhead shrike::
+때까치 속(屬)의 새 Lanius ludovicianus: 몸의 등부분은 잿빛, 복부는 흰 빛이며, 꼬리가 검고, 얼굴은 사람을 연상시킨다; 북미산(産). +
+loggerhead shrike - a common shrike of southeastern United States having black bands around the eyes
+* =Lanius lucovicianus
+* <>shrike - any of numerous Old World birds having a strong hooked bill that feed on smaller animals
+* <>genus Lanius, Lanius - type genus of the Laniidae: typical shrikes
+
+loggerhead (lô′gər-hĕd′, lŏg′ər-)::
+멍텅구리, 바보 +
+loggerhead - a stupid person; these words are used to express a low opinion of someone's intelligence
+* =blockhead, bonehead, dumbass, dunce, dunderhead, fuckhead, hammerhead, knucklehead, lunkhead, muttonhead, numskull, shithead
+* <>dolt, dullard, pillock, poor fish, pudden-head, pudding head, stupe, stupid, stupid person - a person who is not very bright; "The economy, stupid!"
+
+[[_1_2_6_]]
+=== 눈의 진화
+
+두 사람은 광민감성 세포의 단순한 막에서 출발하여 시각이 각 세대마다 1퍼센트씩 향상되면 50만년 안에 인간이나 조류 못지않게 정교한 눈이 생겨날 수 있음을 밝혀냈다. 50만 년은 생명의 력사에 비하면 짧은 기간이다. 이 진화 모형은 눈이 아예 없는 것보다는 반편이나마 있는 것이 나음을 밝혀냈을 뿐 아니라, 페일리와 추종자들 생각과 달리 시각의 진화가 전혀 복잡하거나 불가능하지 않음을 보여주었다
+
+osprey (ŏs′prē, -prā)::
+물수리 +
+osprey - large harmless hawk found worldwide that feeds on fish and builds a bulky nest often occupied for years
+* =fish eagle, fish hawk, Pandion haliaetus, sea eagle
+* <>hawk - diurnal bird of prey typically having short rounded wings and a long tail
+* <>genus Pandion, Pandion - type genus of the Pandionidae
+
+long-tailed tit::
+제주오목눈이(유럽·아시아 북부산(産)) +
+a small European songbird, Aegithalos caudatus, with a black, white, and pink plumage and a very long tail: family Paridae (tits)
+
+american kestrel::
+아메리카황조롱이 Falco sparverius: 아메리카산(産) 작은 매로서, 특히 메뚜기와 작은 포유 동물을 먹이로 한다 +
+American kestrel - small North American falcon
+* =Falco sparverius, kestrel, sparrow hawk
+* <>falcon - diurnal birds of prey having long pointed powerful wings adapted for swift flight
+* <>Falco, genus Falco - a genus of Falconidae
+
+[[_1_3_7_]]
+=== 기만한 새의 눈
+
+.새소리
+* song: 노래, 노랫소리 (짝짓기)
+* call: 울음, 울음소리 (의사소통)
+
+새는 포유류에 비해 눈이 크다. 눈이 클수록 시력이 좋다.
+
+하지만 새의 눈은 기만하다. 보기보다 더 크다
+
+[quote, 윌리엄 하비]
+____
+[새의 눈이] 겉보기에는 작지만, 동공을 빼고는 죄다 피부와 깃털에 덮여 있기 때문이다
+____
+
+눈이 가장 작은 새는 벌새고, 가장 큰 새는 타조다
+
+눈크기::
+각막과 수정체 중앙에서 눈 뒤 망막까지의 거리를 눈의 지름 또는 눈의 크기로 규정한다
+
+* 타조: 50미리미터
+* 사람: 24미리미터
+
+타조는 절대크기로 보면 가장 크지만 몸크기와 비교하면 생각보다 작다. 몸집에 비해 상대해서 가장 큰 새는 독수리, 매, 올빼미가 있다
+
+키위의 눈은 조류의 눈이 최대한 퇴화한 것으로 치부된다
+
+눈이 클수록 망막에 맺히는 상이 크다. 텔레비전 화면이 클수록 픽셀이 많듯 눈이 클수록 광수용기가 많아서 상의 화질이 좋아진다
+
+주행성 새 중에서 먼동이 트자마자 활동하는 새는 어스름이 진 뒤에 시작하는 새보다 눈이 크다. +
+밤에 먹이를 찾는 섭금류 shorebird는 올빼미를 비롯한 야행성 종처럼 눈이 비교히 크다
+
+[W] shorebird (shôr′bûrd′)::
+Any of various birds that frequent the shores of coastal or inland waters, such as a sandpiper, plover, or snipe.
+
+눈은 무겁고 액체로 가득해서 클수록 날기에 불편하다
+
+머리가 무거우면 나는 데 불편하므로 눈 크기에는 한계가 있다. 새가 이빨이 없는 리유는 눈이 커야 하는데 나는 데 불편하면 안 되기 때문인지도 모른다. 새는 이빨 대신 튼튼한 근육질 위가 있으며, 이빨을 대신하여 먹이를 으깨는 모래주머니의 위치는 복부의 무게중심 근처다
+
+[[_1_4_8_]]
+=== 시각의 수수께끼
+
+놀랍게도 우리는 망막에 맺힌 역상을 "`뒤집는"` 훈련을 한다. 1961년의 유명한 실험에서 어윈 문은 세상을 거꾸로 벼여주는 안경을 착용했다. 처음에는 어지러워서 정신이 하나도 없었지만, 여드레가 지나자 적응이 되어 세상이 똑바로 '`보이기`' 시작했다. 문은 이를 립증하려고 오토바이를 몰고 비행기를 날았다. 사고는 한 번도 일어나지 않았다. 문의 극단한 실험은 눈이 아니라 뇌가 *'`본다`'*는 결정증거를 제시했다
+
+우리는 뇌를 별도의 장기 - 말랑말랑한 조직 덩어리 - 로 생각하기 쉽지만, 그보다는 몸의 모든 부분에 련결된 #신경 조직의 정교한 네트워크#로 보는 편이 더 낫다
+
+마틴은 올빼미의 눈이 정면을 향한 리유에 대해 흥미로운 가설을 제시했다. 올빼미는 눈이 매우 커야 할 뿐 아니라 - 빛이 약한 곳에서 날아다녀야 하니까 - 귓구멍이 매우 커야 하는데, 이 때문에 두개골에서 눈이 들어갈 수 있는 곳은 정명밖에 없다는 것이다. 마틴이 묻는다. "`그곳 말고 어디에 갈 수 있었겠는가?`" 올빼미 두개골에 눈과 귀 (그리고 뇌) 자리가 얼마나 부족한가 하면 귓구멍으로 눈알 뒤쪽을 볼 수 있을 정도다
+
+[[_1_5_9_]]
+=== 새는 어떻게 볼까?
+
+[[_1_6_10_]]
+=== 루피콜새의 구애과시
+
+[[_1_7_11_]]
+=== 오른쪽 눈과 왼쪽 눈의 용도
+
+[[_1_8_12_]]
+=== 한쪽 눈을 뜨고 자는 새
+
+[[_2_0_13_]]
+== 제2장 청각
+
+[[_2_1_14_]]
+=== 메추라기뜸부기
+
+[[_2_2_15_]]
+=== 엄청난 소리를 내는 새들
+
+[[_2_3_16_]]
+=== 부당하게 외면 받은 감각
+
+[[_2_4_17_]]
+=== 새에게는 ‘귀’가 없다
+
+[[_2_5_18_]]
+=== 새의 특이한 달팽이
+
+[[_2_6_19_]]
+=== 계절에 따라 새의 노랫소리가 달라지는 리유
+
+[[_2_7_20_]]
+=== 새가 소리를 감지하는 법
+
+[[_2_8_21_]]
+=== 칵테일 파티 효과와 롱바르 효과
+
+[[_2_9_22_]]
+=== 노랫소리와 세력권
+
+[[_2_10_23_]]
+=== 박쥐의 반향정위
+
+[[_3_0_24_]]
+== 제3장 촉각
+
+[[_3_1_25_]]
+=== 부리는 둔감하다?
+
+[[_3_2_26_]]
+=== 딱따구리의 부리는 도끼
+
+[[_3_3_27_]]
+=== 깃 다듬기의 사회 기능
+
+[[_3_4_28_]]
+=== 털깃털의 비밀
+
+[[_3_5_29_]]
+=== 키위의 부리, 딱따구리의 혀
+
+[[_3_6_30_]]
+=== 피부 민감성과 알 낳는 개수
+
+[[_3_7_31_]]
+=== 탁란조의 극악무도한 만행
+
+[[_3_8_32_]]
+=== 새들의 성생활
+
+[[_3_9_33_]]
+=== 오르가슴을 느끼는 새
+
+[[_4_0_34_]]
+== 제4장 미각
+
+[[_4_1_35_]]
+=== 새에게도 미각이 있다
+
+[[_4_2_36_]]
+=== 새의 맛봉오리
+
+[[_4_3_37_]]
+=== 사람과는 다른 맛 감각
+
+[[_4_4_38_]]
+=== 색깔과 맛
+
+[[_5_0_39_]]
+== 제5장 후각
+
+[[_5_1_40_]]
+=== 오듀본의 실험
+
+[[_5_2_41_]]
+=== 죽음을 감지하는 도래까마귀
+
+[[_5_3_42_]]
+=== 의료 삽화가의 의문
+
+[[_5_4_43_]]
+=== 가스관의 쇠콘도르
+
+[[_5_5_44_]]
+=== 1813년, 키위의 발견
+
+[[_5_6_45_]]
+=== 냄새로 먹이를 찾는 멧도요
+
+[[_5_7_46_]]
+=== 후각지형과 후각해경
+
+[[_6_0_47_]]
+== 제6장 자각磁覺
+
+[[_6_1_48_]]
+=== 바다오리의 비행 경로
+
+[[_6_2_49_]]
+=== 새들은 어떻게 길을 찾는가
+
+[[_6_3_50_]]
+=== 에믈런 깔때기
+
+[[_6_4_51_]]
+=== 새는 지구 자기장을 ‘본다’
+
+[[_7_0_52_]]
+== 제7장 정서
+
+[[_7_1_53_]]
+=== 다윈의 통찰
+
+[[_7_2_54_]]
+=== 스트레스와 새의 행동
+
+[[_7_3_55_]]
+=== 새도 통증을 느낄까?
+
+[[_7_4_56_]]
+=== 새들의 유대관계

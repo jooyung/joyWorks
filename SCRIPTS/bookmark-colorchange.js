@@ -2,10 +2,16 @@
  * Color Bookmarks
  * ----------------------
  * Modified: 2015-03-30 (turn it to functions, and clean the code)
+ * ----------------------
+ * The first level is blue, and the second bold
  */
 
 //-- Make second-deep children black
-var bmk, godeep = true, godeepBmk;
+var
+	bmk
+	, godeep = false
+	, godeepBmk
+;
 
 //-- dir means the first chilren of the bookmarkRoot
 var skipDir = ['AAA', 'AA', 'Words', 'Contents', 'Table of Contents', 'Contents at a Glance'];

@@ -1,0 +1,910 @@
+[[_0_]]
+= 제목
+Joy <arbago@gmail.com>
+v1.0, 2015-4-29
+:icons: font
+:sectanchors:
+:imagesdir: images
+:homepage: http://arbago.com
+:toc: macro
+
+toc::[]
+
+[preface]
+== preface
+
+[W] by a long shot::
+To any extent; at all. Usually used in negative sentences: You haven't done your share of the work by a long shot.
+
+This book is not the answer, #not by a long shot#.
+
+[W] the way forward::
+Something that would have a positive influence on life at this moment. +
+It's an idiom, and it means to lay future plans; to determine how you are going to proceed from this point forward.
+* But it is part of my exploration of #the way forward#.
+
+The *Lisp* programming language was designed to be just such a tool. And *Clojure* is an amazingly well designed Lisp.
+
+[W] stumble on::
+To catch the foot against something and lose one's balance:
+* =trip.
+* Idioms: lose one's footing, make a false step.
+* Every programmer who #stumbles onto# Lisp has a story, and mine is similar to many.
+
+[W] I started my professional career with Java, and eventually #ran into a wall# with what I could create with it.
+
+[W] order of magnitude::
+a degree in a continuum of size or quantity; "it was on the order of a mile"; "an explosion of a low order of magnitude"
+* =order
+* <>magnitude - the property of relative size or extent (whether large or small); "they tried to predict the magnitude of the explosion"; "about the magnitude of a small pea"
+* Our team has grown over the past three years, but it's still about #an order of magnitude# smaller than other teams at similar companies.
+
+[W] uphold::
+stand up for; stick up for; of causes, principles, or ideals
+* <>defend, fend for, support - argue or speak in defense of; "She supported the motion to strike"
+* If nothing else, the past three years have #upheld# my belief that tools matter, and that some are far superior to others.
+
+=== about this book
+
+[W] paramount::
+having superior power and influence; "the predominant mood among policy-makers is optimism"
+* =overriding, predominate, preponderant, preponderating, predominant
+* <>dominant - exercising influence or control; "television plays a dominant role in molding public opinion"; "the dominant partner in the marriage"
+* In today's world, where programmer productivity is #paramount#, Clojure shines.
+
+[W] run circles::
+All else being equal, a good Clojure team can #run circles# around significantly larger teams using other languages.
+
+=== How to use this book
+
+[W] leap::
+* Learning Clojure can be quite a #leap# for a lot of programmers.
+
+[W] layer::
+make or form a layer; "layer the different colored sands"
+* <>shape, mould, mold, form, forge, work - make something, usually for a specific function; "She molded the rice balls carefully"; "Form cylinders from the dough"; "shape a figure"; "Work the metal into a sword"
+* It starts out with the absolute basics, and slowly #layers# on the different features of the language in a way to make it all fit together in an intuitive manner.
+
+[[_1_0_0_]]
+== 1. Getting started
+
+Most of all, it's difficult because a new language #makes you feel like a novice again#.
+
+Unless you stick with it and gain some experience, even a simple task will seem like a #chore#.
+
+[[_1_1_1_]]
+=== 1. Introduction to Clojure
+
+[[_1_1_2_]]
+==== 1.1 What is Clojure?
+
+[[_1_1_3_]]
+===== 1.1.1 Clojure—the reincarnation of Lisp
+
+[W] smug::
+marked by excessive complacency or self-satisfaction; "a smug glow of self-congratulation"
+* =self-satisfied
+* <>content, contented - satisfied or showing satisfaction with things as they are; "a contented smile"
+* When someone says that Lisp is the world's most powerful programming language, many folks agree (even if they refer to the speaker as a #smug# Lisp weenie.)
+
+[W] weenie::
+a smooth-textured sausage of minced beef or pork usually smoked; often served on a bread roll
+* =frankfurter, wienerwurst, wiener, frank, hot dog, hotdog, dog
+* <>sausage - highly seasoned minced meat stuffed in casings
+* <>Vienna sausage - short slender frankfurter usually with ends cut off
+* <>red hot, hot dog, hotdog - a frankfurter served hot on a bun
+* even if they refer to the speaker as a smug List #weenie#
+
+What other programming language can lay claim to something similar and get away with it?
+
+[[_1_1_4_]]
+===== 1.1.2 How we got here
+
+[[_1_1_5_]]
+===== 1.1.3 How this book teaches Clojure
+
+[[_1_1_6_]]
+==== 1.2 Understanding Clojure syntax
+
+[[_1_1_7_]]
+===== 1.2.1 XML and parentheses
+
+[W] kludge::
+a badly assembled collection of parts hastily assembled to serve some particular purpose (often used to refer to computing systems or software that has been badly put together)
+* <>computer programing, computer programming, programing, programming - creating a sequence of instructions to enable the computer to do something
+* <>aggregation, collection, accumulation, assemblage - several things grouped together or considered as a whole
+* These days, however, everyone likes to criticize XML for being #kludgy# and verbose.
+
+[[_1_1_8_]]
+===== 1.2.2 Lists, vectors, and hashes
+
+[[_1_1_9_]]
+==== 1.3 The sources of Clojure’s power
+
+Computers understand only one language, *binary code*.
+
+[[_1_1_10_]]
+===== 1.3.1 Clojure and Lisp
+
+[[_1_1_11_]]
+===== 1.3.2 Clojure and functional programming
+
+[[_1_1_12_]]
+===== 1.3.3 Clojure and the JVM
+
+Clojure #sidesteps# this problem neatly.
+
+[[_1_1_13_]]
+===== 1.3.4 Clojure as a Lisp
+
+The Clojure reader is a marvel of innovation.
+
+====== The Reader
+
+The reder is the entity that reads source code, from a program source file, for instance, and converts it into s-expressions.
+
+This is the reason why it's sometimes said that Lisp has no syntax. It's probably more accurate to say that Lisp has no concrete syntax. After all, as described earlier, language processors discard concrete syntax once the AST is created.
+
+[T] homoiconic::
+Programming languages that exhibit this property are called `homoiconic` (_home_ means same, _iconic_ means representation).
+
+Further, the reader invalidates the need to write language parsers because the reader doest that already, and along with _eval_ everything needed to write and internal DSL is already present.
+
+====== The Macro System
+
+====== Metaprogramming with macros
+
+It's the whole reason why Lisp is considered a _programmable_ programming language.
+
+[[_1_1_14_]]
+===== 1.3.5 More advantages of Clojure
+
+[[_1_1_15_]]
+===== 1.3.6 Clojure as a functional language
+
+[[_1_1_16_]]
+===== 1.3.7 Clojure as a JVM-based language
+
+[[_1_1_17_]]
+==== 1.4 Clojure—beyond object orientation
+
+[[_1_1_18_]]
+==== 1.5 Summary
+
+[[_1_2_19_]]
+=== 2. A whirlwind tour
+
+[[_1_2_20_]]
+==== 2.1 Getting started
+
+[[_1_2_21_]]
+===== 2.1.1 Installing Clojure
+
+[[_1_2_22_]]
+===== 2.1.2 The Clojure REPL
+
+[[_1_2_23_]]
+===== 2.1.3 Hello, world
+
+[[_1_2_24_]]
+===== 2.1.4 doc and find-doc
+
+[[_1_2_25_]]
+===== 2.1.5 A few more points on Clojure syntax
+
+prefix notation: also called polish notation
+
+Clojure avoids this special case by not having any operators at all. Instead, math functions are implemented using Clojure functions. All functions work the same way, whether they're math related or not.
+
+Clojure treats them (commas) as whitespace and ignores them.
+
+Clojure, on the other hand, is case sensitive.
+
+[[_1_2_26_]]
+==== 2.2 Program structure
+
+[W] Most of those that we discuss here are categorized as structural forms because they #lend# structure to the code; they set up local names, allow for looping and recursion, and the like.
+
+[[_1_2_27_]]
+===== 2.2.1 Functions
+
+[W] arity (âr′ĭ-tē)::
+The number of arguments or operands taken by a function or operator. +
+[-ar(y) (as in binary and ternary) + -ity.]
+
+[[_1_2_28_]]
+===== 2.2.2 The let form
+
+[[_1_2_29_]]
+===== 2.2.3 Side effects with do
+
+The real world is full of state, and side effects are a necessity
+
+[[_1_2_30_]]
+===== 2.2.4 try/catch/finally and throw
+
+This is optional because Clojure doesn't expect you to handle checked exceptions as Java does.
+
+[[_1_2_31_]]
+===== 2.2.5 Reader macros
+
+The simplest (and most traditional) example of a reader macro is the comment character (;).
+
+Clojure doesn't do this, and so you can't define your own reader macros.
+
+[[_1_2_32_]]
+==== 2.3 Program flow
+
+[[_1_2_33_]]
+===== 2.3.1 Conditionals
+
+I know we keep saying this, but you'll see what this means in chapte 7.
+
+[[_1_2_34_]]
+===== 2.3.2 Functional iteration
+
+.recur::
+* it doesn't consume the stack
+* self-recursion as opposed to a function calling itself by name
+* doesn't have tail call optimization
+* used only from tail positions of code
+
+[W] This will #tip you off# that you have a 'recur' being used from a non-tail position of 'loop, and such errors in code are easy to fix
+
+[[_1_2_35_]]
+===== 2.3.3 The threading macros
+
+[[_1_2_35_1_]]
+====== Thread_first
+
+.thread-first macro
+#*->*#
+
+[[_1_2_35_2_]]
+====== Thread-last
+
+.thread-last macro
+#*->>*#
+
+
+[[_1_2_36_]]
+==== 2.4 Clojure data structures
+
+[[_1_2_37_]]
+===== 2.4.1 nil, truth, and falsehood
+
+[[_1_2_38_]]
+===== 2.4.2 Chars, strings, and numbers
+
+[[_1_2_39_]]
+===== 2.4.3 Keywords and symbols
+
+[[_1_2_40_]]
+===== 2.4.4 Sequences
+
+[[_1_2_41_]]
+==== 2.5 Summary
+
+[[_1_3_42_]]
+=== 3. Building blocks of Clojure
+
+[[_1_3_43_]]
+==== 3.1 Functions
+
+[[_1_3_44_]]
+===== 3.1.1 Defining functions
+
+[[_1_3_45_]]
+===== 3.1.2 Calling functions
+
+[[_1_3_46_]]
+===== 3.1.3 Higher-order functions
+
+[[_1_3_47_]]
+===== 3.1.4 Anonymous functions
+
+[[_1_3_48_]]
+===== 3.1.5 Keywords and symbols
+
+[[_1_3_49_]]
+==== 3.2 Scope
+
+[[_1_3_50_]]
+===== 3.2.1 Vars and binding
+
+[[_1_3_51_]]
+===== 3.2.2 The let form revisited
+
+[[_1_3_52_]]
+===== 3.2.3 Lexical closures
+
+[[_1_3_53_]]
+==== 3.3 Namespaces
+
+[[_1_3_54_]]
+===== 3.3.1 ns
+
+[[_1_3_55_]]
+===== 3.3.2 Working with namespaces
+
+[[_1_3_56_]]
+==== 3.4 Destructuring
+
+[[_1_3_57_]]
+===== 3.4.1 Vector bindings
+
+[[_1_3_58_]]
+===== 3.4.2 Map bindings
+
+[[_1_3_59_]]
+==== 3.5 Metadata
+
+[[_1_3_60_]]
+==== 3.6 Summary
+
+[[_1_4_61_]]
+=== 4. Polymorphism with multimethods
+
+[[_1_4_62_]]
+==== 4.1 Polymorphism
+
+[[_1_4_63_]]
+===== 4.1.1 Subtype polymorphism
+
+[[_1_4_64_]]
+===== 4.1.2 Duck typing
+
+[[_1_4_65_]]
+==== 4.2 Method dispatch
+
+[[_1_4_66_]]
+===== 4.2.1 Single and double dispatch
+
+[[_1_4_67_]]
+===== 4.2.2 The visitor pattern (and simulating double dispatch)
+
+[[_1_4_68_]]
+===== 4.2.3 Multiple dispatch
+
+[[_1_4_69_]]
+==== 4.3 Multimethods
+
+[[_1_4_70_]]
+===== 4.3.1 Without multimethods
+
+[[_1_4_71_]]
+===== 4.3.2 Using multimethods
+
+[[_1_4_72_]]
+===== 4.3.3 Multiple dispatch
+
+[[_1_4_73_]]
+===== 4.3.4 Ad hoc hierarchies
+
+[[_1_4_74_]]
+===== 4.3.5 Redis-clojure
+
+[[_1_4_75_]]
+==== 4.4 Summary
+
+[[_1_5_76_]]
+=== 5. Clojure and Java interop
+
+[[_1_5_77_]]
+==== 5.1 Calling Java from Clojure
+
+[[_1_5_78_]]
+===== 5.1.1 Importing Java classes into Clojure
+
+[[_1_5_79_]]
+===== 5.1.2 Creating instances and accessing methods and fields
+
+[[_1_5_80_]]
+===== 5.1.3 memfn
+
+[[_1_5_81_]]
+===== 5.1.4 bean
+
+[[_1_5_82_]]
+===== 5.1.5 Arrays
+
+[[_1_5_83_]]
+===== 5.1.6 Implementing interfaces and extending classes
+
+[[_1_5_84_]]
+==== 5.2 Compiling Clojure code to Java byte code
+
+[[_1_5_85_]]
+===== 5.2.1 Example–a tale of two calculators
+
+[[_1_5_86_]]
+===== 5.2.2 Creating Java classes and interfaces using gen-class and gen-interface
+
+[[_1_5_87_]]
+==== 5.3 Calling Clojure from Java
+
+[[_1_5_88_]]
+==== 5.4 Summary
+
+[[_1_6_89_]]
+=== 6. State and the concurrent world
+
+[[_1_6_90_]]
+==== 6.1 The problem with state
+
+[[_1_6_91_]]
+===== 6.1.1 Common problems with shared state
+
+[[_1_6_92_]]
+===== 6.1.2 The traditional solution
+
+[[_1_6_93_]]
+==== 6.2 Identities and values
+
+[[_1_6_94_]]
+===== 6.2.1 Immutable values
+
+[[_1_6_95_]]
+===== 6.2.2 Objects and time
+
+[[_1_6_96_]]
+===== 6.2.3 Immutability and concurrency
+
+[[_1_6_97_]]
+==== 6.3 The Clojure way
+
+[[_1_6_98_]]
+===== 6.3.1 Requirements for immutability
+
+[[_1_6_99_]]
+===== 6.3.2 Managed references
+
+[[_1_6_100_]]
+==== 6.4 Refs
+
+[[_1_6_101_]]
+===== 6.4.1 Mutating refs
+
+[[_1_6_102_]]
+===== 6.4.2 Software transactional memory
+
+[[_1_6_103_]]
+==== 6.5 Agents
+
+[[_1_6_104_]]
+===== 6.5.1 Mutating agents
+
+[[_1_6_105_]]
+===== 6.5.2 Working with agents
+
+[[_1_6_106_]]
+===== 6.5.3 Side effects in STM transactions
+
+[[_1_6_107_]]
+==== 6.6 Atoms
+
+[[_1_6_108_]]
+===== 6.6.1 Mutating atoms
+
+[[_1_6_109_]]
+==== 6.7 Vars
+
+[[_1_6_110_]]
+==== 6.8 State and its unified access model
+
+[[_1_6_111_]]
+==== 6.9 Watching for mutation
+
+[[_1_6_112_]]
+==== 6.10 Futures and promises
+
+[[_1_6_113_]]
+===== 6.10.1 Futures
+
+[[_1_6_114_]]
+===== 6.10.2 Promises
+
+[[_1_6_115_]]
+==== 6.11 Summary
+
+[[_1_7_116_]]
+=== 7. Evolving Clojure through macros
+
+[[_1_7_117_]]
+==== 7.1 Macro basics
+
+[[_1_7_118_]]
+===== 7.1.1 Textual substitution
+
+[[_1_7_119_]]
+===== 7.1.2 The unless example
+
+[[_1_7_120_]]
+===== 7.1.3 Macro templates
+
+[[_1_7_121_]]
+===== 7.1.4 Recap—why macros?
+
+[[_1_7_122_]]
+==== 7.2 Macros from within Clojure
+
+[[_1_7_123_]]
+===== 7.2.1 comment
+
+[[_1_7_124_]]
+===== 7.2.2 declare
+
+[[_1_7_125_]]
+===== 7.2.3 defonce
+
+[[_1_7_126_]]
+===== 7.2.4 and
+
+[[_1_7_127_]]
+===== 7.2.5 time
+
+[[_1_7_128_]]
+==== 7.3 Writing your own macros
+
+[[_1_7_129_]]
+===== 7.3.1 infix
+
+[[_1_7_130_]]
+===== 7.3.2 randomly
+
+[[_1_7_131_]]
+===== 7.3.3 defwebmethod
+
+[[_1_7_132_]]
+===== 7.3.4 assert-true
+
+[[_1_7_133_]]
+==== 7.4 Summary
+
+[[_2_7_134_]]
+== 2. Getting real
+
+[[_2_8_135_]]
+=== 8. Test-driven development and more
+
+[[_2_8_136_]]
+==== 8.1 Getting started with TDD
+
+[[_2_8_137_]]
+===== 8.1.1 Example: dates and string
+
+[[_2_8_138_]]
+==== 8.2 Mocking and stubbing things
+
+[[_2_8_139_]]
+===== 8.2.1 Example: expense finders
+
+[[_2_8_140_]]
+===== 8.2.2 Stubbing
+
+[[_2_8_141_]]
+===== 8.2.3 Mocking
+
+[[_2_8_142_]]
+===== 8.2.4 Mocks versus stubs
+
+[[_2_8_143_]]
+==== 8.3 Organizing tests
+
+[[_2_8_144_]]
+===== 8.3.1 Testing
+
+[[_2_8_145_]]
+===== 8.3.2 are
+
+[[_2_8_146_]]
+==== 8.4 Summary
+
+[[_2_9_147_]]
+=== 9. Data storage with Clojure
+
+[[_2_9_148_]]
+==== 9.1 MySQL & clj-record
+
+[[_2_9_149_]]
+===== 9.1.1 ActiveRecord, users, and charges
+
+[[_2_9_150_]]
+===== 9.1.2 The user model
+
+[[_2_9_151_]]
+===== 9.1.3 Associations
+
+[[_2_9_152_]]
+===== 9.1.4 Validations and callbacks
+
+[[_2_9_153_]]
+===== 9.1.5 A look under the hood
+
+[[_2_9_154_]]
+==== 9.2 HBase
+
+[[_2_9_155_]]
+===== 9.2.1 Meet HBase
+
+[[_2_9_156_]]
+===== 9.2.2 Using Clojure to access HBase
+
+[[_2_9_157_]]
+==== 9.3 Redis
+
+[[_2_9_158_]]
+===== 9.3.1 Installing Redis
+
+[[_2_9_159_]]
+===== 9.3.2 Accessing Redis from Clojure programs
+
+[[_2_9_160_]]
+===== 9.3.3 A Redis data mapper
+
+[[_2_9_161_]]
+==== 9.4 Summary
+
+[[_2_10_162_]]
+=== 10. Clojure and the web
+
+[[_2_10_163_]]
+==== 10.1 An HTTP interface from scratch
+
+[[_2_10_164_]]
+===== 10.1.1 The HTTP engine
+
+[[_2_10_165_]]
+==== 10.2 Ring
+
+[[_2_10_166_]]
+===== 10.2.1 Understanding Ring
+
+[[_2_10_167_]]
+===== 10.2.2 Middleware
+
+[[_2_10_168_]]
+==== 10.3 Compojure
+
+[[_2_10_169_]]
+===== 10.3.1 Using Compojure
+
+[[_2_10_170_]]
+===== 10.3.2 Under the hood
+
+[[_2_10_171_]]
+==== 10.4 Generating HTML
+
+[[_2_10_172_]]
+===== 10.4.1 clj-html
+
+[[_2_10_173_]]
+===== 10.4.2 Under the hood
+
+[[_2_10_174_]]
+==== 10.5 Summary
+
+[[_2_11_175_]]
+=== 11. Scaling through messaging
+
+[[_2_11_176_]]
+==== 11.1 Messaging systems
+
+[[_2_11_177_]]
+===== 11.1.1 JMS, STOMP, AMQP
+
+[[_2_11_178_]]
+===== 11.1.2 ActiveMQ, RabbitMQ, ZeroMQ
+
+[[_2_11_179_]]
+==== 11.2 Clojure and RabbitMQ
+
+[[_2_11_180_]]
+===== 11.2.1 AMQP basics
+
+[[_2_11_181_]]
+===== 11.2.2 Connecting to RabbitMQ
+
+[[_2_11_182_]]
+===== 11.2.3 Sending messages over RabbitMQ
+
+[[_2_11_183_]]
+===== 11.2.4 Receiving messages from RabbitMQ
+
+[[_2_11_184_]]
+==== 11.3 Distributed parallel programming
+
+[[_2_11_185_]]
+===== 11.3.1 Creating remote workers
+
+[[_2_11_186_]]
+===== 11.3.2 Servicing worker requests
+
+[[_2_11_187_]]
+===== 11.3.3 Putting it all together
+
+[[_2_11_188_]]
+===== 11.3.4 Multicasting messages to multiple receivers
+
+[[_2_11_189_]]
+===== 11.3.5 Calling all workers
+
+[[_2_11_190_]]
+===== 11.3.6 Additional features
+
+[[_2_11_191_]]
+==== 11.4 Summary
+
+[[_2_12_192_]]
+=== 12. Data processing with Clojure
+
+[[_2_12_193_]]
+==== 12.1 The map/reduce paradigm
+
+[[_2_12_194_]]
+===== 12.1.1 Getting started with map/reduce—counting words
+
+[[_2_12_195_]]
+===== 12.1.2 Generalizing the map/reduce
+
+[[_2_12_196_]]
+===== 12.1.3 Parsing logs
+
+[[_2_12_197_]]
+===== 12.1.4 Analyzing Rails sessions
+
+[[_2_12_198_]]
+===== 12.1.5 Large-scale data processing
+
+[[_2_12_199_]]
+==== 12.2 Master/slave parallelization
+
+[[_2_12_200_]]
+===== 12.2.1 Defining the job
+
+[[_2_12_201_]]
+===== 12.2.2 Maintaining status
+
+[[_2_12_202_]]
+===== 12.2.3 Dispatching a job
+
+[[_2_12_203_]]
+===== 12.2.4 Defining the slave
+
+[[_2_12_204_]]
+===== 12.2.5 Using the master-slave framework
+
+[[_2_12_205_]]
+===== 12.2.6 Running a job
+
+[[_2_12_206_]]
+===== 12.2.7 Seeing task errors
+
+[[_2_12_207_]]
+===== 12.2.8 Rerunning the job
+
+[[_2_12_208_]]
+==== 12.3 Summary
+
+[[_2_13_209_]]
+=== 13. More on functional programming
+
+[[_2_13_210_]]
+==== 13.1 Using higher-order functions
+
+[[_2_13_211_]]
+===== 13.1.1 Collecting results of functions
+
+[[_2_13_212_]]
+===== 13.1.2 Reducing lists of things
+
+[[_2_13_213_]]
+===== 13.1.3 Filtering lists of things
+
+[[_2_13_214_]]
+==== 13.2 Partial application and currying
+
+[[_2_13_215_]]
+===== 13.2.1 Adapting functions
+
+[[_2_13_216_]]
+===== 13.2.2 Defining functions
+
+[[_2_13_217_]]
+===== 13.2.3 Currying
+
+[[_2_13_218_]]
+==== 13.3 Closures
+
+[[_2_13_219_]]
+===== 13.3.1 Free variables and closures
+
+[[_2_13_220_]]
+===== 13.3.2 Delayed computation and closures
+
+[[_2_13_221_]]
+===== 13.3.3 Closures and objects
+
+[[_2_13_222_]]
+===== 13.3.4 An object system for Clojure
+
+[[_2_13_223_]]
+==== 13.4 Summary
+
+[[_2_14_224_]]
+=== 14. Protocols, records, and types
+
+[[_2_14_225_]]
+==== 14.1 The expression problem
+
+[[_2_14_226_]]
+===== 14.1.1 The Clojure world
+
+[[_2_14_227_]]
+===== 14.1.2 The Java world
+
+[[_2_14_228_]]
+===== 14.1.3 The expression problem
+
+[[_2_14_229_]]
+===== 14.1.4 Clojure’s multimethods solution
+
+[[_2_14_230_]]
+==== 14.2 Modus operandi
+
+[[_2_14_231_]]
+===== 14.2.1 def-modus-operandi
+
+[[_2_14_232_]]
+===== 14.2.2 detail-modus-operandi
+
+[[_2_14_233_]]
+===== 14.2.3 Tracking our modus operandi
+
+[[_2_14_234_]]
+===== 14.2.4 The next step
+
+[[_2_14_235_]]
+==== 14.3 Protocols and data types
+
+[[_2_14_236_]]
+===== 14.3.1 defprotocol and extend-protocol
+
+[[_2_14_237_]]
+===== 14.3.2 deftype, defrecord, and reify
+
+[[_2_14_238_]]
+==== 14.4 Summary
+
+[[_2_15_239_]]
+=== 15. More macros and DSLs
+
+[[_2_15_240_]]
+==== 15.1 Macros
+
+[[_2_15_241_]]
+===== 15.1.1 Anaphoric macros
+
+[[_2_15_242_]]
+===== 15.1.2 The anaphoric if
+
+[[_2_15_243_]]
+===== 15.1.3 The thread-it macro
+
+[[_2_15_244_]]
+===== 15.1.4 Shifting computation to compile time
+
+[[_2_15_245_]]
+===== 15.1.5 Macro-generating macros
+
+[[_2_15_246_]]
+==== 15.2 Domain-specific languages
+
+[[_2_15_247_]]
+===== 15.2.1 DSL-driven design
+
+[[_2_15_248_]]
+===== 15.2.2 User classification
+
+[[_2_15_249_]]
+==== 15.3 Summary

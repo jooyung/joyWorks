@@ -7,10 +7,14 @@
 
 var len = bookmarkRoot.children.length;
 var i, bmk, bmkname;
-var changeColor = true;
+var changeColor = false;
 
 //-- Patterns
-var pO = { 0: [/^\s*[cC]hapter\s*(\d+):/, "$1."], 1: [/^(Part|PART)\s*(\w+):/, "$2."], 2: [/^Appendix\s*/, ""], 3: [/^(\d+)/, "$1."] }
+var pO = {
+	0: [/^\s*chapter\s*(\w+)[\.:]/i, "$1."]                                           //- Chapter 1. or Chapter 1:          ===> 1.
+	, 1: [/^\s*part\s*(\w+)[\.:]/i, "$1."]                                             //- Part II.  or Part 2: or Part 2.             ===> II.
+	, 2: [/^\s*appendix\s*(\w+)[\.:]/i, "$1."]       //- Appendix abc  or Appendix 2: or appendix 2.     ===> abc
+	}
 
 /**
  * printing easily
@@ -21,14 +25,16 @@ function cc(str) {
 
 /**
  * ReGex
+ -----------------------------
+ filename.toLowerCase()
  */
 
 function applyReGex(filename) {
 	var newName = false;
+	// filename = filename.toLowerCase();
 	for (var k in pO)  {
 		if (pO[k][0].test(filename)) {
-			filename = filename.replace(pO[k][0], pO[k][1]);
-			newName = filename;
+			newName = filename.replace(pO[k][0], pO[k][1]);
 		}
 	}
 
@@ -62,8 +68,10 @@ function changeNames(bObj, sp) {
 
 		//-- Process: apply regex to change the name
 		if ( newName = applyReGex(bmk.name) ) {
+			//cc(sp + bmk.name);
 			bmk.name = newName;
-			cc(sp + "==> " + bmk.name);
+			//cc(sp + "==> " + bmk.name);
+			//cc();
 			if (changeColor) {
 				bmk.style = 0;
 				bmk.color = ["RGB", 0, 0.0, 1];
@@ -75,5 +83,7 @@ function changeNames(bObj, sp) {
 /**
  * Main
  */
+console.clear();
 var count = 0;
 changeNames(bookmarkRoot, '');
+//console.clear();

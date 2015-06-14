@@ -1,0 +1,381 @@
+[[_0_]]
+= Matrix Transforms for Computer Games and Animation
+Joy <arbago@gmail.com>
+v1.0, 2015-06-2
+:icons: font
+:sectanchors:
+:imagesdir: images
+:homepage: http://arbago.com
+:toc: macro
+
+toc::[]
+
+[preface]
+== 책
+
+Matrix Transforms for Computer Games and Animation, John Vince, 2012
+
+[preface]
+== Preface
+
+transforms: scale, position, shear, reflection, rotation
+
+curved lines, surfaces: quadratic and cubic curves
+
+rotation causes most problems
+
+quaternion (kwə-tûr′nē-ən)::
+. A set of four persons or items.
+. Mathematics Any number of the form a + bi + cj + dk where a, b, c, and d are real numbers, ij = k, i2 = j2 = -1, and ij = -ji. Under addition and multiplication, quaternions have all the properties of a field, except multiplication is not commutative.
+* [1350–1400; Middle English quaternioun < Late Latin quaterniō= Latin quatern(ī) four at a time + -iō -ion]
+
+[[_1_0_0_]]
+== 1. Introduction
+
+[[_1_1_1_]]
+=== 1.1 Matrix Transforms
+
+[[_1_2_2_]]
+=== 1.2 Mathematics
+
+[[_1_3_3_]]
+=== 1.3 The Book's Structure
+
+[[_2_0_3_]]
+== 2. Introduction to Matrix Notation
+
+[[_2_1_4_]]
+=== 2.1 Introduction
+
+[[_2_2_5_]]
+=== 2.2 Solving a Pair of Linear Equations
+
+[[_2_2_5_]]
+==== 2.2.1 Graphical Technique
+
+coincident, parallel or intersect
+
+[[_2_2_5_]]
+==== 2.2.2 Algebraic Technique
+
+coefficient (kō′ə-fĭsh′ənt) 계수(係數: 3x에서 3과 같은 수)::
+A number or symbol multiplied with a variable or an unknown quantity in an algebraic term, as 4 in the term 4x, or x in the term x(a + b).
+* [C17: from New Latin coefficiēns, from Latin co- together + efficere to effect]
+
+[[_2_2_5_]]
+==== 2.2.3 Matrix Technique
+
+[[_2_3_6_]]
+=== 2.3 Matrix Multiplication
+
+[[_2_4_7_]]
+=== 2.4 Identity Matrix
+
+[[_2_5_8_]]
+=== 2.5 Inverse Matrix
+
+[[_2_6_9_]]
+=== 2.6 Worked Examples
+
+[[_2_7_10_]]
+=== 2.7 Summary
+
+[[_3_0_10_]]
+== 3. Determinants
+
+[[_3_1_11_]]
+=== 3.1 Introduction
+
+[[_3_2_12_]]
+=== 3.2 Linear Equations in Three Unknowns
+
+[[_3_2_12_]]
+==== 3.2.1 The Laplace Expansion
+
+[[_3_3_13_]]
+=== 3.3 Linear Equations in Four Unknowns
+
+[[_3_4_14_]]
+=== 3.4 Worked Examples
+
+[[_3_5_15_]]
+=== 3.5 Summary
+
+[[_4_0_15_]]
+== 4. Matrices
+
+[[_4_1_16_]]
+=== 4.1 Introduction
+
+[[_4_2_17_]]
+=== 4.2 Rectangular and Square Matrices
+
+[[_4_3_18_]]
+=== 4.3 Matrix Shorthand
+
+[[_4_4_19_]]
+=== 4.4 Matrix Addition and Subtraction
+
+[[_4_5_20_]]
+=== 4.5 Matrix Scaling
+
+[[_4_6_21_]]
+=== 4.6 Matrix Multiplication
+
+[[_4_6_21_]]
+==== 4.6.1 Vector Scalar Product
+
+[[_4_6_21_]]
+==== 4.6.2 The Vector Product
+
+[[_4_7_22_]]
+=== 4.7 The Zero Matrix
+
+[[_4_8_23_]]
+=== 4.8 The Negative Matrix
+
+[[_4_9_24_]]
+=== 4.9 Diagonal Matrix
+
+[[_4_10_25_]]
+=== 4.10 The Identity Matrix
+
+[[_4_11_26_]]
+=== 4.11 The Transposed Matrix
+
+[[_4_12_27_]]
+=== 4.12 Trace
+
+[[_4_13_28_]]
+=== 4.13 Symmetric Matrix
+
+[[_4_14_29_]]
+=== 4.14 Antisymmetric Matrix
+
+[[_4_15_30_]]
+=== 4.15 Inverse Matrix
+
+[[_4_15_30_]]
+==== 4.15.1 Cofactor Matrix
+
+[[_4_16_31_]]
+=== 4.16 Orthogonal Matrix
+
+[[_4_17_32_]]
+=== 4.17 Worked Examples
+
+[[_4_18_33_]]
+=== 4.18 Summary
+
+[[_5_0_33_]]
+== 5. 2D Matrix Transforms
+
+[[_5_1_34_]]
+=== 5.1 Introduction
+
+[[_5_2_35_]]
+=== 5.2 Transforms
+
+[[_5_2_35_]]
+==== 5.2.1 Homogeneous Coordinates
+
+[[_5_3_36_]]
+=== 5.3 Translation
+
+[[_5_4_37_]]
+=== 5.4 Scaling
+
+[[_5_5_38_]]
+=== 5.5 Reflection
+
+[[_5_5_38_]]
+==== 5.5.1 Reflection About the x and y Axis
+
+[[_5_5_38_]]
+==== 5.5.2 Reflection About a Horizontal or Vertical Axis
+
+[[_5_5_38_]]
+==== 5.5.3 Reflection in a Line Intersecting the Origin
+
+[[_5_6_39_]]
+=== 5.6 Shearing
+
+[[_5_7_40_]]
+=== 5.7 Rotation
+
+[[_5_7_40_]]
+==== 5.7.1 Rotation About an Arbitrary Point
+
+[[_5_7_40_]]
+==== 5.7.2 Rotation and Translation
+
+[[_5_7_40_]]
+==== 5.7.3 Composite Rotations
+
+[[_5_8_41_]]
+=== 5.8 Change of Axes
+
+[[_5_9_42_]]
+=== 5.9 Eigenvectors and Eigenvalues
+
+[[_5_10_43_]]
+=== 5.10 Worked Examples
+
+[[_5_11_44_]]
+=== 5.11 Summary
+
+[[_6_0_44_]]
+== 6. 3D Transforms
+
+[[_6_1_45_]]
+=== 6.1 Introduction
+
+[[_6_2_46_]]
+=== 6.2 Scaling
+
+[[_6_3_47_]]
+=== 6.3 Translation
+
+[[_6_4_48_]]
+=== 6.4 Shearing
+
+[[_6_5_49_]]
+=== 6.5 Reflection in a Plane Intersecting the Origin
+
+[[_6_6_50_]]
+=== 6.6 Rotation
+
+[[_6_6_50_]]
+==== 6.6.1 Rotation About an Off-Set Axis
+
+[[_6_6_50_]]
+==== 6.6.2 Composite Rotations
+
+[[_6_7_51_]]
+=== 6.7 3D Eigenvectors
+
+[[_6_8_52_]]
+=== 6.8 Gimbal Lock
+
+[[_6_9_53_]]
+=== 6.9 Yaw, Pitch and Roll
+
+[[_6_10_54_]]
+=== 6.10 Rotation About an Arbitrary Axis
+
+[[_6_10_54_]]
+==== 6.10.1 Matrices
+
+[[_6_10_54_]]
+==== 6.10.2 Vectors
+
+[[_6_11_55_]]
+=== 6.11 Worked Examples
+
+[[_6_12_56_]]
+=== 6.12 Summary
+
+[[_7_0_56_]]
+== 7. Quaternions
+
+[[_7_1_57_]]
+=== 7.1 Introduction
+
+[[_7_2_58_]]
+=== 7.2 Adding and Subtracting Quaternions
+
+[[_7_3_59_]]
+=== 7.3 Multiplying Quaternions
+
+[[_7_4_60_]]
+=== 7.4 Pure Quaternion
+
+[[_7_5_61_]]
+=== 7.5 The Inverse Quaternion
+
+[[_7_6_62_]]
+=== 7.6 Unit-Norm Quaternion
+
+[[_7_7_63_]]
+=== 7.7 Rotating Points About an Axis
+
+[[_7_8_64_]]
+=== 7.8 Roll, Pitch and Yaw Quaternions
+
+[[_7_9_65_]]
+=== 7.9 Quaternions in Matrix Form
+
+[[_7_9_65_]]
+==== 7.9.1 Vector Method
+
+[[_7_9_65_]]
+==== 7.9.2 Matrix Method
+
+[[_7_9_65_]]
+==== 7.9.3 Geometric Verification
+
+[[_7_10_66_]]
+=== 7.10 Multiple Rotations
+
+[[_7_11_67_]]
+=== 7.11 Eigenvalue and Eigenvector
+
+[[_7_12_68_]]
+=== 7.12 Rotating About an Off-Set Axis
+
+[[_7_13_69_]]
+=== 7.13 Frames of Reference
+
+[[_7_14_70_]]
+=== 7.14 Euler Angles to Quaternion
+
+[[_7_15_71_]]
+=== 7.15 Worked Examples
+
+[[_7_16_72_]]
+=== 7.16 Summary
+
+[[_8_0_72_]]
+== 8. Conclusion
+
+[[_9_0_72_]]
+== Appendix : Composite Point Rotation Sequences
+
+[[_9_1_73_]]
+=== A.1 Euler Rotations
+
+[[_9_2_74_]]
+=== A.2 Rgamma, xRbeta, yRalpha, x
+
+[[_9_3_75_]]
+=== A.3 Rgamma, xRbeta, yRalpha, z
+
+[[_9_4_76_]]
+=== A.4 Rgamma, xRbeta, zRalpha, x
+
+[[_9_5_77_]]
+=== A.5 Rgamma, xRbeta, zRalpha, y
+
+[[_9_6_78_]]
+=== A.6 Rgamma, yRbeta, xRalpha, y
+
+[[_9_7_79_]]
+=== A.7 Rgamma, yRbeta, xRalpha, z
+
+[[_9_8_80_]]
+=== A.8 Rgamma, yRbeta, zRalpha, x
+
+[[_9_9_81_]]
+=== A.9 Rgamma, yRbeta, zRalpha, y
+
+[[_9_10_82_]]
+=== A.10 Rgamma, zRbeta, xRalpha, y
+
+[[_9_11_83_]]
+=== A.11 Rgamma, zRbeta, xRalpha, z
+
+[[_9_12_84_]]
+=== A.12 Rgamma, zRbeta, yRalpha, x
+
+[[_9_13_85_]]
+=== A.13 Rgamma, zRbeta, yRalpha, z

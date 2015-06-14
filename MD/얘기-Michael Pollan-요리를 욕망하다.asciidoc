@@ -1,0 +1,220 @@
+[[_0_]]
+= Cooked
+Joy <arbago@gmail.com>
+v1.0, 2015-5-5
+:icons: font
+:sectanchors:
+:imagesdir: images
+:homepage: http://arbago.com
+:toc: macro
+
+toc::[]
+
+[preface]
+== Cooked: A Natural History of Transformation
+by Michael Pollan 2013
+
+[[_0_0_0_]]
+== Introduction: Why Cook?
+
+[[_0_1_1_]]
+=== 1
+
+[W] such as they were::
+such as
+a. for example: _animals, such as elephants and tigers._
+b. of a similar kind as; like: _people such as your friend John make me angry._
+c. of the (usually small) amount, etc: _the food, such as there was, was excellent._
+d. My kitchen skills, #such as they were#, were pretty much frozen in place by the time I turned thirty.
+
+such as they were::
+그것들이 있는 것 그정도로 -> 그렇고 그렇게 -> 그저 그랬지만 -> 고작 그정도였지만
+
+[[_0_2_2_]]
+=== 2
+
+[[_0_3_3_]]
+=== 3
+
+[[_1_0_4_]]
+== 1. 불: Creatures Of The Flame
+
+[[_1_1_5_]]
+=== 1. Ayden, North Carolina
+
+[[_1_2_6_]]
+=== 2. Cambridge, Massachusetts
+
+[[_1_3_7_]]
+=== 3. Intermission: A Pig's Perspective
+
+[[_1_4_8_]]
+=== 4. Raleigh, North Carolina
+
+[[_1_5_9_]]
+=== 5. Wilson, North Carolina
+
+[[_1_6_10_]]
+=== 6. Manhattan, NYC
+
+[[_1_7_11_]]
+=== 7. Berkeley, California
+
+[[_1_8_12_]]
+=== 8. Coda: Axpe, Spain
+
+[[_2_0_13_]]
+== 2. 물: A Recipie In Seven Steps
+
+[[_2_1_14_]]
+=== 1. Finely Dice Some Onions
+
+[[_2_2_15_]]
+=== 2. Saute Onions and Other Aromatic Vegetables
+
+[[_2_3_16_]]
+=== 3. Salt the Meat; then Brown it
+
+[[_2_4_17_]]
+=== 4. Place all the Ingredients in a Covered Pot
+
+[[_2_5_18_]]
+=== 5. Pour the Braising Liquid over the Ingredients
+
+[[_2_6_19_]]
+=== 6. Simmer, Below the Boil, for a Long Time
+
+[[_2_7_20_]]
+=== 7. Remove Pot from Oven. If Necessary, Skim Fat and Reduce Liquid. Bring to the Table and Serve.
+
+[[_3_0_21_]]
+== 3. 공기: The Education Of An Amateur Baker
+
+[[_3_1_22_]]
+=== 1. A Great White Loaf
+
+[[_3_2_23_]]
+=== 2. Thinking Like a Seed
+
+[[_3_3_24_]]
+=== 3. Coda: Meet Your Wheat
+
+[[_4_0_25_]]
+== 4. 흙: Fermentation's Cold Fire
+
+[[_4_1_26_]]
+=== 1. Vegetable
+
+[[_4_2_27_]]
+=== 2. Animal
+
+[[_4_3_28_]]
+=== 3. Alcohol
+
+[[_5_0_29_]]
+== Afterword: Hand Taste
+
+[[_5_1_30_]]
+=== 1
+
+[[_5_2_31_]]
+=== 2
+
+[[_5_3_32_]]
+=== 3
+
+[[_6_0_33_]]
+== 부록 1. Four Recipies
+
+[[_6_1_34_]]
+=== 1. Fire: Pork Shoulder Barbecue
+
+[[_6_1_35_]]
+==== For the pork
+
+[[_6_1_36_]]
+==== For the vinegar-BBQ sauce
+
+[[_6_1_37_]]
+==== Prepare the pork
+
+[[_6_1_38_]]
+==== Make the vinegar-BBQ sauce
+
+[[_6_1_39_]]
+==== Asian Dipping Sauce
+
+[[_6_1_40_]]
+===== For the dashi
+
+[[_6_1_41_]]
+===== For the sauce
+
+[[_6_1_42_]]
+===== Make the dashi
+
+[[_6_1_43_]]
+===== Make the sauce
+
+[[_6_2_44_]]
+=== 2. Water: Meat Sugo and Pasta
+
+[[_6_2_45_]]
+==== For the spice sachet
+
+[[_6_2_46_]]
+==== For the sugo
+
+[[_6_2_47_]]
+==== For serving
+
+[[_6_2_48_]]
+==== Make the Sachet
+
+[[_6_2_49_]]
+==== Make the sugo
+
+[[_6_2_50_]]
+==== To serve
+
+[[_6_3_51_]]
+=== 3. Air: Whole-Wheat Country Loaf
+
+[[_6_3_52_]]
+==== For the starter
+
+[[_6_3_53_]]
+==== For the leaven
+
+[[_6_3_54_]]
+==== For the bread
+
+[[_6_3_55_]]
+==== Make the starter
+
+[[_6_3_56_]]
+==== Make the leaven
+
+[[_6_3_57_]]
+==== Make the bread
+
+[[_6_3_58_]]
+==== Bulk fermenting the dough
+
+[[_6_3_59_]]
+==== Dividing the dough
+
+[[_6_3_60_]]
+==== Shaping the dough
+
+[[_6_3_61_]]
+==== Proofing
+
+[[_6_3_62_]]
+==== Baking
+
+[[_6_4_63_]]
+=== 4. Earth: Sauerkraut
+
+[[_7_0_64_]]
+== 부록 2. 료리에 관한 작은 책장

@@ -1,0 +1,4058 @@
+[[_0_]]
+= Professional C# 5.0 and .NET 4.5.1
+Joy <arbago@gmail.com>
+:toc: macro
+:toc-title: Table of Contents
+:toclevels: 2
+:icons: font
+:sectanchors:
+:description: C# 5.0 Summary
+
+toc::[]
+
+[[_1_0_0_]]
+== I. The C# Language
+
+[[_1_1_1_]]
+=== 1. .NET Architecture
+
+[[_1_1_2_]]
+==== The Relationship of C#  to .NET
+
+[[_1_1_3_]]
+==== The Common Language Runtime
+
+[[_1_1_4_]]
+===== Platform Independence
+
+[[_1_1_5_]]
+===== Performance Improvement
+
+[[_1_1_6_]]
+===== Language Interoperability
+
+[[_1_1_7_]]
+==== A Closer Look at Intermediate Language
+
+[[_1_1_8_]]
+===== Support for Object Orientation and Interfaces
+
+[[_1_1_9_]]
+===== Distinct Value and Reference Types
+
+[[_1_1_10_]]
+===== Strong Data Typing
+
+[[_1_1_11_]]
+===== Error Handling with Exceptions
+
+[[_1_1_12_]]
+===== Use of Attributes
+
+[[_1_1_13_]]
+==== Assemblies
+
+[[_1_1_14_]]
+===== Private Assemblies
+
+[[_1_1_15_]]
+===== Shared Assemblies
+
+[[_1_1_16_]]
+===== Reflection
+
+[[_1_1_17_]]
+===== Parallel Programming
+
+[[_1_1_18_]]
+===== Asynchronous Programming
+
+[[_1_1_19_]]
+==== .NET Framework Classes
+
+[[_1_1_20_]]
+==== Namespaces
+
+[[_1_1_21_]]
+==== Creating .NET Applications Using C#
+
+[[_1_1_22_]]
+===== Creating ASP.NET Applications
+
+[[_1_1_23_]]
+===== Windows Presentation Foundation (WPF)
+
+[[_1_1_24_]]
+===== Windows Store Apps
+
+[[_1_1_25_]]
+===== Windows Services
+
+[[_1_1_26_]]
+===== Windows Communication Foundation
+
+[[_1_1_27_]]
+===== Windows Workflow Foundation
+
+[[_1_1_28_]]
+==== The Role of C# in the .NET Enterprise Architecture
+
+[[_1_1_29_]]
+==== Summary
+
+[[_1_2_30_]]
+=== 2. Core C#
+
+[[_1_2_31_]]
+==== Fundamental C#
+
+[[_1_2_32_]]
+==== Your First C# Program
+
+[[_1_2_33_]]
+===== The Code
+
+[[_1_2_34_]]
+===== Compiling and Running the Program
+
+You can compile this program by simply running the C# command-line compiler (csc.exe) `against` the source file, like this:
+
+.Compile C#
+----
+csc First.cs
+----
+
+.'.NET Environment'
+----
+<>run vsvars32.bat
+    (c:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\vsvars32.bat)
+
+<>run Visual Studio 2013 command prompt
+    %comspec% /k ""C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\Tools\VsDevCmd.bat""
+
+    Change "Start In" : D:\Testing\csharp\
+----
+
+.Sublime Text 3 build for C#
+----
+    {
+        "shell_cmd": "csc /nologo \"${file}\" && \"${file_path}/${file_base_name}\""
+        , "encoding": "cp949"
+    }
+----
+
+[NOTE]
+.nologo
+    Suppress compiler copyright message
+
+[[_1_2_35_]]
+===== A Closer Look
+
+[[_1_2_36_]]
+==== Variables
+
+[[_1_2_37_]]
+===== Initialization of Variables
+
+[W] ever (ĕv′ər)::
+ever - (intensifier for adjectives) very; "she was ever so friendly"
+* =ever so
+* <>intensifier, intensive - a modifier that has little meaning except to intensify the meaning it modifies; "`up` in 'finished up' is an intensifier"; "`honestly` in 'I honestly don't know' is an intensifier"
+
+Most modern compilers will flag violations of this as a warning, but the `ever-vigilant` C# compiler treats such violations as errors.
+
+[[_1_2_38_]]
+===== Type Inference
+
+[[_1_2_39_]]
+===== Variable Scope
+
+[[_1_2_40_]]
+===== Constants
+
+[[_1_2_41_]]
+==== Predefined Data Types
+
+[[_1_2_42_]]
+===== Value Types and Reference Types
+
+If you want to define your own type as a *value type*, you should declare it as a **struct**.
+
+[[_1_2_43_]]
+===== CTS Types
+
+[[_1_2_44_]]
+===== Predefined Value Types
+
+[[_1_2_45_]]
+===== Predefined Reference Types
+
+[[_1_2_46_]]
+==== Flow Control
+
+[[_1_2_47_]]
+===== Conditional Statements
+
+[[_1_2_47_1_]]
+====== The Switch Statement
+
+This is one example for which you don't need to use *curly braces* to join statements into blocks; instead, you mark the end of the code for each case using the *break* statement.
+
+Isn't it better to code for the norm rather than for the exception?
+
+However, if you *find yourself really wanting to*, you probably should reconsider your approach.
+
+[[_1_2_48_]]
+===== Loops
+
+C# provides four different loops (*for*, *while*, *do...while*, and *foreach*) that enable you to execute a block of code repeatedly until a certain condition is met.
+
+[W] Actually, the way the preceding loop is writen `isn't quite how` you would normally write it.
+
+[W] Technically, to `count as` a collection, it must support an interface called IEnumerable.
+
+[[_1_2_49_]]
+===== Jump Statements
+
+goto, break, continue, return
+
+[W] The reputation of the *goto* statement probably `precedes` it, and in most circumstances, its use is sternly `frowned upon`.
+
+[[_1_2_50_]]
+==== Enumerations
+
+[W] `Not only that, but` you can also give the values user-friendly names.
+
+Creating an enumeration can save you a lot of time and headaches in the long run. At least three benefits exist to using enumerations instead of plain integers:
+
+[[_1_2_51_]]
+==== Namespaces
+
+[[_1_2_52_]]
+===== The using Directive
+
+[[_1_2_53_]]
+===== Namespace Aliases
+
+[[_1_2_54_]]
+==== The Main() Method
+
+This must be a *static* method of a 'class' (or 'struct'), and must have a return type of either 'int' or 'void'.
+
+it will run even if you mark the method as *private*.
+
+[[_1_2_55_]]
+===== Multiple Main() Methods
+
+However, you can explicitly tell the compiler which of these methods to use as the 'entry point' for the program by using the */main* switch, together with the *full name (including namespace) of the class* to which the 'Main()' method belongs:
+
+.multiple main methods
+----
+csc DoubleMain.cs /main:ArBaGo.Program
+----
+
+[[_1_2_56_]]
+===== Passing Arguments to Main()
+
+[[_1_2_57_]]
+==== More on Compiling C# Files
+
+To answer the first question, you can specify 'what type of file you want to create using the /target switch', oftwn abbreviated as */t*.
+
+Note that the '/out' and '/t', or '/target', options must precede the name of the file you want to compile.
+
+.Compile Options
+[options="header"]
+|===
+|OPTION | OUTPUT
+|/t:exe | A console application (the default)
+|/t:library | A class library with a manifest
+|/t:module | A component without a manifest
+|/t:winexe | A Windows application (without a console window)
+|===
+
+.To make a library
+----
+namespace ArBaGo {
+    public class MathLib {
+        public int Add(int x, int y) {
+            return x + y;
+        }
+    }
+}
+
+$ csc /target:library Mathlibrary.cs
+----
+
+.To use the library
+----
+using System;
+
+namespace ArBaGo {
+
+    class Program {
+        static void Main() {
+            MathLib mathObj = new MathLib();
+            Console.WriteLine (mathObj.Add(7, 8));
+        }
+
+    }
+}
+
+$ csc Test.cs /r:MathLibrary.dll
+----
+
+[[_1_2_58_]]
+==== Console I/O
+
+[[_1_2_59_]]
+==== Using Comments
+
+It is possible to put multiline comments within a line of code.
+
+[[_1_2_60_]]
+===== Internal Comments within the Source Files
+
+[[_1_2_61_]]
+===== XML Documentation
+
+```
+csc /t:library /doc:MathLibrary.xml MathLibrary.cs
+```
+
+[[_1_2_62_]]
+==== The C# Preprocessor Directives
+
+[[_1_2_63_]]
+===== #define and #undef
+
+You need to place any *#define* and *#undef* directives at the beginning of the C# source file, before any code that declares any objects to be compiled.
+
+[[_1_2_64_]]
+===== #if, #elif, #else, and #endif
+
+conditional compilation
+
+[[_1_2_65_]]
+===== #warning and #error
+
+[[_1_2_66_]]
+===== #region and #endregion
+
+[[_1_2_67_]]
+===== #line
+
+[[_1_2_68_]]
+===== #pragma
+
+[[_1_2_69_]]
+==== C# Programming Guidelines
+
+[[_1_2_70_]]
+===== Rules for Identifiers
+
+If you need to use one of these words as an identifier (for example, if you are accessing a class written in a different language), you can prefix the identifier with the [big blue bold]*@* symbol to indicate to the compiler that what follows should be treated as [underline]#an identifier#, not as C# keyword (so *abstract* is not a valid identifier, but *@abstract* is).
+
+[[_1_2_71_]]
+===== Usage Conventions
+
+[[_1_2_71_1_]]
+====== Casing of Names
+
+This is not advised in C# because such names are harder to read - the convention is to use Pascal casing <u>`throughout`</u>.
+
+Hence, if you do use names that differ only by case, it is important to do so only in situations in which both names will never be seen outside your assembly.
+
+However, because of the possibility that your classes will be accessed by code written in other languages, it is also important that you don't use names that are keywords in other .NET languages.
+
+[[_1_2_71_2_]]
+====== Use of Properties and Methods
+
+Otherwise, you should use a method.
+
+[[_1_2_71_3_]]
+====== Use of Fields
+
+Fields should almost always be private, although in some cases it may be acceptable for constant or read-only fields to be public.
+
+Consistency between the base classes and your classes will facilitate readability and maintainability.
+
+[[_1_2_72_]]
+==== Summary
+
+[[_1_3_73_]]
+=== 3. Objects and Types
+
+[[_1_3_74_]]
+==== Creating and Using Classes
+
+[[_1_3_75_]]
+==== Classes and Structs
+
+[[_1_3_76_]]
+==== Classes
+
+[[_1_3_77_]]
+===== Data Members
+
+[[_1_3_78_]]
+===== Function Members
+
+[[_1_3_79_]]
+===== readonly Fields
+
+[[_1_3_80_]]
+==== Anonymous Types
+
+[[_1_3_81_]]
+==== Structs
+
+[[_1_3_82_]]
+===== Structs Are Value Types
+
+[[_1_3_83_]]
+===== Structs and Inheritance
+
+[[_1_3_84_]]
+===== Constructors for Structs
+
+[[_1_3_85_]]
+==== Weak References
+
+[[_1_3_86_]]
+==== .ial Classes
+
+[[_1_3_87_]]
+==== Static Classes
+
+[[_1_3_88_]]
+==== The Object Class
+
+[[_1_3_89_]]
+===== System.Object Methods
+
+[[_1_3_90_]]
+===== The ToString() Method
+
+[[_1_3_91_]]
+==== Extension Methods
+
+[[_1_3_92_]]
+==== Summary
+
+[[_1_4_93_]]
+=== 4. Inheritance
+
+[[_1_4_94_]]
+==== Inheritance
+
+[[_1_4_95_]]
+==== Types of Inheritance
+
+[[_1_4_96_]]
+===== Implementation Versus Interface Inheritance
+
+[[_1_4_97_]]
+===== Multiple Inheritance
+
+[[_1_4_98_]]
+===== Structs and Classes
+
+[[_1_4_99_]]
+==== Implementation Inheritance
+
+[[_1_4_100_]]
+===== Virtual Methods
+
+[[_1_4_101_]]
+===== Hiding Methods
+
+[[_1_4_102_]]
+===== Calling Base Versions of Functions
+
+[[_1_4_103_]]
+===== Abstract Classes and Functions
+
+[[_1_4_104_]]
+===== Sealed Classes and Methods
+
+[[_1_4_105_]]
+===== Constructors of Derived Classes
+
+[[_1_4_106_]]
+==== Modifiers
+
+[[_1_4_107_]]
+===== Visibility Modifiers
+
+[[_1_4_108_]]
+===== Other Modifiers
+
+[[_1_4_109_]]
+==== Interfaces
+
+[[_1_4_110_]]
+===== Defining and Implementing Interfaces
+
+[[_1_4_111_]]
+===== Derived Interfaces
+
+[[_1_4_112_]]
+==== Summary
+
+[[_1_5_113_]]
+=== 5. Generics
+
+[[_1_5_114_]]
+==== Generics Overview
+
+[[_1_5_115_]]
+===== Performance
+
+[[_1_5_116_]]
+===== Type Safety
+
+[[_1_5_117_]]
+===== Binary Code Reuse
+
+[[_1_5_118_]]
+===== Code Bloat
+
+[[_1_5_119_]]
+===== Naming Guidelines
+
+[[_1_5_120_]]
+==== Creating Generic Classes
+
+[[_1_5_121_]]
+==== Generics Features
+
+[[_1_5_122_]]
+===== Default Values
+
+[[_1_5_123_]]
+===== Constraints
+
+[[_1_5_124_]]
+===== Inheritance
+
+[[_1_5_125_]]
+===== Static Members
+
+[[_1_5_126_]]
+==== Generic Interfaces
+
+[[_1_5_127_]]
+===== Covariance and Contra-variance
+
+[[_1_5_128_]]
+===== Covariance with Generic Interfaces
+
+[[_1_5_129_]]
+===== Contra-Variance with Generic Interfaces
+
+[[_1_5_130_]]
+==== Generic Structs
+
+[[_1_5_131_]]
+==== Generic Methods
+
+[[_1_5_132_]]
+===== Generic Methods Example
+
+[[_1_5_133_]]
+===== Generic Methods with Constraints
+
+[[_1_5_134_]]
+===== Generic Methods with Delegates
+
+[[_1_5_135_]]
+===== Generic Methods Specialization
+
+[[_1_5_136_]]
+==== Summary
+
+[[_1_6_137_]]
+=== 6. Arrays and Tuples
+
+[[_1_6_138_]]
+==== Multiple Objects of the Same and Different Types
+
+[[_1_6_139_]]
+==== Simple Arrays
+
+[[_1_6_140_]]
+===== Array Declaration
+
+[[_1_6_141_]]
+===== Array Initialization
+
+[[_1_6_142_]]
+===== Accessing Array Elements
+
+[[_1_6_143_]]
+===== Using Reference Types
+
+[[_1_6_144_]]
+==== Multidimensional Arrays
+
+[[_1_6_145_]]
+==== Jagged Arrays
+
+[[_1_6_146_]]
+==== Array Class
+
+[[_1_6_147_]]
+===== Creating Arrays
+
+[[_1_6_148_]]
+===== Copying Arrays
+
+[[_1_6_149_]]
+===== Sorting
+
+[[_1_6_150_]]
+==== Arrays as Parameters
+
+[[_1_6_151_]]
+===== Array Covariance
+
+[[_1_6_152_]]
+===== ArraySegment<T>
+
+[[_1_6_153_]]
+==== Enumerations
+
+[[_1_6_154_]]
+===== IEnumerator Interface
+
+[[_1_6_155_]]
+===== foreach Statement
+
+[[_1_6_156_]]
+===== yield Statement
+
+[[_1_6_157_]]
+==== Tuples
+
+[[_1_6_158_]]
+==== Structural Comparison
+
+[[_1_6_159_]]
+==== Summary
+
+[[_1_7_160_]]
+=== 7. Operators and Casts
+
+[[_1_7_161_]]
+==== Operators and Casts
+
+[[_1_7_162_]]
+==== Operators
+
+[[_1_7_163_]]
+===== Operator Shortcuts
+
+[[_1_7_164_]]
+===== Operator Precedence
+
+[[_1_7_165_]]
+==== Type Safety
+
+[[_1_7_166_]]
+===== Type Conversions
+
+[[_1_7_167_]]
+===== Boxing and Unboxing
+
+[[_1_7_168_]]
+==== Comparing Objects for Equality
+
+[[_1_7_169_]]
+===== Comparing Reference Types for Equality
+
+[[_1_7_170_]]
+===== Comparing Value Types for Equality
+
+[[_1_7_171_]]
+==== Operator Overloading
+
+[[_1_7_172_]]
+===== How Operators Work
+
+[[_1_7_173_]]
+===== Operator Overloading Example: The Vector Struct
+
+[[_1_7_174_]]
+===== Which Operators Can You Overload?
+
+[[_1_7_175_]]
+==== User-Defined Casts
+
+[[_1_7_176_]]
+===== Implementing User-Defined Casts
+
+[[_1_7_177_]]
+===== Multiple Casting
+
+[[_1_7_178_]]
+==== Summary
+
+[[_1_8_179_]]
+=== 8. Delegates, Lambdas, and Events
+
+[[_1_8_180_]]
+==== Referencing Methods
+
+[[_1_8_181_]]
+==== Delegates
+
+[[_1_8_182_]]
+===== Declaring Delegates
+
+[[_1_8_183_]]
+===== Using Delegates
+
+[[_1_8_184_]]
+===== Simple Delegate Example
+
+[[_1_8_185_]]
+===== Action<T> and Func<T> Delegates
+
+[[_1_8_186_]]
+===== BubbleSorter Example
+
+[[_1_8_187_]]
+===== Multicast Delegates
+
+[[_1_8_188_]]
+===== Anonymous Methods
+
+[[_1_8_189_]]
+==== Lambda Expressions
+
+[[_1_8_190_]]
+===== Parameters
+
+[[_1_8_191_]]
+===== Multiple Code Lines
+
+[[_1_8_192_]]
+===== Closures
+
+[[_1_8_193_]]
+===== Closures with Foreach Statements
+
+[[_1_8_194_]]
+==== Events
+
+[[_1_8_195_]]
+===== Event Publisher
+
+[[_1_8_196_]]
+===== Event Listener
+
+[[_1_8_197_]]
+===== Weak Events
+
+[[_1_8_198_]]
+==== Summary
+
+[[_1_9_199_]]
+=== 9. Strings and Regular Expressions
+
+[[_1_9_200_]]
+==== Examining System.String
+
+[[_1_9_201_]]
+===== Building Strings
+
+Normally, you want to use *StringBuilder* to perform any manipulation of strings, and *String* to store or display the final result.
+
+[[_1_9_202_]]
+===== StringBuilder Members
+
+Basically, the *StringBuilder* class should be used when you are manipulating multiple strings. However, if you are just doing something as simple as concatenating two strings, you will find that *System.String* performs better.
+
+[[_1_9_203_]]
+===== Format Strings
+
+[[_1_9_204_]]
+==== Regular Expressions
+
+[[_1_9_205_]]
+===== Introduction to Regular Expressions
+
+[[_1_9_206_]]
+===== The RegularExpressionsPlayaround Example
+
+[[_1_9_207_]]
+===== Displaying Results
+
+[[_1_9_208_]]
+===== Matches, Groups, and Captures
+
+[[_1_9_209_]]
+==== Summary
+
+[[_1_10_210_]]
+=== 10. Collections
+
+[[_1_10_211_]]
+==== Overview
+
+[[_1_10_212_]]
+==== Collection Interfaces and Types
+
+[[_1_10_213_]]
+==== Lists
+
+[[_1_10_214_]]
+===== Creating Lists
+
+[[_1_10_215_]]
+===== Read-only Collections
+
+[[_1_10_216_]]
+==== Queues
+
+[[_1_10_217_]]
+==== Stacks
+
+[[_1_10_218_]]
+==== Linked Lists
+
+[[_1_10_219_]]
+==== Sorted List
+
+[[_1_10_220_]]
+==== Dictionaries
+
+[[_1_10_221_]]
+===== Key Type
+
+[[_1_10_222_]]
+===== Dictionary Example
+
+[[_1_10_223_]]
+===== Lookups
+
+[[_1_10_224_]]
+===== Sorted Dictionaries
+
+[[_1_10_225_]]
+==== Sets
+
+[[_1_10_226_]]
+==== Observable Collections
+
+[[_1_10_227_]]
+==== Bit Arrays
+
+[[_1_10_228_]]
+===== BitArray
+
+[[_1_10_229_]]
+===== BitVector32
+
+[[_1_10_230_]]
+==== Immutable Collections
+
+[[_1_10_231_]]
+==== Concurrent Collections
+
+[[_1_10_232_]]
+===== Creating Pipelines
+
+[[_1_10_233_]]
+===== Using a BlockingCollection
+
+[[_1_10_234_]]
+===== Using a ConcurrentDictionary
+
+[[_1_10_235_]]
+===== Completing the Pipeline
+
+[[_1_10_236_]]
+==== Performance
+
+[[_1_10_237_]]
+==== Summary
+
+[[_1_11_238_]]
+=== 11. Language Integrated Query
+
+[[_1_11_239_]]
+==== Linq Overview
+
+[[_1_11_240_]]
+===== Lists and Entities
+
+[[_1_11_241_]]
+===== LINQ Query
+
+[[_1_11_242_]]
+===== Extension Methods
+
+[[_1_11_243_]]
+===== Deferred Query Execution
+
+[[_1_11_244_]]
+==== Standard Query Operatrs
+
+[[_1_11_245_]]
+===== Filtering
+
+[[_1_11_246_]]
+===== Filtering with Index
+
+[[_1_11_247_]]
+===== Type Filtering
+
+[[_1_11_248_]]
+===== Compound from
+
+[[_1_11_249_]]
+===== Sorting
+
+[[_1_11_250_]]
+===== Grouping
+
+[[_1_11_251_]]
+===== Grouping with Nested Objects
+
+[[_1_11_252_]]
+===== Inner Join
+
+[[_1_11_253_]]
+===== Left Outer Join
+
+[[_1_11_254_]]
+===== Group Join
+
+[[_1_11_255_]]
+===== Set Operations
+
+[[_1_11_256_]]
+===== Zip
+
+[[_1_11_257_]]
+===== .itioning
+
+[[_1_11_258_]]
+===== Aggregate Operators
+
+[[_1_11_259_]]
+===== Conversion Operators
+
+[[_1_11_260_]]
+===== Generation Operators
+
+[[_1_11_261_]]
+==== Parallel LINQ
+
+[[_1_11_262_]]
+===== Parallel Queries
+
+[[_1_11_263_]]
+===== .itioners
+
+[[_1_11_264_]]
+===== Cancellation
+
+[[_1_11_265_]]
+==== Expression Trees
+
+[[_1_11_266_]]
+==== LINQ Providers
+
+[[_1_11_267_]]
+==== Summary
+
+[[_1_12_268_]]
+=== 12. Dynamic Language Extensions
+
+[[_1_12_269_]]
+==== Dynamic Language Runtime
+
+[[_1_12_270_]]
+==== The Dynamic Type
+
+[[_1_12_271_]]
+===== Dynamic Behind the Scenes
+
+[[_1_12_272_]]
+==== Hosting the DLR Script Runtime
+
+[[_1_12_273_]]
+==== Dynamicobject and Expandoobject
+
+[[_1_12_274_]]
+===== DynamicObject
+
+[[_1_12_275_]]
+===== ExpandoObject
+
+[[_1_12_276_]]
+==== Summary
+
+[[_1_13_277_]]
+=== 13. Asynchronous Programming
+
+[[_1_13_278_]]
+==== Why Asynchronous Programming is Important
+
+[[_1_13_279_]]
+==== Asynchronous Patterns
+
+[[_1_13_280_]]
+===== Synchronous Call
+
+[[_1_13_281_]]
+===== Asynchronous Pattern
+
+[[_1_13_282_]]
+===== Event-Based Asynchronous Pattern
+
+[[_1_13_283_]]
+===== Task-Based Asynchronous Pattern
+
+[[_1_13_284_]]
+==== Foundation of Asynchronous Programming
+
+[[_1_13_285_]]
+===== Creating Tasks
+
+[[_1_13_286_]]
+===== Calling an Asynchronous Method
+
+[[_1_13_287_]]
+===== Continuation with Tasks
+
+[[_1_13_288_]]
+===== Synchronization Context
+
+[[_1_13_289_]]
+===== Using Multiple Asynchronous Methods
+
+[[_1_13_290_]]
+===== Converting the Asynchronous Pattern
+
+[[_1_13_291_]]
+==== Error Handling
+
+[[_1_13_292_]]
+===== Handling Exceptions with Asynchronous Methods
+
+[[_1_13_293_]]
+===== Exceptions with Multiple Asynchronous Methods
+
+[[_1_13_294_]]
+===== Using AggregateException Information
+
+[[_1_13_295_]]
+==== Cancellation
+
+[[_1_13_296_]]
+===== Starting a Cancellation
+
+[[_1_13_297_]]
+===== Cancellation with Framework Features
+
+[[_1_13_298_]]
+===== Cancellation with Custom Tasks
+
+[[_1_13_299_]]
+==== Summary
+
+[[_1_14_300_]]
+=== 14. Memory Management and Pointers
+
+[[_1_14_301_]]
+==== Memory Management
+
+[[_1_14_302_]]
+==== Memory Management Under the Hood
+
+[[_1_14_303_]]
+===== Value Data Types
+
+[[_1_14_304_]]
+===== Reference Data Types
+
+[[_1_14_305_]]
+===== Garbage Collection
+
+[[_1_14_306_]]
+==== Freeing Unmanaged Resources
+
+[[_1_14_307_]]
+===== Destructors
+
+[[_1_14_308_]]
+===== The IDisposable Interface
+
+[[_1_14_309_]]
+===== Implementing IDisposable and a Destructor
+
+[[_1_14_310_]]
+==== Unsafe Code
+
+[[_1_14_311_]]
+===== Accessing Memory Directly with Pointers
+
+[[_1_14_312_]]
+===== Pointer Example: PointerPlayground
+
+[[_1_14_313_]]
+===== Using Pointers to Optimize Performance
+
+[[_1_14_314_]]
+==== Summary
+
+[[_1_15_315_]]
+=== 15. Reflection
+
+[[_1_15_316_]]
+==== Manipulating and Inspecting Code at Runtime
+
+[[_1_15_317_]]
+==== Custom Attributes
+
+[[_1_15_318_]]
+===== Writing Custom Attributes
+
+[[_1_15_319_]]
+===== Custom Attribute Example: WhatsNewAttributes
+
+[[_1_15_320_]]
+==== Using Reflection
+
+[[_1_15_321_]]
+===== The System.Type Class
+
+[[_1_15_322_]]
+===== The TypeView Example
+
+[[_1_15_323_]]
+===== The Assembly Class
+
+[[_1_15_324_]]
+===== Completing the WhatsNewAttributes Example
+
+[[_1_15_325_]]
+==== Summary
+
+[[_1_16_326_]]
+=== 16. Errors and Exceptions
+
+[[_1_16_327_]]
+==== Exception Classes
+
+[[_1_16_328_]]
+==== Catching Exceptions
+
+[[_1_16_329_]]
+===== Implementing Multiple Catch Blocks
+
+[[_1_16_330_]]
+===== Catching Exceptions from Other Code
+
+[[_1_16_331_]]
+===== System.Exception Properties
+
+[[_1_16_332_]]
+===== What Happens If an Exception Isn’t Handled?
+
+[[_1_16_333_]]
+===== Nested try Blocks
+
+[[_1_16_334_]]
+==== User-Defined Exception Classes
+
+[[_1_16_335_]]
+===== Catching the User-Defined Exceptions
+
+[[_1_16_336_]]
+===== Throwing the User-Defined Exceptions
+
+[[_1_16_337_]]
+===== Defining the User-Defined Exception Classes
+
+[[_1_16_338_]]
+==== Caller Information
+
+[[_1_16_339_]]
+==== Summary
+
+[[_2_16_340_]]
+== II. Visual Studio
+
+[[_2_17_341_]]
+=== 17. Visual Studio 2013
+
+[[_2_17_342_]]
+==== Working with Visual Studio 2013
+
+It also performs some syntax checks as you type, and underlines code that causes compilation errors, also known as 'design-time debugging'.
+
+In case you want to see some code below the IntelliSense box, just keep pressing the Ctrl button.
+
+[W] `It is the nature` of programming that your code will not run correctly the first time you try it. Or the second time. Or the third time.
+
+[[_2_17_343_]]
+===== Project File Changes
+
+[[_2_17_344_]]
+===== Visual Studio Editions
+
+[[_2_17_345_]]
+===== Visual Studio Settings
+
+[[_2_17_346_]]
+==== Creating a Project
+
+[[_2_17_347_]]
+===== Multi-targeting the .NET Framework
+
+[[_2_17_348_]]
+===== Selecting a Project Type
+
+[W] inkling (ĭng′klĭng)::
+inkling - a slight suggestion or vague understanding; "he had no inkling what was about to happen"
+* =glimmering, intimation, glimmer
+* <>suggestion - an idea that is suggested; "the picnic was her suggestion"
+
+The New Project dialog will appear (see Figure 17-7) - giving you your first `inkling` of the variety of different projects you can create.
+
+[[_2_17_349_]]
+==== Exploring and Coding a Project
+
+[[_2_17_350_]]
+===== Solution Explorer
+
+When running a console application from within Visual Studio, there's a misconception that it's necessary to have a *Console.ReadLine* method at the last line of the _Main_ method to keep the console window open. `That's not the case.`
+
+[[_2_1_350_1_]]
+====== Working with Projects and Solutions
+
+A *project* is a set of all the source-code files and resources that will compile into _a single assembly_ (or in some cases, _a single module_).
+
+[[_2_1_350_2_]]
+====== Adding Projects to a Solution
+
+[[_2_1_350_3_]]
+====== Setting the Startup Project
+
+
+[[_2_1_350_4_]]
+====== Discovering Types and Members
+
+[[_2_1_3505_]]
+====== Previewing Items
+
+[[_2_1_350_6_]]
+====== Using Scopes
+
+[[_2_1_350_7_]]
+====== Adding Items to a Project
+
+[[_2_1_350_8_]]
+====== Managing References
+
+[[_2_1_350_9_]]
+====== Using NuGet Packages to Install and Update Microsoft and Third-party Tools
+
+[[_2_17_351_]]
+===== Working with the Code Editor
+
+[[_2_1_351_1_]]
+===== The Folding Editor
+
+[[_2_1_351_2_]]
+===== IntelliSense
+
+[[_2_1_351_3_]]
+===== CodeLens
+
+[[_2_1_351_4_]]
+===== Using Code Snippets
+
+[[_2_17_352_]]
+===== Learning and Understanding Other Windows
+
+[[_2_1_352_1_]]
+===== Using the Design View Window
+
+[[_2_1_352_2_]]
+===== Using the Properties Window
+
+[[_2_1_352_3_]]
+===== Using the Class View Window
+
+[[_2_1_352_4_]]
+===== Using the Object Browser Window
+
+[[_2_1_352_5_]]
+===== Using the Server Explorer Window
+
+[[_2_1_352_6_]]
+===== Using the Document Outline
+
+[[_2_17_353_]]
+===== Arranging Windows
+
+[[_2_17_354_]]
+==== Building a Project
+
+[[_2_17_355_]]
+===== Building, Compiling, and Making Code
+
+[[_2_17_356_]]
+===== Debugging and Release Builds
+
+[[_2_17_357_]]
+===== Selecting a Configuration
+
+[[_2_17_358_]]
+===== Editing Configurations
+
+[[_2_17_359_]]
+==== Debugging Your Code
+
+[[_2_17_360_]]
+===== Setting Breakpoints
+
+[[_2_17_361_]]
+===== Using Data Tips and Debugger Visualizers
+
+[[_2_17_362_]]
+===== Monitoring and Changing Variables
+
+[[_2_17_363_]]
+===== Exceptions
+
+[[_2_17_364_]]
+===== Multithreading
+
+[[_2_17_365_]]
+===== IntelliTrace
+
+[[_2_17_366_]]
+==== Refactoring Tools
+
+[[_2_17_367_]]
+==== Architecture Tools
+
+[[_2_17_368_]]
+===== Dependency Graph
+
+[[_2_17_369_]]
+===== Layer Diagram
+
+[[_2_17_370_]]
+==== Analyzing Applications
+
+[[_2_17_371_]]
+===== Code Map
+
+[[_2_17_372_]]
+===== Sequence Diagram
+
+[[_2_17_373_]]
+===== Profiler
+
+[[_2_17_374_]]
+===== Concurrency Visualizer
+
+[[_2_17_375_]]
+===== Code Analysis
+
+[[_2_17_376_]]
+===== Code Metrics
+
+[[_2_17_377_]]
+==== Unit Tests
+
+[[_2_17_378_]]
+===== Creating Unit Tests
+
+[[_2_17_379_]]
+===== Running Unit Tests
+
+[[_2_17_380_]]
+===== Expecting Exceptions
+
+[[_2_17_381_]]
+===== Testing All Code Paths
+
+[[_2_17_382_]]
+===== External Dependencies
+
+[[_2_17_383_]]
+===== Fakes Framework
+
+[[_2_17_384_]]
+==== Windows Store Apps, WCF, WF, and More
+
+[[_2_17_385_]]
+===== Building WCF Applications with Visual Studio
+
+[[_2_17_386_]]
+===== Building WF Applications with Visual Studio
+
+[[_2_17_387_]]
+===== Building Windows Store Apps with Visual Studio 2013
+
+[[_2_17_388_]]
+==== Summary
+
+[[_2_18_389_]]
+=== 18. Deployment
+
+[[_2_18_390_]]
+==== Deployment as Part of the Application Life Cycle
+
+[[_2_18_391_]]
+==== Planning for Deployment
+
+[[_2_18_392_]]
+===== Overview of Deployment Options
+
+[[_2_18_393_]]
+===== Deployment Requirements
+
+[[_2_18_394_]]
+===== Deploying the .NET Runtime
+
+[[_2_18_395_]]
+==== Traditional Deployment
+
+[[_2_18_396_]]
+===== xcopy Deployment
+
+[[_2_18_397_]]
+===== xcopy and Web Applications
+
+[[_2_18_398_]]
+===== Windows Installer
+
+[[_2_18_399_]]
+==== ClickOnce
+
+[[_2_18_400_]]
+===== ClickOnce Operation
+
+[[_2_18_401_]]
+===== Publishing a ClickOnce Application
+
+[[_2_18_402_]]
+===== ClickOnce Settings
+
+[[_2_18_403_]]
+===== Application Cache for ClickOnce Files
+
+[[_2_18_404_]]
+===== Application Installation
+
+[[_2_18_405_]]
+===== ClickOnce Deployment API
+
+[[_2_18_406_]]
+==== Web Deployment
+
+[[_2_18_407_]]
+===== Web Application
+
+[[_2_18_408_]]
+===== Configuration Files
+
+[[_2_18_409_]]
+===== Creating a Web Deploy Package
+
+[[_2_18_410_]]
+==== Windows Store Apps
+
+[[_2_18_411_]]
+===== Creating an App Package
+
+[[_2_18_412_]]
+===== Windows App Certification Kit
+
+[[_2_18_413_]]
+===== Sideloading
+
+[[_2_18_414_]]
+===== Windows Deployment API
+
+[[_2_18_415_]]
+==== Summary
+
+[[_3_18_416_]]
+== III. Foundation
+
+[[_3_19_417_]]
+=== 19. Assemblies
+
+[[_3_19_418_]]
+==== What are Assemblies?
+
+[[_3_19_419_]]
+===== Assembly Features
+
+[[_3_19_420_]]
+===== Assembly Structure
+
+[[_3_19_421_]]
+===== Assembly Manifests
+
+[[_3_19_422_]]
+===== Namespaces, Assemblies, and Components
+
+[[_3_19_423_]]
+===== Private and Shared Assemblies
+
+[[_3_19_424_]]
+===== Satellite Assemblies
+
+[[_3_19_425_]]
+===== Viewing Assemblies
+
+[[_3_19_426_]]
+===== Creating Assemblies
+
+[[_3_19_427_]]
+===== Creating Modules and Assemblies
+
+[[_3_19_428_]]
+===== Assembly Attributes
+
+[[_3_19_429_]]
+===== Creating and Loading Assemblies Dynamically
+
+[[_3_19_430_]]
+==== Application Domains
+
+[[_3_19_431_]]
+==== Shared Assemblies
+
+[[_3_19_432_]]
+===== Strong Names
+
+[[_3_19_433_]]
+===== Integrity Using Strong Names
+
+[[_3_19_434_]]
+===== Global Assembly Cache
+
+[[_3_19_435_]]
+===== Creating a Shared Assembly
+
+[[_3_19_436_]]
+===== Creating a Strong Name
+
+[[_3_19_437_]]
+===== Installing the Shared Assembly
+
+[[_3_19_438_]]
+===== Using the Shared Assembly
+
+[[_3_19_439_]]
+===== Delayed Signing of Assemblies
+
+[[_3_19_440_]]
+===== References
+
+[[_3_19_441_]]
+===== Native Image Generator
+
+[[_3_19_442_]]
+==== Configuring .NET Applications
+
+[[_3_19_443_]]
+===== Configuration Categories
+
+[[_3_19_444_]]
+===== Binding to Assemblies
+
+[[_3_19_445_]]
+==== Versioning
+
+[[_3_19_446_]]
+===== Version Numbers
+
+[[_3_19_447_]]
+===== Getting the Version Programmatically
+
+[[_3_19_448_]]
+===== Binding to Assembly Versions
+
+[[_3_19_449_]]
+===== Publisher Policy Files
+
+[[_3_19_450_]]
+===== Runtime Version
+
+[[_3_19_451_]]
+==== Sharing Assemblies Between Different Technologies
+
+[[_3_19_452_]]
+===== Sharing Source Code
+
+[[_3_19_453_]]
+===== Portable Class Library
+
+[[_3_19_454_]]
+==== Summary
+
+[[_3_20_455_]]
+=== 20. Diagnostics
+
+[[_3_20_456_]]
+==== Diagnostics Overview
+
+[[_3_20_457_]]
+==== Code Contracts
+
+[[_3_20_458_]]
+===== Preconditions
+
+[[_3_20_459_]]
+===== Postconditions
+
+[[_3_20_460_]]
+===== Invariants
+
+[[_3_20_461_]]
+===== Purity
+
+[[_3_20_462_]]
+===== Contracts for Interfaces
+
+[[_3_20_463_]]
+===== Abbreviations
+
+[[_3_20_464_]]
+===== Contracts and Legacy Code
+
+[[_3_20_465_]]
+==== Tracing
+
+[[_3_20_466_]]
+===== Trace Sources
+
+[[_3_20_467_]]
+===== Trace Switches
+
+[[_3_20_468_]]
+===== Trace Listeners
+
+[[_3_20_469_]]
+===== Filters
+
+[[_3_20_470_]]
+===== Correlation
+
+[[_3_20_471_]]
+===== Tracing with ETW
+
+[[_3_20_472_]]
+===== Using EventSource
+
+[[_3_20_473_]]
+===== Advanced Tracing with EventSource
+
+[[_3_20_474_]]
+==== Event Logging
+
+[[_3_20_475_]]
+===== Event-logging Architecture
+
+[[_3_20_476_]]
+===== Event-logging Classes
+
+[[_3_20_477_]]
+===== Creating an Event Source
+
+[[_3_20_478_]]
+===== Writing Event Logs
+
+[[_3_20_479_]]
+===== Resource Files
+
+[[_3_20_480_]]
+==== Performance Monitoring
+
+[[_3_20_481_]]
+===== Performance-monitoring Classes
+
+[[_3_20_482_]]
+===== Performance Counter Builder
+
+[[_3_20_483_]]
+===== Adding PerformanceCounter Components
+
+[[_3_20_484_]]
+===== perfmon.exe
+
+[[_3_20_485_]]
+==== Summary
+
+[[_3_21_486_]]
+=== 21. Tasks, Threads, and Synchronization
+
+[[_3_21_487_]]
+==== Overview
+
+[[_3_21_488_]]
+==== Parallel Class
+
+[[_3_21_489_]]
+===== Looping with the Parallel.For Method
+
+[[_3_21_490_]]
+===== Looping with the Parallel.ForEach Method
+
+[[_3_21_491_]]
+===== Invoking Multiple Methods with the Parallel.Invoke Method
+
+[[_3_21_492_]]
+==== Tasks
+
+[[_3_21_493_]]
+===== Starting Tasks
+
+[[_3_21_494_]]
+===== Futures—Results from Tasks
+
+[[_3_21_495_]]
+===== Continuation Tasks
+
+[[_3_21_496_]]
+===== Task Hierarchies
+
+[[_3_21_497_]]
+==== Cancellation Framework
+
+[[_3_21_498_]]
+===== Cancellation of Parallel.For
+
+[[_3_21_499_]]
+===== Cancellation of Tasks
+
+[[_3_21_500_]]
+==== Thread Pools
+
+[[_3_21_501_]]
+==== The Thread Class
+
+[[_3_21_502_]]
+===== Passing Data to Threads
+
+[[_3_21_503_]]
+===== Background Threads
+
+[[_3_21_504_]]
+===== Thread Priority
+
+[[_3_21_505_]]
+===== Controlling Threads
+
+[[_3_21_506_]]
+==== Threading Issues
+
+[[_3_21_507_]]
+===== Race Conditions
+
+[[_3_21_508_]]
+===== Deadlocks
+
+[[_3_21_509_]]
+==== Synchronization
+
+[[_3_21_510_]]
+===== The lock Statement and Thread Safety
+
+[[_3_21_511_]]
+===== Interlocked
+
+[[_3_21_512_]]
+===== Monitor
+
+[[_3_21_513_]]
+===== SpinLock
+
+[[_3_21_514_]]
+===== WaitHandle
+
+[[_3_21_515_]]
+===== Mutex
+
+[[_3_21_516_]]
+===== Semaphore
+
+[[_3_21_517_]]
+===== Events
+
+[[_3_21_518_]]
+===== Barrier
+
+[[_3_21_519_]]
+===== ReaderWriterLockSlim
+
+[[_3_21_520_]]
+==== Timers
+
+[[_3_21_521_]]
+==== Data Flow
+
+[[_3_21_522_]]
+===== Using an Action Block
+
+[[_3_21_523_]]
+===== Source and Target Blocks
+
+[[_3_21_524_]]
+===== Connecting Blocks
+
+[[_3_21_525_]]
+==== Summary
+
+[[_3_22_526_]]
+=== 22. Security
+
+[[_3_22_527_]]
+==== Authentication and Authorization
+
+[[_3_22_528_]]
+===== Identity and Principal
+
+[[_3_22_529_]]
+===== Roles
+
+[[_3_22_530_]]
+===== Declarative Role-Based Security
+
+[[_3_22_531_]]
+===== Claims
+
+[[_3_22_532_]]
+===== Client Application Services
+
+[[_3_22_533_]]
+==== Encryption
+
+[[_3_22_534_]]
+===== Signature
+
+[[_3_22_535_]]
+===== Key Exchange and Secure Transfer
+
+[[_3_22_536_]]
+==== Access Control to Resources
+
+[[_3_22_537_]]
+==== Code Access Security
+
+[[_3_22_538_]]
+===== Security Transparency Level 2
+
+[[_3_22_539_]]
+===== Permissions
+
+[[_3_22_540_]]
+==== Distributing Code Using Certificates
+
+[[_3_22_541_]]
+==== Summary
+
+[[_3_23_542_]]
+=== 23. Interop
+
+[[_3_23_543_]]
+==== .NET and COM
+
+[[_3_23_544_]]
+===== Metadata
+
+[[_3_23_545_]]
+===== Freeing Memory
+
+[[_3_23_546_]]
+===== Interfaces
+
+[[_3_23_547_]]
+===== Method Binding
+
+[[_3_23_548_]]
+===== Data Types
+
+[[_3_23_549_]]
+===== Registration
+
+[[_3_23_550_]]
+===== Threading
+
+[[_3_23_551_]]
+===== Error Handling
+
+[[_3_23_552_]]
+===== Events
+
+[[_3_23_553_]]
+===== Marshaling
+
+[[_3_23_554_]]
+==== Using a COM Component from a .NET Client
+
+[[_3_23_555_]]
+===== Creating a COM Component
+
+[[_3_23_556_]]
+===== Creating a Runtime Callable Wrapper
+
+[[_3_23_557_]]
+===== Using the RCW
+
+[[_3_23_558_]]
+===== Using the COM Server with Dynamic Language Extensions
+
+[[_3_23_559_]]
+===== Threading Issues
+
+[[_3_23_560_]]
+===== Adding Connection Points
+
+[[_3_23_561_]]
+==== Using a .NET Component from a COM Client
+
+[[_3_23_562_]]
+===== COM Callable Wrapper
+
+[[_3_23_563_]]
+===== Creating a .NET Component
+
+[[_3_23_564_]]
+===== Creating a Type Library
+
+[[_3_23_565_]]
+===== COM Interop Attributes
+
+[[_3_23_566_]]
+===== COM Registration
+
+[[_3_23_567_]]
+===== Creating a COM Client Application
+
+[[_3_23_568_]]
+===== Adding Connection Points
+
+[[_3_23_569_]]
+===== Creating a Client with a Sink Object
+
+[[_3_23_570_]]
+==== Platform Invoke
+
+[[_3_23_571_]]
+==== Summary
+
+[[_3_24_572_]]
+=== 24. Manipulating Files and the Registry
+
+[[_3_24_573_]]
+==== File and the Registry
+
+[[_3_24_574_]]
+==== Managing the File System
+
+[[_3_24_575_]]
+===== .NET Classes That Represent Files and Folders
+
+[[_3_24_576_]]
+===== The Path Class
+
+[[_3_24_577_]]
+===== A FileProperties Sample
+
+[[_3_24_578_]]
+==== Moving, Copying, and Deleting Files
+
+[[_3_24_579_]]
+===== FilePropertiesAndMovement Sample
+
+[[_3_24_580_]]
+===== Looking at the Code for FilePropertiesAndMovement
+
+[[_3_24_581_]]
+==== Reading and Writing to Files
+
+[[_3_24_582_]]
+===== Reading a File
+
+[[_3_24_583_]]
+===== Writing to a File
+
+[[_3_24_584_]]
+===== Streams
+
+[[_3_24_585_]]
+===== Buffered Streams
+
+[[_3_24_586_]]
+===== Reading and Writing to Binary Files Using FileStream
+
+[[_3_24_587_]]
+===== Reading and Writing to Text Files
+
+[[_3_24_588_]]
+==== Mapped Memory Files
+
+[[_3_24_589_]]
+==== Reading Drive Information
+
+[[_3_24_590_]]
+==== File Security
+
+[[_3_24_591_]]
+===== Reading ACLs from a File
+
+[[_3_24_592_]]
+===== Reading ACLs from a Directory
+
+[[_3_24_593_]]
+===== Adding and Removing ACLs from a File
+
+[[_3_24_594_]]
+==== Reading and Writing to the Registry
+
+[[_3_24_595_]]
+===== The Registry
+
+[[_3_24_596_]]
+===== The .NET Registry Classes
+
+[[_3_24_597_]]
+==== Reading and Writing to Isolated Storage
+
+[[_3_24_598_]]
+==== Summary
+
+[[_3_25_599_]]
+=== 25. Transactions
+
+[[_3_25_600_]]
+==== Overview
+
+[[_3_25_601_]]
+===== Transaction Phases
+
+[[_3_25_602_]]
+===== ACID Properties
+
+[[_3_25_603_]]
+==== Database and Entity Classes
+
+[[_3_25_604_]]
+==== Traditional Transactions
+
+[[_3_25_605_]]
+===== ADO.NET Transactions
+
+[[_3_25_606_]]
+===== System.EnterpriseServices
+
+[[_3_25_607_]]
+==== System.Transactions
+
+[[_3_25_608_]]
+===== Committable Transactions
+
+[[_3_25_609_]]
+===== Transaction Promotion
+
+[[_3_25_610_]]
+==== Dependent Transactions
+
+[[_3_25_611_]]
+===== Ambient Transactions
+
+[[_3_25_612_]]
+==== Isolation Level
+
+[[_3_25_613_]]
+==== Custom Resource Managers
+
+[[_3_25_614_]]
+===== Transactional Resources
+
+[[_3_25_615_]]
+==== File System Transactions
+
+[[_3_25_616_]]
+==== Summary
+
+[[_3_26_617_]]
+=== 26. Networking
+
+[[_3_26_618_]]
+==== Networking
+
+[[_3_26_619_]]
+==== The Httpclient Class
+
+[[_3_26_620_]]
+==== Displaying Output as an HTML Page
+
+[[_3_26_621_]]
+===== Allowing Simple Web Browsing from Your Applications
+
+[[_3_26_622_]]
+===== Launching Internet Explorer Instances
+
+[[_3_26_623_]]
+===== Giving Your Application More IE-Type Features
+
+[[_3_26_624_]]
+===== Printing Using the WebBrowser Control
+
+[[_3_26_625_]]
+===== Displaying the Code of a Requested Page
+
+[[_3_26_626_]]
+===== The WebRequest and WebResponse Classes Hierarchy
+
+[[_3_26_627_]]
+==== Utility Classes
+
+[[_3_26_628_]]
+===== URIs
+
+[[_3_26_629_]]
+===== IP Addresses and DNS Names
+
+[[_3_26_630_]]
+==== Lower-level Protocols
+
+[[_3_26_631_]]
+===== Using SmtpClient
+
+[[_3_26_632_]]
+===== Using the TCP Classes
+
+[[_3_26_633_]]
+===== The TcpSend and TcpReceive Examples
+
+[[_3_26_634_]]
+===== TCP Versus UDP
+
+[[_3_26_635_]]
+===== The UDP Class
+
+[[_3_26_636_]]
+===== The Socket Class
+
+[[_3_26_637_]]
+===== WebSockets
+
+[[_3_26_638_]]
+==== Summary
+
+[[_3_27_639_]]
+=== 27. Windows Services
+
+[[_3_27_640_]]
+==== What is a Windows Service?
+
+[[_3_27_641_]]
+==== Windows Services Architecture
+
+[[_3_27_642_]]
+===== Service Program
+
+[[_3_27_643_]]
+===== Service Control Program
+
+[[_3_27_644_]]
+===== Service Configuration Program
+
+[[_3_27_645_]]
+===== Classes for Windows Services
+
+[[_3_27_646_]]
+==== Creating a Windows Service Program
+
+[[_3_27_647_]]
+===== Creating Core Functionality for the Service
+
+[[_3_27_648_]]
+===== QuoteClient Example
+
+[[_3_27_649_]]
+===== Windows Service Program
+
+[[_3_27_650_]]
+===== Threading and Services
+
+[[_3_27_651_]]
+===== Service Installation
+
+[[_3_27_652_]]
+===== Installation Program
+
+[[_3_27_653_]]
+==== Monitoring and Controlling Windows Services
+
+[[_3_27_654_]]
+===== MMC Snap-in
+
+[[_3_27_655_]]
+===== net.exe Utility
+
+[[_3_27_656_]]
+===== sc.exe Utility
+
+[[_3_27_657_]]
+===== Visual Studio Server Explorer
+
+[[_3_27_658_]]
+===== Writing a Custom Service Controller
+
+[[_3_27_659_]]
+==== Troubleshooting and Event Logging
+
+[[_3_27_660_]]
+==== Summary
+
+[[_3_28_661_]]
+=== 28. Localization
+
+[[_3_28_662_]]
+==== Global Markets
+
+[[_3_28_663_]]
+==== Namespace System.Globalization
+
+[[_3_28_664_]]
+===== Unicode Issues
+
+[[_3_28_665_]]
+===== Cultures and Regions
+
+[[_3_28_666_]]
+===== Cultures in Action
+
+[[_3_28_667_]]
+===== Sorting
+
+[[_3_28_668_]]
+==== Resources
+
+[[_3_28_669_]]
+===== Creating Resource Files
+
+[[_3_28_670_]]
+===== Resource File Generator
+
+[[_3_28_671_]]
+===== ResourceWriter
+
+[[_3_28_672_]]
+===== Using Resource Files
+
+[[_3_28_673_]]
+===== The System.Resources Namespace
+
+[[_3_28_674_]]
+==== Windows Forms Localization Using Visual Studio
+
+[[_3_28_675_]]
+===== Changing the Culture Programmatically
+
+[[_3_28_676_]]
+===== Using Custom Resource Messages
+
+[[_3_28_677_]]
+===== Automatic Fallback for Resources
+
+[[_3_28_678_]]
+===== Outsourcing Translations
+
+[[_3_28_679_]]
+==== Localization with ASP.NET Web Forms
+
+[[_3_28_680_]]
+==== Localization with WPF
+
+[[_3_28_681_]]
+===== .NET Resources with WPF
+
+[[_3_28_682_]]
+===== XAML Resource Dictionaries
+
+[[_3_28_683_]]
+==== A Custom Resource Reader
+
+[[_3_28_684_]]
+===== Creating a DatabaseResourceReader
+
+[[_3_28_685_]]
+===== Creating a DatabaseResourceSet
+
+[[_3_28_686_]]
+===== Creating a DatabaseResourceManager
+
+[[_3_28_687_]]
+===== Client Application for DatabaseResourceReader
+
+[[_3_28_688_]]
+==== Creating Custom Cultures
+
+[[_3_28_689_]]
+==== Localization with Windows Store Apps
+
+[[_3_28_690_]]
+===== Using Resources
+
+[[_3_28_691_]]
+===== Localization with the Multilingual App Toolkit
+
+[[_3_28_692_]]
+==== Summary
+
+[[_3_29_693_]]
+=== 29. Core XAML
+
+[[_3_29_694_]]
+==== Uses of XAML
+
+[[_3_29_695_]]
+==== XAML Foundation
+
+[[_3_29_696_]]
+===== How Elements Map to .NET Objects
+
+[[_3_29_697_]]
+===== Using Custom .NET Classes
+
+[[_3_29_698_]]
+===== Properties as Attributes
+
+[[_3_29_699_]]
+===== Properties as Elements
+
+[[_3_29_700_]]
+===== Essential .NET Types
+
+[[_3_29_701_]]
+===== Using Collections with XAML
+
+[[_3_29_702_]]
+===== Calling Constructors with XAML Code
+
+[[_3_29_703_]]
+==== Dependency Properties
+
+[[_3_29_704_]]
+===== Creating a Dependency Property
+
+[[_3_29_705_]]
+===== Coerce Value Callback
+
+[[_3_29_706_]]
+===== Value Changed Callbacks and Events
+
+[[_3_29_707_]]
+==== Bubbling and Tunneling Events
+
+[[_3_29_708_]]
+==== Attached Properties
+
+[[_3_29_709_]]
+==== Markup Extensions
+
+[[_3_29_710_]]
+===== Creating Custom Markup Extensions
+
+[[_3_29_711_]]
+===== XAML-Defined Markup Extensions
+
+[[_3_29_712_]]
+==== Reading and Writing XAML
+
+[[_3_29_713_]]
+==== Summary
+
+[[_3_30_714_]]
+=== 30. Managed Extensibility Framework
+
+[[_3_30_715_]]
+==== MEF Architecture
+
+[[_3_30_716_]]
+===== MEF Using Attributes
+
+[[_3_30_717_]]
+===== Convention-Based Part Registration
+
+[[_3_30_718_]]
+==== Defining Contracts
+
+[[_3_30_719_]]
+==== Exporting Parts
+
+[[_3_30_720_]]
+===== Creating Parts
+
+[[_3_30_721_]]
+===== Exporting Properties and Methods
+
+[[_3_30_722_]]
+===== Exporting Metadata
+
+[[_3_30_723_]]
+===== Using Metadata for Lazy Loading
+
+[[_3_30_724_]]
+==== Importing Parts
+
+[[_3_30_725_]]
+===== Importing Collections
+
+[[_3_30_726_]]
+===== Lazy Loading of Parts
+
+[[_3_30_727_]]
+===== Reading Metadata with Lazyily Instantiated Parts
+
+[[_3_30_728_]]
+==== Containers and Export Providers
+
+[[_3_30_729_]]
+==== Catalogs
+
+[[_3_30_730_]]
+==== Summary
+
+[[_3_31_731_]]
+=== 31. Windows Runtime
+
+[[_3_31_732_]]
+==== Overview
+
+[[_3_31_733_]]
+===== Comparing .NET and Windows Runtime
+
+[[_3_31_734_]]
+===== Namespaces
+
+[[_3_31_735_]]
+===== Metadata
+
+[[_3_31_736_]]
+===== Language Projections
+
+[[_3_31_737_]]
+===== Windows Runtime Types
+
+[[_3_31_738_]]
+==== Windows Runtime Components
+
+[[_3_31_739_]]
+===== Collections
+
+[[_3_31_740_]]
+===== Streams
+
+[[_3_31_741_]]
+===== Delegates and Events
+
+[[_3_31_742_]]
+===== Async
+
+[[_3_31_743_]]
+==== Windows Store Apps
+
+[[_3_31_744_]]
+==== The Life Cycle of Applications
+
+[[_3_31_745_]]
+===== Application Execution States
+
+[[_3_31_746_]]
+===== Suspension Manager
+
+[[_3_31_747_]]
+===== Navigation State
+
+[[_3_31_748_]]
+===== Testing Suspension
+
+[[_3_31_749_]]
+===== Page State
+
+[[_3_31_750_]]
+==== Application Settings
+
+[[_3_31_751_]]
+==== Summary
+
+[[_4_31_752_]]
+== IV. Data
+
+[[_4_32_753_]]
+=== 32. Core ADO.NET
+
+[[_4_32_754_]]
+==== ADO.NET Overview
+
+[[_4_32_755_]]
+===== Namespaces
+
+[[_4_32_756_]]
+===== Shared Classes
+
+[[_4_32_757_]]
+===== Database-Specific Classes
+
+[[_4_32_758_]]
+==== Using Database Connections
+
+[[_4_32_759_]]
+===== Managing Connection Strings
+
+[[_4_32_760_]]
+===== Using Connections Efficiently
+
+[[_4_32_761_]]
+===== Transactions
+
+[[_4_32_762_]]
+==== Commands
+
+[[_4_32_763_]]
+===== Executing Commands
+
+[[_4_32_764_]]
+===== Calling Stored Procedures
+
+[[_4_32_765_]]
+==== Fast Data Access: The Data Reader
+
+[[_4_32_766_]]
+==== Asynchronous Data Access: Using Task and Await
+
+[[_4_32_767_]]
+==== Managing Data and Relationships: The DataSet Class
+
+[[_4_32_768_]]
+===== Data Tables
+
+[[_4_32_769_]]
+===== Data Relationships
+
+[[_4_32_770_]]
+===== Data Constraints
+
+[[_4_32_771_]]
+==== XML Schemas: Generating Code with XSD
+
+[[_4_32_772_]]
+==== Populating a DataSet
+
+[[_4_32_773_]]
+===== Populating a DataSet Class with a Data Adapter
+
+[[_4_32_774_]]
+===== Populating a DataSet from XML
+
+[[_4_32_775_]]
+==== Persisting DataSet Changes
+
+[[_4_32_776_]]
+===== Updating with Data Adapters
+
+[[_4_32_777_]]
+===== Writing XML Output
+
+[[_4_32_778_]]
+==== Working with ADO.NET
+
+[[_4_32_779_]]
+===== Tiered Development
+
+[[_4_32_780_]]
+===== Key Generation with SQL Server
+
+[[_4_32_781_]]
+===== Naming Conventions
+
+[[_4_32_782_]]
+==== Summary
+
+[[_4_33_783_]]
+=== 33. ADO.NET Entity Framework
+
+[[_4_33_784_]]
+==== Programming with the Entity Framework
+
+[[_4_33_785_]]
+==== Entity Framework Mapping
+
+[[_4_33_786_]]
+===== Logical Layer
+
+[[_4_33_787_]]
+===== Conceptual Layer
+
+[[_4_33_788_]]
+===== Mapping Layer
+
+[[_4_33_789_]]
+===== Connection String
+
+[[_4_33_790_]]
+==== Entities
+
+[[_4_33_791_]]
+==== Data Context
+
+[[_4_33_792_]]
+==== Relationships
+
+[[_4_33_793_]]
+===== Table-per-Hierarchy
+
+[[_4_33_794_]]
+===== Table-per-Type
+
+[[_4_33_795_]]
+===== Lazy, Explicit, and Eager Loading
+
+[[_4_33_796_]]
+==== Querying Data
+
+[[_4_33_797_]]
+===== Entity SQL
+
+[[_4_33_798_]]
+===== Using DbSqlQuery
+
+[[_4_33_799_]]
+===== LINQ to Entities
+
+[[_4_33_800_]]
+==== Writing Data to the Database
+
+[[_4_33_801_]]
+===== Object Tracking
+
+[[_4_33_802_]]
+===== Change Information
+
+[[_4_33_803_]]
+===== Attaching and Detaching Entities
+
+[[_4_33_804_]]
+===== Writing Entity Changes with Last One Wins
+
+[[_4_33_805_]]
+===== Writing Entity Changes with First One Wins
+
+[[_4_33_806_]]
+===== Writing Entity Changes with Conflict Handling
+
+[[_4_33_807_]]
+==== Using the Code First Programming Model
+
+[[_4_33_808_]]
+===== Defining Entity Types
+
+[[_4_33_809_]]
+===== Creating the Data Context
+
+[[_4_33_810_]]
+===== Creating the Database and Storing Entities
+
+[[_4_33_811_]]
+===== The Database
+
+[[_4_33_812_]]
+===== Query Data
+
+[[_4_33_813_]]
+===== Customizing Database Generation
+
+[[_4_33_814_]]
+===== Automatic Filling of a Database
+
+[[_4_33_815_]]
+===== Connection Resiliency
+
+[[_4_33_816_]]
+===== Schema Migrations
+
+[[_4_33_817_]]
+==== Summary
+
+[[_4_34_818_]]
+=== 34. Manipulating XML
+
+[[_4_34_819_]]
+==== XML
+
+[[_4_34_820_]]
+==== XML Standards Support in .NET
+
+[[_4_34_821_]]
+==== Introducing the System .Xml Namespace
+
+[[_4_34_822_]]
+==== Using System .Xml Classes
+
+[[_4_34_823_]]
+==== Reading and Writing Streamed XML
+
+[[_4_34_824_]]
+===== Using the XmlReader Class
+
+[[_4_34_825_]]
+===== Validating with XmlReader
+
+[[_4_34_826_]]
+===== Using the XmlWriter Class
+
+[[_4_34_827_]]
+==== Using the DOM in .NET
+
+[[_4_34_828_]]
+===== Using the XmlDocument Class
+
+[[_4_34_829_]]
+==== Using XPathNavigators
+
+[[_4_34_830_]]
+===== The System.Xml.XPath Namespace
+
+[[_4_34_831_]]
+===== The System.Xml.Xsl Namespace
+
+[[_4_34_832_]]
+==== XML and ADO.NET
+
+[[_4_34_833_]]
+===== Converting ADO.NET Data to XML
+
+[[_4_34_834_]]
+===== Converting XML to ADO.NET Data
+
+[[_4_34_835_]]
+==== Serializing Objects in XML
+
+[[_4_34_836_]]
+===== Serialization without Source Code Access
+
+[[_4_34_837_]]
+==== LINQ to XML and .NET
+
+[[_4_34_838_]]
+==== Working with Different XML Objects
+
+[[_4_34_839_]]
+===== XDocument
+
+[[_4_34_840_]]
+===== XElement
+
+[[_4_34_841_]]
+===== XNamespace
+
+[[_4_34_842_]]
+===== XComment
+
+[[_4_34_843_]]
+===== XAttribute
+
+[[_4_34_844_]]
+==== Using LINQ to Query XML Documents
+
+[[_4_34_845_]]
+===== Querying Static XML Documents
+
+[[_4_34_846_]]
+===== Querying Dynamic XML Documents
+
+[[_4_34_847_]]
+==== More Query Techniques for XML Documents
+
+[[_4_34_848_]]
+===== Reading from an XML Document
+
+[[_4_34_849_]]
+===== Writing to an XML Document
+
+[[_4_34_850_]]
+==== Summary
+
+[[_5_34_851_]]
+== V. Presentation
+
+[[_5_35_852_]]
+=== 35. Core WPF
+
+[[_5_35_853_]]
+==== Understanding WPF
+
+[T] WPF::
+Windows Presentation Foundation
+
+One of the main advantages of WPF is that _work can be easily separated between designers and developers_.
+
+[T] XAML::
+eXtensible Application Markup Language
+
+[[_5_35_854_]]
+===== Namespaces
+
+* Windows Forms: System.Windows.Forms
+* WPF: System.Windows and subnamespaces thereof
+
+* Button
+** for Windows Forms: System.Windows.Forms.Button
+** for WPF: System.Windows.Controls.Button
+
+.namespaces
+[options="header"]
+|======
+| NAMESPACE | DESCRIPTION | REMARKS
+| System.Windows | Application, DependencyObject, DependencyProperty, FrameworkElement | core namespace of WPF
+| .Annotations | | annotations and notes to be stored separately from the document
+| .Annotations.Storage | | storing annotations
+| .Automation | |
+| .Automation.Peers | ButtonAutomationPeer, CheckBoxAutomationPeer |
+| .Automation.Provider | | to create a custom automation provider
+| .Baml2006 | Baml2006Reader |
+| .Controls |  Button, Border, Canvas, ComboBox, Expander, Slider, ToolTip, TreeView |
+| .Controls.Primitives | Popup, ScrollBar, StatusBar, TabPanel | to be used within complex controls
+| .Converters | | for data conversion. core converter classes are in System.Windows
+| .Data | Binding | data binding between a WPF target element and a CLR source
+| .Documents | FixedDocument, FlowDocument |
+| .Documents.Serialization | | write documents to disk
+| .Ink | | user input for Windows Table PC and Ultra Mobile PC
+| .Input | | command handling, keboard inputs, working with stylus
+| .Interop | | integration with native Window handles from the Windows API and Windows Forms
+| .Markup | | helper classes for XAML markup code
+| .Media | | images, audio, and video content
+| .Navigation | | navigation between windows
+| .Resources | |
+| .Shapes | Line, Ellipse, Rectangle | core classes for the UI
+| .Threading | Dispatcher |
+| .Xps | | stands for XML Paper Specification. supplied by Microsoft Word
+| .Xps.Packaging | |
+| .Xps.Serialization
+|======
+
+[[_5_35_855_]]
+===== Class Hierarchy
+
+.class hierarchy
+[options="header"]
+|======
+| CLASS | DESCRIPTION
+| DispatcherObject | an abstract base class that are bound to one thread. Classes derived from _DispatcherObject_ have an associated _Dispatcher_ object that can be used to switch the thread.
+| Application | a singleton pattern
+| DependencyObject | base class for all classes that support dependency properties
+| Visual | base class for all visual elements. hit testing and transformation
+| UIElement | the abstract base class for all WPF elements that need basic presentation features. tunneling and bublling events for mouse moves, drag and drop, and key clicks. virtual methods for rendering that can be overriden. _layout_. As WPF does not use Window handles, this class can be considered to be equivalent to _Window handles_
+| FrameworkElement | derived from UIElement
+| Shape | base class for _Line_, _Ellipse_, _Polygon_, _Rectangle_
+| Control | derived from FrameworkElement. user interactive elements
+| ContentControl | base class for all controls that have a single content. _Label_, _Button_
+| ItemsControl | base class for all controls that contain a collection of items as content. _ListBox_, _ComboBox_
+| Panel | derived from _FrameworkElement_. abstract base class for all panels. _Children_ property. _WrapPanel_, _StackPanel_, _Grid_
+|======
+
+[[_5_35_856_]]
+==== Shapes
+
+two-dimensional graphics
+
+* rectangles
+* lines
+* ellipses
+* paths
+* polygons
+
+System.Windows.Shapes
+
+[[_5_35_857_]]
+==== Geometry
+
+[[_5_35_858_]]
+==== Transformation
+
+[[_5_35_859_]]
+==== Brushes
+
+[[_5_35_860_]]
+===== SolidColorBrush
+
+[[_5_35_861_]]
+===== LinearGradientBrush
+
+[[_5_35_862_]]
+===== RadialGradientBrush
+
+[[_5_35_863_]]
+===== DrawingBrush
+
+[[_5_35_864_]]
+===== ImageBrush
+
+[[_5_35_865_]]
+===== VisualBrush
+
+[[_5_35_866_]]
+==== Controls
+
+[[_5_35_867_]]
+===== Simple Controls
+
+[[_5_35_868_]]
+===== Content Controls
+
+[[_5_35_869_]]
+===== Headered Content Controls
+
+[[_5_35_870_]]
+===== Items Controls
+
+[[_5_35_871_]]
+===== Headered Items Controls
+
+[[_5_35_872_]]
+===== Decoration
+
+[[_5_35_873_]]
+==== Layout
+
+[[_5_35_874_]]
+===== StackPanel
+
+[[_5_35_875_]]
+===== WrapPanel
+
+[[_5_35_876_]]
+===== Canvas
+
+[[_5_35_877_]]
+===== DockPanel
+
+[[_5_35_878_]]
+===== Grid
+
+[[_5_35_879_]]
+==== Styles and Resources
+
+[[_5_35_880_]]
+===== Styles
+
+[[_5_35_881_]]
+===== Resources
+
+[[_5_35_882_]]
+===== System Resources
+
+[[_5_35_883_]]
+===== Accessing Resources from Code
+
+[[_5_35_884_]]
+===== Dynamic Resources
+
+[[_5_35_885_]]
+===== Resource Dictionaries
+
+[[_5_35_886_]]
+==== Triggers
+
+[[_5_35_887_]]
+===== Property Triggers
+
+[[_5_35_888_]]
+===== MultiTrigger
+
+[[_5_35_889_]]
+===== Data Triggers
+
+[[_5_35_890_]]
+==== Templates
+
+[[_5_35_891_]]
+===== Control Templates
+
+[[_5_35_892_]]
+===== Data Templates
+
+[[_5_35_893_]]
+===== Styling a ListBox
+
+[[_5_35_894_]]
+===== ItemTemplate
+
+[[_5_35_895_]]
+===== Control Templates for ListBox Elements
+
+[[_5_35_896_]]
+==== Animations
+
+[[_5_35_897_]]
+===== Timeline
+
+[[_5_35_898_]]
+===== Nonlinear Animations
+
+[[_5_35_899_]]
+===== Event Triggers
+
+[[_5_35_900_]]
+===== Keyframe Animations
+
+[[_5_35_901_]]
+==== Visual State Manager
+
+[[_5_35_902_]]
+===== Visual States
+
+[[_5_35_903_]]
+===== Transitions
+
+[[_5_35_904_]]
+==== 3-D
+
+[[_5_35_905_]]
+===== Model
+
+[[_5_35_906_]]
+===== Cameras
+
+[[_5_35_907_]]
+===== Lights
+
+[[_5_35_908_]]
+===== Rotation
+
+[[_5_35_909_]]
+==== Summary
+
+[[_5_36_910_]]
+=== 36. Business Applications with WPF
+
+[[_5_36_911_]]
+==== Menu and Ribbon Controls
+
+[[_5_36_912_]]
+===== Menu Controls
+
+[[_5_36_913_]]
+===== Ribbon Controls
+
+[[_5_36_914_]]
+==== Commanding
+
+[[_5_36_915_]]
+===== Defining Commands
+
+[[_5_36_916_]]
+===== Defining Command Sources
+
+[[_5_36_917_]]
+===== Command Bindings
+
+[[_5_36_918_]]
+==== Data Binding
+
+[[_5_36_919_]]
+===== BooksDemo Application Content
+
+[[_5_36_920_]]
+===== Binding with XAML
+
+[[_5_36_921_]]
+===== Simple Object Binding
+
+[[_5_36_922_]]
+===== Change Notification
+
+[[_5_36_923_]]
+===== Object Data Provider
+
+[[_5_36_924_]]
+===== List Binding
+
+[[_5_36_925_]]
+===== Master Details Binding
+
+[[_5_36_926_]]
+===== MultiBinding
+
+[[_5_36_927_]]
+===== Priority Binding
+
+[[_5_36_928_]]
+===== Value Conversion
+
+[[_5_36_929_]]
+===== Adding List Items Dynamically
+
+[[_5_36_930_]]
+===== Adding Tab Items Dynamically
+
+[[_5_36_931_]]
+===== Data Template Selector
+
+[[_5_36_932_]]
+===== Binding to XML
+
+[[_5_36_933_]]
+===== Binding Validation and Error Handling
+
+[[_5_36_934_]]
+==== TreeView
+
+[[_5_36_935_]]
+==== DataGrid
+
+[[_5_36_936_]]
+===== Custom Columns
+
+[[_5_36_937_]]
+===== Row Details
+
+[[_5_36_938_]]
+===== Grouping with the DataGrid
+
+[[_5_36_939_]]
+===== Live Shaping
+
+[[_5_36_940_]]
+==== Summary
+
+[[_5_37_941_]]
+=== 37. Creating Documents with WPF
+
+[[_5_37_942_]]
+==== Text Elements
+
+[[_5_37_943_]]
+===== Fonts
+
+[[_5_37_944_]]
+===== TextEffect
+
+[[_5_37_945_]]
+===== Inline
+
+[[_5_37_946_]]
+===== Block
+
+[[_5_37_947_]]
+===== Lists
+
+[[_5_37_948_]]
+===== Tables
+
+[[_5_37_949_]]
+===== Anchor to Blocks
+
+[[_5_37_950_]]
+==== Flow Documents
+
+[[_5_37_951_]]
+==== Fixed Documents
+
+[[_5_37_952_]]
+==== XPS Documents
+
+[[_5_37_953_]]
+==== Printing
+
+[[_5_37_954_]]
+===== Printing with the PrintDialog
+
+[[_5_37_955_]]
+===== Printing Visuals
+
+[[_5_37_956_]]
+==== Summary
+
+[[_5_38_957_]]
+=== 38. Windows Store Apps: User Interface
+
+[[_5_38_958_]]
+==== Overview
+
+[[_5_38_959_]]
+==== Microsoft Modern Design
+
+[[_5_38_960_]]
+===== Content, Not Chrome
+
+[[_5_38_961_]]
+===== Fast and Fluid
+
+[[_5_38_962_]]
+===== Readability
+
+[[_5_38_963_]]
+==== Sample Application Core Functionality
+
+[[_5_38_964_]]
+===== Files and Directories
+
+[[_5_38_965_]]
+===== Application Pages
+
+[[_5_38_966_]]
+==== App Bars
+
+[[_5_38_967_]]
+==== Launching and Navigation
+
+[[_5_38_968_]]
+==== Layout Changes
+
+[[_5_38_969_]]
+===== Application Data
+
+[[_5_38_970_]]
+==== Storage
+
+[[_5_38_971_]]
+===== Defining a Data Contract
+
+[[_5_38_972_]]
+===== Writing Roaming Data
+
+[[_5_38_973_]]
+===== Reading Data
+
+[[_5_38_974_]]
+===== Writing Images
+
+[[_5_38_975_]]
+===== Reading Images
+
+[[_5_38_976_]]
+==== Pickers
+
+[[_5_38_977_]]
+==== Live Tiles
+
+[[_5_38_978_]]
+==== Summary
+
+[[_5_39_979_]]
+=== 39. Windows Store Apps: Contracts and Devices
+
+[[_5_39_980_]]
+==== Overview
+
+[[_5_39_981_]]
+==== Searching
+
+[[_5_39_982_]]
+==== Sharing Contract
+
+[[_5_39_983_]]
+===== Sharing Source
+
+[[_5_39_984_]]
+===== Sharing Target
+
+[[_5_39_985_]]
+==== Camera
+
+[[_5_39_986_]]
+==== Geolocation
+
+[[_5_39_987_]]
+==== Sensors
+
+[[_5_39_988_]]
+===== Light
+
+[[_5_39_989_]]
+===== Compass
+
+[[_5_39_990_]]
+===== Accelerometer
+
+[[_5_39_991_]]
+===== Inclinometer
+
+[[_5_39_992_]]
+===== Gyrometer
+
+[[_5_39_993_]]
+===== Orientation
+
+[[_5_39_994_]]
+===== Rolling Marble Sample
+
+[[_5_39_995_]]
+==== Summary
+
+[[_5_40_996_]]
+=== 40. Core ASP.NET
+
+[[_5_40_997_]]
+==== .NET Frameworks for Web Applications
+
+[[_5_40_998_]]
+===== ASP.NET Web Forms
+
+[[_5_40_999_]]
+===== ASP.NET Web Pages
+
+[[_5_40_1000_]]
+===== ASP.NET MVC
+
+[[_5_40_1001_]]
+==== Web Technologies
+
+[[_5_40_1002_]]
+===== HTML
+
+[[_5_40_1003_]]
+===== CSS
+
+[[_5_40_1004_]]
+===== JavaScript and jQuery
+
+[[_5_40_1005_]]
+==== Hosting and Configuration
+
+[[_5_40_1006_]]
+==== Handlers and Modules
+
+[[_5_40_1007_]]
+===== Creating a Custom Handler
+
+[[_5_40_1008_]]
+===== ASP.NET Handlers
+
+[[_5_40_1009_]]
+===== Creating a Custom Module
+
+[[_5_40_1010_]]
+===== Common Modules
+
+[[_5_40_1011_]]
+==== Global Application Class
+
+[[_5_40_1012_]]
+==== Request and Response
+
+[[_5_40_1013_]]
+===== Using the HttpRequest Object
+
+[[_5_40_1014_]]
+===== Using the HttpResponse Object
+
+[[_5_40_1015_]]
+==== State Management
+
+[[_5_40_1016_]]
+===== View State
+
+[[_5_40_1017_]]
+===== Cookies
+
+[[_5_40_1018_]]
+===== Session
+
+[[_5_40_1019_]]
+===== Application
+
+[[_5_40_1020_]]
+===== Cache
+
+[[_5_40_1021_]]
+===== Profiles
+
+[[_5_40_1022_]]
+==== ASP.NET Identity System
+
+[[_5_40_1023_]]
+===== Foundation
+
+[[_5_40_1024_]]
+===== Storing and Retrieving User Information
+
+[[_5_40_1025_]]
+===== Security Startup
+
+[[_5_40_1026_]]
+===== User Registration and Authentication
+
+[[_5_40_1027_]]
+==== Summary
+
+[[_5_41_1028_]]
+=== 41. ASP.NET Web Forms
+
+[[_5_41_1029_]]
+==== Overview
+
+[[_5_41_1030_]]
+==== ASPX Page Model
+
+[[_5_41_1031_]]
+===== Adding Controls
+
+[[_5_41_1032_]]
+===== Using Events
+
+[[_5_41_1033_]]
+===== Working with Postbacks
+
+[[_5_41_1034_]]
+===== Using Auto-postbacks
+
+[[_5_41_1035_]]
+===== Doing Postbacks to Other Pages
+
+[[_5_41_1036_]]
+===== Defining Strongly Typed Cross-page Postbacks
+
+[[_5_41_1037_]]
+===== Using Page Events
+
+[[_5_41_1038_]]
+===== ASPX Code
+
+[[_5_41_1039_]]
+===== Server-side Controls
+
+[[_5_41_1040_]]
+==== Master Pages
+
+[[_5_41_1041_]]
+===== Creating a Master Page
+
+[[_5_41_1042_]]
+===== Using Master Pages
+
+[[_5_41_1043_]]
+===== Defining Master Page Content from Content Pages
+
+[[_5_41_1044_]]
+==== Navigation
+
+[[_5_41_1045_]]
+===== Site Map
+
+[[_5_41_1046_]]
+===== Menu Control
+
+[[_5_41_1047_]]
+===== Menu Path
+
+[[_5_41_1048_]]
+==== Validating User Input
+
+[[_5_41_1049_]]
+===== Using Validation Controls
+
+[[_5_41_1050_]]
+===== Using a Validation Summary
+
+[[_5_41_1051_]]
+===== Validation Groups
+
+[[_5_41_1052_]]
+==== Accessing Data
+
+[[_5_41_1053_]]
+===== Using the Entity Framework
+
+[[_5_41_1054_]]
+===== Creating a Repository
+
+[[_5_41_1055_]]
+===== Using the Object Data Source
+
+[[_5_41_1056_]]
+===== Editing
+
+[[_5_41_1057_]]
+===== Customizing Columns
+
+[[_5_41_1058_]]
+===== Using Templates with the Grid
+
+[[_5_41_1059_]]
+==== Security
+
+[[_5_41_1060_]]
+===== Setting Up the ASP.NET Identity
+
+[[_5_41_1061_]]
+===== User Registration
+
+[[_5_41_1062_]]
+===== User Authentication
+
+[[_5_41_1063_]]
+===== User Authorization
+
+[[_5_41_1064_]]
+==== Ajax
+
+[[_5_41_1065_]]
+===== What Is ASP.NET AJAX?
+
+[[_5_41_1066_]]
+===== ASP.NET AJAX Website Example
+
+[[_5_41_1067_]]
+===== ASP.NET AJAX-enabled Website Configuration
+
+[[_5_41_1068_]]
+===== Adding ASP.NET AJAX Functionality
+
+[[_5_41_1069_]]
+==== Summary
+
+[[_5_42_1070_]]
+=== 42. ASP.NET MVC
+
+[[_5_42_1071_]]
+==== ASP.NET MVC Overview
+
+[[_5_42_1072_]]
+==== Defining Routes
+
+[[_5_42_1073_]]
+===== Adding Routes
+
+[[_5_42_1074_]]
+===== Route Constraints
+
+[[_5_42_1075_]]
+==== Creating Controllers
+
+[[_5_42_1076_]]
+===== Action Methods
+
+[[_5_42_1077_]]
+===== Parameters
+
+[[_5_42_1078_]]
+===== Returning Data
+
+[[_5_42_1079_]]
+==== Creating Views
+
+[[_5_42_1080_]]
+===== Passing Data to Views
+
+[[_5_42_1081_]]
+===== Razor Syntax
+
+[[_5_42_1082_]]
+===== Strongly Typed Views
+
+[[_5_42_1083_]]
+===== Layout
+
+[[_5_42_1084_]]
+===== .ial Views
+
+[[_5_42_1085_]]
+==== Submitting Data from the Client
+
+[[_5_42_1086_]]
+===== Model Binder
+
+[[_5_42_1087_]]
+===== Annotations and Validation
+
+[[_5_42_1088_]]
+==== HTML Helpers
+
+[[_5_42_1089_]]
+===== Simple Helpers
+
+[[_5_42_1090_]]
+===== Using Model Data
+
+[[_5_42_1091_]]
+===== Define HTML Attributes
+
+[[_5_42_1092_]]
+===== Create Lists
+
+[[_5_42_1093_]]
+===== Strongly Typed Helpers
+
+[[_5_42_1094_]]
+===== Editor Extensions
+
+[[_5_42_1095_]]
+===== Creating Custom Helpers
+
+[[_5_42_1096_]]
+===== Templates
+
+[[_5_42_1097_]]
+==== Creating a Data-Driven Application
+
+[[_5_42_1098_]]
+===== Defining a Model
+
+[[_5_42_1099_]]
+===== Creating Controllers and Views
+
+[[_5_42_1100_]]
+==== Action Filters
+
+[[_5_42_1101_]]
+==== Authentication and Authorization
+
+[[_5_42_1102_]]
+===== Model for Login
+
+[[_5_42_1103_]]
+===== Controller for Login
+
+[[_5_42_1104_]]
+===== Login View
+
+[[_5_42_1105_]]
+==== Summary
+
+[[_6_42_1106_]]
+== VI Communication
+
+[[_6_43_1107_]]
+=== 43. Windows Communication Foundation
+
+[[_6_43_1108_]]
+==== WCF Overview
+
+[[_6_43_1109_]]
+===== SOAP
+
+[[_6_43_1110_]]
+===== WSDL
+
+[[_6_43_1111_]]
+===== REST
+
+[[_6_43_1112_]]
+===== JSON
+
+[[_6_43_1113_]]
+==== Creating a Simple Service and Client
+
+[[_6_43_1114_]]
+===== Defining Service and Data Contracts
+
+[[_6_43_1115_]]
+===== Data Access
+
+[[_6_43_1116_]]
+===== Service Implementation
+
+[[_6_43_1117_]]
+===== WCF Service Host and WCF Test Client
+
+[[_6_43_1118_]]
+===== Custom Service Host
+
+[[_6_43_1119_]]
+===== WCF Client
+
+[[_6_43_1120_]]
+===== Diagnostics
+
+[[_6_43_1121_]]
+===== Sharing Contract Assemblies with the Client
+
+[[_6_43_1122_]]
+==== Contracts
+
+[[_6_43_1123_]]
+===== Data Contract
+
+[[_6_43_1124_]]
+===== Versioning
+
+[[_6_43_1125_]]
+===== Service and Operation Contracts
+
+[[_6_43_1126_]]
+===== Message Contract
+
+[[_6_43_1127_]]
+===== Fault Contract
+
+[[_6_43_1128_]]
+==== Service Behaviors
+
+[[_6_43_1129_]]
+==== Binding
+
+[[_6_43_1130_]]
+===== Standard Bindings
+
+[[_6_43_1131_]]
+===== Features of Standard Bindings
+
+[[_6_43_1132_]]
+===== Web Socket
+
+[[_6_43_1133_]]
+==== Hosting
+
+[[_6_43_1134_]]
+===== Custom Hosting
+
+[[_6_43_1135_]]
+===== WAS Hosting
+
+[[_6_43_1136_]]
+===== Preconfigured Host Classes
+
+[[_6_43_1137_]]
+==== Clients
+
+[[_6_43_1138_]]
+===== Using Metadata
+
+[[_6_43_1139_]]
+===== Sharing Types
+
+[[_6_43_1140_]]
+==== Duplex Communication
+
+[[_6_43_1141_]]
+===== Contract for Duplex Communication
+
+[[_6_43_1142_]]
+===== Service for Duplex Communication
+
+[[_6_43_1143_]]
+===== Client Application for Duplex Communication
+
+[[_6_43_1144_]]
+==== Routing
+
+[[_6_43_1145_]]
+===== Sample Application
+
+[[_6_43_1146_]]
+===== Routing Interfaces
+
+[[_6_43_1147_]]
+===== WCF Routing Service
+
+[[_6_43_1148_]]
+===== Using a Router for Failover
+
+[[_6_43_1149_]]
+===== Bridging for Protocol Changes
+
+[[_6_43_1150_]]
+===== Filter Types
+
+[[_6_43_1151_]]
+==== Summary
+
+[[_6_44_1152_]]
+=== 44. ASP.NET Web API
+
+[[_6_44_1153_]]
+==== Overview
+
+[[_6_44_1154_]]
+==== Creating Services
+
+[[_6_44_1155_]]
+===== Defining a Model
+
+[[_6_44_1156_]]
+===== Creating a Controller
+
+[[_6_44_1157_]]
+===== Error Handling
+
+[[_6_44_1158_]]
+==== Creating a .NET Client
+
+[[_6_44_1159_]]
+===== Sending GET Requests
+
+[[_6_44_1160_]]
+===== Sending POST Requests
+
+[[_6_44_1161_]]
+===== Sending PUT Requests
+
+[[_6_44_1162_]]
+===== Sending DELETE Requests
+
+[[_6_44_1163_]]
+==== Web API Routing and Actions
+
+[[_6_44_1164_]]
+===== Adding HTTP Methods to Actions
+
+[[_6_44_1165_]]
+===== Attribute-based Routing
+
+[[_6_44_1166_]]
+==== Using OData
+
+[[_6_44_1167_]]
+===== Creating a Data Model
+
+[[_6_44_1168_]]
+===== Creating a Service
+
+[[_6_44_1169_]]
+===== OData Query
+
+[[_6_44_1170_]]
+===== WCF Data Services Client
+
+[[_6_44_1171_]]
+==== Security with the Web API
+
+[[_6_44_1172_]]
+===== Create an Account
+
+[[_6_44_1173_]]
+===== Create an Authentication Token
+
+[[_6_44_1174_]]
+===== Sending an Authenticated Call
+
+[[_6_44_1175_]]
+===== Getting User Information
+
+[[_6_44_1176_]]
+==== Self-Hosting
+
+[[_6_44_1177_]]
+==== Summary
+
+[[_6_45_1178_]]
+=== 45. Windows Workflow Foundation
+
+[[_6_45_1179_]]
+==== A Workflow Overview
+
+[[_6_45_1180_]]
+==== Hello World
+
+[[_6_45_1181_]]
+==== Activities
+
+[[_6_45_1182_]]
+===== If Activity
+
+[[_6_45_1183_]]
+===== InvokeMethod Activity
+
+[[_6_45_1184_]]
+===== Parallel Activity
+
+[[_6_45_1185_]]
+===== Delay Activity
+
+[[_6_45_1186_]]
+===== Pick Activity
+
+[[_6_45_1187_]]
+==== Custom Activities
+
+[[_6_45_1188_]]
+===== Activity Validation
+
+[[_6_45_1189_]]
+===== Designers
+
+[[_6_45_1190_]]
+===== Custom Composite Activities
+
+[[_6_45_1191_]]
+==== Workflows
+
+[[_6_45_1192_]]
+===== Arguments and Variables
+
+[[_6_45_1193_]]
+===== WorkflowApplication
+
+[[_6_45_1194_]]
+===== Hosting WCF Workflows
+
+[[_6_45_1195_]]
+===== Workflow Versioning
+
+[[_6_45_1196_]]
+===== Hosting the Designer
+
+[[_6_45_1197_]]
+==== Summary
+
+[[_6_46_1198_]]
+=== 46. Peer-to-Peer Networking
+
+[[_6_46_1199_]]
+==== Peer-to-Peer Networking Overview
+
+[[_6_46_1200_]]
+===== Client-Server Architecture
+
+[[_6_46_1201_]]
+===== P2P Architecture
+
+[[_6_46_1202_]]
+===== P2P Architectural Challenges
+
+[[_6_46_1203_]]
+===== P2P Terminology
+
+[[_6_46_1204_]]
+===== P2P Solutions
+
+[[_6_46_1205_]]
+==== Peer Name Resolution Protocol (PNRP)
+
+[[_6_46_1206_]]
+===== PNRP IDs
+
+[[_6_46_1207_]]
+===== PNRP Clouds
+
+[[_6_46_1208_]]
+===== PNRP Since Windows 7
+
+[[_6_46_1209_]]
+==== Building P2P Applications
+
+[[_6_46_1210_]]
+===== Registering Peer Names
+
+[[_6_46_1211_]]
+===== Resolving Peer Names
+
+[[_6_46_1212_]]
+===== Code Access Security in System.Net.PeerToPeer
+
+[[_6_46_1213_]]
+===== Sample Application
+
+[[_6_46_1214_]]
+==== Summary
+
+[[_6_47_1215_]]
+=== 47. Message Queuing
+
+[[_6_47_1216_]]
+==== Overview
+
+[[_6_47_1217_]]
+===== When to Use Message Queuing
+
+[[_6_47_1218_]]
+===== Message Queuing Features
+
+[[_6_47_1219_]]
+==== Message Queuing Products
+
+[[_6_47_1220_]]
+==== Message Queuing Architecture
+
+[[_6_47_1221_]]
+===== Messages
+
+[[_6_47_1222_]]
+===== Message Queue
+
+[[_6_47_1223_]]
+==== Message Queuing Administrative Tools
+
+[[_6_47_1224_]]
+===== Creating Message Queues
+
+[[_6_47_1225_]]
+===== Message Queue Properties
+
+[[_6_47_1226_]]
+==== Programming Message Queuing
+
+[[_6_47_1227_]]
+===== Creating a Message Queue
+
+[[_6_47_1228_]]
+===== Finding a Queue
+
+[[_6_47_1229_]]
+===== Opening Known Queues
+
+[[_6_47_1230_]]
+===== Sending a Message
+
+[[_6_47_1231_]]
+===== Receiving Messages
+
+[[_6_47_1232_]]
+==== Course Order Application
+
+[[_6_47_1233_]]
+===== Course Order Class Library
+
+[[_6_47_1234_]]
+===== Course Order Message Sender
+
+[[_6_47_1235_]]
+===== Sending Priority and Recoverable Messages
+
+[[_6_47_1236_]]
+===== Course Order Message Receiver
+
+[[_6_47_1237_]]
+==== Receiving Results
+
+[[_6_47_1238_]]
+===== Acknowledgment Queues
+
+[[_6_47_1239_]]
+===== Response Queues
+
+[[_6_47_1240_]]
+==== Transactional Queues
+
+[[_6_47_1241_]]
+==== Message Queuing with WCF
+
+[[_6_47_1242_]]
+===== Entity Classes with a Data Contract
+
+[[_6_47_1243_]]
+===== WCF Service Contract
+
+[[_6_47_1244_]]
+===== WCF Message Receiver Application
+
+[[_6_47_1245_]]
+===== WCF Message Sender Application
+
+[[_6_47_1246_]]
+==== Message Queue Installation
+
+[[_6_47_1247_]]
+==== Summary

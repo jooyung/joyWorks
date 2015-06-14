@@ -1,0 +1,1039 @@
+[[_0_]]
+= Practical WPF Charts and Graphics
+Joy <arbago@gmail.com>
+v1.0, 2015-06-1
+:icons: font
+:sectanchors:
+:imagesdir: images
+:homepage: http://arbago.com
+:toc: macro
+
+toc::[]
+
+[preface]
+== 책
+
+-Practical WPF Charts and Graphics by Jack Xu, 20091110
+
+[preface]
+== 머릿말
+
+[[_1_0_0_]]
+== 1. Overview of WPF Programming
+
+[[_1_1_1_]]
+=== New features in WPF
+
+[[_1_2_2_]]
+=== XAML Basics
+
+[[_1_2_2_]]
+==== Why Is XAML Needed?
+
+[[_1_2_2_]]
+==== Creating XAML Files
+
+[[_1_2_2_]]
+==== Code-Behind Files
+
+[[_1_3_3_]]
+=== Your First WPF Program
+
+[[_1_3_3_]]
+==== Properties in XAML
+
+[[_1_3_3_]]
+==== Event Handlers in Code-Behind Files
+
+[[_1_4_4_]]
+=== Code-Only Example
+
+[[_1_5_5_]]
+=== XAML-Only Example
+
+[[_2_0_5_]]
+== 2. 2D Transformations
+
+[[_2_1_6_]]
+=== Basics of Matrices and Transformations
+
+[[_2_1_6_]]
+==== Vectors and Points
+
+[[_2_1_6_]]
+==== Scaling
+
+[[_2_1_6_]]
+==== Reflection
+
+[[_2_1_6_]]
+==== Rotation
+
+[[_2_1_6_]]
+==== Translation
+
+[[_2_2_7_]]
+=== Homogeneous Coordinates
+
+[[_2_2_7_]]
+==== Translation in Homogeneous Coordinates
+
+[[_2_2_7_]]
+==== Scaling in Homogeneous Coordinates
+
+[[_2_2_7_]]
+==== Rotation in Homogeneous Coordinates
+
+[[_2_2_7_]]
+==== Combining Transforms
+
+[[_2_3_8_]]
+=== Vectors and Matrices in WPF
+
+[[_2_3_8_]]
+==== Vector Structure
+
+[[_2_3_8_]]
+==== Matrix Structure
+
+[[_2_3_8_]]
+==== Matrix Operations
+
+[[_2_3_8_]]
+==== Matrix Transforms
+
+[[_2_3_8_]]
+==== Creating Perpendicular Lines
+
+[[_2_4_9_]]
+=== Object Transformations in WPF
+
+[[_2_4_9_]]
+==== MatrixTransform Class
+
+[[_2_4_9_]]
+==== ScaleTransform Class
+
+[[_2_4_9_]]
+==== TranslateTransform Class
+
+[[_2_4_9_]]
+==== RotateTransform Class
+
+[[_2_4_9_]]
+==== SkewTransform Class
+
+[[_2_4_9_]]
+==== Composite Transforms
+
+[[_3_0_9_]]
+== 3. WPF Graphics Basics in 2D
+
+[[_3_1_10_]]
+=== 2D Coordinate Systems in WPF
+
+[[_3_1_10_]]
+==== Default Coordinates
+
+[[_3_1_10_]]
+==== Custom Coordinates
+
+[[_3_1_10_]]
+==== Custom Coordinates for 2D Charts
+
+[[_3_1_10_]]
+==== 2D Viewport
+
+[[_3_1_10_]]
+==== Zooming and Panning
+
+[[_3_1_10_]]
+==== Resizable Canvas
+
+[[_3_2_11_]]
+=== Basic 2D Graphics Shapes in WPF
+
+[[_3_2_11_]]
+==== Lines
+
+[[_3_2_11_]]
+==== Rectangles and Ellipses
+
+[[_3_2_11_]]
+==== Polylines
+
+[[_3_2_11_]]
+==== Polygons
+
+[[_3_3_12_]]
+=== Paths and Geometries
+
+[[_3_3_12_]]
+==== Line, Rectangle, and Ellipse Geometries
+
+[[_3_3_12_]]
+==== GeometryGroup Class
+
+[[_3_3_12_]]
+==== CombinedGeometry Class
+
+[[_3_3_12_]]
+==== PathGeometry Class
+
+[[_3_3_12_]]
+==== Lines and Polylines
+
+[[_3_3_12_]]
+==== Arcs
+
+[[_3_3_12_]]
+==== Bezier Curves
+
+[[_3_3_12_]]
+==== Geometry and Mini-Language
+
+[[_3_3_12_]]
+==== Hit Testing
+
+[[_3_4_13_]]
+=== Custom Shapes
+
+[[_3_4_13_]]
+==== Star Class
+
+[[_3_4_13_]]
+==== ArrowLine Class
+
+[[_3_4_13_]]
+==== Testing Custom Shapes
+
+[[_4_0_13_]]
+== 4. Colors and Brushes
+
+[[_4_1_14_]]
+=== Colors
+
+[[_4_1_14_]]
+==== System Colors
+
+[[_4_1_14_]]
+==== Color Picker
+
+[[_4_2_15_]]
+=== Brushes
+
+[[_4_2_15_]]
+==== SolidColorBrush
+
+[[_4_2_15_]]
+==== LinearGradientBrush
+
+[[_4_2_15_]]
+==== RadialGradientBrush
+
+[[_4_2_15_]]
+==== DrawingBrush
+
+[[_4_3_16_]]
+=== Custom Colormap and Shading
+
+[[_4_3_16_]]
+==== Custom Colormap Brushes
+
+[[_4_3_16_]]
+==== Testing Colormap Brushes
+
+[[_4_3_16_]]
+==== Color Shading
+
+[[_4_3_16_]]
+==== Testing Color Shading
+
+[[_5_0_16_]]
+== 5. 2D Line charts
+
+[[_5_1_17_]]
+=== Simple Line Charts
+
+[[_5_1_17_]]
+==== Creating Simple Line Charts
+
+[[_5_1_17_]]
+==== How It Works
+
+[[_5_2_18_]]
+=== Line Charts with Data Collection
+
+[[_5_2_18_]]
+==== Chart Style
+
+[[_5_2_18_]]
+==== Data Series
+
+[[_5_2_18_]]
+==== Data Collection
+
+[[_5_2_18_]]
+==== Creating Line Charts
+
+[[_5_3_19_]]
+=== Gridlines and Labels
+
+[[_5_3_19_]]
+==== Chart Style with Gridlines
+
+[[_5_3_19_]]
+==== Creating a Chart with Gridlines
+
+[[_5_4_20_]]
+=== Legends
+
+[[_5_4_20_]]
+==== Legend Class
+
+[[_5_4_20_]]
+==== Creating a Chart with a Legend
+
+[[_5_5_21_]]
+=== Symbols
+
+[[_5_5_21_]]
+==== Defining Symbols
+
+[[_5_5_21_]]
+==== Symbols Class
+
+[[_5_5_21_]]
+==== Creating a Chart with Symbols
+
+[[_5_6_22_]]
+=== Line Charts with Two Y Axes
+
+[[_5_6_22_]]
+==== Why We Need Two Y Axes
+
+[[_5_6_22_]]
+==== Chart Style with Two Y Axes
+
+[[_5_6_22_]]
+==== DataSeries and DataCollection with Two Y Axes
+
+[[_5_6_22_]]
+==== Creating a Chart with Two Y Axes
+
+[[_6_0_22_]]
+== 6. Specialized 2D Charts
+
+[[_6_1_23_]]
+=== Bar Charts
+
+[[_6_1_23_]]
+==== DataSeries for Bar Charts
+
+[[_6_1_23_]]
+==== DataCollection for Bar Charts
+
+[[_6_1_23_]]
+==== Creating Simple Bar Charts
+
+[[_6_1_23_]]
+==== Creating Group Bar Charts
+
+[[_6_1_23_]]
+==== Creating Overlay Bar Charts
+
+[[_6_1_23_]]
+==== Creating Stacked Bar Charts
+
+[[_6_2_24_]]
+=== Stair-Step Charts
+
+[[_6_2_24_]]
+==== DataSeries for Stair-Step Charts
+
+[[_6_2_24_]]
+==== DataCollection for Stair-Step Charts
+
+[[_6_2_24_]]
+==== Creating Stair-Step Charts
+
+[[_6_3_25_]]
+=== Stem Charts
+
+[[_6_3_25_]]
+==== DataCollection for Stem Charts
+
+[[_6_3_25_]]
+==== Creating Stem Charts
+
+[[_6_4_26_]]
+=== Error Bar Charts
+
+[[_6_4_26_]]
+==== DataSeries for Error Bars
+
+[[_6_4_26_]]
+==== DataCollection for Error Bars
+
+[[_6_4_26_]]
+==== Creating Error Bar Charts
+
+[[_6_5_27_]]
+=== Area Charts
+
+[[_6_5_27_]]
+==== DataSeries for Area Charts
+
+[[_6_5_27_]]
+==== DataCollection for Area Charts
+
+[[_6_5_27_]]
+==== Creating Area Charts
+
+[[_6_6_28_]]
+=== Polar Charts
+
+[[_6_6_28_]]
+==== Chart Style for Polar Charts
+
+[[_6_6_28_]]
+==== DataCollection for Polar Charts
+
+[[_6_6_28_]]
+==== Creating Polar Charts
+
+[[_6_7_29_]]
+=== Pie Charts
+
+[[_6_7_29_]]
+==== Pie Chart Style
+
+[[_6_7_29_]]
+==== Legend for Pie Charts
+
+[[_6_7_29_]]
+==== Creating Pie Charts
+
+[[_7_0_29_]]
+== 7. Stock Charts
+
+[[_7_1_30_]]
+=== Static Stock Charts
+
+[[_7_1_30_]]
+==== Text File Reader
+
+[[_7_1_30_]]
+==== DataSeries and DataCollection for Stock Charts
+
+[[_7_1_30_]]
+==== Hi-Lo Stock Charts
+
+[[_7_1_30_]]
+==== Hi-Lo Open-Close Stock Charts
+
+[[_7_1_30_]]
+==== Candlestick Stock Charts
+
+[[_7_2_31_]]
+=== Moving Averages
+
+[[_7_2_31_]]
+==== Simple Moving Averages
+
+[[_7_2_31_]]
+==== Implementation
+
+[[_7_2_31_]]
+==== Creating SMA Curves
+
+[[_7_2_31_]]
+==== Weighted Moving Averages
+
+[[_7_2_31_]]
+==== Implementation
+
+[[_7_2_31_]]
+==== Creating WMA Curves
+
+[[_7_2_31_]]
+==== Exponential Moving Averages
+
+[[_7_2_31_]]
+==== Implementation
+
+[[_7_2_31_]]
+==== Creating EMA Curves
+
+[[_7_3_32_]]
+=== Using Yahoo Stock Charts in WPF
+
+[[_7_3_32_]]
+==== Connecting to Yahoo Stock Charts
+
+[[_7_3_32_]]
+==== Creating Yahoo Stock Charts in WPF
+
+[[_8_0_32_]]
+== 8. Interactive 2D Charts
+
+[[_8_1_33_]]
+=== Automatic Tick Placement
+
+[[_8_1_33_]]
+==== Optimal Tick Spacing
+
+[[_8_1_33_]]
+==== Creating Charts with Automatic Ticks
+
+[[_8_2_34_]]
+=== Chart Panning with a Mouse
+
+[[_8_3_35_]]
+=== Chart Zooming with a Mouse
+
+[[_8_4_36_]]
+=== Chart Zooming with a Mouse Wheel
+
+[[_8_5_37_]]
+=== Retrieving Chart Data
+
+[[_9_0_37_]]
+== 9. 2D Chart Controls
+
+[[_9_1_38_]]
+=== Line Chart Control
+
+[[_9_1_38_]]
+==== Defining Dependency Properties
+
+[[_9_1_38_]]
+==== Using the Line Chart Control
+
+[[_9_1_38_]]
+==== Creating a Simple Line Chart
+
+[[_9_1_38_]]
+==== Creating Multiple Line Charts
+
+[[_9_2_39_]]
+=== Specialized 2D Chart Control
+
+[[_9_2_39_]]
+==== Bar Chart Control
+
+[[_9_2_39_]]
+==== Implementation
+
+[[_9_2_39_]]
+==== Creating Bar Charts
+
+[[_9_2_39_]]
+==== Creating Multiple Bar Charts
+
+[[_9_2_39_]]
+==== Stair-Step Chart Control
+
+[[_9_2_39_]]
+==== Implementation
+
+[[_9_2_39_]]
+==== Creating Stair-Step Charts
+
+[[_9_2_39_]]
+==== Stem Chart Control
+
+[[_9_2_39_]]
+==== Implementation
+
+[[_9_2_39_]]
+==== Creating Stem Charts
+
+[[_9_2_39_]]
+==== Error Bar Control
+
+[[_9_2_39_]]
+==== Implementation
+
+[[_9_2_39_]]
+==== Creating Error Bar Charts
+
+[[_9_2_39_]]
+==== Area Chart Control
+
+[[_9_2_39_]]
+==== Implementation
+
+[[_9_2_39_]]
+==== Creating Area Charts
+
+[[_9_2_39_]]
+==== Polar Chart Control
+
+[[_9_2_39_]]
+==== Implementation
+
+[[_9_2_39_]]
+==== Creating Polar Charts
+
+[[_9_2_39_]]
+==== Pie Chart Control
+
+[[_9_2_39_]]
+==== Implementation
+
+[[_9_2_39_]]
+==== Creating Pie Charts
+
+[[_9_2_39_]]
+==== Creating Multiple Charts
+
+[[_10_0_39_]]
+== 10. Data Interpolations
+
+[[_10_1_40_]]
+=== Linear Interpolation
+
+[[_10_1_40_]]
+==== Algorithm
+
+[[_10_1_40_]]
+==== Implementation
+
+[[_10_1_40_]]
+==== Testing Linear Interpolation
+
+[[_10_2_41_]]
+=== Lagrange Interpolation
+
+[[_10_2_41_]]
+==== Algorithm
+
+[[_10_2_41_]]
+==== Implementation
+
+[[_10_2_41_]]
+==== Testing Lagrange Interpolation
+
+[[_10_3_42_]]
+=== Barycentric Interpolation
+
+[[_10_3_42_]]
+==== Algorithm
+
+[[_10_3_42_]]
+==== Implementation
+
+[[_10_3_42_]]
+==== Testing Barycentric interpolation
+
+[[_10_4_43_]]
+=== Newton Divided-Difference Interpolation
+
+[[_10_4_43_]]
+==== Algorithm
+
+[[_10_4_43_]]
+==== Implementation
+
+[[_10_4_43_]]
+==== Testing Newton Divided-Difference Interpolation
+
+[[_10_5_44_]]
+=== Cubic Spline Interpolation
+
+[[_10_5_44_]]
+==== Algorithm
+
+[[_10_5_44_]]
+==== Implementation
+
+[[_10_5_44_]]
+==== Testing Cubic Spline Interpolation
+
+[[_11_0_44_]]
+== 11. Curve Fitting
+
+[[_11_1_45_]]
+=== Linear Algebraic Equations
+
+[[_11_1_45_]]
+==== Gauss-Jordan Algorithm
+
+[[_11_1_45_]]
+==== Implementation
+
+[[_11_2_46_]]
+=== Least-Squares Fit
+
+[[_11_3_47_]]
+=== Straight-Line Fit
+
+[[_11_3_47_]]
+==== Implementation
+
+[[_11_3_47_]]
+==== Testing Straight-Line Fit
+
+[[_11_4_48_]]
+=== Linear Regression
+
+[[_11_4_48_]]
+==== Implementation
+
+[[_11_4_48_]]
+==== Testing Linear Regression
+
+[[_11_5_49_]]
+=== Polynomial Fit
+
+[[_11_5_49_]]
+==== Implementation
+
+[[_11_5_49_]]
+==== Testing Polynomial Fit
+
+[[_11_6_50_]]
+=== Weighted Linear Regression
+
+[[_11_6_50_]]
+==== Implementation
+
+[[_11_6_50_]]
+==== Exponential-Function Fit
+
+[[_12_0_50_]]
+== 12. 3D Transformations
+
+[[_12_1_51_]]
+=== 3D Matrices in WPF
+
+[[_12_1_51_]]
+==== 3D Points and Vectors
+
+[[_12_1_51_]]
+==== Matrix3D Structure
+
+[[_12_1_51_]]
+==== Matrix3D Operations
+
+[[_12_1_51_]]
+==== Matrix3D Transforms
+
+[[_12_1_51_]]
+==== Rotation and Quaternion
+
+[[_12_2_52_]]
+=== Projections
+
+[[_12_2_52_]]
+==== Orthographic Projections
+
+[[_12_2_52_]]
+==== Multiview Projections
+
+[[_12_2_52_]]
+==== Axonometric Projections
+
+[[_12_2_52_]]
+==== Perspective Projections
+
+[[_12_2_52_]]
+==== One-Point Perspective Projections
+
+[[_12_2_52_]]
+==== Two-Point Perspective Projections
+
+[[_12_2_52_]]
+==== Three-Point Perspective Projections
+
+[[_12_2_52_]]
+==== Perspective Projection Matrix
+
+[[_12_3_53_]]
+=== Views and Projections in WPF
+
+[[_12_3_53_]]
+==== View Transform
+
+[[_12_3_53_]]
+==== Perspective Projection
+
+[[_12_3_53_]]
+==== View Frustum
+
+[[_12_3_53_]]
+==== Perspective Transform Matrix
+
+[[_12_3_53_]]
+==== Implementing Perspective Transforms
+
+[[_12_3_53_]]
+==== Testing Perspective Projections
+
+[[_12_3_53_]]
+==== Orthographic Projection
+
+[[_12_3_53_]]
+==== Orthographic Transform Matrix
+
+[[_12_3_53_]]
+==== Implementing Orthographic Transforms
+
+[[_12_3_53_]]
+==== Testing Orthographic Projections
+
+[[_12_4_54_]]
+=== Object Transforms in WPF
+
+[[_12_4_54_]]
+==== ScaleTransform3D Class
+
+[[_12_4_54_]]
+==== TranslateTransform3D class
+
+[[_12_4_54_]]
+==== RotateTransform3D Class
+
+[[_12_4_54_]]
+==== MatrixTransform3D Class
+
+[[_12_4_54_]]
+==== Combining Transforms
+
+[[_13_0_54_]]
+== 13. WPF Graphics Basics in 3D
+
+[[_13_1_55_]]
+=== 3D Graphics Basics
+
+[[_13_1_55_]]
+==== Viewport3D
+
+[[_13_1_55_]]
+==== 3D Objects in WPF
+
+[[_13_1_55_]]
+==== Geometry and Mesh
+
+[[_13_1_55_]]
+==== GeometryModel3D and Surfaces
+
+[[_13_1_55_]]
+==== Illuminating the Scene
+
+[[_13_1_55_]]
+==== Camera Position
+
+[[_13_1_55_]]
+==== Simple Triangle in 3D
+
+[[_13_2_56_]]
+=== Basic 3D Shapes
+
+[[_13_2_56_]]
+==== Coordinate Axes and Wireframe
+
+[[_13_2_56_]]
+==== Creating a Cube
+
+[[_13_2_56_]]
+==== Creating a Sphere
+
+[[_13_2_56_]]
+==== Creating a Cylinder
+
+[[_13_2_56_]]
+==== Creating a Cone
+
+[[_13_2_56_]]
+==== Creating a Torus
+
+[[_14_0_56_]]
+== 14. 3D Charts with the WPF 3D Engine
+
+[[_14_1_57_]]
+=== Simple Surfaces
+
+[[_14_1_57_]]
+==== Rectangular Meshes
+
+[[_14_1_57_]]
+==== SimpleSurface Class
+
+[[_14_1_57_]]
+==== Creating Simple Surfaces
+
+[[_14_2_58_]]
+=== Parametric Surfaces
+
+[[_14_2_58_]]
+==== ParametricSurface Class
+
+[[_14_2_58_]]
+==== Creating Parametric Surfaces
+
+[[_14_2_58_]]
+==== Helicoid Surface
+
+[[_14_2_58_]]
+==== Sphere Surface
+
+[[_14_2_58_]]
+==== Torus Surface
+
+[[_14_2_58_]]
+==== Quadric Surfaces
+
+[[_14_3_59_]]
+=== Extruded Surfaces
+
+[[_14_3_59_]]
+==== ExtrudeSurface Class
+
+[[_14_3_59_]]
+==== Creating Extruded Surfaces
+
+[[_14_4_60_]]
+=== Surfaces of Revolution
+
+[[_14_4_60_]]
+==== RotateSurface Class
+
+[[_14_4_60_]]
+==== Creating Surfaces of Revolution
+
+[[_14_5_61_]]
+=== Surface Shading
+
+[[_14_5_61_]]
+==== SurfaceShading Class
+
+[[_14_5_61_]]
+==== Creating Shaded Surfaces
+
+[[_15_0_61_]]
+== 15. 3D Charts Without the WPF 3D Engine
+
+[[_15_1_62_]]
+=== 3D Coordinate System
+
+[[_15_1_62_]]
+==== Azimuth and Elevation View
+
+[[_15_1_62_]]
+==== Creating a Cube
+
+[[_15_2_63_]]
+=== Chart Style in 3D
+
+[[_15_2_63_]]
+==== 3D Coordinate Axes
+
+[[_15_2_63_]]
+==== Gridlines
+
+[[_15_2_63_]]
+==== Labels
+
+[[_15_2_63_]]
+==== Testing the Project
+
+[[_15_3_64_]]
+=== 3D Line Charts
+
+[[_15_3_64_]]
+==== Implementation
+
+[[_15_3_64_]]
+==== Testing the Project
+
+[[_15_4_65_]]
+=== 3D Surface Charts
+
+[[_15_4_65_]]
+==== Implementation
+
+[[_15_4_65_]]
+==== DataSeries Class
+
+[[_15_4_65_]]
+==== Chart Functions
+
+[[_15_4_65_]]
+==== DrawSurfaceChart Class
+
+[[_15_4_65_]]
+==== Mesh Charts
+
+[[_15_4_65_]]
+==== Curtain Charts
+
+[[_15_4_65_]]
+==== Waterfall Charts
+
+[[_15_4_65_]]
+==== Surface Charts
+
+[[_16_0_65_]]
+== 16. Specialized 3D Charts
+
+[[_16_1_66_]]
+=== Implementation
+
+[[_16_1_66_]]
+==== 2D Chart Style
+
+[[_16_1_66_]]
+==== Draw3DChart Class
+
+[[_16_2_67_]]
+=== Color Charts on the X-Y Plane
+
+[[_16_2_67_]]
+==== Implementation
+
+[[_16_2_67_]]
+==== Testing X-Y Color Charts
+
+[[_16_3_68_]]
+=== Contour Charts
+
+[[_16_3_68_]]
+==== Algorithm
+
+[[_16_3_68_]]
+==== Implementation
+
+[[_16_3_68_]]
+==== Testing Contour Charts
+
+[[_16_4_69_]]
+=== Combination Charts
+
+[[_16_4_69_]]
+==== X-Y Charts in 3D
+
+[[_16_4_69_]]
+==== Contour Charts in 3D
+
+[[_16_4_69_]]
+==== Filled Contour Charts
+
+[[_16_4_69_]]
+==== Mesh Contour Charts
+
+[[_16_4_69_]]
+==== Surface Contour Charts
+
+[[_16_4_69_]]
+==== Surface-Filled Contour Charts
+
+[[_16_5_70_]]
+=== 3D Bar Charts
+
+[[_16_5_70_]]
+==== Implementation
+
+[[_16_5_70_]]
+==== Testing 3D Bar Charts

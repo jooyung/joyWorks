@@ -1,0 +1,1188 @@
+[[_0_]]
+= Billard Atlas
+Joy <arbago@gmail.com>
+v1.0, 2015-05-31
+:icons: font
+:sectanchors:
+:imagesdir: images
+:homepage: http://arbago.com
+:toc: macro
+
+toc::[]
+
+[preface]
+== 책
+
+Billard Atlas by Walt Harris, 빌리어드 아틀라스, 1991
+
+[preface]
+== 머릿말
+
+[[_0_0_0_]]
+== 00. 기본사항
+
+[[_0_1_1_]]
+=== Table ID
+
+[[_0_2_2_]]
+=== Cue Ball Notation
+
+[[_0_3_3_]]
+=== George Fels
+
+[[_0_4_4_]]
+=== Balls & Rails
+
+[[_0_5_5_]]
+=== Measuring Table Slide
+
+[[_1_0_5_]]
+== 01. 1-1. 데드볼 시스템(Dead Ball System)
+
+[[_1_1_6_]]
+=== Dead Ball Tickie
+
+[[_1_2_7_]]
+=== System Sid
+
+[[_1_3_8_]]
+=== Sid Variation 1
+
+[[_1_4_9_]]
+=== Sid Variation 2
+
+[[_1_5_10_]]
+=== Chicago End Rail System
+
+[[_1_6_11_]]
+=== Chicago Example
+
+[[_1_7_12_]]
+=== Bernie's Dead Ball Tracks
+
+[[_1_8_13_]]
+=== LaGongle's Short Bridge
+
+[[_1_9_14_]]
+=== On Pool
+
+[[_2_0_14_]]
+== 02. 1-2. 구멍치기(Cocoa Beach Tickie Tracks)
+
+[[_2_1_15_]]
+=== Tickie Tracks
+
+[[_2_2_16_]]
+=== Basic Tickie Tracks
+
+[[_2_3_17_]]
+=== Maloney's Spread Tickie
+
+[[_2_4_18_]]
+=== Bitalis's Follow Tickie
+
+[[_3_0_18_]]
+== 03. 1-3. 롱앵글 & 쇼트앵글 시스템
+
+[[_3_1_19_]]
+=== Walt's Long Angle Tracks
+
+[[_3_2_20_]]
+=== Walt's Long Angle Track Example
+
+[[_3_3_21_]]
+=== Long Angle Example
+
+[[_3_4_22_]]
+=== Walt's Long Angle Track Shift
+
+[[_3_5_23_]]
+=== Walt's Long Angle Track Shift
+
+[[_3_6_24_]]
+=== Joey's Short Angles
+
+[[_3_7_25_]]
+=== Short Angle Track
+
+[[_3_8_26_]]
+=== Bernie's Umbrella Tracks
+
+[[_3_9_27_]]
+=== AShby's Reverse The Rail
+
+[[_3_10_28_]]
+=== Richard's Reverse The Rail
+
+[[_3_11_29_]]
+=== Sang Lee's Manufactured Short Angle
+
+[[_3_12_30_]]
+=== Dead Draw Shot
+
+[[_3_13_31_]]
+=== More Dead Draws
+
+[[_3_14_32_]]
+=== 웨스트 선수의 조언
+
+[[_4_0_32_]]
+== 04. 1-4. 플러스 시스템(Walt's Basic Plus System)
+
+[[_4_1_33_]]
+=== Plus Return Examples
+
+[[_4_2_34_]]
+=== Walt's Basic Plus System Returns
+
+[[_4_3_35_]]
+=== Plus Backups
+
+[[_4_4_36_]]
+=== Plus Problem Example
+
+[[_4_5_37_]]
+=== Plus Shift
+
+이동점::
+기준점 60과 3쿠션점의 거리차만큼 더 간 곳
+
+이동선:: 기준선에 대비한 이동점의 선
+
+수구 1쿠션점 정하기::
+수구위치를 불문하고, 이동선을 3미터 정도 연장한 곳을 향해 친다
+
+[[_5_0_37_]]
+== 05. 1-5. 다이아몬드 시스템(Diamond and Track Systems)
+
+[[_5_1_38_]]
+=== Diamond System Tracks
+
+[[_5_2_39_]]
+=== Diamond System, Problem A
+
+[[_5_3_40_]]
+=== Two Diamond Tracks
+
+[[_5_4_41_]]
+=== 80-To-30 Basic Track
+
+[[_5_5_42_]]
+=== 80-To-30
+
+[[_5_6_43_]]
+=== 80-To-30 Returns
+
+[[_5_7_44_]]
+=== 80-To-0 Returns
+
+[[_5_8_45_]]
+=== Basic Tracks For Four Rails
+
+[[_5_9_46_]]
+=== More Basic Rail Tracks
+
+[[_5_10_47_]]
+=== Seven Rail Speed Track
+
+[[_5_11_48_]]
+=== 5th-To-6th Rail Tracks
+
+[[_5_12_49_]]
+=== Walt's Basic Track System
+
+[[_5_13_50_]]
+=== 80-To-10, Sight Line
+
+[[_5_14_51_]]
+=== Sighting
+
+[[_5_15_52_]]
+=== Connecting Paths, Allowance, and Shift
+
+[[_5_16_53_]]
+=== Short Cut
+
+수구 1쿠션점 찾기::
+수구위치를 불문하고, 기준점에서 3쿠션점으로 향하는 1쿠션점을 3미터 정도 연장하여 수구에서 그 점을 향해 친다 (Spot On The Wall)
+
+[[_6_0_53_]]
+== 06. 1-6. 새로운 교정선과 오차 조정(Walt's New End Rail Alignment and Allowances)
+
+[[_6_1_54_]]
+=== Existing Diamond System End Rail Allowances
+
+출발단쿠션 1포인트마다 1쿠션도 1포인트씩 움직인다
+
+[[_6_2_55_]]
+=== Walt's Basic Track End Rail System
+
+[[_6_3_56_]]
+=== End Rail System Example
+
+[[_6_4_57_]]
+=== More End Rail
+
+[[_6_5_58_]]
+=== End Rail Track Numbers & Allowances
+
+[[_6_6_59_]]
+=== Proprietor's View
+
+수구의 위치를 파악하기 전에 +
+수구의 진로선을 명확히 그려야 한다
+
+[[_7_0_59_]]
+== 07. 1-7. 더블쿠션(Across the Table)
+
+[[_7_1_60_]]
+=== More Billy
+
+[[_7_2_61_]]
+=== Hallon's Across The Table
+
+당점은 하단이지만 끌지 않는 타법
+
+1, 2구 거리의 한계는 1포인트
+
+1쿠션점은 공 한개
+
+라공글 선수의 트랰:: 무시로 248
+
+[[_7_3_62_]]
+=== George Fels의 조언
+
+방해하는 상대가 없이 정지공을 때린다 +
+적은 경기 그 자체일 뿐이다 +
+모든 집중력을 쏟아부어라
+
+마지막 치기련습에서 잠시 '`완전히`' 멈춘다 +
+그리고 겨냥점을 점검한다 +
+완벽한 감이 오면 방아쇠를 당긴다
+
+치기련습은 3~5 번이면 충분하다 +
+리듬을 잃게 되고 쓸데없이 긴장하게 된다
+
+'`당점을 1팊 이하로 하라`'는 옛 격언은 잊어라 +
+장비가 발달한 요즘, 이 격언을 따르면 바보다 +
+가능하다면 무회전을 사용하라. 하지만 그럴 기회는 적다 +
+모든 당점을 연마하라
+
+[[_8_0_62_]]
+== 08. 1-8. 원쿠션 걸어치기(Chicago First Rail Tracks)
+
+[[_8_1_63_]]
+=== Rail First Track
+
+[[_8_2_64_]]
+=== Six Rail First Tracks
+
+[[_8_3_65_]]
+=== Rail First 3rd Rail Returns
+
+[[_8_4_66_]]
+=== Rail First Track Shift
+
+[[_8_5_67_]]
+=== Rail First Hit Method
+
+[[_8_6_68_]]
+=== Donnelly's Kiss Back
+
+[[_8_7_69_]]
+=== Ray On Rail First
+
+[[_9_0_69_]]
+== 09. 1-9. 키스와 포지션 플레이(Kisses and Position)
+
+[[_9_1_70_]]
+=== Avoiding Kisses
+
+[[_9_2_71_]]
+=== The Champ's Unique Variation
+
+[[_9_3_72_]]
+=== Five Rail Kiss
+
+[[_9_4_73_]]
+=== Merle Smith's Follow System
+
+[[_9_5_74_]]
+=== Bump Shot
+
+[[_9_6_75_]]
+=== Concentration, Care and Execution
+
+[[_9_7_76_]]
+=== The Dallas West's Hand Release
+
+[[_9_8_77_]]
+=== Ray's Unique Dead Stop
+
+[[_9_9_78_]]
+=== The Florida Fan Shot
+
+[[_10_0_78_]]
+== 10. 1-10. 응용
+
+[[_10_1_79_]]
+=== 스리쿠션과 포켓볼
+
+[[_10_2_80_]]
+=== Sid's System
+
+[[_10_3_81_]]
+=== Walt's Basic Plus System
+
+[[_10_4_82_]]
+=== Chicago End Rail System
+
+[[_10_5_83_]]
+=== Bernie's System
+
+[[_11_0_83_]]
+== 11. 2-1. 간단한 시스템(Easy Systems)
+
+[[_11_1_84_]]
+=== Rising Sun Ball System
+
+[[_11_2_85_]]
+=== Rising Sun Ball System 2
+
+[[_11_3_86_]]
+=== Rising Sun Variation
+
+[[_11_4_87_]]
+=== Isolated Dead Ball Track
+
+[[_11_5_88_]]
+=== New York Bob System
+
+[[_11_6_89_]]
+=== $32.00 System
+
+[[_12_0_89_]]
+== 12. 2-2. 기초 몇 가지(Some Basics)
+
+[[_12_1_90_]]
+=== Up Stroke, Down Stroke
+
+[[_12_2_91_]]
+=== Stroke Positions
+
+[[_12_3_92_]]
+=== Long Angle Up Stroke
+
+[[_12_4_93_]]
+=== Long Angle Down Stroke
+
+[[_12_5_94_]]
+=== Easy Short Angle Stroke
+
+[[_12_6_95_]]
+=== Back Hand
+
+[[_12_7_96_]]
+=== Choking
+
+[[_12_8_97_]]
+=== Rhythm
+
+[[_13_0_97_]]
+== 13. 2-3. 반(半)회전 샷(Semi-Spin Shots)
+
+[[_13_1_98_]]
+=== A Reverse English Path
+
+[[_13_2_99_]]
+=== Reverse English Paths
+
+[[_13_3_100_]]
+=== Using Reverse English Tracks
+
+[[_13_4_101_]]
+=== End Rail First Track
+
+[[_13_5_102_]]
+=== Long Angle Semi-Spin
+
+[[_13_6_103_]]
+=== Maximum English Tracks
+
+[[_13_7_104_]]
+=== Rail Point Numbers
+
+[[_13_8_105_]]
+=== 3.6 Example 2
+
+[[_13_9_106_]]
+=== Aim Change
+
+[[_13_10_107_]]
+=== 3.6 The Short Way
+
+[[_14_0_107_]]
+== 14. 2-4. 스토로크(More Basics The Stroke)
+
+[[_14_1_108_]]
+=== Follow-through Stroke
+
+[[_14_2_109_]]
+=== Komori's Reverse-The-Rail
+
+[[_14_3_110_]]
+=== Jab Track
+
+[[_14_4_111_]]
+=== Frank is Frank
+
+[[_14_5_112_]]
+=== Frank Does Not Kiss
+
+[[_14_6_113_]]
+=== Long Jab
+
+[[_14_7_114_]]
+=== The Komori Technique
+
+[[_14_8_115_]]
+=== Jab Across the Table
+
+[[_14_9_116_]]
+=== Long To Long, To Long, To Long
+
+[[_15_0_116_]]
+== 15. 2-5. 기초 보강 훈련(More Basics)
+
+[[_15_1_117_]]
+=== Basic Training
+
+[[_15_2_118_]]
+=== More Basics, More Etc
+
+[[_15_3_119_]]
+=== Ashby's Second Chance
+
+[[_15_4_120_]]
+=== Soo Kim On Systems
+
+[[_15_5_121_]]
+=== The Preacher On Hitting Accurately
+
+[[_15_6_122_]]
+=== Cue Ball Behavior Examples
+
+[[_15_7_123_]]
+=== Cue Ball Behavior Examples 2
+
+[[_15_8_124_]]
+=== Third Rail English
+
+[[_15_9_125_]]
+=== An Anatomy of a Break Shot
+
+[[_15_10_126_]]
+=== An Outlook
+
+[[_15_11_127_]]
+=== Basic Summary
+
+[[_16_0_127_]]
+== 16. 2-6. 볼 시스템(A Ball System)
+
+[[_16_1_128_]]
+=== A Ball System
+
+[[_16_2_129_]]
+=== Table Line Numbers
+
+[[_16_3_130_]]
+=== Third Rail Hit Point Numbers
+
+[[_16_4_131_]]
+=== Cue Ball Numbers
+
+[[_16_5_132_]]
+=== First Object Ball Numbers
+
+[[_16_6_133_]]
+=== Ball System Example
+
+[[_16_7_134_]]
+=== Stroke Example
+
+[[_16_8_135_]]
+=== Tricky Line 1
+
+[[_16_9_136_]]
+=== Cue Ball Information
+
+[[_16_10_137_]]
+=== Cue Ball Alignment
+
+[[_16_11_138_]]
+=== Martinueau's Allowance
+
+[[_16_12_139_]]
+=== Allowance Change
+
+[[_16_13_140_]]
+=== Line 1 The Long Way
+
+[[_16_14_141_]]
+=== Long Way Example
+
+[[_16_15_142_]]
+=== Long Way Dennis
+
+[[_17_0_142_]]
+== 17. 2-7. 데드볼(Dead Ball
+
+[[_17_1_143_]]
+=== More Komori
+
+[[_17_2_144_]]
+=== Umbrella Shot Variation
+
+[[_17_3_145_]]
+=== Lucky Seven Dead Ball System
+
+[[_17_4_146_]]
+=== More Lucky Seven
+
+[[_17_5_147_]]
+=== Seven The Short Way
+
+[[_17_6_148_]]
+=== More Lucky Seven Short Way
+
+[[_17_7_149_]]
+=== Averages
+
+[[_18_0_149_]]
+== 18. 2-8. 기타(Miscellany)
+
+[[_18_1_150_]]
+=== Reverse Backout
+
+[[_18_2_151_]]
+=== Reverse Backout System
+
+[[_18_3_152_]]
+=== Reverse Backout System 2
+
+[[_18_4_153_]]
+=== Hallon's Line
+
+[[_18_5_154_]]
+=== Bernie's Whip Out
+
+[[_18_6_155_]]
+=== Richard's Across-The-Table
+
+[[_18_7_156_]]
+=== A Letter On Position Play
+
+[[_18_8_157_]]
+=== Position Anyone?
+
+[[_18_9_158_]]
+=== A Near Kiss
+
+[[_18_10_159_]]
+=== Rehab Your Table
+
+[[_18_11_160_]]
+=== Cue
+
+[[_18_12_161_]]
+=== Equipment
+
+[[_18_13_162_]]
+=== Presto Change-O
+
+[[_18_14_163_]]
+=== Average Time With A Shot
+
+[[_18_15_164_]]
+=== Rumors, Odds and Ends
+
+[[_18_16_165_]]
+=== Venzke's Viewpoint
+
+[[_19_0_165_]]
+== 19. 3-1. 롱앵글(The Long Angle)
+
+[[_19_1_166_]]
+=== System South
+
+[[_19_2_167_]]
+=== Two-Thirds System
+
+[[_19_3_168_]]
+=== Lucky Five
+
+[[_19_4_169_]]
+=== Florida Back-Up
+
+[[_19_5_170_]]
+=== Sid's Cousin
+
+[[_19_6_171_]]
+=== Bank Tickie
+
+[[_20_0_171_]]
+== 20. 3-2. 더블쿠션(Across The Table)
+
+[[_20_1_172_]]
+=== Easy Across
+
+[[_20_2_173_]]
+=== Dive Back
+
+[[_20_3_174_]]
+=== Spread 2.8
+
+[[_20_4_175_]]
+=== Spread 1.4
+
+[[_20_5_176_]]
+=== Max Across
+
+[[_20_6_177_]]
+=== Max's Kin
+
+[[_20_7_178_]]
+=== Triangulate Across
+
+[[_20_8_179_]]
+=== Parallel Across
+
+[[_20_9_180_]]
+=== Equal Angle
+
+[[_20_10_181_]]
+=== Wow's Cousin
+
+[[_21_0_181_]]
+== 21. 3-3. 몇 가지 보석(Some Gems)
+
+[[_21_1_182_]]
+=== Kirikaeshi System
+
+[[_21_2_183_]]
+=== Frozen Object Ball
+
+[[_21_3_184_]]
+=== More Frozen Ball
+
+[[_22_0_184_]]
+== 22. 3-4. 엔드레일 시스템(End Rail)
+
+[[_22_1_185_]]
+=== Tokyo Connection
+
+[[_22_2_186_]]
+=== Tokyo's Change
+
+[[_22_3_187_]]
+=== East End
+
+[[_22_4_188_]]
+=== Far East End
+
+[[_22_5_189_]]
+=== Grab for Straws
+
+[[_22_6_190_]]
+=== Blue Moon Shot
+
+[[_22_7_191_]]
+=== Small Moon
+
+[[_22_8_192_]]
+=== Blue Moon Reverse Back-Out
+
+[[_23_0_192_]]
+== 23. 3-5. 몇 가지 노하우(How to)
+
+[[_23_1_193_]]
+=== Miss-A-Kiss-A-Day
+
+[[_23_2_194_]]
+=== Wow Shot
+
+[[_23_3_195_]]
+=== Paralleling
+
+[[_23_4_196_]]
+=== Mirror, Mirror
+
+[[_23_5_197_]]
+=== Spot On The Wall
+
+[[_23_6_198_]]
+=== Basic Diamond System
+
+[[_23_7_199_]]
+=== More Diamonds
+
+[[_23_8_200_]]
+=== The Preacher On Hitting Accurately
+
+[[_23_9_201_]]
+=== Cue Ball Side Movement
+
+[[_23_10_202_]]
+=== English
+
+[[_24_0_202_]]
+== 24. 3-6. 쇼트게임(The Short Game)
+
+[[_24_1_203_]]
+=== Short Angles
+
+[[_24_2_204_]]
+=== Frozen Short
+
+[[_24_3_205_]]
+=== Short Review
+
+[[_24_4_206_]]
+=== Spot Check
+
+[[_25_0_206_]]
+== 25. 3-7. 기초 원리(Fundamentals)
+
+[[_25_1_207_]]
+=== More
+
+[[_25_2_208_]]
+=== The Magic Cure
+
+[[_25_3_209_]]
+=== More Magic Cure
+
+[[_25_4_210_]]
+=== Rhythm
+
+[[_25_5_211_]]
+=== More Rhythm
+
+[[_25_6_212_]]
+=== The Wrist
+
+[[_25_7_213_]]
+=== Wrist, etc
+
+[[_25_8_214_]]
+=== Theory
+
+[[_25_9_215_]]
+=== Theory Continued
+
+[[_25_10_216_]]
+=== Position
+
+[[_25_11_217_]]
+=== Stroke Styles
+
+[[_26_0_217_]]
+== 26. 3-8. 정신력(The Mental Side)
+
+[[_26_1_218_]]
+=== Get Mental
+
+[[_26_2_219_]]
+=== Mental, Etc
+
+[[_26_3_220_]]
+=== Mental, Etc. Etc
+
+[[_26_4_221_]]
+=== Mental, Etc. Etc
+
+[[_26_5_222_]]
+=== Sharking
+
+[[_27_0_222_]]
+== 27. 3-9. 장비(Equipment)
+
+[[_27_1_223_]]
+=== The Cushion
+
+[[_27_2_224_]]
+=== More Cushion
+
+[[_27_3_225_]]
+=== More Cushion Etc
+
+[[_27_4_226_]]
+=== More Cushion, Etc. Etc
+
+[[_27_5_227_]]
+=== Cushion End
+
+[[_27_6_228_]]
+=== The Ball
+
+[[_27_7_229_]]
+=== Ball Etc
+
+[[_28_0_229_]]
+== 28. 3-10. 기타(Miscellaneous)
+
+[[_28_1_230_]]
+=== Survey
+
+[[_28_2_231_]]
+=== Coaching
+
+[[_28_3_232_]]
+=== USA Tournament Formats
+
+[[_28_4_233_]]
+=== Fifty Innings
+
+[[_28_5_234_]]
+=== Open Letter To The Billiard Player
+
+[[_28_6_235_]]
+=== More Letter
+
+[[_28_7_236_]]
+=== Iron Willie
+
+[[_28_8_237_]]
+=== Misc
+
+[[_28_9_238_]]
+=== Via Robert Byrne
+
+[[_28_10_239_]]
+=== More Byrne
+
+[[_29_0_239_]]
+== 29. 4-1. 데드볼 시스템(Dead Ball Systems)
+
+[[_29_1_240_]]
+=== Seeing Spots
+
+[[_29_2_241_]]
+=== Angle Care
+
+[[_29_3_242_]]
+=== One Rail
+
+[[_29_4_243_]]
+=== More Spots
+
+[[_29_5_244_]]
+=== Mirror Ball
+
+[[_29_6_245_]]
+=== Third Rail Arrival
+
+[[_29_7_246_]]
+=== Diamond's Best Friend
+
+[[_29_8_247_]]
+=== Another Shift
+
+[[_29_9_248_]]
+=== Six Ball System
+
+[[_29_10_249_]]
+=== Six Shooting
+
+[[_29_11_250_]]
+=== Minus Five System
+
+[[_29_12_251_]]
+=== The Shooni Umbrella
+
+[[_29_13_252_]]
+=== Rojas
+
+[[_29_14_253_]]
+=== Plus Ten
+
+[[_30_0_253_]]
+== 30. 4-2. 수직축 시스템(Vertical Axis Systems)
+
+[[_30_1_254_]]
+=== Hallon's Curve
+
+[[_30_2_255_]]
+=== Piece de Resistance
+
+[[_30_3_256_]]
+=== Joey's Alignment
+
+[[_30_4_257_]]
+=== Dead Ball Plus
+
+[[_30_5_258_]]
+=== No Accident
+
+[[_31_0_258_]]
+== 31. 4-3. 속도(Speed)
+
+[[_31_1_259_]]
+=== Path Change
+
+[[_31_2_260_]]
+=== More Second To Third Ball
+
+[[_31_3_261_]]
+=== Speed Change
+
+[[_31_4_262_]]
+=== More Speed
+
+[[_31_5_263_]]
+=== Hit It Hard
+
+[[_31_6_264_]]
+=== Drop In
+
+[[_31_7_265_]]
+=== Speed System
+
+[[_31_8_266_]]
+=== Table
+
+[[_32_0_266_]]
+== 32. 4-4. 롱앵글(Long Angles)
+
+[[_32_1_267_]]
+=== West Chicago Long Angle
+
+[[_32_2_268_]]
+=== More West Chicago
+
+[[_32_3_269_]]
+=== Long Across
+
+[[_32_4_270_]]
+=== Five To Three Ratio
+
+[[_32_5_271_]]
+=== More Five To Three
+
+[[_32_6_272_]]
+=== Ninety Degrees
+
+[[_32_7_273_]]
+=== Michael's System
+
+[[_32_8_274_]]
+=== Back Across
+
+[[_32_9_275_]]
+=== Nippon Gem
+
+[[_32_10_276_]]
+=== Nippon Ease
+
+[[_32_11_277_]]
+=== Gem Expansion
+
+[[_33_0_277_]]
+== 33. 4-5. 확장 효과(Angle Stretch)
+
+[[_33_1_278_]]
+=== Take A Spin
+
+[[_33_2_279_]]
+=== Rail Hug
+
+[[_33_3_280_]]
+=== Curve Ball
+
+[[_33_4_281_]]
+=== More Curve Ball
+
+[[_33_5_282_]]
+=== Another Curve Ball
+
+[[_33_6_283_]]
+=== A Small Masse
+
+[[_33_7_284_]]
+=== Greek Massage
+
+[[_33_8_285_]]
+=== Greek Masse
+
+[[_33_9_286_]]
+=== Detroit Dead Ball
+
+[[_34_0_286_]]
+== 34. 4-6. ½두께(Half Ball Hit)
+
+[[_34_1_287_]]
+=== Blomdahl
+
+[[_34_2_288_]]
+=== Basic Half Ball
+
+[[_34_3_289_]]
+=== Long Angle Hint
+
+[[_34_4_290_]]
+=== Half Ball Hit Speed
+
+[[_34_5_291_]]
+=== Odd Tracks To Know
+
+[[_34_6_292_]]
+=== More Odd
+
+[[_34_7_293_]]
+=== Still Odd
+
+[[_34_8_294_]]
+=== Forward Reverse
+
+[[_34_9_295_]]
+=== More On Frozen
+
+[[_34_10_296_]]
+=== Developing
+
+[[_34_11_297_]]
+=== More Reverse
+
+[[_34_12_298_]]
+=== Applause
+
+[[_34_13_299_]]
+=== Curve Clue
+
+[[_34_14_300_]]
+=== Spear Throw
+
+[[_34_15_301_]]
+=== Okay Naoki
+
+[[_34_16_302_]]
+=== Let's Split
+
+[[_35_0_302_]]
+== 35. 4-7. 기타(Miscellaneous)
+
+[[_35_1_303_]]
+=== Lauderale Technique
+
+[[_35_2_304_]]
+=== Lucky Strike
+
+[[_35_3_305_]]
+=== Two Thirds Of Beyond
+
+[[_35_4_306_]]
+=== Short Way Backout
+
+[[_35_5_307_]]
+=== Backout Again
+
+[[_35_6_308_]]
+=== Palm Bay Bob
+
+[[_35_7_309_]]
+=== Choices, Choices
+
+[[_35_8_310_]]
+=== Easy Seven
+
+[[_36_0_310_]]
+== 36. 4-8. 1급 정보들(A First Rate Mixture)
+
+[[_36_1_311_]]
+=== Cue Movement
+
+[[_36_2_312_]]
+=== Jimmy's Tips
+
+[[_36_3_313_]]
+=== Miscues
+
+[[_36_4_314_]]
+=== Jaspers
+
+[[_36_5_315_]]
+=== Anybody Straight?
+
+[[_36_6_316_]]
+=== A Bridge Too Far
+
+[[_36_7_317_]]
+=== Reaching
+
+[[_36_8_318_]]
+=== Technique Viguera
+
+[[_36_9_319_]]
+=== A Shepard's Guide
+
+[[_36_10_320_]]
+=== Thin Hits
+
+[[_36_11_321_]]
+=== Defence
+
+[[_36_12_322_]]
+=== Katie's House
+
+[[_37_0_322_]]
+== 37. 4-9. 다음 단계(Next)
+
+[[_37_1_323_]]
+=== Amplification
+
+[[_37_2_324_]]
+=== Ball Control
+
+[[_38_0_324_]]
+== 38. 4-10. 볼 시스템(A Ball System)
+
+[[_38_1_325_]]
+=== A Ball System
+
+[[_38_2_326_]]
+=== Table Line Numbers
+
+[[_38_3_327_]]
+=== Third Rail Hit Point Numbers
+
+[[_38_4_328_]]
+=== Cue Ball Numbers
+
+[[_38_5_329_]]
+=== First Object Ball Numbers
+
+[[_38_6_330_]]
+=== Ball System Example
+
+[[_38_7_331_]]
+=== Stroke Example
+
+[[_38_8_332_]]
+=== Tricky Line 1
+
+[[_38_9_333_]]
+=== Cue Ball Information
+
+[[_38_10_334_]]
+=== Cue Ball Alignment
+
+[[_38_11_335_]]
+=== Martinueau's Allowance
+
+[[_38_12_336_]]
+=== Allowance Change
+
+[[_38_13_337_]]
+=== Long Way Example
+

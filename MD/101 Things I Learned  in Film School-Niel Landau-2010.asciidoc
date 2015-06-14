@@ -1,0 +1,328 @@
+[[_0_]]
+= 101 Things I Learned  in Film School
+Joy <arbago@gmail.com>
+v1.0, 2015-06-14
+:icons: font
+:sectanchors:
+:imagesdir: images
+:homepage: http://arbago.com
+:toc: macro
+
+toc::[]
+
+[preface]
+== 101 Things I Learned  in Film School, Niel Landau with Matthew Frederick-2010
+
+[preface]
+== 머릿말
+
+[[_1_]]
+== 1. Start strong.
+
+tumbleweed (tŭm′bəl-wēd′)::
+* 회전초(가을이 되면 줄기 밑동에서 떨어져 공 모양으로 바람에 날리는 잡초)
+* Any of various densely branched annual plants, such as Russian thistle and several species of amaranth, that break off from the roots at the end of the growing season and are rolled about by the wind.
+
+board something up::
+* =cover up, seal, close up, shut up
+** _Shopkeepers have boarded up their windows._
+
+[[_2_]]
+== 2. Start late.
+
+[[_3_]]
+== 3. Show, don’t tell.
+
+[[_4_]]
+== 4. Three stages of filmmaking
+
+[[_5_]]
+== 5. Filmspeak
+
+[[_6_]]
+== 6. Above-the-line versus below-the-line costs
+
+[[_7_]]
+== 7. Follow the action.
+
+[[_8_]]
+== 8. Conceal the action.
+
+[[_9_]]
+== 9. Discover the action.
+
+[[_10_]]
+== 10. Make psychology visual.
+
+[[_11_]]
+== 11. Control the back-story.
+
+[[_12_]]
+== 12. A flawed protagonist is more compelling than a perfect protagonist.
+
+[[_13_]]
+== 13. The antagonist subverts the truth.
+
+[[_14_]]
+== 14. Beginning, middle, end.
+
+[[_15_]]
+== 15. 1 screenplay page = 1 minute of screen time.
+
+[[_16_]]
+== 16. What’s at stake?
+
+[[_17_]]
+== 17. Create tangible objects of desire.
+
+[[_18_]]
+== 18. Practice perfect pitch.
+
+[[_19_]]
+== 19. A high concept movie can be explained in one sentence.
+
+[[_20_]]
+== 20. Have a strong but.
+
+[[_21_]]
+== 21. A good title says what a movie is.
+
+[[_22_]]
+== 22. Plot is physical events; story is emotional events.
+
+[[_23_]]
+== 23. Story concerns the specific characters in a film; theme concerns the universal human condition.
+
+[[_24_]]
+== 24. Whose story is it?
+
+[[_25_]]
+== 25. Create memorable entrances.
+
+[[_26_]]
+== Chapter 26
+
+[[_27_]]
+== 27. Tell a story at different scales.
+
+[[_28_]]
+== 28. Beware the passive protagonist.
+
+[[_29_]]
+== 29. Props reveal character.
+
+[[_30_]]
+== 30. The human eye can distinctly process about 20 images per second.
+
+[[_31_]]
+== 31. Act 2 is where a poorly structured film goes to die.
+
+[[_32_]]
+== 32. The best story structure is invisible.
+
+[[_33_]]
+== 33. Every scene must reveal new information.
+
+[[_34_]]
+== 34. Every scene must contain conflict.
+
+[[_35_]]
+== 35. In fantasy stories, set the rules early, clearly, and simply.
+
+[[_36_]]
+== 36. Animation provides an opportunity to think expansively, not expensively.
+
+[[_37_]]
+== 37. Make setting a character.
+
+[[_38_]]
+== 38. In film noir, everyone is corrupt.
+
+[[_39_]]
+== 39. The fourth wall
+
+[[_40_]]
+== 40. Dialogue is not real speech.
+
+[[_41_]]
+== 41. Give your characters the anonymity test.
+
+[[_42_]]
+== 42. Mise-en-scène
+
+[[_43_]]
+== 43. Beware children, animals, and liquids!
+
+[[_44_]]
+== 44. Save time—and money.
+
+[[_45_]]
+== 45. Studio or remote?
+
+[[_46_]]
+== 46. Lighting
+
+[[_47_]]
+== 47. Clear the eye line.
+
+[[_48_]]
+== 48. Call “Action” in the mood of the scene.
+
+[[_49_]]
+== 49. Shoot it again.
+
+[[_50_]]
+== 50. Have a plan, but enjoy the detours.
+
+[[_51_]]
+== Chapter 51
+
+[[_52_]]
+== 52. Signs of a novice filmmaker
+
+[[_53_]]
+== 53. The 180-degree rule
+
+[[_54_]]
+== 54. The rule of thirds
+
+[[_55_]]
+== 55. Leave breathing room.
+
+[[_56_]]
+== 56. Place figures in uncomfortable proximity.
+
+[[_57_]]
+== 57. Film is three-dimensional.
+
+[[_58_]]
+== 58. Make sure everyone is making the same movie.
+
+[[_59_]]
+== 59. Have some showstoppers.
+
+[[_60_]]
+== 60. Every movie is a suspense movie.
+
+[[_61_]]
+== 61. Random hypothesis
+
+[[_62_]]
+== 62. Make the conflict existential.
+
+[[_63_]]
+== 63. Help the audience keep track of your characters.
+
+[[_64_]]
+== 64. Dig deeper.
+
+[[_65_]]
+== 65. Film, novel, television, or stage?
+
+[[_66_]]
+== 66. Film is a director’s medium; television is a writer’s medium.
+
+[[_67_]]
+== 67. A movie is a novel turned inside out.
+
+[[_68_]]
+== 68. A comedy isn’t just about jokes.
+
+[[_69_]]
+== 69. Good writing is good rewriting.
+
+[[_70_]]
+== 70. Make rejection a process.
+
+[[_71_]]
+== 71. Who is the intersection?
+
+[[_72_]]
+== 72. Montage
+
+[[_73_]]
+== 73. Different lenses tell different stories.
+
+[[_74_]]
+== 74. The plotlines of ensemble movies share a single theme.
+
+[[_75_]]
+== 75. Make visual motifs specific.
+
+[[_76_]]
+== 76. Rhythm and tempo
+
+[[_77_]]
+== 77. Tell the story in the cut.
+
+[[_78_]]
+== 78. Augment action scenes with clean cutaways.
+
+[[_79_]]
+== 79. The music you hear in your head during filming is probably not the right music for the film.
+
+[[_80_]]
+== 80. Burn your characters’ bridges.
+
+[[_81_]]
+== 81. STANLEY ELKIN
+
+[[_82_]]
+== 82. Set the clock ticking.
+
+[[_83_]]
+== 83. Read it aloud.
+
+[[_84_]]
+== 84. Don’t cast solely by looks.
+
+[[_85_]]
+== 85. Rehearsal isn’t just for the actors.
+
+[[_86_]]
+== 86. Give actors something to do.
+
+[[_87_]]
+== 87. Acting speaks louder than words.
+
+[[_88_]]
+== 88. If you want to write, read. If you want to make films, see films.
+
+[[_89_]]
+== 89. Work in the trenches.
+
+[[_90_]]
+== 90. Let it go, already.
+
+[[_91_]]
+== 91. Play well with others.
+
+[[_92_]]
+== 92. Make it shorter.
+
+[[_93_]]
+== 93. ANTOINE DE SAINT-EXUPÉRY
+
+[[_94_]]
+== 94. Convenient versus inconvenient coincidences
+
+[[_95_]]
+== 95. Hang a lantern.
+
+[[_96_]]
+== 96. Don’t overtax an audience’s good will.
+
+[[_97_]]
+== 97. Deus ex machina
+
+[[_98_]]
+== 98. The climax is the truth.
+
+[[_99_]]
+== 99. After the climax, get out fast.
+
+[[_100_]]
+== 100. Catharsis
+
+[[_101_]]
+== 101. You are your protagonist.

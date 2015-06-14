@@ -1,0 +1,441 @@
+[[_0_]]
+= Windows Presentation Foundation 4.5 Cookbook
+Joy <arbago@gmail.com>
+:toc: macro
+:icons: font
+:sectanchors:
+
+toc::[]
+
+[[_1_0_0_]]
+== 1. Foundations
+
+[[_1_1_1_]]
+=== Introduction
+
+[[_1_2_2_]]
+=== Creating custom type instances in XAML
+
+A Simple name like _Button_ is [underline]#not necessarily unique#, not in the XML sense and certainly not in the .NET sense (there are at least four Button types in .NET, naturally in different namespace).
+
+By default, [big blue yellow-background]*two XML namespaces* are declared by a typical XAML file: the first, which is the default XML namespace, is mapped to the _normal_ WPF namespaces (*System.Windows*, *System.Windows.Controls*, and so on). The other, typically with the _x_ prefix, is mapped to the XAML namespace (*System.Windows.Markup*).
+
+.Four our own types,
+----
+xmlns:local="clr-namespace:CH01.CustomTypes"
+----
+This allows our _Book_ class to be recognized and used within the XAML.
+
+[W] If the type was defined in a referenced assembly (_not our own assembly_), then the mapping would `continue to something like` the following:
+
+.referenced assembly
+----
+xmlns:local="clr-namespace:CH01.CustomTypes;assembly=TheOtherAssembly"
+----
+
+.example
+----
+xmlns:sys="clr-namespace:System;assembly=mscorlib"
+
+//- create an instance of anything in the System namespace
+//- This will be hosted in ResourceDictionary
+<sys:Random x:Key="rnd" />
+----
+
+[[_1_3_3_]]
+=== Creating a dependency property
+
+[[_1_3_3_1_]]
+==== Property value inheritance
+
+Dependency properties are the `workhorse` of WPF.
+
+[[_1_3_3_2_]]
+==== Why "dependency"?
+
+The first (and lowest) priority is the default value registered with _DependencyProperty.Register_.
+
+[W] `A higher still priority` is a local value (30 in our example) that takes precedence over inheritance.
+
+So, a dependency property _depends_ on one of several _levels_ or _priorities_ of value providers. In fact, there are about *11 different levels* in all (we have seen three in this example). All provider values are not _lost_ - they may become effective if the highest provider is cleared. Here's an example:
+
+.clear value
+----
+_text2.ClearValue(TextBlock.FontSizeProperty);
+----
+
+By the way, _the highest priority provider_ (except for a coercion callback, explained in the next section) is an *active animation*.
+
+[[_1_3_3_3_]]
+==== Dependency property levels
+
+.property levels
+|======
+| Property coercion |
+| Active animation |
+| Local value |
+| Template parent properties |
+| Implicit style |
+| Style triggers |
+| Template triggers |
+| Style setters |
+| Default style |
+| Inheritance |
+| Default value |
+|======
+
+[[_1_4_4_]]
+=== Using an attached property
+
+[W] Attached properties are `curious beings`. There is no `direct analogue to` anything else in the .NET framework. `The closet` may be extension methods, introduced in C# 3.0.
+
+RepeatButton::
+System.Windows.Controls.Primitives.RepeatButton +
+Represents a control that raises its Click event repeatedly from the time it is pressed until it is released.
+
+[W] An attached property is `first and foremost` a dependency property, meaning it supports all the capabilities of dependency properties.
+
+[[_1_4_4_1_]]
+==== Why an attached property?
+
+The reason is, that a Left or Top property may not always make sense.
+
+contextual property::
+they are relevant under particular circumstances, so they can be ``attached" if and when actually needed.
+
+[[_1_4_4_2_]]
+==== Does the declaring type "own" the property?
+
+[W] Not at all. This is just coincidence. The above properties in fact make sense only for elements placed inside their respective declaring type, but that does not `have to be the case`.
+
+[[_1_5_5_]]
+=== Creating an attached property
+
+propa::
+snippet for attached property
+
+[[_1_5_5_1_]]
+==== Reusing existing attached properties
+
+[[_1_6_6_]]
+=== Accessing a static property from XAML
+
+[[_1_7_7_]]
+=== Creating a custom markup extension
+
+[W] These can be used to `do pretty much anything`, so caution is advised - these extensions must preserve the declarative nature of XAML, so that non-declarative operations are avoided; these should be handled by normal C# code.
+
+[[_1_7_7_1_]]
+==== Don't go overboard
+
+[[_1_8_8_]]
+=== Handling routed events
+
+[[_1_8_8_1_]]
+==== Stopping bubbling or tunneling
+
+[[_1_8_8_2_]]
+==== Attached events
+
+[[_2_0_9_]]
+== 2. Resources
+
+[[_2_1_10_]]
+=== Introduction
+
+[[_2_2_11_]]
+=== Using logical resources
+
+[[_2_3_12_]]
+=== Dynamically binding to a logical resource
+
+[[_2_4_13_]]
+=== Using user-selected colors and fonts
+
+[[_2_5_14_]]
+=== Using binary resources
+
+[[_2_6_15_]]
+=== Accessing binary resources in code
+
+[[_2_7_16_]]
+=== Accessing binary resources from another assembly
+
+[[_2_8_17_]]
+=== Managing logical resources
+
+[[_3_0_18_]]
+== 3. Layout and Panels
+
+[[_3_1_19_]]
+=== Introduction
+
+[[_3_2_20_]]
+=== Creating a table-like user interface
+
+[[_3_3_21_]]
+=== Dynamically sizing grid rows/columns
+
+[[_3_4_22_]]
+=== Creating a scrollable user interface
+
+[[_3_5_23_]]
+=== Creating a border around panels and
+elements
+
+[[_3_6_24_]]
+=== Placing elements in exact positions
+
+[[_3_7_25_]]
+=== Adding/removing elements to a panel
+dynamically
+
+[[_3_8_26_]]
+=== Creating a tabbed user interface
+
+[[_3_9_27_]]
+=== Implementing drag-and-drop
+
+[[_4_0_28_]]
+== 4. Using Standard Controls
+
+[[_4_1_29_]]
+=== Introduction
+
+[[_4_2_30_]]
+=== Working with text
+
+[[_4_3_31_]]
+=== Using content controls
+
+[[_4_4_32_]]
+=== Displaying images
+
+[[_4_5_33_]]
+=== Creating tooltips
+
+[[_4_6_34_]]
+=== Creating a list of items
+
+[[_4_7_35_]]
+=== Creating a standard menu
+
+[[_4_8_36_]]
+=== Creating a context menu
+
+[[_4_9_37_]]
+=== Selecting options with checkboxes and
+radio buttons
+
+[[_4_10_38_]]
+=== Manipulating tab order and focus
+
+[[_5_0_39_]]
+== 5. Application and Windows
+
+[[_5_1_40_]]
+=== Introduction
+
+[[_5_2_41_]]
+=== Creating a window
+
+[[_5_3_42_]]
+=== Creating a dialog box
+
+[[_5_4_43_]]
+=== Using the common dialog boxes
+
+[[_5_5_44_]]
+=== Creating ownership between windows
+
+[[_5_6_45_]]
+=== Creating a custom shaped window
+
+[[_5_7_46_]]
+=== Creating a single instance application
+
+[[_5_8_47_]]
+=== Handling an unhandled exception
+
+[[_6_0_48_]]
+== 6. Data Binding
+
+[[_6_1_49_]]
+=== Introduction
+
+[[_6_2_50_]]
+=== Element to element binding
+
+[[_6_3_51_]]
+=== Binding to a single object
+
+[[_6_4_52_]]
+=== Binding to a collection
+
+[[_6_5_53_]]
+=== Using data templates
+
+[[_6_6_54_]]
+=== Using value converters
+
+[[_6_7_55_]]
+=== Creating a master-detail view
+
+[[_6_8_56_]]
+=== Sorting and filtering bound collections
+
+[[_6_9_57_]]
+=== Grouping bound collections
+
+[[_6_10_58_]]
+=== Binding to multiple properties
+
+[[_6_11_59_]]
+=== Binding hierarchical data to a TreeView
+
+[[_6_12_60_]]
+=== Presenting data in a grid
+
+[[_6_13_61_]]
+=== Validating data
+
+[[_7_0_62_]]
+== 7. Commands and MVVM
+
+[[_7_1_63_]]
+=== Introduction
+
+[[_7_2_64_]]
+=== Using routed commands
+
+[[_7_3_65_]]
+=== Implementing a basic MVVM application
+
+[[_7_4_66_]]
+=== Building a simple MVVM framework
+
+[[_7_5_67_]]
+=== Building a complete MVVM style application
+
+[[_7_6_68_]]
+=== Creating an undo/redo system
+
+[[_8_0_69_]]
+== 8. Styles, Triggers, and Control Templates
+
+[[_8_1_70_]]
+=== Introduction
+
+[[_8_2_71_]]
+=== Creating and using styles
+
+[[_8_3_72_]]
+=== Applying a style automatically
+
+[[_8_4_73_]]
+=== Creating a property trigger
+
+[[_8_5_74_]]
+=== Using data triggers
+
+[[_8_6_75_]]
+=== Creating an event trigger
+
+[[_8_7_76_]]
+=== Creating a multi trigger
+
+[[_8_8_77_]]
+=== Using behaviors
+
+[[_8_9_78_]]
+=== Replacing the control template of a
+progress bar
+
+[[_8_10_79_]]
+=== Replacing the control template of a
+scroll bar
+
+[[_8_11_80_]]
+=== Customizing selection in a Selector control
+
+[[_9_0_81_]]
+== 9. Graphics and Animation
+
+[[_9_1_82_]]
+=== Introduction
+
+[[_9_2_83_]]
+=== Creating a custom shape
+
+[[_9_3_84_]]
+=== Applying transforms on elements
+
+[[_9_4_85_]]
+=== Manipulating a bitmap programmatically
+
+[[_9_5_86_]]
+=== Creating adorners
+
+[[_9_6_87_]]
+=== Creating property-based animations
+
+[[_9_7_88_]]
+=== Creating path-based animations
+
+[[_9_8_89_]]
+=== Creating custom animations
+
+[[_9_9_90_]]
+=== Adding animation easing to animations
+
+[[_9_10_91_]]
+=== Using custom effects with pixel shaders
+
+[[_10_0_92_]]
+== 10. Custom Elements
+
+[[_10_1_93_]]
+=== Introduction
+
+[[_10_2_94_]]
+=== Creating a user control
+
+[[_10_3_95_]]
+=== Handling standard commands in a user control
+
+[[_10_4_96_]]
+=== Creating a custom (templated) control
+
+[[_10_5_97_]]
+=== Customizing a default template of custom control
+
+[[_10_6_98_]]
+=== Creating a custom panel
+
+[[_10_7_99_]]
+=== Creating a lightweight custom element
+
+[[_11_0_100_]]
+== 11. Threading
+
+[[_11_1_101_]]
+=== Introduction
+
+[[_11_2_102_]]
+=== Updating the UI from a non-UI thread
+
+[[_11_3_103_]]
+=== Adding cancelation support
+
+[[_11_4_104_]]
+=== Using the BackgroundWorker component
+
+[[_11_5_105_]]
+=== Adding cancelation and progress with
+BackgroundWorker
+
+[[_11_6_106_]]
+=== Using a timer to do periodic updates
+
+[[_11_7_107_]]
+=== Using C# 5.0 to perform asynchronous operations

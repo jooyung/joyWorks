@@ -1,0 +1,388 @@
+[[_0_]]
+= Night School
+Joy <arbago@gmail.com>
+v1.0, 2015-5-16
+:icons: font
+:sectanchors:
+:imagesdir: images
+:homepage: http://arbago.com
+:toc: macro
+
+toc::[]
+
+[preface]
+== 책
+
+Night School by Richard Wiseman, 2014
+
+[preface]
+== 머릿말
+
+[[_0_0_0_]]
+== Introduction WAKING UP
+
+[[_0_1_1_]]
+=== Assignment: It’s all in the timing
+
+[[_1_0_2_]]
+== 1 INTO THE NIGHT
+
+[[_1_1_3_]]
+=== The personification of static
+
+[[_1_2_4_]]
+=== The palace of science
+
+[[_1_3_5_]]
+=== What’s in a wave?
+
+[[_1_4_6_]]
+=== How to draw blood from a turnip
+
+[[_1_5_7_]]
+=== Five amazing facts about dreaming
+
+[[_1_6_8_]]
+=== A touch of the Bram Stokers
+
+[[_1_7_9_]]
+=== It’s just a stage he’s going through
+
+[[_1_8_10_]]
+=== The ninety-minute rule
+
+[[_1_9_11_]]
+=== The clockwork universe
+
+[[_1_10_12_]]
+=== Going underground
+
+[[_1_11_13_]]
+=== The rhythm of life
+
+[[_1_12_14_]]
+=== Rhythm and blues
+
+[[_1_13_15_]]
+=== Top tips to help overcome jet lag
+
+[[_1_14_16_]]
+=== Assignment: Assess your sleep
+
+[[_2_0_17_]]
+== 2 HOW TO BE HAPPY, HEALTHY, WEALTHY, AND WISE
+
+[[_2_1_18_]]
+=== Light-headed
+
+[[_2_2_19_]]
+=== Shattered
+
+[[_2_3_20_]]
+=== The curse of continuous consciousness
+
+[[_2_4_21_]]
+=== Sleep deprivation and torture
+
+[[_2_5_22_]]
+=== An accident waiting to happen
+
+[[_2_6_23_]]
+=== The mystery of micro-sleep
+
+[[_2_7_24_]]
+=== Sleeping on the job
+
+[[_2_8_25_]]
+=== The dangers of long sleep
+
+[[_2_9_26_]]
+=== I’ll sleep when I’m dead
+
+[[_2_10_27_]]
+=== Beauty sleep
+
+[[_2_11_28_]]
+=== Getting up and feeling down
+
+[[_2_12_29_]]
+=== Sleep: The ultimate detox?
+
+[[_2_13_30_]]
+=== Time for a test
+
+[[_2_14_31_]]
+=== The national sleep deprivation map
+
+[[_2_15_32_]]
+=== Assignment: What does your sleeping position reveal about you?
+
+[[_3_0_33_]]
+== 3 THE SECRET OF SUPER-SLEEP
+
+[[_3_1_34_]]
+=== Life on the ocean waves
+
+[[_3_2_35_]]
+=== Short sleep
+
+[[_3_3_36_]]
+=== How much sleep do you need?
+
+[[_3_4_37_]]
+=== Super-sleep
+
+[[_3_4_38_]]
+==== 1) Create your own bat cave
+
+[[_3_4_39_]]
+==== 2) What to do during the day
+
+[[_3_4_40_]]
+==== Strange bedfellows
+
+[[_3_4_41_]]
+==== 3) Just before you head for bed
+
+[[_3_4_42_]]
+==== 4) How to fall asleep
+
+[[_3_4_43_]]
+==== 5) What to do if you wake up during the night
+
+[[_3_5_44_]]
+=== When waking up in the middle of the night is good for you
+
+[[_3_6_45_]]
+=== The young ones
+
+[[_3_7_46_]]
+=== Should you sleep in the same bed as a baby?
+
+[[_3_8_47_]]
+=== Assignment: The mouth and nose test
+
+[[_4_0_48_]]
+== 4 ON SLEEPWALKING AND NIGHT TERRORS
+
+[[_4_1_49_]]
+=== A great perturbation in nature
+
+[[_4_2_50_]]
+=== All talk, no action
+
+[[_4_3_51_]]
+=== Fright night
+
+[[_4_4_52_]]
+=== Probing parasomnia
+
+[[_4_5_53_]]
+=== Dream disorders
+
+[[_4_6_54_]]
+=== How to stop sleepwalking and night terrors in children
+
+[[_4_7_55_]]
+=== Falling down and running around
+
+[[_4_8_56_]]
+=== Ondine’s Curse
+
+[[_4_9_57_]]
+=== Good vibrations
+
+[[_4_10_58_]]
+=== Sing, sing a song
+
+[[_4_11_59_]]
+=== Assignment: Mid-term exam
+
+[[_5_0_60_]]
+== 5 SLEEP LEARNING AND POWER NAPS
+
+[[_5_1_61_]]
+=== How to develop a sleep-powered super memory
+
+[[_5_2_62_]]
+=== Why do babies sleep so much?
+
+[[_5_3_63_]]
+=== Let’s get physical
+
+[[_5_4_64_]]
+=== How to do anything
+
+[[_5_5_65_]]
+=== Total recall
+
+[[_5_6_66_]]
+=== The power of napping
+
+[[_5_7_67_]]
+=== Where should I nap?
+
+[[_5_8_68_]]
+=== How long should I nap for?
+
+[[_5_9_69_]]
+=== When should I nap?
+
+[[_5_10_70_]]
+=== What if I feel guilty about napping?
+
+[[_5_11_71_]]
+=== What if I worry about oversleeping?
+
+[[_5_12_72_]]
+=== Do you have one other great final tip?
+
+[[_5_13_73_]]
+=== Suite dreams
+
+[[_5_14_74_]]
+=== Neuro-napping
+
+[[_5_15_75_]]
+=== A little night music
+
+[[_5_16_76_]]
+=== Assignment: The Night School Dream Diary
+
+[[_6_0_77_]]
+== 6 WELCOME TO DREAMLAND
+
+[[_6_1_78_]]
+=== A gift from the gods
+
+[[_6_2_79_]]
+=== The Prince of Percipients
+
+[[_6_3_80_]]
+=== Do you have the gift?
+
+[[_6_4_81_]]
+=== False awakenings and dream detectives
+
+[[_6_5_82_]]
+=== Dream interpretation: A beginner’s guide
+
+[[_6_6_83_]]
+=== Are you a natural dream interpreter?
+
+[[_6_7_84_]]
+=== Paging Dr Freud
+
+[[_6_8_85_]]
+=== Are you a natural Freudian?
+
+[[_6_9_86_]]
+=== Assignment: Faking Freud
+
+[[_7_0_87_]]
+== 7 DREAM THERAPY
+
+[[_7_1_88_]]
+=== The secret life of dreams
+
+[[_7_2_89_]]
+=== Dirty dreams, wet dreams, and animals
+
+[[_7_3_90_]]
+=== The twenty-four-hour shrink
+
+[[_7_4_91_]]
+=== Dreaming and depression
+
+[[_7_5_92_]]
+=== Dream therapy
+
+[[_7_6_93_]]
+=== Dream work
+
+[[_7_6_94_]]
+==== 1) Exploration
+
+[[_7_6_95_]]
+==== 2) Insight
+
+[[_7_6_96_]]
+==== 3) Action
+
+[[_7_7_97_]]
+=== The Storytelling Method
+
+[[_7_8_98_]]
+=== Dream solutions
+
+[[_7_9_99_]]
+=== Finding your dream solution
+
+[[_7_10_100_]]
+=== The Brownies
+
+[[_7_11_101_]]
+=== The secret science of the bedtime story
+
+[[_7_12_102_]]
+=== Assignment: Experimenting with your eyes and arms
+
+[[_7_12_103_]]
+==== The eyes experiment
+
+[[_7_12_104_]]
+==== The arms experiment
+
+[[_7_12_105_]]
+==== Score Description
+
+[[_8_0_106_]]
+== 8 SWEET DREAMS
+
+[[_8_1_107_]]
+=== On becoming lucid
+
+[[_8_2_108_]]
+=== A beginner’s guide to lucidity
+
+[[_8_3_109_]]
+=== Unicycling, snowboarding, and skateboarding
+
+[[_8_4_110_]]
+=== Sweet dreams are made of cheese
+
+[[_8_5_111_]]
+=== Dreams and How to Guide Them: Practical Observations
+
+[[_8_6_112_]]
+=== Smelling the roses
+
+[[_8_7_113_]]
+=== Dream:ON
+
+[[_8_8_114_]]
+=== The dark side of the moon
+
+[[_8_9_115_]]
+=== On the rebound
+
+[[_8_10_116_]]
+=== How to banish nightmares
+
+[[_8_11_117_]]
+=== Imagery rehearsal therapy
+
+[[_8_12_118_]]
+=== Children’s nightmares
+
+[[_8_13_119_]]
+=== A dream life
+
+[[_9_0_120_]]
+== Conclusion TIME FOR BED
+
+[[_9_1_121_]]
+=== The Night School Manifesto
+
+[[_10_0_122_]]
+== Appendix Donald and the Elephant at School

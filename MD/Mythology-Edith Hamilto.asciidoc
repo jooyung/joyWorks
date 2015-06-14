@@ -1,0 +1,450 @@
+[[_0_]]
+= Mythology
+Joy <arbago@gmail.com>
+v1.0, 2015-06-4
+:icons: font
+:sectanchors:
+:imagesdir: images
+:homepage: http://arbago.com
+:toc: macro
+
+toc::[]
+
+[preface]
+== 책
+
+Mythology by Edith Hamilton, 1942 by Edith Hamilton, renewed © 1969 by Dorian Fielding Reid and Doris
+Fielding Reid
+
+[preface]
+== Preface
+
+My aim has been nothing more ambitious than to keep distinct for the reader the very different writers from whom our knowledge of the myths comes.
+
+My hope is that those who do not know the classics will gain in this way not only a knowledge of the myths, but some little idea of what the writers were like who told them -- who have been proved, by two thousand years and more, to be immortal.
+
+[[_0_0_0_]]
+== Introduction to Classical Mythology
+
+[[_0_1_1_]]
+=== THE MYTHOLOGY OF THE GREEKS
+
+[[_0_2_2_]]
+=== THE GREEK AND ROMAN WRITERS OF MYTHOLOGY
+
+[[_1_0_2_]]
+== One. The Gods, the Creation, and the Earliest Heroes 26
+
+[[_1_1_3_]]
+=== I. The Gods 27
+
+[[_1_1_3_]]
+==== The Titans and the Twelve Great Olympians 27
+
+[[_1_1_3_]]
+===== ZEUS (JUPITER)
+
+[[_1_1_3_]]
+===== HERA (JUNO)
+
+[[_1_1_3_]]
+===== POSEIDON (NEPTUNE)
+
+[[_1_1_3_]]
+===== HADES (PLUTO)
+
+[[_1_1_3_]]
+===== PALLAS ATHENA (MINERVA)
+
+[[_1_1_3_]]
+===== PHOEBUS APOLLO
+
+[[_1_1_3_]]
+===== ARTEMIS (DIANA)
+
+[[_1_1_3_]]
+===== APHRODITE (VENUS)
+
+[[_1_1_3_]]
+===== HERMES (MERCURY)
+
+[[_1_1_3_]]
+===== ARES (MARS)
+
+[[_1_1_3_]]
+===== HEPHAESTUS (VULCAN AND MULCIBER)
+
+[[_1_1_3_]]
+===== HESTIA (VESTA)
+
+[[_1_1_3_]]
+==== The Lesser Gods of Olympus 41
+
+[[_1_1_3_]]
+==== The Gods of the Waters 44
+
+[[_1_1_3_]]
+==== The Underworld 45
+
+[[_1_1_3_]]
+==== The Lesser Gods of Earth 47
+
+[[_1_1_3_]]
+==== The Roman Gods 51
+
+[[_1_2_4_]]
+=== II. The Two Great Gods of Earth 55
+
+lightning (līt′nĭng) 번개, 번갯불::
+lightning - the flash of light that accompanies an electric discharge in the atmosphere (or something resembling such a flash); can scintillate for a second or more
+* flash - a sudden intense burst of radiant energy
+* heat lightning - bright flashes of light near the horizon without thunder (especially on hot evenings); usually attributed to distant lightning that is reflected by clouds
+* sheet lighting - lightning that appears as a broad sheet; due to reflections of more distant lightning and to diffusion by the clouds
+
+hallow (hăl′ō) 신성하게[깨끗하게] 하다::
+hallow - render holy by means of religious rites
+= sanctify, bless, consecrate
+* reconsecrate - consecrate anew, as after a desecration
+* declare - state emphatically and authoritatively; "He declared that he needed more money to carry out the task he was charged with"
+** Through her the field of grain was hallowed
+
+threshing floor 타작 마당, 탈곡장::
+threshing floor - a floor or ground area for threshing or treading out grain
+* area - a part of a structure having some specific characteristic or function; "the spacious cooking area provided plenty of room for servants"
+
+reverent (rĕv′ər-ənt) 숭배하는::
+reverent - showing great reverence for god; "a godly man"; "leading a godly life"
+* =godly, worshipful
+* pious - having or showing or expressing reverence for a deity; "pious readings"
+
+sacrifice (săk′rə-fīs′) 희생; 희생물::
+sacrifice - the act of killing (an animal or person) in order to propitiate a deity
+* =ritual killing
+* animal, animate being, beast, creature, fauna, brute - a living organism characterized by voluntary movement
+* kill, putting to death, killing - the act of terminating a life
+* hecatomb - a great sacrifice; an ancient Greek or Roman sacrifice of 100 oxen
+* immolation - killing or offering as a sacrifice
+* [C13: via Old French from Latin sacrificium, from sacer holy + facere to make]
+** Processions took place, sacrifices were held with dances and song, there were general rejoicing.
+
+Eleusis (ĭ-lo͞o′sĭs) 엘레우시스 ((고대 그리스 Attica국의 도시))::
+An ancient city of eastern Greece near Athens, site of the Eleusinian mysteries.
+* El′eu·sin′i·an (ĕl′yo͝o-sĭn′ē-ən) adj. & n.
+** The great temple was at Eleusis, a little town near Athens, and the worship was called the Eleusinian Mysteries.
+
+Cicero (sĭs′ə-rō′), Marcus Tullius 106-43 bc.::
+키케로 Marcus Tullius ~ (106-43 B.C.) ((고대 로마의 정치가·철학자·웅변가))
+* Roman statesman, orator, and philosopher. A major figure in the last years of the Republic, he is best known for his orations against Catiline and for his mastery of Latin prose. His later writings introduced Greek philosophy to Rome.
+
+even so 그렇기는 하지만::
+even so - despite anything to the contrary (usually following a concession); "although I'm a little afraid, however I'd like to try it"; "while we disliked each other, nevertheless we agreed"; "he was a stern yet fair master"; "granted that it is dangerous, all the same I still want to go"
+* =all the same, however, nevertheless, nonetheless, notwithstanding, withal, still, yet
+
+and yet vs. as yet::
+* http://forum.wordreference.com/threads/and-yet-or-and-as-yet.991904/
+* "As yet" means "as of this time" or "currently".
+* "Yet" by itself is like "nevertheless", so "and yet" means something like "but even so".
+
+[[_1_2_4_]]
+==== Demeter (Ceres) 58
+
+[[_1_2_4_]]
+==== Dionysus or Bacchus 64
+
+[[_1_3_5_]]
+=== III. How the World and Mankind Were Created 75
+
+[[_1_4_6_]]
+=== IV. The Earliest Heroes 91
+
+[[_1_4_6_]]
+==== Prometheus and Io 91
+
+[[_1_4_6_]]
+==== Europa 95
+
+[[_1_4_6_]]
+==== The Cyclops Polyphemus 100
+
+[[_1_4_6_]]
+==== Flower-Myths: Narcissus, Hyacinth, Adonis 104
+
+[[_2_0_6_]]
+== Two. Stories of Love and Adventure 112
+
+[[_2_1_7_]]
+=== I. Cupid and Psyche 113
+
+[[_2_2_8_]]
+=== II. Eight Brief Tales of Lovers 124
+
+[[_2_2_8_]]
+==== Pyramus and Thisbe 124
+
+[[_2_2_8_]]
+==== Orpheus and Eurydice 126
+
+[[_2_2_8_]]
+==== Ceyx and Alcyone 130
+
+[[_2_2_8_]]
+==== Pygmalion and Galatea 133
+
+[[_2_2_8_]]
+==== Baucis and Philemon 136
+
+[[_2_2_8_]]
+==== Endymion 139
+
+[[_2_2_8_]]
+==== Daphne 140
+
+[[_2_2_8_]]
+==== Alpheus and Arethusa 142
+
+[[_2_3_9_]]
+=== III. The Quest of the Golden Fleece 144
+
+[[_2_4_10_]]
+=== IV. Four Great Adventures 161
+
+[[_2_4_10_]]
+==== Phaëthon 161
+
+[[_2_4_10_]]
+==== Pegasus and Bellerophon 165
+
+[[_2_4_10_]]
+==== Otus and Ephialtes 170
+
+[[_2_4_10_]]
+==== Daedalus 171
+
+[[_3_0_10_]]
+== Three. The Great Heroes before the Trojan War 173
+
+[[_3_1_11_]]
+=== I. Perseus 174
+
+[[_3_2_12_]]
+=== II. Theseus 185
+
+[[_3_3_13_]]
+=== III. Hercules 198
+
+[[_3_4_14_]]
+=== IV. Atalanta 215
+
+[[_4_0_14_]]
+== Four. The Heroes of the Trojan War 222
+
+[[_4_1_15_]]
+=== I. The Trojan War 223
+
+[[_4_1_15_]]
+==== Prologue: The Judgment of Paris 224
+
+[[_4_1_15_]]
+==== The Trojan War 225
+
+[[_4_2_16_]]
+=== II. The Fall of Troy 242
+
+[[_4_3_17_]]
+=== III. The Adventures of Odysseus 254
+
+[[_4_4_18_]]
+=== IV. The Adventures of Aeneas 276
+
+[[_4_4_18_]]
+==== One. From Troy to Italy 277
+
+[[_4_4_18_]]
+==== Two. The Descent into the Lower World 283
+
+[[_4_4_18_]]
+==== Three. The War in Italy 289
+
+[[_5_0_18_]]
+== Five. The Great Families of Mythology 296
+
+[[_5_1_19_]]
+=== I. The House of Atreus 297
+
+[[_5_1_19_]]
+==== Tantalus and Niobe 298
+
+[[_5_1_19_]]
+==== Agamemnon and His Children 301
+
+[[_5_1_19_]]
+==== Iphigenia Among the Taurians 311
+
+[[_5_2_20_]]
+=== II. The Royal House of Thebes 319
+
+[[_5_2_20_]]
+==== Cadmus and His Children 319
+
+[[_5_2_20_]]
+==== Oedipus 321
+
+[[_5_2_20_]]
+==== Antigone 327
+
+[[_5_2_20_]]
+==== The Seven against Thebes 329
+
+[[_5_3_21_]]
+=== III. The Royal House of Athens 331
+
+[[_5_3_21_]]
+==== Cecrops 332
+
+[[_5_3_21_]]
+==== Procne and Philomela 333
+
+[[_5_3_21_]]
+==== Procris and Cephalus 335
+
+[[_5_3_21_]]
+==== Orithyia and Boreas 337
+
+[[_5_3_21_]]
+==== Creüsa and Ion 338
+
+[[_6_0_21_]]
+== Six. The Less Important Myths 343
+
+[[_6_1_22_]]
+=== I. Midas—and Others 344
+
+[[_6_1_22_]]
+==== Aesculapius 346
+
+[[_6_1_22_]]
+==== The Danaïds 348
+
+[[_6_1_22_]]
+==== Glaucus and Scylla 349
+
+[[_6_1_22_]]
+==== Erysichthon 352
+
+[[_6_1_22_]]
+==== Pomona and Vertumnus 353
+
+[[_6_2_23_]]
+=== II. Brief Myths Arranged Alphabetically 355
+
+[[_6_2_23_]]
+==== AMALTHEA
+
+[[_6_2_23_]]
+==== THE AMAZONS
+
+[[_6_2_23_]]
+==== AMYMONE
+
+[[_6_2_23_]]
+==== ANTIOPE
+
+[[_6_2_23_]]
+==== ARACHNE
+
+[[_6_2_23_]]
+==== ARION
+
+[[_6_2_23_]]
+==== ARISTAEUS
+
+[[_6_2_23_]]
+==== BITON AND CLEOBIS
+
+[[_6_2_23_]]
+==== CALLISTO
+
+[[_6_2_23_]]
+==== CHIRON
+
+[[_6_2_23_]]
+==== CLYTIE
+
+[[_6_2_23_]]
+==== DRYOPE
+
+[[_6_2_23_]]
+==== EPIMENIDES
+
+[[_6_2_23_]]
+==== ERICTHONIUS
+
+[[_6_2_23_]]
+==== HERO AND LEANDER
+
+[[_6_2_23_]]
+==== THE HYADES
+
+[[_6_2_23_]]
+==== IBYCUS AND THE CRANES
+
+[[_6_2_23_]]
+==== LETO (LATONA)
+
+[[_6_2_23_]]
+==== LINUS
+
+[[_6_2_23_]]
+==== MARPESSA
+
+[[_6_2_23_]]
+==== MARSYAS
+
+[[_6_2_23_]]
+==== MELAMPUS
+
+[[_6_2_23_]]
+==== MEROPE
+
+[[_6_2_23_]]
+==== THE MYRMIDONS
+
+[[_6_2_23_]]
+==== NISUS AND SCYLLA
+
+[[_6_2_23_]]
+==== ORION
+
+[[_6_2_23_]]
+==== THE PLEIADES
+
+[[_6_2_23_]]
+==== RHOECUS
+
+[[_6_2_23_]]
+==== SALMONEUS
+
+[[_6_2_23_]]
+==== SISYPHUS
+
+[[_6_2_23_]]
+==== TYRO
+
+[[_7_0_23_]]
+== Seven. The Mythology of the Norsemen 370
+
+[[_7_1_24_]]
+=== Introduction to Norse Mythology 371
+
+[[_7_2_25_]]
+=== I. The Stories of Signy and Sigurd 375
+
+[[_7_3_26_]]
+=== II. The Norse Gods 381
+
+[[_7_3_26_]]
+==== The Creation 386
+
+[[_7_3_26_]]
+==== The Norse Wisdom 388
+

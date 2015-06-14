@@ -1,7 +1,10 @@
 /*
 ([^\d])$
-185
-256
+276
+208
+핸재
+194
+230
  */
 
 var pageIncrease = 4;
@@ -9,16 +12,17 @@ var source =
 [
 	["^AAA"]
 	,["$a"]
+	,["^Words"]
+	,["$a"]
 	,["^AA"]
 	,["Cover"]
 
 
 
 
-	,["$차례", 8]
-	,[":차례", 8]
 
-
+	,["$차례", 4]
+	,[":차례", 4]
 
 
 
@@ -82,19 +86,68 @@ function makeBookmark(BOOKMARK, pos, bmkArray) {
 	myPagenumber = 0;
 	myStyle = 0;
 	myColor = "black";
-	if (len > 1) myPagenumber = bmkArray[1] + pageIncrease;
+	if (len > 1) myPagenumber = parseInt(bmkArray[1]) + pageIncrease;
 	if (len > 2) myStyle = bmkArray[2];
 	if (len > 3) myColor = bmkArray[3];
-
-	if (myColor == "blue") myColor = ["RGB", 0, 0.0, 1];
-	else if (myColor == "green") myColor = ["RGB", 0, 0.3, 0.7];
-	else if (myColor == "red") myColor = ["RGB", 1, 0.0, 0.0];
-	// console.println("name: " + myName + ", page: " + myPagenumber + ", style: " + myStyle + ", color: " + myColor);
 
 	BOOKMARK.createChild(myName, "pageNum="+myPagenumber, pos);
 	var childBookmark = BOOKMARK.children[pos];
 	childBookmark.style = myStyle;
-	childBookmark.color = myColor;
+	childBookmark.color = color[myColor]; //- This works great
+}
+
+/**
+ * Color
+ * -----
+ * If something about color goes not the way, then use this method
+ */
+
+function setColor(color) {
+	var tmpColor = [];
+
+	switch (color) {
+		case "black":
+			tmpColor = ["G", 0];
+			break;
+		case "blue":
+			tmpColor = ["RGB",0,0,1];
+			break;
+		case "transparent":
+			tmpColor = ["T"];
+			break;
+		case "white":
+			tmpColor = ["G", 1];
+			break;
+		case "red":
+			tmpColor = ["RGG",1,0,0];
+			break;
+		case "green":
+			tmpColor = ["RGG",0,1,0];
+			break;
+		case "cyan":
+			tmpColor = ["CMYK", 1,0,0,0];
+			break;
+		case "magenta":
+			tmpColor = ["CMYK", 0,1,0,0];
+			break;
+		case "yellow":
+			tmpColor = ["CMYK", 0,0,1,0];
+			break;
+		case "dkGray":
+			tmpColor = ["G", 0.25];
+			break;
+		case "gray":
+			tmpColor = ["G", 0.5];
+			break;
+		case "ltGray":
+			tmpColor = ["G", 0.75];
+			break;
+		default:
+			tmpColor = ["G", 0];
+			break;
+
+		return tmpColor;
+	}
 }
 
 function start(BOOKMARK) {

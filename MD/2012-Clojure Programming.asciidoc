@@ -1,0 +1,1563 @@
+[[_0_]]
+= Clojure Programming
+Joy <arbago@gmail.com>
+v1.0, 2015-5-3
+:icons: font
+:sectanchors:
+:imagesdir: images
+:homepage: http://arbago.com
+:toc: macro
+
+toc::[]
+
+[preface]
+== Preface
+
+[W] pedigree (pĕd′ĭ-grē′)::
+pedigree - the descendants of one individual; "his entire lineage has been warriors"
+* =blood line, bloodline, ancestry, lineage, line of descent, stemma, parentage, blood, origin, descent, stock, line
+* <>kinfolk, kinsfolk, phratry, family line, sept, folk, family - people descended from a common ancestor; "his family has lived in Massachusetts since the Mayflower"
+* <>side - a family line of descent; "he gets his brains from his father's side"
+* <>family tree, genealogy - successive generations of kin
+* A Lisp #pedigree#, thereby providing remarkably flexible and powerful metaprogramming faciities
+
+[W] strain (strān)::
+strain - cause to be tense and uneasy or nervous or anxious; "he got a phone call from his lawyer that tensed him up"
+* =tense up, tense
+* <>affect - act physically on; have an effect upon; "the medicine affects my heart rate"
+* <>stretch, extend - extend one's limbs or muscles, or the entire body; "Stretch your legs!"; "Extend your right arm above your head"
+* !=make relaxed, unlax, unstrain, unwind, relax, loosen up - cause to feel relaxed; "A hot bath always relaxes me"
+* Clojure offers a compelling practical alternative to many who #strain against# the limitations of typical programming languages and environments
+
+=== Who Is This Book For?
+
+[W] concision (kən-sĭzh′ən)::
+concision - terseness and economy in writing and speaking achieved by expressing a great deal in just a few words
+* =conciseness, pithiness, succinctness
+* <>terseness - a neatly short and concise expressive style
+* Clojure matches and often exceeds your current favorite language's expressivity, #concision#, and flexibility while allowing you to effortlessly leverage the performance, libraries, community, and operational stability of the JVM
+
+==== Engaged Java Developers
+
+==== Ruby, Python, and Other Developers
+
+[W] garner (gär′nər)::
+garner - acquire or deserve by one's efforts or actions
+* =earn
+* <>acquire, get - come into the possession of something concrete or abstract; "She got a lot of paintings from her uncle"; "They acquired a new pet"; "Get your results the next day"; "Get permission to take a few days off from work"
+* <>letter - win an athletic letter
+* Ruby and Python are not new languages by any means, but they have #garnered# significant (dare we say, "mainstream"?) traction over recent yeas
+
+==== How to Read This Book
+
+duplex book
+
+===== Start with Practical Applications of Clojure
+
+[W] practicum (prăk′tĭ-kəm)::
+a course of study devoted to practical experience in a field.
+* Often the best way to learn is to dig straight into the nitty-gritty of how a language is used in the real world. If that sounds appealing, the hope is that you will find that at least a couple of #practicums# resonate with what you do on a day-to-day basis, so that you can readily #draw parallels# between how you solve certain categories of problems in your current language(s) and how they may be solved using Clojure.
+
+[[_1_0_0_]]
+== I. Functional Programming and Concurrency
+
+[[_1_1_1_]]
+=== 1. Down the Rabbit Hole
+
+[W] reciprocity (rĕs′ə-prŏs′ĭ-tē)::
+reciprocity - mutual exchange of commercial or other privileges
+* <>interchange, reciprocation, give-and-take - mutual interaction; the activity of reciprocating or exchanging (especially information)
+* On the other hand, we assume that you expect #reciprocity# for the time and effort you'll expend to learn a new language, some tangible benefits that can makeyou more productive, you team more effective, and your organization more flexible.
+
+*Clojure demands that you raise your game, and pays you back for doing so.*
+
+As the old saying goes, *we want whatever makes the easy stuff easy, and the hard stuff possible*.
+
+[[_1_1_2_]]
+==== Why Clojure?
+
+[W] barrel (băr′əl)::
+To move or progress rapidly: "That the European Union barreled ahead was not surprising" (Richard W. Stevenson).
+*  Forged of a unique blend of the best features of a number of different programming languages—including various Lisp implementations, Ruby, Python, Java, Haskell, and others — Clojure provides a set of capabilities suited to address many of the most frustrating problems programmers struggle with today and those we can see #barreling# toward us over the horizon.
+
+[W] marquee (mär-kē′)::
+Exceptionally popular or skilled: _The team is hoping to sign a marquee player._
+* To whet your appetite, let’s enumerate some of Clojure’s #marquee# features and characteristics:
+
+[W] gestalt (gə-shtält′, -shtôlt′, -stält′, -stôlt′)::
+gestalt - a configuration or pattern of elements so unified as a whole that it cannot be described merely as a sum of its parts
+* <>pattern, form, shape - a perceptual structure; "the composition presents problems for students of musical form"; "a visual pattern must include not only objects but the spaces between them"
+* Of course, we don't expect you to understand all of that, but we do hope the #gestalt# sounds compelling.
+
+[[_1_1_3_]]
+==== Obtaining Clojure
+
+[W] in short order::
+in short order - without delay; "John got ready in short order"
+* It will download Clojure for you, give you a better REPL than Clojure’s default, and you’ll likely be using it on a daily basis for your own projects #in short order# anyway.
+
+[[_1_1_4_]]
+==== The Clojure REPL
+
+Many languages have REPLs, often also referred to as #interpreters#:
+
+----
+java -cp clojure-1.4.0.jar clojure.main
+----
+
+----
+java -jar clojure.jar
+----
+
+[[_1_1_5_]]
+==== No, Parentheses Actually Won’t Make You Go Blind
+
+[[_1_1_6_]]
+==== Expressions, Operators, Syntax, and Precedence
+
+[W] corollary (kôr′ə-lĕr′ē, kŏr′-)::
+corollary - a practical consequence that follows naturally; "blind jealousy is a frequent corollary of passionate love"
+* <>aftermath, consequence - the outcome of an event especially as relative to an individual
+* Clojure's #corollaries# to these statements are all expressions that evaluate to a value
+
+s-expressions::
+sexprs +
+symbolic expressions +
+due to the significance of symbols in identifying the values to be used in the calls denoted by such lists
+
+forms::
+valid s-expressions that can be successfully evaluated +
+Not all s-expressions are forms
+
+[W] internalize (ĭn-tûr′nə-līz′)::
+internalize - incorporate within oneself; make subjective or personal; "internalize a belief"
+* =interiorise, interiorize, internalise
+* <>psychological science, psychology - the science of mental life
+* <>ascribe, attribute, impute, assign - attribute or credit to; "We attributed this quotation to Shakespeare"; "People impute great cleverness to cats"
+* This simplification helps make Clojure's syntax very easy to learn and #internalize#, and helps make Clojure code very easy to read
+
+[[_1_1_7_]]
+==== Homoiconicity
+
+homoiconicity::
+code-as-data +
+Clojure code is composed of literal representations of its own data structures and atomic values
+
+AST::
+abstract syntax tree +
+a data structure that represents formally what is manifested concretely in text
+
+Much of the appeal of domain-specific languages springs from exactly this point
+
+Clojure (like all Lisps) takes a different path: rather than defining a syntax that will be transformed into an AST, Clojure programs are written using Clojure data structures that represent that AST directly
+
+[W] paramount (păr′ə-mount′)::
+Of chief concern or importance: "My paramount object in this struggle is to save the Union" (Abraham Lincoln).
+* This is the basis for macros — Clojure’s metaprogramming facility — a far different beast than the gloriously painful hack that are C-style macros and other textual preprocessors, and #the ultimate escape hatch# when expressivity or domain-specific notation is #paramount#.
+
+In practical terms, the direct correspondence between code and data means that the Clojure code you write in the REPL or in a text source file isn't text at all: #*you are programming using Clojure data structure literals*#
+
+[[_1_1_8_]]
+==== The Reader
+
+[[_1_1_9_]]
+===== Scalar Literals
+
+noncollection values
+
+[W] bread-and-butter::
+1. providing a livelihood or reliable income: the agency's bread-and-butter accounts.
+2. of or pertaining to the basic needs of life.
+3. basic or everyday; staple; routine.
+4. expressing thanks for hospitality: a bread-and-butter letter.
+5. Many of these are #bread-and-butter# types that you already know intimately from Java or very similar analogues in Ruby, Python, and other languages; others are specific to Clojure and carry new semantics
+
+[[_1_1_10_]]
+====== Strings
+
+Java Strings +
+java.lang.String +
+double quotes
+
+multiline-capable
+
+[[_1_1_11_]]
+====== Booleans
+
+[W] Connote vs. denote::
+http://grammarist.com/usage/connote-denote/ +
+A word or phrase denotes its literal meaning (i.e., its dictionary definition), and it connotes all the meanings and associations it bears in addition to its literal meaning. By extension, denotations are the literal meanings of words and phrases, and connotations are the meanings associated with them. The words _childish_ and _childlike_, for instance, have the same denotation—both mean _of or resembling a child_—but _childish_ tends to have negative connotations because we use it to describe bad things, while _childlike_ tends to have positive connotations because we use it to describe good things.
+
+The tokens _true_ and _false_ are used to #denote# literal Boolean values in Clojure, just as in Java, Ruby, and Python (#modulo# the latter's capitalization)
+
+[W] modulo (mŏj′ə-lō)::
+1. Mathematics With respect to a specified modulus: 18 is congruent to 42 modulo 12 because both 18 and 42 leave 6 as a remainder when divided by 12.
+2. Correcting or adjusting for something, as by leaving something out of account: This proposal is the best so far, modulo the fact that parts of it need modification.
+
+[W] modulus (mŏj′ə-ləs)::
+a quantity by which two given quantities can be divided to yield the same remainders. +
+an integer that can be divided exactly into the difference between two other integers See also congruence2: 7 is a modulus of 25 and 11.
+
+[[_1_1_12_]]
+====== nil
+
+_nil* is also logically false in Clojure conditionals, as it is in Ruby and Python
+
+[[_1_1_13_]]
+====== Characters
+
+Character literals are #denoted# by a backslash:
+
+.special named character literals
+* \space
+* \newline
+* \formfeed
+* \return
+* \backspace
+* \tab
+
+[[_1_1_14_]]
+====== Keywords
+
+Keywords evaluate to themselves +
+often used as accessors for the values they name in Clojure collections and types, such as hash maps and records +
+keywords are functions that look themselves up in collections passed to them
+
+keywords are always prefixed with a colon
+
+A slash character (/) denotes a _namespace keyword_
+
+a keyword prefixed with two colons (::) is expanded by the reader to a namespaced keyword in the current namespace
+
+or another namespace if the keyword started by a namespace alias, _::alias/kw_ for example
+
+[source, clojure]
+----
+(def pizza {:name "Ramunto's"
+            :location "Claremont, NH"
+            ::location "43.3734,-72.3365"}) ;; <1>
+
+pizza
+{:name "Ramunto's", :location "Claremont, NH", :user/location "43.3734,-72.3365"} ;; <2>
+
+(:user/location pizza) ;; <3>
+"43.3734,-72.3365"
+----
+<1> using a namespace
+<2> namespace result
+<3> keywords are functions that look themselves up in collections
+
+.named type of value
+* keywords
+* symbols
+
+[[_1_1_15_]]
+====== Symbols
+
+.Symbols
+* must begin with a non-numeric character
+* can contain **, +, !, -, _, ?*
+
+Symbols that contain a slash (/) denote a _namespaced symbol_
+
+[[_1_1_16_]]
+====== Numbers
+
+[W] pedestrian (pə-dĕs′trē-ən)::
+pedestrian - lacking wit or imagination; "a pedestrian movie plot" +
+dull; commonplace: a pedestrian style of writing.
+* =prosy, earthbound, prosaic
+* <>uninteresting - arousing no interest or attention or curiosity or excitement; "a very uninteresting account of her trip"
+* Many of them are #pedestrian#, but others are rare to find in a general-purpose programming language and can simplify the implementation of certain algorithms - especially in cases where the algorithms are defined in terms of particular numeric representations (octal, binary, rational numbers, and scientific notation)
+
+Clojure has a bias toward longs and doubles at the expense of other widths, including bytes, shorts, ints, and floats
+
+[[_1_1_17_]]
+====== Regular expressions
+
+[[_1_1_18_]]
+===== Comments
+
+a semcolon (;)
+
+Form-level: #- reader macro
+
+_comment_ forms always evaluate to _nil_
+
+----
+(+ 1 2 (comment (* 2 2)) 8)
+java.lang.NullPointerException: null
+         Numbers.java:942 clojure.lang.Numbers.ops
+         Numbers.java:126 clojure.lang.Numbers.add
+        Numbers.java:3523 clojure.lang.Numbers.add
+----
+
+[[_1_1_19_]]
+===== Whitespace and Commas
+
+_commas_ are considered _whitespace_ by the reader
+
+[[_1_1_20_]]
+===== Collection Literals
+
+[[_1_1_21_]]
+===== Miscellaneous Reader Sugar
+
+* *'*: Evaluation suppression
+* *#()*: Anonymous function
+* *#'*: Referring to vars
+* *@*: Dereferencing reference type
+* *`*, *~*, *~@*: macros
+* some sugar for Java interop forms
+* *^*: Attach metadata to literal values
+
+[[_1_1_22_]]
+==== Namespaces
+
+Symbol Evaluation::
+identifying locals +
+tied up with namespaces
+
+vars::
+mutable storage locations +
+associated with a symbol
+
+The current namespace is always bound to [big underline]#\*ns*#.
+
+ns::
+creates a new namespace +
+side effect of switching to that new namespace in the REPL
+
+All classes in the *java.lang* package are imported by default
+
+*clojure.core*
+
+[[_1_1_23_]]
+==== Symbol Evaluation
+
+[[_1_1_24_]]
+==== Special Forms
+
+[W] précis (prā′sē, prā-sē′)::
+precis - a sketchy summary of the main points of an argument or theory
+* =synopsis, abstract, outline
+* <>summary, sum-up - a brief statement that presents the main points in a concise form; "he gave a summary of the conclusions"
+* <>brief - a condensed written summary or abstract
+* <>apercu - a short synopsis
+* <>epitome - a brief abstract (as of an article or book)
+* Paul Graham's _The Root of Lisp_ is a brief yet approachable #precis# of the fundamental operations of computation, as originally discovered and enumerated by John McCarthy.
+
+[[_1_1_25_]]
+===== Suppressing Evaluation: quote
+
+There is reader syntax for *quote*; prefixing any form with a quote character (') will expand into a usage of *quote*.
+
+You can usually have a peek at what the reader produces by quoting a form
+
+[[_1_1_26_]]
+===== Code Blocks: do
+
+The values of all but the last expression are discarded, although their side effects do occur (such as printing to standard out as we're doing here, or manipulations of a stateful object available in the current scope)
+
+[[_1_1_27_]]
+===== Defining Vars: def
+
+[[_1_1_28_]]
+===== Local Bindings: let
+
+[W] raft (răft)::
+a great quantity; a lot.
+* If you really need a "mutable" local binding, Clojure provides a #raft# of reference types that enforce specific mutation semantics;
+
+[[_1_1_29_]]
+===== Destructuring (let, Part 2)
+
+Vectors are function of their indices.
+
+All of Clojure's sequential collections implement the *java.util.List* interface
+
+[[_1_1_30_]]
+====== Sequential destructuring
+
+vector of symbols - [x y z] - instead of a scalar symbol name
+
+[W] Clojure, Python, and Ruby all seem pretty #similar on their face#; but as you'll see as we go along, Clojure #goes quite a long ways beyond# what Python and Ruby offer
+
+[W] The destructuring mechanism has no limit to how far it can descend into a deeply nested data structure, #but there are limits to good taste#.
+
+Gathering extra-positional sequential values::
+Notice that the value of *rest* here is a _sequence_, and _not_ a _vector_, even though we provided a vector to the destructuring form
+
+Retaining the destructured value::
+*:as*
+
+[[_1_1_31_]]
+====== Map destructuring
+
+* hash-map, array-map
+* java.util.Map
+* get function
+** Clojure vectors
+** Strings
+** Arrays
+
+[W] coup de grâce (ko͞o′ də gräs′)::
+coup de grace - the blow that kills (usually mercifully)
+* =deathblow
+* <>kill, putting to death, killing - the act of terminating a life
+* The #coup de grâce# is the composition of both map and sequential destructuring, however they are needed to effectively extract the values you need from the collections at hand:
+
+Retaining the destructured value::
+:as
+
+Default Values::
+:or pair to provide a defaults map
+
+Binding values to their key`'s names::
+:keys, :strs, :syms
+
+You will likely find yourself using *:keys* more than *:strs* or *:syms*; keyword _keys_ are by far the most common key type in Clojure maps and keyword arguments, and are the general-purpose accessor #by dint of# their usage in conjunction with records
+
+[W] dint::
+Force or effort; power: _succeeded by dint of hard work._ +
+dint - interchangeable with `means' in the expression `by means of'
+* <>means, way, agency - how a result is obtained or an end is achieved; "a means of control"; "an example is the best agency of instruction"; "the true way to success"
+* by dint of
+** =by means of, using, due to, as a result of, by virtue of, on the strength of, on account of, as a consequence of, by force of _He succeeded by dint of sheer hard work._
+
+Destructuring rest sequences as map key/value pairs::
+
+[[_1_1_32_]]
+===== Creating Functions: fn
+
+[W] fall, fold::
+Functions are first-class values in Clojure; creating them #falls# to the *fn* special form, which also #folds# in the semantics of *let* and *do*.
+
+multiple arities::
+* each arity's binding vector and implementation body must be enclosed within a pair of parentheses
+* function calls dispatch based on argument count
+
+defn builds on fn::
+def + fn
+
+[[_1_1_33_]]
+====== Destructuring function arguments
+
+Variadic functions::
+* _rest arguments_ or _varargs_
+
+Keyword arghuments::
+
+Pre- and postconditions::
+
+[[_1_1_34_]]
+====== Function literals
+
+No implicit do form::
+
+Arity and arguments specified using unnamed positional symbols::
+* unnamed positional symbol: %
+
+You should prefer the shorter notation in general
+
+.variadic function
+[source, clojure]
+----
+(fn [x & rest]
+    (- x (apply + rest)))
+
+#(- % (apply + %&))
+----
+
+Function literals cannot be nested::
+
+[[_1_1_35_]]
+===== Conditionals: if
+
+[W] The second and third expressions are only evaluated #as necessary#.
+
+Clojure conditionals determine logical truth to be anything other than *nil* or *false*:
+
+[[_1_1_36_]]
+===== Looping: loop and recur
+
+* *doseq*
+* *dotimes*
+* *recur*
+
+recur::
+* transfers control to the _local-most loop head_
+* without consuming stack space
+* which is defined either by *loop* or a function
+
+Appropriate use of recur::
+* *doseq*
+* *dotimes*
+* *map*
+* *reduce*
+* *for*
+
+[[_1_1_37_]]
+===== Referring to Vars: var
+
+[[_1_1_38_]]
+===== Java Interop: . and new
+
+[W] Thus, it's rare to see *.* and *new* used directly, but you will #nevertheless# come across them #out in the wild# at some point:
+
+[[_1_1_39_]]
+===== Exception Handling: try and throw
+
+[[_1_1_40_]]
+===== Specialized Mutation: set!
+
+[[_1_1_41_]]
+===== Primitive Locking: monitor-enter and monitor-exit
+
+[[_1_1_42_]]
+==== Putting It All Together
+
+[W] pick at::
+1. To pluck or pull at, especially with the fingers.
+2. To eat sparingly or without appetite: The child just picked at the food.
+3. Informal To nag: Don't pick at me.
+4. We've continued to #pick at# the running example from Example 1-2 throughout our first explorations of Clojure:
+
+[[_1_1_43_]]
+===== eval
+
+[[_1_1_44_]]
+==== This Is Just the Beginning
+
+[[_1_2_45_]]
+=== 2. Functional Programming
+
+[W] care about someone or something::
+1. to hold someone or something dear; to prize someone or something. I really care about you. I care very much about my family.
+2. to have even minimal regard for someone or something. (Does not imply any of the tender feelings expressed in {1}.) Don't you care about animals? I care about what happens in Washington.
+3. Explain why you should #care about# it
+
+[W] make (out) a case for something/doing something::
+to give good reasons why something should be done You've certainly made out a case for us buying a dishwasher. +
+See _I rest my case_
+* Along the way, we hope to #make the case that# FP - and Clojure's flavor of FP in particular - far from being an academic exercise, can improve your practice of software design and development just as structural- and object-oriented programming concepts have over the years
+
+[NOTE]
+****
+make a case for something::
+to explain why something should be done Everything seems to be going pretty well, and she has yet to make a case for change. +
+*Usage notes:* also used in the form make a case that (to explain that something is true): It is easy to make a case that he's one of the best baseball players around.
+Etymology: based on the legal meaning of make a case (to show that what you say is true)
+****
+
+[[_1_2_46_]]
+==== What Does Functional Programming Mean?
+
+[[_1_2_47_]]
+==== On the Importance of Values
+
+[W] jar (jär)::
+jar - be incompatible; be or come into conflict; "These colors clash"
+* =collide, clash
+* <>conflict - be in conflict; "The two proposals conflict!"
+* The shift from mutable state and objects to immutable values can be #jarring# for many
+
+[[_1_2_48_]]
+===== About Values
+
+[[_1_2_49_]]
+===== Comparing Values to Mutable Objects
+
+[W] hyperbole (hī-pûr′bə-lē)::
+hyperbole - extravagant exaggeration
+* =exaggeration
+* <>figure of speech, trope, image, figure - language used in a figurative or nonliteral sense
+* That may sound like #hyperbole#, especially if your current practice of using mutable objects on a daily basis seems to be working out for you
+
+[W] ostensible (ŏ-stĕn′sə-bəl)::
+ostensible - appearing as such but not necessarily so; "for all his apparent wealth he had no money to pay the rent"; "the committee investigated some apparent discrepancies"; "the ostensible truth of their theories"; "his seeming honesty"
+* =seeming, apparent
+* <>superficial - concerned with or comprehending only what is apparent or obvious; not deep or penetrating emotionally or intellectually; "superficial similarities"; "a superficial mind"; "his thinking was superficial and fuzzy"; "superficial knowledge"; "the superficial report didn't give the true picture"; "only superficial differences"
+* A simple _print-number_ function, which #ostensibly# should just print the value of the given number to _stdout_.
+
+[W] unbeknownst (ŭn′bĭ-nōnst′)::
+unbeknownst - (usually used with `to') occurring or existing without the knowledge of; "a crisis unbeknown to me"; "she had been ill for months, unbeknownst to the family"
+* =unbeknown
+* <>unknown - not known; "an unknown amount"; "an unknown island"; "an unknown writer"; "an unknown source"
+* #Unbeknownst# to us, it additionally modifies _StatefulInteger_ arguments
+
+[W] raison dêtre (ˈreɪ zoʊn ˈdɛ trə, ˈrɛz ɔ̃)::
+reason for existence.
+* Neither of these conditions are suitably guarded against with documentation (which is read even more rarely than it is written!), and indeed, such pitfalls of mutability are the #raison dêtre# for the notion of deep object copying and copy constructors
+
+[W] pernicious (pər-nĭsh′əs)::
+pernicious - exceedingly harmful
+* =baneful, pestilent, deadly
+* <>noxious - injurious to physical or mental health; "noxious chemical wastes"; "noxious ideas"
+* Problems like this exist in any language where mutable objects are available, but their effects are more #pernicious# in languages where immutable values are rarely used: many programmers #learn the hard way# to #avoid sharp edges#, so even if a particular programming task is most efficiently modeled with, say, a map that has collections for keys, past lessons preclude the simplest solution in favor of other approaches that are generally more complicated and baroque
+
+[[_1_2_50_]]
+===== A Critical Choice
+
+[W] beachhead (bēch′hĕd′)::
+beachhead - a bridgehead on the enemy's shoreline seized by an amphibious operation; "the Germans were desperately trying to contain the Anzio beachhead"
+* <>bridgehead, foothold - an area in hostile territory that has been captured and is held awaiting further troops and supplies; "an attempt to secure a bridgehead behind enemy lines"; "the only foothold left for British troops in Europe was Gibraltar"
+* Immutable values establish a whole new #beachhead# of invariants; using them, you can know with absolute certainty that calling a function with a collection won't result in changes to that collection, that multiple threads can touch a value without risking its consistency or imposing a complexity tax in the form of complicated lock strategies, and that time-dependent changes will not result in timing-dependent behavior
+
+[[_1_2_51_]]
+==== First-Class and Higher-Order Functions
+
+[W] impoverish (ĭm-pŏv′ər-ĭsh, -pŏv′rĭsh)::
+impoverish - make poor
+* <>deprive - keep from having, keeping, or obtaining
+* <>reduce - lessen and make more modest; "reduce one's standard of living"
+* <>pauperise, pauperize, beggar - reduce to beggary
+* <>bankrupt, ruin, smash, break - reduce to bankruptcy; "My daughter's fancy wedding is going to break me!"; "The slump in the financial markets smashed him"
+* !=enrich - make wealthy or richer; "the oil boom enriched a lot of local people"
+* Classes defined only to contain static utility methods - like _java.lang.Math - end up functioning as #impoverished# namespaces created to compensate for the lack of first-class functions
+
+higher-order functions (HOFs)::
+these are any functions that take other functions as arguments or return a function as a result
+
+[[_1_2_51_1_]]
+====== map
+
+[[_1_2_51_2_]]
+====== reduce
+
+[[_1_2_52_]]
+===== Applying Ourselves Partially
+
+*Function application* is the invocation of a function with a sequence of arguments, in contrast to function calls indicated by syntactic convention
+
+Whereas function application is when a function is applied to its arguments held in a sequential collection - *apply* must be provided with _all_ arguments to that function - *partial application* is where you can provide only _some_ of the arguments to a function, yielding a new function that can be called with the remainder of the arguments to the original function later
+
+[W] by leaps and bounds::
+Rapidly, or in fast progress, as in _The corn is growing by leaps and bounds_, or _School enrollment is increasing by leaps and bounds._ This term is a redundancy, since leap and bound both mean "spring" or "jump," but the two words have been paired since Shakespeare's time and are still so used.
+* On the bright side, because of that underlying efficient machinery, calling functions with _apply_ and the functions returned by _partial_ remain #leaps and bounds# fater in Clojure than, for example, direct, explicit method calls in Python or Ruby
+
+[[_1_2_53_]]
+==== Composition of Function(ality)
+
+[[_1_2_54_]]
+===== Writing Higher-Order Functions
+
+[[_1_2_55_]]
+===== Building a Primitive Logging System with Composable Higher-Order Functions
+
+[[_1_2_56_]]
+==== Pure Functions
+
+[[_1_2_57_]]
+===== Why Are Pure Functions Interesting?
+
+[[_1_2_58_]]
+==== Functional Programming in the Real World
+
+[[_1_3_59_]]
+=== 3. Collections and Data Structures
+
+[[_1_3_60_]]
+==== Abstractions over Implementations
+
+[[_1_3_61_]]
+===== Collection
+
+[[_1_3_62_]]
+===== Sequences
+
+[[_1_3_63_]]
+====== Sequences are not iterators
+
+[[_1_3_64_]]
+====== Sequences are not lists
+
+[[_1_3_65_]]
+====== Creating seqs
+
+[[_1_3_66_]]
+====== Lazy seqs
+
+[[_1_3_67_]]
+====== Head retention
+
+[[_1_3_68_]]
+===== Associative
+
+[[_1_3_69_]]
+====== Beware of nil values
+
+[[_1_3_70_]]
+===== Indexed
+
+[[_1_3_71_]]
+===== Stack
+
+[[_1_3_72_]]
+===== Set
+
+[[_1_3_73_]]
+===== Sorted
+
+[[_1_3_74_]]
+====== Comparators and predicates to define ordering
+
+[[_1_3_75_]]
+==== Concise Collection Access
+
+[[_1_3_76_]]
+===== Idiomatic Usage
+
+[[_1_3_77_]]
+===== Collections and Keys and Higher-Order Functions
+
+[[_1_3_78_]]
+==== Data Structure Types
+
+[[_1_3_79_]]
+===== Lists
+
+[[_1_3_80_]]
+===== Vectors
+
+[[_1_3_81_]]
+====== Vectors as tuples
+
+[[_1_3_82_]]
+===== Sets
+
+[[_1_3_83_]]
+===== Maps
+
+[[_1_3_84_]]
+====== Maps as ad-hoc structs
+
+[[_1_3_85_]]
+====== Other usages of maps
+
+[[_1_3_86_]]
+==== Immutability and Persistence
+
+[[_1_3_87_]]
+===== Persistence and Structural Sharing
+
+[[_1_3_88_]]
+====== Visualizing persistence: lists
+
+[[_1_3_89_]]
+====== Visualizing persistence: maps (and vectors and sets)
+
+[[_1_3_90_]]
+====== Tangible benefits
+
+[[_1_3_91_]]
+===== Transients
+
+[[_1_3_92_]]
+==== Metadata
+
+[[_1_3_93_]]
+==== Putting Clojure’s Collections to Work
+
+[[_1_3_94_]]
+===== Identifiers and Cycles
+
+[[_1_3_95_]]
+===== Thinking Different: From Imperative to Functional
+
+[[_1_3_96_]]
+====== Revisiting a classic: Conway’s Game of Life
+
+[[_1_3_97_]]
+====== Maze generation
+
+[[_1_3_98_]]
+===== Navigation, Update, and Zippers
+
+[[_1_3_99_]]
+====== Manipulating zippers
+
+[[_1_3_100_]]
+====== Custom zippers
+
+[[_1_3_101_]]
+====== Ariadne’s zipper
+
+[[_1_3_102_]]
+==== In Summary
+
+[[_1_4_103_]]
+=== 4. Concurrency and Parallelism
+
+[[_1_4_104_]]
+==== Shifting Computation Through Time and Space
+
+[[_1_4_105_]]
+===== Delays
+
+[[_1_4_106_]]
+===== Futures
+
+[[_1_4_107_]]
+===== Promises
+
+[[_1_4_108_]]
+==== Parallelism on the Cheap
+
+[[_1_4_109_]]
+==== State and Identity
+
+[[_1_4_110_]]
+==== Clojure Reference Types
+
+[[_1_4_111_]]
+==== Classifying Concurrent Operations
+
+[[_1_4_112_]]
+==== Atoms
+
+[[_1_4_113_]]
+==== Notifications and Constraints
+
+[[_1_4_114_]]
+===== Watches
+
+[[_1_4_115_]]
+===== Validators
+
+[[_1_4_116_]]
+==== Refs
+
+[[_1_4_117_]]
+===== Software Transactional Memory
+
+[[_1_4_118_]]
+===== The Mechanics of Ref Change
+
+[[_1_4_119_]]
+====== Understanding alter
+
+[[_1_4_120_]]
+====== Minimizing transaction conflict with commute
+
+[[_1_4_121_]]
+====== Clobbering ref state with ref-set
+
+[[_1_4_122_]]
+====== Enforcing local consistency by using validators
+
+[[_1_4_123_]]
+===== The Sharp Corners of Software Transactional Memory
+
+[[_1_4_124_]]
+====== Side-effecting functions strictly verboten
+
+[[_1_4_125_]]
+====== Minimize the scope of each transaction
+
+[[_1_4_126_]]
+====== Readers may retry
+
+[[_1_4_127_]]
+====== Write skew
+
+[[_1_4_128_]]
+==== Vars
+
+[[_1_4_129_]]
+===== Defining Vars
+
+[[_1_4_130_]]
+====== Private vars
+
+[[_1_4_131_]]
+====== Docstrings
+
+[[_1_4_132_]]
+====== Constants
+
+[[_1_4_133_]]
+===== Dynamic Scope
+
+[[_1_4_134_]]
+===== Vars Are Not Variables
+
+[[_1_4_135_]]
+===== Forward Declarations
+
+[[_1_4_136_]]
+==== Agents
+
+[[_1_4_137_]]
+===== Dealing with Errors in Agent Actions
+
+[[_1_4_138_]]
+====== Agent error handlers and modes
+
+[[_1_4_139_]]
+===== I/O, Transactions, and Nested Sends
+
+[[_1_4_140_]]
+====== Persisting reference states with an agent-based write-behind log
+
+[[_1_4_141_]]
+====== Using agents to parallelize workloads
+
+[[_1_4_142_]]
+==== Using Java’s Concurrency Primitives
+
+[[_1_4_143_]]
+===== Locking
+
+[[_1_4_144_]]
+==== Final Thoughts
+
+[[_2_4_145_]]
+== II. Building Abstractions
+
+[[_2_5_146_]]
+=== 5. Macros
+
+[[_2_5_147_]]
+==== What Is a Macro?
+
+[[_2_5_148_]]
+===== What Macros Are Not
+
+[[_2_5_149_]]
+===== What Can Macros Do that Functions Cannot?
+
+[[_2_5_150_]]
+===== Macros Versus Ruby eval
+
+[[_2_5_151_]]
+==== Writing Your First Macro
+
+[[_2_5_152_]]
+==== Debugging Macros
+
+[[_2_5_153_]]
+===== Macroexpansion
+
+[[_2_5_154_]]
+==== Syntax
+
+[[_2_5_155_]]
+===== quote Versus syntax-quote
+
+[[_2_5_156_]]
+===== unquote and unquote-splicing
+
+[[_2_5_157_]]
+==== When to Use Macros
+
+[[_2_5_158_]]
+==== Hygiene
+
+[[_2_5_159_]]
+===== Gensyms to the Rescue
+
+[[_2_5_160_]]
+===== Letting the User Pick Names
+
+[[_2_5_161_]]
+===== Double Evaluation
+
+[[_2_5_162_]]
+==== Common Macro Idioms and Patterns
+
+[[_2_5_163_]]
+==== The Implicit Arguments: &env and &form
+
+[[_2_5_164_]]
+===== &env
+
+[[_2_5_165_]]
+===== &form
+
+[[_2_5_166_]]
+====== Producing useful macro error messages
+
+[[_2_5_167_]]
+====== Preserving user-provided type hints
+
+[[_2_5_168_]]
+===== Testing Contextual Macros
+
+[[_2_5_169_]]
+==== In Detail: -> and ->>
+
+[[_2_5_170_]]
+==== Final Thoughts
+
+[[_2_6_171_]]
+=== 6. Datatypes and Protocols
+
+[[_2_6_172_]]
+==== Protocols
+
+[[_2_6_173_]]
+==== Extending to Existing Types
+
+[[_2_6_174_]]
+==== Defining Your Own Types
+
+[[_2_6_175_]]
+===== Records
+
+[[_2_6_176_]]
+====== Constructors and factory functions
+
+[[_2_6_177_]]
+====== When to use maps or records
+
+[[_2_6_178_]]
+===== Types
+
+[[_2_6_179_]]
+==== Implementing Protocols
+
+[[_2_6_180_]]
+===== Inline Implementation
+
+[[_2_6_181_]]
+====== Inline implementations of Java interfaces
+
+[[_2_6_182_]]
+====== Defining anonymous types with reify
+
+[[_2_6_183_]]
+===== Reusing Implementations
+
+[[_2_6_184_]]
+==== Protocol Introspection
+
+[[_2_6_185_]]
+==== Protocol Dispatch Edge Cases
+
+[[_2_6_186_]]
+==== icipating in Clojure’s Collection Abstractions
+
+[[_2_6_187_]]
+==== Final Thoughts
+
+[[_2_7_188_]]
+=== 7. Multimethods
+
+[[_2_7_189_]]
+==== Multimethods Basics
+
+[[_2_7_190_]]
+==== Toward Hierarchies
+
+[[_2_7_191_]]
+==== Hierarchies
+
+[[_2_7_192_]]
+===== Independent Hierarchies
+
+[[_2_7_193_]]
+==== Making It Really Multiple!
+
+[[_2_7_194_]]
+==== A Few More Things
+
+[[_2_7_195_]]
+===== Multiple Inheritance
+
+[[_2_7_196_]]
+===== Introspecting Multimethods
+
+[[_2_7_197_]]
+===== type Versus class; or, the Revenge of the Map
+
+[[_2_7_198_]]
+===== The Range of Dispatch Functions Is Unlimited
+
+[[_2_7_199_]]
+==== Final Thoughts
+
+[[_3_7_200_]]
+== III. Tools, Platform, and Projects
+
+[[_3_8_201_]]
+=== 8. Organizing and Building Clojure
+  Projects
+
+[[_3_8_202_]]
+==== Project Geography
+
+[[_3_8_203_]]
+===== Defining and Using Namespaces
+
+[[_3_8_204_]]
+====== Namespaces and files
+
+[[_3_8_205_]]
+====== A classpath primer
+
+[[_3_8_206_]]
+===== Location, Location, Location
+
+[[_3_8_207_]]
+===== The Functional Organization of Clojure Codebases
+
+[[_3_8_208_]]
+====== Basic project organization principles
+
+[[_3_8_209_]]
+==== Build
+
+[[_3_8_210_]]
+===== Ahead-of-Time Compilation
+
+[[_3_8_211_]]
+===== Dependency Management
+
+[[_3_8_212_]]
+===== The Maven Dependency Management Model
+
+[[_3_8_213_]]
+====== Artifacts and coordinates
+
+[[_3_8_214_]]
+====== Repositories
+
+[[_3_8_215_]]
+====== Dependencies
+
+[[_3_8_216_]]
+===== Build Tools and Configuration Patterns
+
+[[_3_8_217_]]
+====== Maven
+
+[[_3_8_218_]]
+====== Leiningen
+
+[[_3_8_219_]]
+====== AOT compilation configuration
+
+[[_3_8_220_]]
+====== Building mixed-source projects
+
+[[_3_8_221_]]
+==== Final Thoughts
+
+[[_3_9_222_]]
+=== 9. Java and JVM Interoperability
+
+[[_3_9_223_]]
+==== The JVM Is Clojure’s Foundation
+
+[[_3_9_224_]]
+==== Using Java Classes, Methods, and Fields
+
+[[_3_9_225_]]
+==== Handy Interop Utilities
+
+[[_3_9_226_]]
+==== Exceptions and Error Handling
+
+[[_3_9_227_]]
+===== Escaping Checked Exceptions
+
+[[_3_9_228_]]
+===== with-open, finally’s Lament
+
+[[_3_9_229_]]
+==== Type Hinting for Performance
+
+[[_3_9_230_]]
+==== Arrays
+
+[[_3_9_231_]]
+==== Defining Classes and Implementing Interfaces
+
+[[_3_9_232_]]
+===== Instances of Anonymous Classes: proxy
+
+[[_3_9_233_]]
+===== Defining Named Classes
+
+[[_3_9_234_]]
+====== gen-class
+
+[[_3_9_235_]]
+===== Annotations
+
+[[_3_9_236_]]
+====== Producing annotated JUnit tests
+
+[[_3_9_237_]]
+====== Implementing JAX-RS web service endpoints
+
+[[_3_9_238_]]
+==== Using Clojure from Java
+
+[[_3_9_239_]]
+===== Using deftype and defrecord Classes
+
+[[_3_9_240_]]
+===== Implementing Protocol Interfaces
+
+[[_3_9_241_]]
+==== Collaborating Partners
+
+[[_3_10_242_]]
+=== 10. REPL-Oriented Programming
+
+[[_3_10_243_]]
+==== Interactive Development
+
+[[_3_10_244_]]
+===== The Persistent, Evolving Environment
+
+[[_3_10_245_]]
+==== Tooling
+
+[[_3_10_246_]]
+===== The Bare REPL
+
+[[_3_10_247_]]
+====== Introspecting namespaces
+
+[[_3_10_248_]]
+===== Eclipse
+
+[[_3_10_249_]]
+===== Emacs
+
+[[_3_10_250_]]
+====== clojure-mode and paredit
+
+[[_3_10_251_]]
+====== inferior-lisp
+
+[[_3_10_252_]]
+====== SLIME
+
+[[_3_10_253_]]
+==== Debugging, Monitoring, and Patching Production in the REPL
+
+[[_3_10_254_]]
+===== Special Considerations for “Deployed” REPLs
+
+[[_3_10_255_]]
+==== Limitations to Redefining Constructs
+
+[[_3_10_256_]]
+==== In Summary
+
+[[_4_10_257_]]
+== IV. Practicums
+
+[[_4_11_258_]]
+=== 11. Numerics and Mathematics
+
+[[_4_11_259_]]
+==== Clojure Numerics
+
+[[_4_11_260_]]
+===== Clojure Prefers 64-bit (or Larger) Representations
+
+[[_4_11_261_]]
+===== Clojure Has a Mixed Numerics Model
+
+[[_4_11_262_]]
+===== Rationals
+
+[[_4_11_263_]]
+===== The Rules of Numeric Contagion
+
+[[_4_11_264_]]
+==== Clojure Mathematics
+
+[[_4_11_265_]]
+===== Bounded Versus Arbitrary Precision
+
+[[_4_11_266_]]
+===== Unchecked Ops
+
+[[_4_11_267_]]
+===== Scale and Rounding Modes for Arbitrary-Precision Decimals Ops
+
+[[_4_11_268_]]
+==== Equality and Equivalence
+
+[[_4_11_269_]]
+===== Object Identity (identical?)
+
+[[_4_11_270_]]
+===== Reference Equality (=)
+
+[[_4_11_271_]]
+===== Numeric Equivalence (==)
+
+[[_4_11_272_]]
+====== Equivalence can preserve your sanity
+
+[[_4_11_273_]]
+==== Optimizing Numeric Performance
+
+[[_4_11_274_]]
+===== Declare Functions to Take and Return Primitives
+
+[[_4_11_275_]]
+====== Type errors and warnings
+
+[[_4_11_276_]]
+===== Use Primitive Arrays Judiciously
+
+[[_4_11_277_]]
+====== The mechanics of primitive arrays
+
+[[_4_11_278_]]
+====== Automating type hinting of multidimensional array operations
+
+[[_4_11_279_]]
+==== Visualizing the Mandelbrot Set in Clojure
+
+[[_4_12_280_]]
+=== 12. Design Patterns
+
+[[_4_12_281_]]
+==== Dependency Injection
+
+[[_4_12_282_]]
+==== Strategy Pattern
+
+[[_4_12_283_]]
+==== Chain of Responsibility
+
+[[_4_12_284_]]
+==== Aspect-Oriented Programming
+
+[[_4_12_285_]]
+==== Final Thoughts
+
+[[_4_13_286_]]
+=== 13. Testing
+
+[[_4_13_287_]]
+==== Immutable Values and Pure Functions
+
+[[_4_13_288_]]
+===== Mocking
+
+[[_4_13_289_]]
+==== clojure.test
+
+[[_4_13_290_]]
+===== Defining Tests
+
+[[_4_13_291_]]
+===== Test “Suites”
+
+[[_4_13_292_]]
+===== Fixtures
+
+[[_4_13_293_]]
+==== Growing an HTML DSL
+
+[[_4_13_294_]]
+==== Relying upon Assertions
+
+[[_4_13_295_]]
+===== Preconditions and Postconditions
+
+[[_4_14_296_]]
+=== 14. Using Relational Databases
+
+[[_4_14_297_]]
+==== clojure.java.jdbc
+
+[[_4_14_298_]]
+===== with-query-results Explained
+
+[[_4_14_299_]]
+===== Transactions
+
+[[_4_14_300_]]
+===== Connection Pooling
+
+[[_4_14_301_]]
+==== Korma
+
+[[_4_14_302_]]
+===== Prelude
+
+[[_4_14_303_]]
+===== Queries
+
+[[_4_14_304_]]
+===== Why Bother with a DSL?
+
+[[_4_14_305_]]
+==== Hibernate
+
+[[_4_14_306_]]
+===== Setup
+
+[[_4_14_307_]]
+===== Persisting Data
+
+[[_4_14_308_]]
+===== Running Queries
+
+[[_4_14_309_]]
+===== Removing Boilerplate
+
+[[_4_14_310_]]
+==== Final Thoughts
+
+[[_4_15_311_]]
+=== 15. Using Nonrelational Databases
+
+[[_4_15_312_]]
+==== Getting Set Up with CouchDB and Clutch
+
+[[_4_15_313_]]
+==== Basic CRUD Operations
+
+[[_4_15_314_]]
+==== Views
+
+[[_4_15_315_]]
+===== A Simple (JavaScript) View
+
+[[_4_15_316_]]
+===== Views in Clojure
+
+[[_4_15_317_]]
+==== _changes: Abusing CouchDB as a Message Queue
+
+[[_4_15_318_]]
+==== À la Carte Message Queues
+
+[[_4_15_319_]]
+==== Final Thoughts
+
+[[_4_16_320_]]
+=== 16. Clojure and the Web
+
+[[_4_16_321_]]
+==== The “Clojure Stack”
+
+[[_4_16_322_]]
+==== The Foundation: Ring
+
+[[_4_16_323_]]
+===== Requests and Responses
+
+[[_4_16_324_]]
+===== Adapters
+
+[[_4_16_325_]]
+===== Handlers
+
+[[_4_16_326_]]
+===== Middleware
+
+[[_4_16_327_]]
+==== Routing Requests with Compojure
+
+[[_4_16_328_]]
+==== Templating
+
+[[_4_16_329_]]
+===== Enlive: Selector-Based HTML Transformation
+
+[[_4_16_330_]]
+====== Testing the waters
+
+[[_4_16_331_]]
+====== Selectors
+
+[[_4_16_332_]]
+====== Iterating and branching
+
+[[_4_16_333_]]
+====== Putting everything together
+
+[[_4_16_334_]]
+==== Final Thoughts
+
+[[_4_17_335_]]
+=== 17. Deploying Clojure Web Applications
+
+[[_4_17_336_]]
+==== Java and Clojure Web Architecture
+
+[[_4_17_337_]]
+===== Web Application Packaging
+
+[[_4_17_338_]]
+====== Building .war files with Maven
+
+[[_4_17_339_]]
+====== Building .war files with Leiningen
+
+[[_4_17_340_]]
+==== Running Web Apps Locally
+
+[[_4_17_341_]]
+==== Web Application Deployment
+
+[[_4_17_342_]]
+===== Deploying Clojure Apps to Amazon’s Elastic Beanstalk
+
+[[_4_17_343_]]
+==== Going Beyond Simple Web Application Deployment
+
+[[_5_17_344_]]
+== V. Miscellanea
+
+[[_5_18_345_]]
+=== 18. Choosing Clojure Type Definition Forms Wisely
+
+[[_5_19_346_]]
+=== 19. Introducing Clojure into Your
+  Workplace
+
+[[_5_19_347_]]
+==== Just the Facts…
+
+[[_5_19_348_]]
+==== Emphasize Productivity
+
+[[_5_19_349_]]
+==== Emphasize Community
+
+[[_5_19_350_]]
+==== Be Prudent
+
+[[_5_20_351_]]
+=== 20. What’s Next?
+
+[[_5_20_352_]]
+==== (dissoc Clojure 'JVM)
+
+[[_5_20_353_]]
+===== ClojureCLR
+
+[[_5_20_354_]]
+===== ClojureScript
+
+[[_5_20_355_]]
+==== 4Clojure
+
+[[_5_20_356_]]
+==== Overtone
+
+[[_5_20_357_]]
+==== core.logic
+
+[[_5_20_358_]]
+==== Pallet
+
+[[_5_20_359_]]
+==== Avout
+
+[[_5_20_360_]]
+==== Clojure on Heroku

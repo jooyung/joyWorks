@@ -1,0 +1,1085 @@
+[[_0_]]
+= Nginx HTTP Server
+Joy <arbago@gmail.com>
+v1.0, 2015-05-31
+:icons: font
+:sectanchors:
+:imagesdir: images
+:homepage: http://arbago.com
+:toc: macro
+
+toc::[]
+
+[preface]
+== 책
+
+Nginx HTTP Server by Clément Nedelcu, 2010
+
+[preface]
+== Preface
+
+Nginx::
+* engine X
+* developer Igor Sysoev
+* started in 2002
+* for a Russian website Rambler
+
+Features::
+* speed: asynchronous sockets, one process per core suffices
+* ease of use
+* modularity
+
+[[_1_0_0_]]
+== 1. Preparing your Work Environment
+
+[[_1_1_1_]]
+=== Setting up a terminal emulator
+
+[[_1_1_1_]]
+==== Finding and downloading PuTTY
+
+[[_1_1_1_]]
+==== Creating a session
+
+[[_1_1_1_]]
+==== Working with PuTTY and the shell
+
+[[_1_2_2_]]
+=== Basic shell commands
+
+[[_1_2_2_]]
+==== File and directory management
+
+[[_1_2_2_]]
+==== User and group management
+
+[[_1_2_2_]]
+===== Superuser account
+
+[[_1_2_2_]]
+===== User accounts
+
+[[_1_2_2_]]
+===== Group management
+
+[[_1_2_2_]]
+==== Programs and processes
+
+[[_1_2_2_]]
+===== Starting an application
+
+[[_1_2_2_]]
+===== System services
+
+[[_1_2_2_]]
+===== Process management
+
+[[_1_3_3_]]
+=== Discovering the Linux filesystem
+
+[[_1_3_3_]]
+==== Directory structure
+
+[[_1_3_3_]]
+==== Special files and devices
+
+[[_1_3_3_]]
+===== Device types
+
+[[_1_3_3_]]
+===== Pseudo devices
+
+[[_1_3_3_]]
+===== Mounting a storage device
+
+[[_1_3_3_]]
+==== Files and inodes
+
+[[_1_3_3_]]
+===== EXT3 filesystem specifications
+
+[[_1_3_3_]]
+===== Filenames
+
+[[_1_3_3_]]
+===== Inodes
+
+[[_1_3_3_]]
+===== Atime, ctime, mtime
+
+[[_1_3_3_]]
+===== Symbolic and hard links
+
+[[_1_3_3_]]
+==== File manipulation
+
+[[_1_3_3_]]
+===== Reading a file
+
+[[_1_3_3_]]
+===== Editing a file
+
+[[_1_3_3_]]
+===== Compression and archiving
+
+[[_1_4_4_]]
+=== System administration tools
+
+[[_1_4_4_]]
+==== Running a command as Superuser
+
+[[_1_4_4_]]
+===== Su command
+
+[[_1_4_4_]]
+===== Sudo command
+
+[[_1_4_4_]]
+==== System verification and maintenance
+
+[[_1_4_4_]]
+===== Disk Free
+
+[[_1_4_4_]]
+===== Disk Usage
+
+[[_1_4_4_]]
+===== Free memory
+
+[[_1_4_4_]]
+==== Software packages
+
+[[_1_4_4_]]
+===== Package managers
+
+[[_1_4_4_]]
+===== Downloading and installing packages manually
+
+[[_1_4_4_]]
+===== Building from source
+
+[[_1_4_4_]]
+==== Files and permissions
+
+[[_1_4_4_]]
+===== Understanding file permissions
+
+[[_1_4_4_]]
+===== Directory permissions
+
+[[_1_4_4_]]
+===== Octal representation
+
+[[_1_4_4_]]
+===== Changing permissions
+
+[[_1_4_4_]]
+===== Changing ownership and group
+
+[[_1_5_5_]]
+=== Summary
+
+[[_2_0_5_]]
+== 2. Downloading and Installing Nginx
+
+[[_2_1_6_]]
+=== Setting up the prerequisites
+
+[[_2_1_6_]]
+==== GCC — GNU Compiler Collection
+
+[[_2_1_6_]]
+==== PCRE library
+
+[[_2_1_6_]]
+==== zlib library
+
+[[_2_1_6_]]
+==== OpenSSL
+
+[[_2_2_7_]]
+=== Downloading Nginx
+
+[[_2_2_7_]]
+==== Websites and resources
+
+[[_2_2_7_]]
+==== Version branches
+
+[[_2_2_7_]]
+==== Features
+
+[[_2_2_7_]]
+==== Downloading and extracting
+
+[[_2_3_8_]]
+=== Configure options
+
+[[_2_3_8_]]
+==== The easy way
+
+[[_2_3_8_]]
+==== Path options
+
+[[_2_3_8_]]
+==== Prerequisites options
+
+[[_2_3_8_]]
+==== Module options
+
+[[_2_3_8_]]
+===== Modules enabled by default
+
+[[_2_3_8_]]
+===== Modules disabled by default
+
+[[_2_3_8_]]
+==== Miscellaneous options
+
+[[_2_3_8_]]
+==== Configuration examples
+
+[[_2_3_8_]]
+===== About the prefix switch
+
+[[_2_3_8_]]
+===== Regular HTTP and HTTPS servers
+
+[[_2_3_8_]]
+===== All modules enabled
+
+[[_2_3_8_]]
+===== Mail server proxy
+
+[[_2_3_8_]]
+==== Build configuration issues
+
+[[_2_3_8_]]
+===== Make sure you installed the prerequisites
+
+[[_2_3_8_]]
+===== Directories exist and are writable
+
+[[_2_3_8_]]
+==== Compiling and installing
+
+[[_2_4_9_]]
+=== Controlling the Nginx service
+
+[[_2_4_9_]]
+==== Daemons and services
+
+[[_2_4_9_]]
+==== User and group
+
+[[_2_4_9_]]
+==== Nginx command-line switches
+
+[[_2_4_9_]]
+==== Starting and stopping the daemon
+
+[[_2_4_9_]]
+==== Testing the configuration
+
+[[_2_4_9_]]
+==== Other switches
+
+[[_2_5_10_]]
+=== Adding Nginx as a system service
+
+[[_2_5_10_]]
+==== System V scripts
+
+[[_2_5_10_]]
+==== What is an init script?
+
+[[_2_5_10_]]
+==== Creating an init script for Nginx
+
+[[_2_5_10_]]
+==== Installing the script
+
+[[_2_5_10_]]
+===== Debian-based distributions
+
+[[_2_5_10_]]
+===== Red Hat-based distributions
+
+[[_2_6_11_]]
+=== Summary
+
+[[_3_0_11_]]
+== 3. Basic Nginx Configuration
+
+[[_3_1_12_]]
+=== Configuration file syntax
+
+[[_3_1_12_]]
+==== Configuration Directives
+
+[[_3_1_12_]]
+==== Organization and inclusions
+
+[[_3_1_12_]]
+==== Directive blocks
+
+[[_3_1_12_]]
+==== Advanced language rules
+
+[[_3_1_12_]]
+===== Directives accept specific syntaxes
+
+[[_3_1_12_]]
+===== Diminutives in directive values
+
+[[_3_1_12_]]
+===== Variables
+
+[[_3_1_12_]]
+===== String values
+
+[[_3_2_13_]]
+=== Base module directives
+
+[[_3_2_13_]]
+==== What are base modules?
+
+[[_3_2_13_]]
+==== Nginx process architecture
+
+[[_3_2_13_]]
+==== Core module directives
+
+[[_3_2_13_]]
+==== Events module
+
+[[_3_2_13_]]
+==== Configuration module
+
+[[_3_3_14_]]
+=== A configuration for your profile
+
+[[_3_3_14_]]
+==== Understanding the default configuration
+
+[[_3_3_14_]]
+==== Necessary adjustments
+
+[[_3_3_14_]]
+==== Adapting to your hardware
+
+[[_3_4_15_]]
+=== Testing your server
+
+[[_3_4_15_]]
+==== Creating a test server
+
+[[_3_4_15_]]
+==== Performance tests
+
+[[_3_4_15_]]
+===== Httperf
+
+[[_3_4_15_]]
+===== Autobench
+
+[[_3_4_15_]]
+===== OpenWebLoad
+
+[[_3_4_15_]]
+==== Upgrading Nginx gracefully
+
+[[_3_5_16_]]
+=== Summary
+
+[[_4_0_16_]]
+== 4. HTTP Configuration
+
+[[_4_1_17_]]
+=== HTTP Core module
+
+[[_4_1_17_]]
+==== Structure blocks
+
+[[_4_2_18_]]
+=== Module directives
+
+[[_4_2_18_]]
+==== Socket and host configuration
+
+[[_4_2_18_]]
+==== Paths and documents
+
+[[_4_2_18_]]
+==== Client requests
+
+[[_4_2_18_]]
+==== MIME Types
+
+[[_4_2_18_]]
+==== Limits and restrictions
+
+[[_4_2_18_]]
+==== File processing and caching
+
+[[_4_2_18_]]
+==== Other directives
+
+[[_4_3_19_]]
+=== Module variables
+
+[[_4_3_19_]]
+==== Request headers
+
+[[_4_3_19_]]
+==== Response headers
+
+[[_4_3_19_]]
+==== Nginx generated
+
+[[_4_4_20_]]
+=== The Location block
+
+[[_4_4_20_]]
+==== Location modifier
+
+[[_4_4_20_]]
+==== Search order and priority
+
+[[_4_4_20_]]
+===== Case 1:
+
+[[_4_4_20_]]
+===== Case 2:
+
+[[_4_4_20_]]
+===== Case 3:
+
+[[_4_5_21_]]
+=== Summary
+
+[[_5_0_21_]]
+== 5. Module Configuration
+
+[[_5_1_22_]]
+=== Rewrite module
+
+[[_5_1_22_]]
+==== Reminder on regular expressions
+
+[[_5_1_22_]]
+===== Purpose
+
+[[_5_1_22_]]
+===== PCRE syntax
+
+[[_5_1_22_]]
+===== Quantifiers
+
+[[_5_1_22_]]
+===== Captures
+
+[[_5_1_22_]]
+==== Internal requests
+
+[[_5_1_22_]]
+===== error_page
+
+[[_5_1_22_]]
+===== Rewrite
+
+[[_5_1_22_]]
+===== Infinite loops
+
+[[_5_1_22_]]
+===== Server Side Includes (SSI)
+
+[[_5_1_22_]]
+==== Conditional structure
+
+[[_5_1_22_]]
+==== Directives
+
+[[_5_1_22_]]
+==== Common rewrite rules
+
+[[_5_1_22_]]
+===== Performing a search
+
+[[_5_1_22_]]
+===== User profile page
+
+[[_5_1_22_]]
+===== Multiple parameters
+
+[[_5_1_22_]]
+===== Wikipedia-like
+
+[[_5_1_22_]]
+===== News website article
+
+[[_5_1_22_]]
+===== Discussion board
+
+[[_5_2_23_]]
+=== SSI module
+
+[[_5_2_23_]]
+==== Module directives and variables
+
+[[_5_2_23_]]
+==== SSI Commands
+
+[[_5_2_23_]]
+===== File includes
+
+[[_5_2_23_]]
+===== Working with variables
+
+[[_5_2_23_]]
+===== Conditional structure
+
+[[_5_2_23_]]
+===== Configuration
+
+[[_5_3_24_]]
+=== Additional modules
+
+[[_5_3_24_]]
+==== Website access and logging
+
+[[_5_3_24_]]
+===== Autoindex
+
+[[_5_3_24_]]
+===== Random index
+
+[[_5_3_24_]]
+===== Log
+
+[[_5_3_24_]]
+==== Limits and restrictions
+
+[[_5_3_24_]]
+===== Auth_basic module
+
+[[_5_3_24_]]
+===== Access
+
+[[_5_3_24_]]
+===== Limit zone
+
+[[_5_3_24_]]
+===== Limit request
+
+[[_5_3_24_]]
+==== Content and encoding
+
+[[_5_3_24_]]
+===== Empty GIF
+
+[[_5_3_24_]]
+===== FLV
+
+[[_5_3_24_]]
+===== HTTP headers
+
+[[_5_3_24_]]
+===== Addition
+
+[[_5_3_24_]]
+===== Substitution
+
+[[_5_3_24_]]
+===== Gzip filter
+
+[[_5_3_24_]]
+===== Gzip static
+
+[[_5_3_24_]]
+===== Charset filter
+
+[[_5_3_24_]]
+===== Memcached
+
+[[_5_3_24_]]
+===== Image filter
+
+[[_5_3_24_]]
+===== XSLT
+
+[[_5_3_24_]]
+==== About your visitors
+
+[[_5_3_24_]]
+===== Browser
+
+[[_5_3_24_]]
+===== Map
+
+[[_5_3_24_]]
+===== Geo
+
+[[_5_3_24_]]
+===== GeoIP
+
+[[_5_3_24_]]
+===== UserID filter
+
+[[_5_3_24_]]
+===== Referer
+
+[[_5_3_24_]]
+===== Real IP
+
+[[_5_3_24_]]
+==== SSL and security
+
+[[_5_3_24_]]
+===== SSL
+
+[[_5_3_24_]]
+===== Setting up an SSL certificate
+
+[[_5_3_24_]]
+===== Secure link
+
+[[_5_3_24_]]
+==== Other miscellaneous modules
+
+[[_5_3_24_]]
+===== Stub status
+
+[[_5_3_24_]]
+===== Google-perftools
+
+[[_5_3_24_]]
+===== WebDAV
+
+[[_5_3_24_]]
+==== Third-party modules
+
+[[_5_4_25_]]
+=== Summary
+
+[[_6_0_25_]]
+== 6. PHP and Python with Nginx
+
+[[_6_1_26_]]
+=== Introduction to FastCGI
+
+[[_6_1_26_]]
+==== Understanding the mechanism
+
+[[_6_1_26_]]
+==== Common Gateway Interface (CGI)
+
+CGI is the protocol that describes the way information is exchanged between the web server (Nginx) and the gateway application (PHP, Python, and so on).
+
+[[_6_1_26_]]
+==== Fast Common Gateway Interface (FastCGI)
+
+[W] proprietary (prə-prī′ĭ-tĕr′ē) 상품이 등록[전매] 상표가 붙은; 소유주[자]의::
+. Of or relating to a proprietor or to ownership: had proprietary rights.
+. Privately owned, as a business: a proprietary hospital.
+. Owned by a private individual or corporation under a trademark or patent: a proprietary drug.
+* [From Middle English proprietarie, owner of property, from Old French proprietaire and from Medieval Latin proprietārius, both from Late Latin, of a property owner, from Latin proprietās, ownership; see property.]
+
+socket-based protocol
+
+[[_6_1_26_]]
+==== Main directives
+
+[[_6_1_26_]]
+==== FastCGI caching
+
+[[_6_1_26_]]
+==== Upstream blocks
+
+[[_6_1_26_]]
+===== Module syntax
+
+[[_6_1_26_]]
+===== Server directive
+
+[[_6_2_27_]]
+=== PHP with Nginx
+
+[[_6_2_27_]]
+==== Architecture
+
+FastCGI is a communication protocol running through sockets, which implies that there is a client and a server +
+The client is obviously Nginx; as for the server, well, the answer is actually more complicated than just PHP
+
+PHP-FPM::
+PHP FastCGI Process Manager
+
+[[_6_2_27_]]
+==== PHP-FPM
+
+PHP-FPM is not actually a program per se
+
+.features
+* automatically daemnizes PHP
+* CLI script for managing PHP processes
+* imporoved logging, IP address restrictions, etc.
+
+[[_6_2_27_]]
+==== Setting up PHP and PHP-FPM
+
+[[_6_2_27_]]
+===== Downloading and extracting
+
+[[_6_2_27_]]
+===== Patching
+
+[[_6_2_27_]]
+===== Requirements
+
+[[_6_2_27_]]
+===== Building PHP
+
+[[_6_2_27_]]
+===== Post-install configuration
+
+[[_6_2_27_]]
+===== Running and controlling
+
+[[_6_2_27_]]
+==== Nginx configuration
+
+[[_6_3_28_]]
+=== Python and Nginx
+
+[[_6_3_28_]]
+==== Django
+
+[[_6_3_28_]]
+==== Setting up Python and Django
+
+[[_6_3_28_]]
+===== Python
+
+[[_6_3_28_]]
+===== Django
+
+[[_6_3_28_]]
+===== Starting the FastCGI process manager
+
+[[_6_3_28_]]
+==== Nginx configuration
+
+[[_6_4_29_]]
+=== Summary
+
+[[_7_0_29_]]
+== 7. Apache and Nginx together
+
+[[_7_1_30_]]
+=== Nginx as reverse proxy
+
+[[_7_1_30_]]
+==== Understanding the issue
+
+[[_7_1_30_]]
+==== The reverse proxy mechanism
+
+[[_7_1_30_]]
+==== Advantages and disadvantages
+
+[[_7_2_31_]]
+=== Nginx Proxy module
+
+[[_7_2_31_]]
+==== Main directives
+
+[[_7_2_31_]]
+==== Caching, buffering, and temporary files
+
+[[_7_2_31_]]
+==== Limits, timeouts, and errors
+
+[[_7_2_31_]]
+==== Other directives
+
+[[_7_2_31_]]
+==== Variables
+
+[[_7_3_32_]]
+=== Configuring Apache and Nginx
+
+[[_7_3_32_]]
+==== Reconfiguring Apache
+
+[[_7_3_32_]]
+===== Configuration overview
+
+[[_7_3_32_]]
+===== Resetting the port number
+
+[[_7_3_32_]]
+===== Accepting local requests only
+
+[[_7_3_32_]]
+==== Configuring Nginx
+
+[[_7_3_32_]]
+===== Enabling proxy options
+
+[[_7_3_32_]]
+===== Separating content
+
+[[_7_3_32_]]
+==== Advanced configuration
+
+[[_7_4_33_]]
+=== Additional steps
+
+[[_7_4_33_]]
+==== Forwarding the correct IP address
+
+[[_7_4_33_]]
+==== SSL issues and solutions
+
+[[_7_4_33_]]
+==== Server control panel issues
+
+[[_7_5_34_]]
+=== Summary
+
+[[_8_0_34_]]
+== 8. From Apache to Nginx
+
+[[_8_1_35_]]
+=== Nginx versus Apache
+
+[[_8_1_35_]]
+==== Features
+
+[[_8_1_35_]]
+===== Core and functioning
+
+[[_8_1_35_]]
+===== General functionality
+
+[[_8_1_35_]]
+==== Flexibility and community
+
+[[_8_1_35_]]
+==== Performance
+
+[[_8_1_35_]]
+==== Usage
+
+[[_8_1_35_]]
+==== Conclusion
+
+[[_8_2_36_]]
+=== Porting your Apache configuration
+
+[[_8_2_36_]]
+==== Directives
+
+[[_8_2_36_]]
+==== Modules
+
+[[_8_2_36_]]
+==== Virtual hosts and configuration sections
+
+[[_8_2_36_]]
+===== Configuration sections
+
+[[_8_2_36_]]
+===== Creating a virtual host
+
+[[_8_2_36_]]
+==== htaccess files
+
+[[_8_2_36_]]
+===== Reminder on Apache .htaccess files
+
+[[_8_2_36_]]
+===== Nginx equivalence
+
+[[_8_3_37_]]
+=== Rewrite rules
+
+[[_8_3_37_]]
+==== General remarks
+
+[[_8_3_37_]]
+===== On the location
+
+[[_8_3_37_]]
+===== On the syntax
+
+[[_8_3_37_]]
+===== RewriteRule
+
+[[_8_3_37_]]
+==== WordPress
+
+[[_8_3_37_]]
+==== MediaWiki
+
+[[_8_3_37_]]
+==== vBulletin
+
+[[_8_4_38_]]
+=== Summary
+
+[[_9_0_38_]]
+== A. Directive Index
+
+[[_10_0_38_]]
+== B. Module Reference
+
+[[_10_1_39_]]
+=== Access
+
+[[_10_2_40_]]
+=== Addition*
+
+[[_10_3_41_]]
+=== Auth_basic module
+
+[[_10_4_42_]]
+=== Autoindex
+
+[[_10_5_43_]]
+=== Browser
+
+[[_10_6_44_]]
+=== Charset
+
+[[_10_7_45_]]
+=== Core
+
+[[_10_8_46_]]
+=== DAV*
+
+[[_10_9_47_]]
+=== Empty GIF
+
+[[_10_10_48_]]
+=== Events
+
+[[_10_11_49_]]
+=== FastCGI
+
+[[_10_12_50_]]
+=== FLV*
+
+[[_10_13_51_]]
+=== Geo
+
+[[_10_14_52_]]
+=== Geo IP*
+
+[[_10_15_53_]]
+=== Google-perftools*
+
+[[_10_16_54_]]
+=== Gzip
+
+[[_10_17_55_]]
+=== Gzip Static*
+
+[[_10_18_56_]]
+=== Headers
+
+[[_10_19_57_]]
+=== HTTP Core
+
+[[_10_20_58_]]
+=== Image Filter*
+
+[[_10_21_59_]]
+=== Limit Requests
+
+[[_10_22_60_]]
+=== Limit Zone
+
+[[_10_23_61_]]
+=== Log
+
+[[_10_24_62_]]
+=== Map
+
+[[_10_25_63_]]
+=== Memcached
+
+[[_10_26_64_]]
+=== Proxy
+
+[[_10_27_65_]]
+=== Random index*
+
+[[_10_28_66_]]
+=== Real IP*
+
+[[_10_29_67_]]
+=== Referer
+
+[[_10_30_68_]]
+=== Rewrite
+
+[[_10_31_69_]]
+=== Secure Link*
+
+[[_10_32_70_]]
+=== SSI
+
+[[_10_33_71_]]
+=== SSL*
+
+[[_10_34_72_]]
+=== Stub status*
+
+[[_10_35_73_]]
+=== Substitution*
+
+[[_10_36_74_]]
+=== Upstream
+
+[[_10_37_75_]]
+=== User ID
+
+[[_10_38_76_]]
+=== XSLT*
+
+[[_11_0_76_]]
+== C. Troubleshooting
+
+[[_11_1_77_]]
+=== General tips on troubleshooting
+
+[[_11_1_77_]]
+==== Checking access permissions
+
+[[_11_1_77_]]
+==== Testing your configuration
+
+[[_11_1_77_]]
+==== Have you reloaded the service?
+
+[[_11_1_77_]]
+==== Checking logs
+
+[[_11_1_77_]]
+==== Install issues
+
+[[_11_1_77_]]
+==== 403 Forbidden custom error page
+
+[[_11_1_77_]]
+==== Location block priorities
+
+[[_11_1_77_]]
+==== If block issues
+
+[[_11_1_77_]]
+===== Inefficient statements
+
+[[_11_1_77_]]
+===== Unexpected behavior

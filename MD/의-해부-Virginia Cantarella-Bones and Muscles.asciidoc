@@ -1,0 +1,540 @@
+[[_0_]]
+= Bones and Muscles: An Illustrated Anatomy
+Joy <arbago@gmail.com>
+v1.0, 2015-5-19
+:icons: font
+:sectanchors:
+:imagesdir: images
+:homepage: http://arbago.com
+:toc: macro
+
+toc::[]
+
+[preface]
+== 책
+
+Bones and Muscles: An Illustrated Anatomy, Virginia Cantarella, 1999, Published by Wolf Fly Press, South Westerlo, New York
+
+[preface]
+== 머릿말
+
+[[_1_0_0_]]
+== 1. Head and neck
+
+[[_1_1_1_]]
+=== 1. The skull from a 3⁄4 frontal view
+
+[[_1_2_2_]]
+=== 2. The skull seen from the side
+
+[[_1_3_3_]]
+=== 3. The frontalis and the occipital muscles
+
+[[_1_4_4_]]
+=== 4. The corrugator supercilii and the procerus muscles
+
+[[_1_5_5_]]
+=== 5. The palpebral levator superioris muscle
+
+[[_1_6_6_]]
+=== 6. The orbicularis oculi muscle
+
+[[_1_7_7_]]
+=== 7. The auricularis muscles
+
+[[_1_8_8_]]
+=== 8. The nasalis muscle
+The depressor septi muscle
+
+[[_1_9_9_]]
+=== 9. The orbicularis oris muscle
+The buccinator muscle +
+The levator anguli oris muscle
+
+[[_1_10_10_]]
+=== 10. The zygomaticus major muscle
+The zygomaticus minor muscle +
+The levator labii superioris muscle +
+The levator anguli oris muscle +
+The levator labii superioris alaeque nasi muscle +
+The depressor anguli oris muscle +
+The deppressor labii inferioris muscle +
+The mentalis muscle +
+The risorious muscle
+
+[[_1_11_11_]]
+=== 11. The temporalis muscle
+
+[[_1_12_12_]]
+=== 12. The masseter muscle
+
+[[_1_13_13_]]
+=== 13. The pterygoid muscles
+
+[[_1_14_14_]]
+=== 14. The bones of the neck
+
+[[_1_15_15_]]
+=== 15. The digastric muscle
+
+[[_1_16_16_]]
+=== 16. The styloid muscle
+
+[[_1_17_17_]]
+=== 17. The mylohyoid muscle
+
+[[_1_18_18_]]
+=== 18. The goniohyoid muscle
+
+[[_1_19_19_]]
+=== 19. The thyrohyoid muscle
+The sternothyroid muscle
+
+[[_1_20_20_]]
+=== 20. The sternohyoid and omohyoid muscle
+
+[[_1_21_21_]]
+=== 21. The bones of the neck, interior-frontal view
+
+[[_1_22_22_]]
+=== 22. The skull, neck and upper back, posterior view
+
+[[_1_23_23_]]
+=== 23. The sternocleidomastoid muscle
+
+[[_1_24_24_]]
+=== 24. The rectus capitis lateralis muscles
+The rectus capitis anterior muscles
+
+[[_1_25_25_]]
+=== 25. The rectus capitis posterior minor muscle
+The rectus capitis posterior major muscle +
+The obliquus capitis superior muscle +
+The obliquus capitis inferior muscle
+
+[[_1_26_26_]]
+=== 26. The scalenus muscles
+
+[[_1_27_27_]]
+=== 27. The longus colli muscle
+The longus capitis muscle
+
+[[_1_28_28_]]
+=== 28. The platysma muscle
+
+[[_2_0_28_]]
+== 2. The Shoulder
+
+[[_2_1_29_]]
+=== 29. The bones of the shoulder, anterior view
+
+[[_2_2_30_]]
+=== 30. The bones of the shoulder posterior view
+
+[[_2_3_31_]]
+=== 31. The levator scapulae
+The rhomboideus major muscle
+
+[[_2_4_32_]]
+=== 32. The teres minor muscle
+The teres major muscle
+
+[[_2_5_33_]]
+=== 33. The supraspinatus muscle
+The infraspinatus muscle
+
+[[_2_6_34_]]
+=== 34. The subscapularis muscle
+
+[[_2_7_35_]]
+=== 35. The deltoid muscle
+
+[[_2_8_36_]]
+=== 36. The trapezius muscle
+
+[[_3_0_36_]]
+== 3. Arm and hand
+
+[[_3_1_37_]]
+=== 37. The bones of the right arm and hand with shoulder and two ribs, anterior view;
+The same bones without the ribs, posterior view
+
+[[_3_2_38_]]
+=== 38. The humerus, the clavicle, the rib cagethe sternum, and the scapula: anterior view
+
+[[_3_3_39_]]
+=== 39. The pectoralis major muscle
+
+[[_3_4_40_]]
+=== 40. The latissimus dorsi muscle
+
+[[_3_5_41_]]
+=== 41. The corocobrachialis muscle
+The brachialis muscle
+
+[[_3_6_42_]]
+=== 42. The biceps brachii muscle
+
+[[_3_7_43_]]
+=== 43. The triceps brachii muscle
+
+[[_3_8_44_]]
+=== 44. The elbow and forearm from the palmer view
+The elbow and forearm from the dorsal view
+
+[[_3_9_45_]]
+=== 45. The pronator teres muscle
+The pronator quadratus muscle +
+The supinator muscle
+
+[[_3_10_46_]]
+=== 46. Anconeus muscle
+
+[[_3_11_47_]]
+=== 47. The flexor pollicis longus muscle
+
+[[_3_12_48_]]
+=== 48. The flexor digitorum profundus muscle
+
+[[_3_13_49_]]
+=== 49. The flexor digitorum superficialis muscle
+
+[[_3_14_50_]]
+=== 50. The flexor carpi ulnaris muscle, anterior and posterior views
+
+[[_3_15_51_]]
+=== 51. The palmaris longus muscle
+
+[[_3_16_52_]]
+=== 52. The flexor carpi radialis muscle
+
+[[_3_17_53_]]
+=== 53. The abductor pollicis longus muscle
+
+[[_3_18_54_]]
+=== 54. The extensor pollicis brevis muscle
+
+[[_3_19_55_]]
+=== 55. The extensor pollicis longus muscle
+
+[[_3_20_56_]]
+=== 56. The extensor indicis muscle
+
+[[_3_21_57_]]
+=== 57. The brachioradialis muscle
+
+[[_3_22_58_]]
+=== 58. The extensor carpi radialis longus muscle
+
+[[_3_23_59_]]
+=== 59. The extensor carpi ulnaris muscle
+The extensor carpi radialis brevis muscle
+
+[[_3_24_60_]]
+=== 60. The extensor digitorum muscle
+The extensor digiti minimi muscle
+
+[[_3_25_61_]]
+=== 61. The bones of the right hand and wrist, palmar view
+
+[[_3_26_62_]]
+=== 62. The bones of the hand, dorsal view
+
+[[_3_27_63_]]
+=== 63. The dorsal interossei muscles
+
+[[_3_28_64_]]
+=== 64. The interossei palmares muscles
+
+[[_3_29_65_]]
+=== 65. The lumbricales muscles of the hand
+
+[[_3_30_66_]]
+=== 66. The opponens digiti minimi muscle
+
+[[_3_31_67_]]
+=== 67. The flexor digiti minimi brevis muscle
+
+[[_3_32_68_]]
+=== 68. The abductor digiti minimi muscle
+
+[[_3_33_69_]]
+=== 69. The adductor pollicis muscle
+
+[[_3_34_70_]]
+=== 70. The opponens pollicis muscle
+The palmaris brevis muscle
+
+[[_3_35_71_]]
+=== 71. The flexor pollicis brevis muscle
+
+[[_3_36_72_]]
+=== 72. The abductor pollicis brevis muscle
+
+[[_4_0_72_]]
+== 4. Back and Thorax
+
+[[_4_1_73_]]
+=== 73. The bones of the back
+
+[[_4_2_74_]]
+=== 74. Three views of the tenth and eleventh thoracic vertebrae
+
+[[_4_3_75_]]
+=== 75. The splenius capitis muscle
+The splenius cervicis muscle
+
+[[_4_4_76_]]
+=== 76. The transversospinales muscles
+The rototores brevis and the rotatores longus muscles +
+The intertransversarii muscles +
+The interspinales muscles
+
+[[_4_5_77_]]
+=== 77. The multifidus muscle
+
+[[_4_6_78_]]
+=== 78. The semispinales muscles
+
+[[_4_7_79_]]
+=== 79. The spinales muscles
+
+[[_4_8_80_]]
+=== 80. The longissimus dorsi muscle
+
+[[_4_9_81_]]
+=== 81. The iliocostalis muscle
+
+[[_4_10_82_]]
+=== 82. The thorax or rib cage
+
+[[_4_11_83_]]
+=== 83. The sternum, the costal cartilages and part of ten ribs, ventral view
+
+[[_4_12_84_]]
+=== 84. The ribcage and the spinal column, showing the sixth cervical vertebra, the twelve thoracic vertebrae, and the first lumbar vertebrae, posterior view
+
+[[_4_13_85_]]
+=== 85. The rib cage or thorax with the twelve thoracic vertebrae, left lateral view
+
+[[_4_14_86_]]
+=== 86. The transverse thoracic muscle
+
+[[_4_15_87_]]
+=== 87. The intercostales interni muscles
+
+[[_4_16_88_]]
+=== 88. The intercostales externi muscles
+
+[[_4_17_89_]]
+=== 89. The serratus anterior muscle
+
+[[_4_18_90_]]
+=== 90. The serratus posterior muscles, superior and inferior
+
+[[_4_19_91_]]
+=== 91. The levatores costorum muscles
+
+[[_4_20_92_]]
+=== 92. The pectoralis minor muscle
+The subclavius muscle
+
+[[_5_0_92_]]
+== 5. The Abdomen and pelvis
+
+[[_5_1_93_]]
+=== 93. The torso from a three quarter front view;
+the ribcage with the sternum, scapula and humerus; +
+the spinal column with the sacrum, showing how it articulates with the pelvis; +
+the top of the femur, showing how it articulates with the pelvis
+
+[[_5_2_94_]]
+=== 94. The torso seen from the side
+
+[[_5_3_95_]]
+=== 95. The rectus abdominis muscle
+
+[[_5_4_96_]]
+=== 96. The transversus abdominis muscle
+
+[[_5_5_97_]]
+=== 97. The obliquus internus abdominis muscle
+
+[[_5_6_98_]]
+=== 98. The obliquus externus abdominis muscle
+
+[[_5_7_99_]]
+=== 99. The quadratus lumborum muscle
+
+[[_5_8_100_]]
+=== 100. The pelvis, anterior view
+
+[[_5_9_101_]]
+=== 101. The right innominate bone, lateral view
+The right innominate bone, medial view
+
+[[_5_10_102_]]
+=== 102. The pelvis, posterior inferior view, showing the head of the femur in the acetabum;
+The pelvis, anterior inferior view, showing the top portion of the femur with its head in the acetabulum
+
+[[_5_11_103_]]
+=== 103. The psoas major muscle
+The psoas minor muscle +
+The iliacus muscle
+
+[[_5_12_104_]]
+=== 104. The obturator externus muscle
+
+[[_5_13_105_]]
+=== 105. The obturator internus muscle
+The gemellus muscle, superior and inferior +
+The quadratus femoris muscle +
+The piriformis muscle
+
+[[_5_14_106_]]
+=== 106. The gluteus minimus muscle
+
+[[_5_15_107_]]
+=== 107. The gluteus medius muscle
+
+[[_5_16_108_]]
+=== 108. The gluteus maximus muscle
+
+[[_6_0_108_]]
+== 6. Leg and Foot
+
+[[_6_1_109_]]
+=== 109. The bones of the right leg and pelvis, anterior and posterior views
+
+condyle (kŏn′dīl′, -dl) 관절구(丘) ((뼈끝의 둥근 돌기))::
+A rounded prominence at the end of a bone, most often for articulation with another bone.
+* 1630s, "knob at the end of a bone," from French condyle (16c.), from Latin condylus, from Greek kondylos "a knuckle," of unknown origin.
+
+ramus (rā′məs) (식물·혈관·뼈·신경 등의) 가지, 분기(分岐)::
+A bony process extending like a branch from a larger bone, especially the ascending part of the lower jaw that makes a joint at the temple.
+* "a branch" (anatomical), 1803, from Latin ramus "a branch, bough, twig," related to radix "root;" see radish.
+
+Trochanter (trō-kăn′tər) 전자(轉子) ((대퇴골 상부의 돌기))::
+Any of several bony processes on the upper part of the femur of many vertebrates
+* [New Latin, from Greek trokhantēr, ball of the hip joint, from trekhein, to run.]
+* either of two knobs at the top of the femur, the greater on the outside and the lesser on the inside, serving for the attachment of muscles between the thigh and pelvis.
+* 1610s, from French trochanter (16c.), from Greek trokhanter, from trekhein "to run" (see truckle (n.)).
+
+[[_6_2_110_]]
+=== 110. The bones of the right thigh, anterior and posterior views
+
+[[_6_3_111_]]
+=== 111. The adductor magnus and adductor minimus muscle
+
+[[_6_4_112_]]
+=== 112. The adductor brevis muscle
+
+[[_6_5_113_]]
+=== 113. The adductor longus muscle
+
+[[_6_6_114_]]
+=== 114. The pectineus muscle
+
+[[_6_7_115_]]
+=== 115. The gracilis muscle
+
+[[_6_8_116_]]
+=== 116. The vastus intermedius
+The vastus lateralis +
+The vastus medialis muscles
+
+[[_6_9_117_]]
+=== 117. The rectus femoris muscle
+
+[[_6_10_118_]]
+=== 118. The sartorius muscle
+
+[[_6_11_119_]]
+=== 119. The tensor fasciae latae muscle
+
+[[_6_12_120_]]
+=== 120. The biceps femoris muscle
+
+[[_6_13_121_]]
+=== 121. The semitendinosus muscle
+
+[[_6_14_122_]]
+=== 122. The semimembranosus muscle
+
+[[_6_15_123_]]
+=== 123. The bones of the lower leg, anterior and posterior views
+
+[[_6_16_124_]]
+=== 124. The popliteus muscle
+
+[[_6_17_125_]]
+=== 125. The plantaris muscle
+
+[[_6_18_126_]]
+=== 126. The extensor digitorum longus muscle
+The fibula tertius muscle
+
+[[_6_19_127_]]
+=== 127. The flexor hallucis longus muscle
+
+[[_6_20_128_]]
+=== 128. The tibialis anteriore muscle
+
+[[_6_21_129_]]
+=== 129. The peroneus (fibula) brevis muscle
+The peroneus (fibula) longus muscle
+
+[[_6_22_130_]]
+=== 130. The tibialis posteriore muscle
+
+[[_6_23_131_]]
+=== 131. The flexor hallucis longus muscle
+
+[[_6_24_132_]]
+=== 132. The flexor digitorum longus muscle
+
+[[_6_25_133_]]
+=== 133. The medial and lateral aspect of the foot showing the tendinous extensions of all the flexor and extensor muscles on the lower leg which control the movement of the foot and ankle and the retinaculae which keep them in place
+
+[[_6_26_134_]]
+=== 134. The soleus muscle
+
+[[_6_27_135_]]
+=== 135. The gastrocnemius muscle
+
+[[_6_28_136_]]
+=== 136. The bones of the foot, dorsal view
+
+[[_6_29_137_]]
+=== 137. The bones of the foot, plantar view
+
+[[_6_30_138_]]
+=== 138. The bones of the foot, medial view
+The bones of the foot lateral view
+
+[[_6_31_139_]]
+=== 139. The dorsal interossei muscles
+
+[[_6_32_140_]]
+=== 140. The extensor digitorum brevis muscle
+
+[[_6_33_141_]]
+=== 141. The plantar interossei muscles
+
+[[_6_34_142_]]
+=== 142. The flexor hallucis brevis muscle
+The flexor digiti minimi brevis muscle
+
+[[_6_35_143_]]
+=== 143. The adductor hallucis muscle
+
+[[_6_36_144_]]
+=== 144. The lumbricale muscles
+The quadratus plantae muscle
+
+[[_6_37_145_]]
+=== 145. The abductor hallucis muscle
+The abductor digiti minimi muscle
+
+[[_6_38_146_]]
+=== 146. The flexor digitorum brevis muscle

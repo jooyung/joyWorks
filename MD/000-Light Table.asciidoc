@@ -1,0 +1,451 @@
+[[_0_]]
+= Light Table
+Joy <arbago@gmail.com>
+:icons: font
+:sectanchors:
+:toc: macro
+
+toc::[]
+
+[preface]
+== 머릿말
+
+[[_1_0_0_]]
+== 1. Introduction
+
+[[_1_1_0_]]
+=== See It In Action
+
+[[_1_2_0_]]
+=== Features
+
+[[_1_2_1_]]
+==== Watches
+
+Next-gen println to keep track of important values in your code
+
+[[_1_2_2_]]
+==== Inline Evaluation
+
+No more printing to the console in order to view your results
+
+[[_1_2_3_]]
+==== Open Source
+
+*#because none of us are as smart as all of us#*
+
+[[_1_2_4_]]
+==== Malleable
+
+*Light Table's Behavior-Object-Tag engine* means you can easily shape your IDE to whatever your work requires
+
+[[_1_2_5_]]
+==== Plugin Manager
+
+You don't have to go hunting all over the internet to find the ones you want
+
+[[_1_2_6_]]
+==== Powerful Editing
+
+Light Table is a lightweight, clean, and sleek interface
+
+[[_2_0_0_]]
+== 2. Getting Started
+
+[[_2_1_0_]]
+=== Full Tutorials
+
+[[_2_2_0_]]
+=== Opening and creating new files
+
+* C-n: New file
+* +C-S-o+: Open file
+
+[[_2_3_0_]]
+=== With Clojure
+
+instarepl::
+an environment for Clojure where everything you type is evaluated immediately
+
+.instarepl
+. C-Space or Alt-Space (my modification): opens the commands
+. Instarepl: Open a clojure instarepl
+
+.instarepl with a file
+. #.clj# extension: save or open the file
+. C-Enter: evaluates a form
+
+[[_2_4_0_]]
+=== With Javascript/HTML/CSS
+
+.browser tab
+. Alt-Space: opens commands
+. Browser: add browser tab
+. url: file or internet page
+
+[[_2_5_0_]]
+=== With Python
+
+[[_2_6_0_]]
+=== With the workspace tree (or how to open files)
+
+Workspace is like the file explorer
+
+.workspace tree
+. Alt-3: opens the Workspace
+. You can then add files or folders to the workspace using the buttons at the top
+
+When you open a new window of Light Table, you'll be given a new blank workspace
+
+[[_2_7_0_]]
+=== With the Navigate pane
+
+Navigate pane is filter and quickly finding files and folder once they have been included in the Workspace
+
+C-o: opens the navigate pane
+
+.filter list
+* sequential partial substring matching
+* as long as those letters appear in order in one of the list items it will be considered a match
+* ex) mcf will match my-cool-file
+
+[[_2_8_0_]]
+=== With the Connections pane
+
+.connections pane
+* Alt-Space: opens the commands
+
+.connections pane
+* Alt-Space: Opens commands
+* Connect: Show connect bar
+
+[[_2_9_0_]]
+=== With the Command pane
+
+One stop shop +
+filter list like navigate pane
+
+.command pane
+* Alt-Space: open command pane
+* shows key bindings of the given or found command
+
+[[_3_0_0_]]
+== 3. How do I..?
+
+[[_3_1_0_]]
+=== Change settings (fonts, line numbers...)?
+
+Behaviors is the name for settings in other programs
+
+.change settings
+* Settings: User behavior
+* modify the opened file
+* find a relevant tag, type in the behavior namd, and then select one from through the auto-complete list
+
+[[_3_2_0_]]
+=== Configure behaviors
+
+.configure behaviors
+* add a vector
+* [:TAG :COMMAND :ARG1 :ARG2 ...]
+* use '`-`' prefix to nullify the default behavior
+
+[[_3_3_0_]]
+=== Change theme/skin
+
+.change them/skin
+* Alt-Space: open the command pane
+* Settings: User behaviors
+* :editor tag
+* type "`theme`" in the square bracket
+* select Style: set the editor theme
+* type the theme name: auto-complete will help
+* to change the skin: Style: Set Light Table skin
+
+.theme/skin directories
+* /path/to/lighttable/core/css/skins
+*path/to/lighttable/core/css/skins
+
+[[_3_4_0_]]
+=== Evaluate code inline?
+
+.evaling a form
+* C-Enter: eval a form
+* C-S-Enter: eval the entire file
+* use Connections pane to find out the relevant client
+
+[[_3_5_0_]]
+=== Change keybindings?
+
+.keybindings
+* .keymap: the file name
+* Settings: User keymap
+* Settings: Default keymap
+
+[[_3_6_0_]]
+=== Configure keybindings
+
+.add keybindings
+* add a vector
+* [:TAG "KEYBINDING" :COMMAND]
+* ex) [:editor "alt-w" :editor.watch.watch-selection]
+* for arguments, use parentheses
+* ex) [:editor "alt-(" (:paredit.select.parent "(")]
+* to nullify a default keybinding, use '`-`' prefix
+* ex) [:app "-ctrl-shift-d" :docs.search.show]
+
+[[_3_7_0_]]
+=== Split windows?
+
+.tabset
+* R-click in the tab area
+* select `New tabset`
+* or `Tabs: Add a tabset` command
+
+.close a tabset
+* R-click in the tab area
+* select `Close tabset`
+* or `Tabs: Remove active tabset`
+* or resize it to 0 width
+
+.move tabs
+* move a tab to other tabset
+
+[[_3_8_0_]]
+=== Open a new window?
+a new instance of Light Table
+
+.new window
+* C-S-n
+* or `Window: Open new window`
+
+[[_3_9_0_]]
+=== Open a browser tab for live modification?
+
+.browser tab
+* `Browser: add browser tab` command
+* or choose one from `connect` tab -> Add Connection menu
+* C-r to refresh it
+
+[[_3_10_0_]]
+=== Bring up auto-completion?
+
+.auto-completion
+* use Tab key
+
+[[_3_11_0_]]
+=== Eval an arbitraty unit of code?
+
+.eval a unit of code
+* select a region
+* C-Enter
+
+[[_3_12_0_]]
+=== Eval Clojure?
+
+.eval clojure
+* open a `.clj` file
+* C-Enter
+* leiningen project will be found if there is one
+* or the local REPL client will be used
+
+[[_3_13_0_]]
+=== Connect to an nREPL server?
+To connect to a remote nREPL server
+
+.nREPL server
+* `Connections` pane
+* `add connection` button
+* select `Clojure (remote nREPL)` client
+* middleware: `lighttable-ops` in the repl options
+
+[[_3_14_0_]]
+=== Eval ClojureScript
+
+.eval clojurescript in a browser
+* `connect` tab
+* `Add Connection` button
+* select `Browser`
+* go to the page for evaling
+* C-Enter
+
+.evan clojurescript in LT UI
+* select `Light Table UI` instead of `Browser`
+* lein-cljsbuild output should already be there
+
+[[_3_15_0_]]
+=== Eval Javascript in NodeJS?
+
+.nodejs
+. `connect` tab
+. `Add Connection` button
+. `NodeJS` select
+. choose a javascript file
+. open a .js file
+. C-Enter
+. select the nodejs client from the popup
+
+[[_3_16_0_]]
+=== Eval Python?
+
+[[_3_17_0_]]
+=== Use IPython for Python eval?
+
+[[_3_18_0_]]
+=== See the output from STDOUT and STDERR?
+
+.open the console
+* clicking the blue number in the bottom right corner of the editor
+* or `View` menu
+* or `Console: Toggle console` command
+
+[[_3_19_0_]]
+=== Use a different client once I've evaled something?
+
+[[_3_20_0_]]
+=== Close a client?
+
+.close a client
+* `connect` -> `disconnect` button
+
+[[_3_21_0_]]
+=== Install a Plugin
+
+.plugin installation
+* `Plugins: Show Plugin Manager`
+* search for a plugin
+* click the install button
+
+[[_3_22_0_]]
+=== Toggle Vim keybindings?
+
+.vim keybinding
+. install `vim` plugin
+. user behaviors
+. `:editor` tag
+. type `vim`
+. select `Vim: Activate vim mode`
+
+[[_3_23_0_]]
+=== Toggle Emacs keybindings?
+
+same as vim keybindings
+
+[[_3_24_0_]]
+=== Exclude files from the workspace?
+
+.exclude files
+. open the user behaviros
+. find and go to `:app` tag
+. type `ignore`
+. select `Files: Set ignore pattern` behavior
+
+[[_3_25_0_]]
+=== Change the location of the lighttable directory?
+
+.location directory
+* `LTHOME` environment variable
+
+[[_3_26_0_]]
+=== Find out what version of Light Table I'm using?
+
+.version
+* `App: Light Table version`
+
+[[_3_27_0_]]
+=== Plugins directory
+
+.plugins directory
+* `%APPDATALOCAL%/LightTable/plugins`
+* to see it, `App: Light Table version`
+
+[[_3_28_0_]]
+=== User plugin
+
+[[_3_29_0_]]
+=== Write a plugin
+
+[[_3_30_0_]]
+=== Submit a plugin
+
+[[_4_0_0_]]
+== 4. What is..?
+
+[[_4_1_0_]]
+=== Eval?
+
+[[_4_2_0_]]
+=== A REPL?
+
+REPL stands for Read-Eval-Print-Loop +
+Basically the gist of it is that it's a little prompt +
+Inside of Light Table we remove the need for a special prompt
+
+[[_4_3_0_]]
+=== An Instarepl?
+
+Results are blue and variable values are shown in purple to the right of their use in the code.
+
+[[_4_4_0_]]
+=== A client?
+
+[[_4_5_0_]]
+=== A workspace?
+
+Workspaces are saved and created automatically +
+you can access the last 20 workspaces you've used by clicking the "recent" button at the top of the workspace tree.
+
+[[_4_6_0_]]
+=== A behavior
+
+Behaviors are not applied directly to objects, but rather to "tags"
+
+[[_5_0_0_]]
+== Other
+
+[[_5_1_0_]]
+=== What languages does Light Table support?
+
+Clojure, ClojureScript, Javascript, Python, HTML, and CSS
+
+[[_5_2_0_]]
+=== What platforms does Light Table support?
+
+[[_5_3_0_]]
+=== Does Light Table auto-update?
+
+[[_5_4_0_]]
+=== What is Light Table written in?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

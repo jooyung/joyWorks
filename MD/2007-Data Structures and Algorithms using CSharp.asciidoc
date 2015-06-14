@@ -1,0 +1,929 @@
+[[an_introduction_to_collections_generics_and_the_timing_class]]
+== 1. An Introduction to Collections, Generics, and the Timing Class
+
+[[collections_defined]]
+=== COLLECTIONS DEFINED
+
+A collection is a *structured data type* that *stores data* and *provides operations* for *adding* data to the collection, *removing* data from the collection, *updating* data in the collection, as well as operations for setting and returning the values of *different attributes* of the collection.
+
+.two types
+- linear
+- nonlinear
+
+.properties
+- Count
+
+.operations
+- Add
+- Insert
+- Remove
+- Clear
+- Contains
+- IndexOf
+
+[[collections_described]]
+=== COLLECTIONS DESCRIBED
+
+.linear collections
+- direct access collections
+- sequential access collections
+
+.nonlinear collections
+- hierarchical collections
+- grouped collections
+
+[[direct_access_collections]]
+==== Direct Access Collections
+
+.array
+- built-in data type
+- class
+- ArrayList
+
+.string
+- immutable
+- StringBuilder
+
+.struct (structure, records)
+- methods
+- Int32
+
+[[sequential_access_collections]]
+==== Sequential Access Collections
+
+.linear list
+- two methods of traversing a list
+- grocery list
+- ordered
+- unordered
+- stack
+- queue
+
+.stack
+- push
+- pop
+
+.queue
+- EnQueue
+- DeQueue
+- priority queue
+
+.generalized indexed collections
+- hash table
+- dictionary
+
+.hash table
+- hash function
+- integer index
+- HashTable
+
+.dictionary
+- association
+- associative array
+
+[[hierarchical_collections]]
+==== Hierarchical Collections
+
+- level
+- tree
+- binary tree
+- heap
+
+.tree
+- node
+- node's children
+- file system
+
+.binary tree
+- binary search tree
+
+.heap
+- heap sort
+
+[[group_collections]]
+==== Group Collections
+
+- nonlinear
+- unordered
+- set
+- graph
+- network
+
+.set
+- unordered
+- unique
+- students in a class
+- integers
+- union
+- intersection
+
+.graph
+- nodes
+- edges
+- logistics
+- job scheduling
+- "Traveling Salesman" problem
+- NP-complete problem (nondeterministic polynomial time)
+
+.network
+- weight
+
+[[the_collectionbase_class]]
+=== THE COLLECTIONBASE CLASS
+
+The .NET Framework library does not include a generic Collection class for storing data, but there is an abstract class you can use to build your own Collection class - [small red yellow-background overline]'*CollectionBase*'.
+
+[W] The class implicitly implements two interfaces necessary for building a Collection class, *ICollection* and *IEnumerable*, `leaving the programmer with having to` implement just those methods that are typically part of a Collection class.
+
+[[a_collection_class_implementation_using_arraylists]]
+==== A Collection Class Implementation Using ArrayLists
+
+> As 'Don Knuth' (one of the pioneers of computer science) says, to paraphrase, '*you haven't really learned something well until you've taught it to a computer*'.
+
+[quote, Don Knuth]
+____
+As 'Don Knuth' (one of the pioneers of computer science) says, to paraphrase, '*you haven't really learned something well until you've taught it to a computer*'.
+____
+
+[[defining_a_collection_class]]
+==== Defining a Collection Class
+
+[W] underlying (ŭn′dər-lī′ĭng)::
+(겉으로 잘 드러나지는 않지만) 근본적인[근원적인]
+1. underlying - in the nature of something though not readily apparent; "shortcomings inherent in our approach"; "an underlying meaning"
+    - =implicit in, inherent
+    - <>implicit, inexplicit - implied though not directly expressed; inherent in the nature of something; "an implicit agreement not to raise the subject"; "there was implicit criticism in his voice"; "anger was implicit in the argument"; "the oak is implicit in the acorn"
+2.  underlying - located beneath or belowunderlying - located beneath or below
+    - <>subjacent - lying nearby but lower; "hills and subjacent valleys"
+3.  underlying - being or involving basic facts or principles; "the fundamental laws of the universe"; "a fundamental incomatibility between them"; "these rudimentary truths"; "underlying principles"
+    - =rudimentary, fundamental
+    - <>basic - pertaining to or constituting a base or basis; "a basic fact"; "the basic ingredients"; "basic changes in public opinion occur because of changes in priorities"
+
+The CollectionBase class provides an `underlying` data structure, *InnerList (an ArrayList)*, which you can use as a base for your class.
+
+[[implementing_the_collection_class]]
+==== Implementing the Collection Class
+
+[[generic_programming]]
+==== Generic Programming
+
+[T] Generic Programming: One solution to 'code bloat' is the ability of *one value to take on multiple data types*, while *only providing one definition* of that value.
+
+[[timing_tests]]
+==== Timing Tests
+
+[W] eschew (ĕs-cho͞o′)::
+eschew - avoid and stay away from deliberately; stay clear of
+** =shun
+** <>avoid - stay clear from; keep away from; keep out of the way of someone or something; "Her former friends now avoid her"
+
+* =avoid, give up, abandon, have nothing to do with, shun, elude, renounce, refrain from, forgo, abstain from, fight shy of, forswear, abjure, kick (informal), swear off, give a wide berth to, keep or steer clear of He eschewed publicity and avoided nightclubs.
+
+* To keep away from:
+** =avoid, burke, bypass, circumvent, dodge, duck, elude, escape, evade, get around, shun.
+** Idioms: fight shy of, give a wide berth to, have no truck with, keep clear of.
+
+Because this book takes a practical approach to the analysis of the data structures and algorithms examined, we `eschew` the use of 'Big O analysis', preferring instead to run simple benchmark tests that will tell us how lon in seconds (or whatever time unit) it takes for a code segment to run.
+
+[[an_oversimplified_timing_test]]
+==== An Oversimplified Timing Test
+
+[[timing_tests_for_the_net_environment]]
+==== Timing Tests for the .NET Environment
+
+[W] head off::
+head off - prevent the occurrence of; prevent from happening; "Let's avoid a confrontation"; "head off a confrontation"; "avert a strike"
+** =deflect, fend off, forefend, forfend, avert, stave off, ward off, avoid, debar, obviate
+** <>foreclose, forestall, preclude, prevent, forbid - keep from happening or arising; make impossible; "My sense of tact forbids an honest answer"; "Your role in the projects precludes your involvement in the competitive project"
+
+We can `head off` arbitrary garbage collection by calling the garbage collector explicitly.
+
+[W] We have `one hurdle cleared` and just one left to go - using the proper thread.
+
+.process (application domain)
+* A program is run inside a `process`, also called an `application domain`.
+* This allows the operating system to separate each different program running on it at the same time.
+
+.thread
+* Within a process, a program or a part of a program is run inside a `thread`. `Execution time` for a program is allocated by the operating system `via threads`.
+
+[W] This `compares` with the approximately 5 seconds returned using the first timing code.
+
+
+[[a_timing_test_class]]
+==== A Timing Test Class
+
+[[summary]]
+=== SUMMARY
+
+[[exercises]]
+=== EXERCISES
+
+[[arrays_and_arraylists]]
+== 2. Arrays and ArrayLists
+
+[[array_basics]]
+=== ARRAY BASICS
+
+[W] In fact, `it is probably the simplest just to say that` array data are object.
+
+[[declaring_and_initializing_arrays]]
+==== Declaring and Initializing Arrays
+
+[[setting_and_accessing_array_elements]]
+==== Setting and Accessing Array Elements
+
+[[methods_and_properties_for_retrieving_array_metadata]]
+==== Methods and Properties for Retrieving Array Metadata
+
+[[multidimensional_arrays]]
+==== Multidimensional Arrays
+
+In C#, an array can have *up to 32 dimensions, though arrays with more than three dimensions are very rare (and very confusing).
+
+When you initialize an array with an initialization list, you can't specify the bounds of the array.
+
+[[parameter_arrays]]
+==== Parameter Arrays
+
+[[jagged_arrays]]
+==== Jagged Arrays
+
+[W] `This isn't much of a problem` for this array, but with a much larger array we end up with a lot of wasted space.
+
+The second set of parentheses is left blank.
+
+`int[][] jagged = new int[12][];`
+
+[[the_arraylist_class]]
+==== The ArrayList Class
+
+[[members_of_the_arraylist_class]]
+==== Members of the ArrayList Class
+
+[[using_the_arraylist_class]]
+==== Using the ArrayList Class
+
+[[summary]]
+=== SUMMARY
+
+Array are useful in situations where you need direct access to ``far away'' elements of your data set.
+
+The .NET Framework introduces a new type of array called an ArrayList.
+
+[[basic_sorting_algorithms]]
+== 3. Basic Sorting Algorithms
+
+The two most common operations performed on data stored in a computer are *sorting* and *searching*.
+
+[W] `This has been true since` the beginning of the computing industry, which means that sorting and searching are also two of the most studied operations in computer science.
+
+[[sorting_algorithms]]
+=== SORTING ALGORITHMS
+
+Sorting is a fundamental process in working with data and deserves close study.
+
+[W] test bed::
+test bed - a place equipped with instruments for testing (e.g. engines or machinery or computer programs etc.) under working conditions
+- <>workplace, work - a place where work is done; "he arrived at work early today"
+
+To examine these algorithms, we will first need a `test bed` in which to implement and test them.
+
+[[an_array_class_test_bed]]
+==== An Array Class Test Bed
+
+[[Ramdom]]
+.Random class definition
+----
+[SerializableAttribute]
+[ComVisibleAttribute(true)]
+public class Random
+----
+
+Pseudo-random numbers are chosen with equal probability from a finite set of numbers. The chosen numbers are not completely random because a mathematical algorithm is used to select them, but they are sufficiently random for practical purposes. The current implementation of the Random class is based on +Donald E. Knuth's subtractive random number generator algorithm+. For more information, see D. E. Knuth. The Art of Computer Programming, Volume 2: Seminumerical Algorithms. Addison-Wesley, Reading, MA, third edition, 1997.
+
+[[bubble_sort]]
+==== Bubble Sort
+
+Assuming you are sorting a list of numbers in ascending order, 'higher values float to the right whereas lower values float to the left'.
+
+[W] You can watch how 72 moves from the beginning of the array to the middle of the array, and you can see how 2 moves `from just past the middle` of the array to the beginning of the array.
+
+[[examining_the_sorting_process]]
+==== Examining the Sorting Process
+
+[[selection_sort]]
+==== Selection Sort
+
+[[insertion_sort]]
+==== Insertion Sort
+
+[[timing_comparisons_of_the_basic_sortingalgorithms]]
+=== TIMING COMPARISONS OF THE BASIC SORTINGALGORITHMS
+
+[W] We can use the Timing class to compare the three algorithms to see if any of them `stand out` from the others `in terms of` the time it takes to sort a large set of numbers.
+
+[[summary]]
+=== SUMMARY
+
+[W] The performance of all three algorithms `degrades` considerably, though the Selection sort is still many times faster then the other two.
+
+[[exercises]]
+=== EXERCISES
+
+[[basic_searching_algorithms]]
+== 4. Basic Searching Algorithms
+
+[[sequential_searching]]
+=== SEQUENTIAL SEARCHING
+
+[[searching_for_minimum_and_maximum_values]]
+==== Searching for Minimum and Maximum Values
+
+[[making_sequential_search_faster:_self_organizing_data]]
+==== Making Sequential Search Faster: Self-Organizing Data
+
+[[binary_search]]
+==== Binary Search
+
+[[a_recursive_binary_search_algorithm]]
+==== A Recursive Binary Search Algorithm
+
+[[summary]]
+=== SUMMARY
+
+[[exercises]]
+=== EXERCISES
+
+[[stacks_and_queues]]
+== 5. Stacks and Queues
+
+[[stacks_a_stack_implementation_and_the_stack_class]]
+=== STACKS, A STACK IMPLEMENTATION AND THE STACK CLASS
+
+[[stack_operations]]
+==== Stack Operations
+
+[[a_stack_class_implementation]]
+==== A Stack Class Implementation
+
+[[the_stack_class]]
+=== THE STACK CLASS
+
+[[the_stack_constructor_methods]]
+==== The Stack Constructor Methods
+
+[[the_primary_stack_operations]]
+==== The Primary Stack Operations
+
+[[the_peek_method]]
+==== The Peek Method
+
+[[the_clear_method]]
+==== The Clear Method
+
+[[the_contains_method]]
+==== The Contains Method
+
+[[the_copyto_and_toarray_methods]]
+==== The CopyTo and ToArray Methods
+
+[[a_stack_class_example:_decimal_tomultiple_bases_conversion]]
+==== A Stack Class Example: Decimal toMultiple-Bases Conversion
+
+[[queues_the_queue_class_and_a_queue_class_implementation]]
+=== QUEUES, THE QUEUE CLASS AND A QUEUE CLASS IMPLEMENTATION
+
+[[queue_operations]]
+==== Queue Operations
+
+[[a_queue_implementation]]
+==== A Queue Implementation
+
+[[the_queue_class:_a_sample_application]]
+==== The Queue Class: A Sample Application
+
+[[sorting_data_with_queues]]
+==== Sorting Data With Queues
+
+[[priority_queues:_deriving_from_the_queue_class]]
+==== Priority Queues: Deriving From the Queue Class
+
+[[summary]]
+=== SUMMARY
+
+[[exercises]]
+=== EXERCISES
+
+[[the_bitarray_class]]
+== 6. The BitArray Class
+
+[[a_motivating_problem]]
+=== A MOTIVATING PROBLEM
+
+[[bits_and_bit_manipulation]]
+=== BITS AND BIT MANIPULATION
+
+[[the_binary_number_system]]
+==== The Binary Number System
+
+[[manipulating_binary_numbers:_the_bitwiseand_bit_shift_operators]]
+==== Manipulating Binary Numbers: The Bitwiseand Bit-shift Operators
+
+[[a_bitwise_operator_application]]
+=== A BITWISE OPERATOR APPLICATION
+
+[[the_bitshift_operators]]
+==== The BitShift Operators
+
+[[an_integer_to_binary_converter_application]]
+=== AN INTEGER-TO-BINARY CONVERTER APPLICATION
+
+[[a_bit_shift_demonstration_application]]
+=== A BIT SHIFT DEMONSTRATION APPLICATION
+
+[[the_bitarray_class]]
+=== THE BITARRAY CLASS
+
+[[using_the_bitarray_class]]
+==== Using the BitArray Class
+
+[[more_bitarray_class_methods_and_properties]]
+==== More BitArray Class Methods and Properties
+
+[[using_a_bitarray_to_write_the_sieve_of_eratosthenes]]
+=== USING A BITARRAY TO WRITE THE SIEVE OF ERATOSTHENES
+
+[[comparison_of_bitarray_versus_arrayfor_sieve_of_eratosthenes]]
+=== COMPARISON OF BITARRAY VERSUS ARRAYFOR SIEVE OF ERATOSTHENES
+
+[[summary]]
+=== SUMMARY
+
+[[exercises]]
+=== EXERCISES
+
+[[strings_the_string_class_and_the_stringbuilder_class]]
+== 7. Strings, the String Class, and the StringBuilder Class
+
+[[working_with_the_string_class]]
+=== WORKING WITH THE STRING CLASS
+
+[[creating_string_objects]]
+==== Creating String Objects
+
+[[frequently_used_string_class_methods]]
+==== Frequently Used String Class Methods
+
+[[the_split_and_join_methods]]
+==== The Split and Join Methods
+
+[[methods_for_comparing_strings]]
+==== Methods for Comparing Strings
+
+[[methods_for_manipulating_strings]]
+==== Methods for Manipulating Strings
+
+[[the_stringbuilder_class]]
+=== THE STRINGBUILDER CLASS
+
+[[constructing_stringbuilder_objects]]
+==== Constructing StringBuilder Objects
+
+[[obtaining_and_setting_informationabout_stringbuilder_objects]]
+==== Obtaining and Setting Informationabout StringBuilder Objects
+
+[[modifying_stringbuffer_objects]]
+==== Modifying StringBuffer Objects
+
+[[comparing_the_efficiency_of_the_string_classto_stringbuilder]]
+=== COMPARING THE EFFICIENCY OF THE STRING CLASSTO STRINGBUILDER
+
+[[summary]]
+=== SUMMARY
+
+[[exercises]]
+=== EXERCISES
+
+[[pattern_matching_and_text_processing]]
+== 8. Pattern Matching and Text Processing
+
+[[an_introduction_to_regular_expressions]]
+=== AN INTRODUCTION TO REGULAR EXPRESSIONS
+
+[[working_with_regular_expressions:_an_overview]]
+==== Working With Regular Expressions: An Overview
+
+[[quantifiers]]
+=== QUANTIFIERS
+
+[[using_character_classes]]
+=== USING CHARACTER CLASSES
+
+[[modifying_regular_expressions_using_assertions]]
+=== MODIFYING REGULAR EXPRESSIONS USING ASSERTIONS
+
+[[using_grouping_constructs]]
+=== USING GROUPING CONSTRUCTS
+
+[[anonymous_groups]]
+==== Anonymous Groups
+
+[[named_groups]]
+==== Named Groups
+
+[[zero_width_lookahead_and_lookbehind_assertions]]
+==== Zero-Width Lookahead and Lookbehind Assertions
+
+[[the_capturescollection_class]]
+=== THE CAPTURESCOLLECTION CLASS
+
+[[regular_expression_options]]
+=== REGULAR EXPRESSION OPTIONS
+
+[[summary]]
+=== SUMMARY
+
+[[exercises]]
+=== EXERCISES
+
+[[building_dictionaries:_the_dictionarybase_class_and_the_sortedlist_class]]
+== 9. Building Dictionaries: The DictionaryBase Class and the SortedList Class
+
+[[the_dictionarybase_class]]
+=== THE DICTIONARYBASE CLASS
+
+[[fundamental_dictionarybase_classmethods_and_properties]]
+==== Fundamental DictionaryBase ClassMethods and Properties
+
+[[other_dictionarybase_methods]]
+==== Other DictionaryBase Methods
+
+[[the_generic_keyvaluepair_class]]
+=== THE GENERIC KEYVALUEPAIR CLASS
+
+[[the_sortedlist_class]]
+=== THE SORTEDLIST CLASS
+
+[[using_the_sortedlist_class]]
+==== Using the SortedList Class
+
+[[summary]]
+=== SUMMARY
+
+[[exercises]]
+=== EXERCISES
+
+[[hashing_and_the_hashtable_class]]
+== 10. Hashing and the Hashtable Class
+
+[[an_overview_of_hashing]]
+=== AN OVERVIEW OF HASHING
+
+[[choosing_a_hash_function]]
+=== CHOOSING A HASH FUNCTION
+
+[[searching_for_data_in_a_hash_table]]
+=== SEARCHING FOR DATA IN A HASH TABLE
+
+[[handling_collisions]]
+=== HANDLING COLLISIONS
+
+[[bucket_hashing]]
+==== Bucket Hashing
+
+[[open_addressing]]
+==== Open Addressing
+
+[[double_hashing]]
+==== Double Hashing
+
+[[the_hashtable_class]]
+=== THE HASHTABLE CLASS
+
+[[instantiating_and_adding_data_to_a_hashtable_object]]
+==== Instantiating and Adding Data to a Hashtable Object
+
+[[retrieving_the_keys_and_the_values_separatelyfrom_a_hash_table]]
+==== Retrieving the Keys and the Values SeparatelyFrom a Hash Table
+
+[[retrieving_a_value_based_on_the_key]]
+==== Retrieving a Value Based on the Key
+
+[[utility_methods_of_the_hashtable_class]]
+==== Utility Methods of the Hashtable Class
+
+[[a_hashtable_application:_computer_terms_glossary]]
+=== A HASHTABLE APPLICATION: COMPUTER TERMS GLOSSARY
+
+[[summary]]
+=== SUMMARY
+
+[[exercises]]
+=== EXERCISES
+
+[[linked_lists]]
+== 11. Linked Lists
+
+[[the_problem_with_arrays]]
+=== THE PROBLEM WITH ARRAYS
+
+[[linked_lists_defined]]
+=== LINKED LISTS DEFINED
+
+[[an_object_oriented_linked_list_design]]
+=== AN OBJECT-ORIENTED LINKED LIST DESIGN
+
+[[the_node_class]]
+==== The Node Class
+
+[[the_linkedlist_class]]
+==== The LinkedList Class
+
+[[linked_list_design_modifications]]
+=== LINKED LIST DESIGN MODIFICATIONS
+
+[[the_doubly_linked_list]]
+==== The Doubly Linked List
+
+[[the_circularly_linked_list]]
+==== The Circularly Linked List
+
+[[using_an_iterator_class]]
+=== USING AN ITERATOR CLASS
+
+[[the_new_linkedlist_class]]
+==== The New LinkedList Class
+
+[[demonstrating_the_iterator_class]]
+==== Demonstrating the Iterator Class
+
+[[the_generic_linked_list_class_and_the_generic_node_class]]
+=== THE GENERIC LINKED LIST CLASS AND THE GENERIC NODE CLASS
+
+[[a_generic_linked_list_example]]
+==== A Generic Linked List Example
+
+[[summary]]
+=== SUMMARY
+
+[[exercises]]
+=== EXERCISES
+
+[[binary_trees_and_binary_search_trees]]
+== 12. Binary Trees and Binary Search Trees
+
+[[the_definition_of_a_tree]]
+=== THE DEFINITION OF A TREE
+
+[[binary_trees]]
+==== BINARY TREES
+
+[[building_a_binary_search_tree]]
+==== Building a Binary Search Tree
+
+[[traversing_a_binary_search_tree]]
+==== Traversing a Binary Search Tree
+
+[[finding_a_node_and_minimum_maximum_valuesin_a_binary_search_tree]]
+==== Finding a Node and Minimum/Maximum Valuesin a Binary Search Tree
+
+[[removing_a_leaf_node_from_a_bst]]
+==== Removing a Leaf Node From a BST
+
+[[deleting_a_node_with_one_child]]
+==== Deleting a Node With One Child
+
+[[deleting_a_node_with_two_children]]
+==== Deleting a Node With Two Children
+
+[[summary]]
+=== SUMMARY
+
+[[exercises]]
+=== EXERCISES
+
+[[sets]]
+== 13. Sets
+
+[[fundamental_set_definitions_operations_and_properties]]
+=== FUNDAMENTAL SET DEFINITIONS, OPERATIONS AND PROPERTIES
+
+[[set_definitions]]
+==== Set Definitions
+
+[[set_operations]]
+==== Set Operations
+
+[[set_properties]]
+==== Set Properties
+
+[[a_first_set_class_implementation_using_a_hash_table]]
+=== A FIRST SET CLASS IMPLEMENTATION USING A HASH TABLE
+
+[[class_data_members_and_constructor_method]]
+==== Class Data Members and Constructor Method
+
+[[the_add_method]]
+==== The Add Method
+
+[[the_remove_and_size_methods]]
+==== The Remove and Size Methods
+
+[[the_union_method]]
+==== The Union Method
+
+[[the_intersection_method]]
+==== The Intersection Method
+
+[[the_issubset_method]]
+==== The isSubset Method
+
+[[the_difference_method]]
+==== The Difference Method
+
+[[a_program_to_test_the_cset_implementation]]
+==== A Program to Test the CSet Implementation
+
+[[a_bitarray_implementation_of_the_cset_class]]
+=== A BITARRAY IMPLEMENTATION OF THE CSET CLASS
+
+[[overview_of_using_a_bitarray_implementation]]
+==== Overview of Using a BitArray Implementation
+
+[[the_bitarray_set_implementation]]
+=== The BitArray Set Implementation
+
+[[summary]]
+=== SUMMARY
+
+[[exercises]]
+=== EXERCISES
+
+[[advanced_sorting_algorithms]]
+== 14. Advanced Sorting Algorithms
+
+[[the_shellsort_algorithm]]
+=== THE SHELLSORT ALGORITHM
+
+[[the_mergesort_algorithm]]
+=== THE MERGESORT ALGORITHM
+
+[[the_heapsort_algorithm]]
+=== THE HEAPSORT ALGORITHM
+
+[[building_a_heap]]
+==== Building a Heap
+
+[[the_quicksort_algorithm]]
+=== THE QUICKSORT ALGORITHM
+
+[[the_quicksort_algorithm_described]]
+==== The QuickSort Algorithm Described
+
+[[code_for_the_quicksort_algorithm]]
+==== Code for the QuickSort Algorithm
+
+[[an_improvement_to_the_quicksort_algorithm]]
+==== An Improvement to the QuickSort Algorithm
+
+[[summary]]
+=== SUMMARY
+
+[[exercises]]
+=== EXERCISES
+
+[[advanced_data_structures_and_algorithms_for_searching]]
+== 15. Advanced Data Structures and Algorithms for Searching
+
+[[avl_trees]]
+=== AVL TREES
+
+[[avl_tree_fundamentals]]
+==== AVL Tree Fundamentals
+
+[[the_avl_tree_implementation]]
+==== The AVL Tree Implementation
+
+[[red_black_trees]]
+==== RED–BLACK TREES
+
+[[red_black_tree_rules]]
+==== Red–Black Tree Rules
+
+[[red_black_tree_insertion]]
+==== Red–Black Tree Insertion
+
+[[red_black_tree_implementation_code]]
+==== Red–Black Tree Implementation Code
+
+[[skip_lists]]
+=== SKIP LISTS
+
+[[skip_list_fundamentals]]
+==== Skip List Fundamentals
+
+[[skip_list_implementation]]
+==== Skip List Implementation
+
+[[summary]]
+=== SUMMARY
+
+[[exercises]]
+=== EXERCISES
+
+[[graphs_and_graph_algorithms]]
+== 16. Graphs and Graph Algorithms
+
+[[graph_definitions]]
+=== GRAPH DEFINITIONS
+
+[[real_world_systems_modeled_by_graphs]]
+==== REAL WORLD SYSTEMS MODELED BY GRAPHS
+
+[[the_graph_class]]
+=== THE GRAPH CLASS
+
+[[representing_vertices]]
+==== Representing Vertices
+
+[[representing_edges]]
+==== Representing Edges
+
+[[building_a_graph]]
+==== Building a Graph
+
+[[a_first_graph_application:_topological_sorting]]
+=== A FIRST GRAPH APPLICATION: TOPOLOGICAL SORTING
+
+[[an_algorithm_for_topological_sorting]]
+==== An Algorithm for Topological Sorting
+
+[[implementing_the_algorithm]]
+==== Implementing the Algorithm
+
+[[searching_a_graph]]
+=== SEARCHING A GRAPH
+
+[[depth_first_search]]
+==== Depth-First Search
+
+[[breadth_first_search]]
+==== Breadth-First Search
+
+[[minimum_spanning_trees]]
+=== MINIMUM SPANNING TREES
+
+[[a_minimum_spanning_tree_algorithm]]
+==== A Minimum Spanning Tree Algorithm
+
+[[finding_the_shortest_path]]
+=== FINDING THE SHORTEST PATH
+
+[[weighted_graphs]]
+==== Weighted Graphs
+
+[[dijkstra_s_algorithm_for_determining_the_shortest_path]]
+==== Dijkstra’s Algorithm for Determining the Shortest Path
+
+[[code_for_dijkstra_s_algorithm]]
+==== Code for Dijkstra’s Algorithm
+
+[[summary]]
+=== SUMMARY
+
+[[exercises]]
+=== EXERCISES
+
+[[advanced_algorithms]]
+== 17. Advanced Algorithms
+
+[[dynamic_programming]]
+=== DYNAMIC PROGRAMMING
+
+[[a_dynamic_programming_example:_computingfibonacci_numbers]]
+==== A Dynamic Programming Example: ComputingFibonacci Numbers
+
+[[finding_the_longest_common_substring]]
+==== Finding the Longest Common Substring
+
+[[the_knapsack_problem]]
+==== The Knapsack Problem
+
+[[greedy_algorithms]]
+=== GREEDY ALGORITHMS
+
+[[a_first_greedy_algorithm_example:the_coin_changing_problem]]
+==== A First Greedy Algorithm Example:The Coin-Changing Problem
+
+[[data_compression_using_huffman_coding]]
+==== Data Compression Using Huffman Coding
+
+[[a_greedy_solution_to_the_knapsack_problem]]
+==== A Greedy Solution to the Knapsack Problem
+
+[[summary]]
+=== SUMMARY
+
+[[exercises]]
+=== EXERCISES
